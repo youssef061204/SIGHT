@@ -1,0 +1,18 @@
+{
+  "input": "Public Toronto landmark coordinates, not a device GPS recording",
+  "code": "Ok",
+  "providerDistanceMeters": 820.5,
+  "providerDurationSeconds": 656.2,
+  "geometryPoints": 61,
+  "steps": 15,
+  "names": [
+    "PATH",
+    "PATH Main Route",
+    "York Concourse",
+    "York East Teamway"
+  ],
+  "fieldValidated": false,
+  "accessibilityValidated": false,
+  "gpsNavigationExecuted": false,
+  "warning": "Provider route contains PATH / York Concourse names; indoor accessibility, opening hours and real GPS suitability unverified"
+}

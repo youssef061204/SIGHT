@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "selected_model": "efficientdet_lite0_int8",
+  "runtime": "MediaPipe Tasks Vision ObjectDetector",
+  "source_documentation": "https://developers.google.com/edge/mediapipe/solutions/vision/object_detector",
+  "retrieved_date": "2026-10-23",
+  "models": [
+    {
+      "id": "efficientdet_lite0_int8",
+      "path": "models/efficientdet_lite0_int8.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-models/object_detector/efficientdet_lite0/int8/1/efficientdet_lite0.tflite",
+      "sha256": "0720bf247bd76e6594ea28fa9c6f7c5242be774818997dbbeffc4da460c723bb",
+      "bytes": 4602795,
+      "input": "320x320 RGB; int8 quantized weights; metadata handles normalization",
+      "version": "1",
+      "training_dataset": "COCO 80 detection categories",
+      "role": "Phone CPU default candidate, pending device profiling",
+      "license": "Apache-2.0 (Google MediaPipe distributed model; retain NOTICE and verify downstream model terms before store release)"
+    },
+    {
+      "id": "ssd_mobilenet_v2_float32",
+      "path": "models/ssd_mobilenet_v2_float32.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-models/object_detector/ssd_mobilenet_v2/float32/1/ssd_mobilenet_v2.tflite",
+      "sha256": "b8ccb1a25d45455ba52e85f26531948e1cb75efeb94c7c3d456d54fd4d6fbdd2",
+      "bytes": 11316189,
+      "input": "256x256 RGB float32; task metadata handles normalization",
+      "version": "1",
+      "training_dataset": "COCO 80 detection categories",
+      "role": "Desktop comparator",
+      "license": "Apache-2.0 (Google MediaPipe distributed model; retain NOTICE and verify downstream model terms before store release)"
+    }
+  ]
+}

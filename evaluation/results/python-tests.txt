@@ -1,0 +1,18 @@
+test_crowd_matches_are_ignored_without_hiding_regular_misses (test_detection_scoring.DetectionScoringTest.test_crowd_matches_are_ignored_without_hiding_regular_misses) ... ok
+test_duplicate_is_false_positive_and_missing_object_false_negative (test_detection_scoring.DetectionScoringTest.test_duplicate_is_false_positive_and_missing_object_false_negative) ... ok
+test_empty_references_are_not_perfect_accuracy (test_metrics.MetricsTest.test_empty_references_are_not_perfect_accuracy) ... ok
+test_insertions_can_exceed_reference_length (test_metrics.MetricsTest.test_insertions_can_exceed_reference_length) ... ok
+test_known_edit_distance_and_failed_recognition (test_metrics.MetricsTest.test_known_edit_distance_and_failed_recognition) ... ok
+test_normalization_retains_punctuation (test_metrics.MetricsTest.test_normalization_retains_punctuation) ... ok
+test_missing_conditions_cannot_silently_pass (test_regression.RegressionTest.test_missing_conditions_cannot_silently_pass) ... ok
+test_one_material_regression_fails_even_if_other_metric_improves (test_regression.RegressionTest.test_one_material_regression_fails_even_if_other_metric_improves) ... ok
+test_refuses_dataset_or_threshold_changes (test_regression.RegressionTest.test_refuses_dataset_or_threshold_changes) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.780s
+
+OK
+creating index...
+index created!
+creating index...
+index created!

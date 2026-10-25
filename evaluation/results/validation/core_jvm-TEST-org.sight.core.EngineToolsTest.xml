@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.core.EngineToolsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-24T02:19:53" hostname="YUNO" time="0.065">
+  <properties/>
+  <testcase name="no location depth or route provider can produce a success" classname="org.sight.core.EngineToolsTest" time="0.023"/>
+  <testcase name="tool memory remains historical after live evidence expires" classname="org.sight.core.EngineToolsTest" time="0.036"/>
+  <testcase name="receipt-clock tools require confirmation rather than silently succeeding" classname="org.sight.core.EngineToolsTest" time="0.0"/>
+  <testcase name="requesting text is pending and historical OCR cannot become fresh tool text" classname="org.sight.core.EngineToolsTest" time="0.004"/>
+  <testcase name="tool access shares actual scene and rejects stale live facts" classname="org.sight.core.EngineToolsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

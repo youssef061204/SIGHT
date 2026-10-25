@@ -1,0 +1,123 @@
+{
+  "schema": "sight.validation.v1",
+  "recorded_at_utc": "2026-10-25T19:22:04.480493+00:00",
+  "tests": {
+    "core_jvm": {
+      "tests": 35,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "app_jvm": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "meta_jvm": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "android35_native": {
+      "expected_tests": 2,
+      "status": "passed",
+      "raw_output": "emulator-api35/native-perception.txt"
+    },
+    "android35_camera": {
+      "expected_tests": 1,
+      "status": "passed",
+      "raw_output": "emulator-api35/camera-flow.txt"
+    },
+    "android35_atd_final_suite": {
+      "expected_tests": 3,
+      "status": "passed",
+      "raw_output": "emulator-api35/atd-final-suite.txt"
+    },
+    "meta_official_mdk": {
+      "expected_tests": 5,
+      "status": "passed",
+      "raw_output": "emulator-api35/meta-instrumentation.txt"
+    },
+    "meta_official_mdk_atd": {
+      "expected_tests": 5,
+      "status": "passed",
+      "raw_output": "emulator-api35/atd-meta-instrumentation.txt"
+    },
+    "android30_native": {
+      "expected_tests": 2,
+      "status": "passed",
+      "raw_output": "emulator-api30/native-perception.txt"
+    },
+    "android30_camera": {
+      "expected_tests": 1,
+      "status": "passed",
+      "raw_output": "emulator-api30/camera-flow.txt"
+    },
+    "android30_final_suite": {
+      "expected_tests": 3,
+      "status": "passed",
+      "raw_output": "emulator-api30/final-suite.txt"
+    },
+    "android35_offline_speech": {
+      "status": "passed",
+      "proof": {
+        "offlineVoiceAvailable": true,
+        "synthesized": true,
+        "voice": "en-us-x-tpf-local",
+        "locale": "en-US",
+        "networkRequired": false,
+        "waveBytes": 183930,
+        "pcmBytes": 183886,
+        "audioHeardByHuman": false,
+        "collectionMethod": "Metadata read with adb shell run-as org.sight.app cat cache/sight-speech-proof.json before emulator reboot. WAV was not copied to this repository."
+      }
+    },
+    "python_tools": {
+      "tests": 9,
+      "status": "passed"
+    }
+  },
+  "artifacts": {
+    "app/build/outputs/apk/debug/app-debug.apk": {
+      "bytes": 125450803,
+      "sha256": "96231bdd0bb95c092f039db3eadd63a64f9950b2cc8fff169d992cb06dd79232"
+    },
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": {
+      "bytes": 1207951,
+      "sha256": "cab9b30de0ba1ced23f5ae70809a3d3eaed573feccfa14b4a716f4fc406b9b1c"
+    },
+    "integrations/meta/adapter/build/outputs/apk/androidTest/debug/adapter-debug-androidTest.apk": {
+      "bytes": 41197614,
+      "sha256": "285c3c0c25233662a2e4bf511fdf7b5fe090c587b2f0309bd189907217abdb89"
+    },
+    "app/src/main/assets/efficientdet_lite0_int8.tflite": {
+      "bytes": 4602795,
+      "sha256": "0720bf247bd76e6594ea28fa9c6f7c5242be774818997dbbeffc4da460c723bb"
+    }
+  },
+  "devices": {
+    "emulator-5558": {
+      "ro.build.fingerprint": "Android/sdk_slim_x86_64/emu64x:15/AE3A.240806.019/12368160:userdebug/test-keys",
+      "ro.product.cpu.abilist": "x86_64",
+      "ro.build.version.sdk": "35",
+      "sys.boot_completed": "1",
+      "serial": "emulator-5558",
+      "collection": "Properties captured earlier in the executed run"
+    },
+    "emulator-5556": {
+      "ro.build.fingerprint": "Android/sdk_slim_x86/generic_x86:11/RSR1.210722.009/7752727:userdebug/test-keys",
+      "ro.product.cpu.abilist": "x86,armeabi-v7a,armeabi",
+      "ro.build.version.sdk": "30",
+      "sys.boot_completed": "1",
+      "serial": "emulator-5556",
+      "collection": "Properties captured earlier in the executed run"
+    }
+  },
+  "historical_failures": "Google APIs Android 15 combined reruns had freshness timeouts with System UI ANRs; an interrupted rerun reports Process crashed after the test process was deliberately stopped. Logs are retained. Final camera validation uses AOSP ATD; freshness limits were unchanged.",
+  "boundary": "Android emulators and official MDK simulated media, not physical phones/glasses or participant validation. Headless emulator audio output was disabled; no audible-hearing claim."
+}

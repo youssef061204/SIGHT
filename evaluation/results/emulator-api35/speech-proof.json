@@ -1,0 +1,11 @@
+{
+  "offlineVoiceAvailable": true,
+  "synthesized": true,
+  "voice": "en-us-x-tpf-local",
+  "locale": "en-US",
+  "networkRequired": false,
+  "waveBytes": 183930,
+  "pcmBytes": 183886,
+  "audioHeardByHuman": false,
+  "collectionMethod": "Metadata read with adb shell run-as org.sight.app cat cache/sight-speech-proof.json before emulator reboot. WAV was not copied to this repository."
+}

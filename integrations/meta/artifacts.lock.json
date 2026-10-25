@@ -1,0 +1,10 @@
+{
+  "version": "1.0.1",
+  "retrieved": "2026-10-23",
+  "androidSourceCommit": "f4371bc9f90249d51eb07d7f8a61e8d829294f16",
+  "artifacts": {
+    "mwdat-core": "9d3c72f7e273c793418f8e86f68cf0d85b4ab2a4dfff3c964d304275224ba5fc",
+    "mwdat-camera": "2a0a69fb89e533d627ace09abb1f4c367cd9599d69891b14ab32ca5bd2638bdc",
+    "mwdat-mockdevice": "9cd18f7e8a197a49879bd986cbceff820db7b0b2ece678aeb3dd063586135661"
+  }
+}

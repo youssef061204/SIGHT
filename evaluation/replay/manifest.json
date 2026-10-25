@@ -1,0 +1,20 @@
+{
+  "id": "constructed-real-detection-repeat-v1",
+  "source": "Actual EfficientDet Lite0 int8 clean predictions; COCO image IDs 170099 and 277197",
+  "model_predictions": "evaluation/results/desktop-coco-smoke-v1/efficientdet_lite0_int8/clean_predictions.json",
+  "frames": 19,
+  "provenance": "Repeated photographs with constructed timestamps, empty frame injection, stale evidence injection, source outage and commands. Independent photographs do not establish continuous scene identity.",
+  "valid_metrics": [
+    "object mentions vs naive per-detection narration baseline",
+    "stale result rejection",
+    "input outage state",
+    "goal confirmation and timeout"
+  ],
+  "invalid_claims": [
+    "IDF1",
+    "identity switch rate on real video",
+    "tracking accuracy",
+    "real-time camera or speech performance",
+    "user task success rate"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "retrievedAt": "2026-10-23T22:20:54.706137+00:00",
+  "purpose": "Public Toronto landmark smoke, not personal GPS; no traversability or accessibility validation",
+  "requests": [
+    {
+      "file": "photon-search.json",
+      "url": "https://photon.komoot.io/api/?q=CN%20Tower%20Toronto&limit=3&lang=en",
+      "httpStatus": 200,
+      "elapsedMs": 569.96,
+      "bytes": 1234,
+      "sha256": "e553bc35b2b819fc39713eaf0101e4c037cbda0f59648bdcf47cca1f686e7c88"
+    },
+    {
+      "file": "walking-route.json",
+      "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/-79.3871,43.6426;-79.3806,43.6453?overview=full&geometries=geojson&steps=true&alternatives=false",
+      "httpStatus": 200,
+      "elapsedMs": 3552.39,
+      "bytes": 12119,
+      "sha256": "ec1df5b635102fe9beda1087ba4ca48e1d5d8c1c2df2440f29a4ba26a8e55a64"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+﻿
+org.sight.app.NativePerceptionTest:..
+org.sight.app.CameraFlowTest:.
+
+Time: 10.661
+
+OK (3 tests)
+
+

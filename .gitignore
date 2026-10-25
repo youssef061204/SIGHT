@@ -1,0 +1,14 @@
+.tools/
+.gradle/
+.kotlin/
+**/build/
+local.properties
+**/.venv/
+**/.venv-*/
+**/__pycache__/
+*.keystore
+*.jks
+.idea/
+*.iml
+evaluation/data/cache/
+models/*.tflite

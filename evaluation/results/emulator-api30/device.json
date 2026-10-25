@@ -1,0 +1,7 @@
+{
+  "ro.build.fingerprint": "Android/sdk_slim_x86/generic_x86:11/RSR1.210722.009/7752727:userdebug/test-keys",
+  "ro.product.cpu.abilist": "x86,armeabi-v7a,armeabi",
+  "ro.build.version.sdk": "30",
+  "sys.boot_completed": "1",
+  "serial": "emulator-5556"
+}

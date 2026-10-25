@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+data/cache/
+# Kept locally as measured evidence; original Flickr author no longer recoverable.
+# Do not publicly redistribute these photographs/derivatives pending attribution.
+**/000000170099.jpg
+**/000000249550.jpg
+**/000000168974.jpg
+**/000000277197.jpg
+**/000000134886.jpg
+data/contact-sheet.jpg

@@ -1,0 +1,57 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 502537 Realtime: 502537
+
+** MEMINFO in pid 2509 [org.sight.app] **
+                   Pss  Private  Private     Swap      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap    51754    51664        0        0    55760    69048    62289     2531
+  Dalvik Heap     8099     7912        0        0    15608    11087     5544     5543
+ Dalvik Other    11845     4440        0        0    19856                           
+        Stack     1760     1760        0        0     1768                           
+       Ashmem       16        0        0        0      580                           
+    Other dev        6        0        4        0      332                           
+     .so mmap     4269      168     1180        0    38636                           
+    .jar mmap     3399        0       32        0    44444                           
+    .apk mmap    10113      492     9224        0    11628                           
+    .ttf mmap      503        0      388        0      736                           
+    .dex mmap    24788        4    24768        0    25620                           
+    .oat mmap       45        0        0        0     1868                           
+    .art mmap     8597     8052        0        0    29540                           
+   Other mmap     8670        4     4524        0    14344                           
+      Unknown     1194     1184        0        0     2012                           
+        TOTAL   135058    75680    40120        0   262732    80135    67833     8074
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    15964                          45148
+         Native Heap:    51664                          55760
+                Code:    36508                         137976
+               Stack:     1760                           1768
+            Graphics:        0                              0
+       Private Other:     9904
+              System:    19258
+             Unknown:                                   22080
+ 
+           TOTAL PSS:   135058            TOTAL RSS:   262732      TOTAL SWAP (KB):        0
+ 
+ Objects
+               Views:       14         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+              Assets:        8        AssetManagers:        0
+       Local Binders:       23        Proxy Binders:       61
+       Parcel memory:       12         Parcel count:       48
+    Death Recipients:        3             WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      114
+  PAGECACHE_OVERFLOW:       50          MALLOC_SIZE:       46
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b) cache hits cache misses cache size  Dbname
+PER CONNECTION STATS
+         4       64             68   169    55     6  /data/user/0/org.sight.app/databases/com.google.android.datatransport.events
+POOL STATS
+     cache hits  cache misses    cache size  Dbname
+            169            56           225  /data/user/0/org.sight.app/databases/com.google.android.datatransport.events

@@ -1,0 +1,8 @@
+﻿
+org.sight.meta.MetaMockDeviceContractTest:.....
+
+Time: 15.228
+
+OK (5 tests)
+
+

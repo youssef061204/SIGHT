@@ -1,0 +1,23 @@
+﻿
+org.sight.app.CameraFlowTest:
+Error in continuousCameraProducesFreshFramesAndRecoversAfterPause(org.sight.app.CameraFlowTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 30000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at org.sight.app.CameraFlowTest.continuousCameraProducesFreshFramesAndRecoversAfterPause(CameraFlowTest.kt:24)
+
+org.sight.app.NativePerceptionTest:..
+org.sight.app.NativeSpeechTest:.
+
+Time: 149.095
+There was 1 failure:
+1) continuousCameraProducesFreshFramesAndRecoversAfterPause(org.sight.app.CameraFlowTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 30000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at org.sight.app.CameraFlowTest.continuousCameraProducesFreshFramesAndRecoversAfterPause(CameraFlowTest.kt:24)
+
+FAILURES!!!
+Tests run: 4,  Failures: 1
+
+

@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "type": "summary",
+    "frames": 19,
+    "rejectedFrames": 1,
+    "naiveObjectMentions": 34,
+    "coreLiveUtterances": 2,
+    "coreObjectMentions": 3,
+    "findCompletions": 1,
+    "note": "Naive baseline emits each confidence>=0.5 detection without persistence, novelty or freshness checks. Core utterances may group objects; compare object mentions separately. Repeated-photo fixtures cannot establish temporal tracking accuracy or real camera performance."
+  },
+  "policy_checks": {
+    "stale_frame_rejected": true,
+    "no_live_utterance_from_stale_frame": true,
+    "input_outage_reported": true,
+    "confirmed_find_completed": true,
+    "unconfirmed_search_times_out": true
+  },
+  "input_fixture": "replay\\real-detection-repeat.tsv",
+  "fixture_sha256": "aa04bdace4808e12152cabd4805bdcbe8d9fc17dfa110d5dbb78bfe9d18918c4",
+  "jvm_output_sha256": "f937ee97ad1b612330843632958d471cd73625020ed194e19a469efa6c55658a",
+  "evidence_scope": "Constructed repeated-photo replay using real detector results; actual production Kotlin policy. No camera, audio playback, real-video tracking or user study claims."
+}

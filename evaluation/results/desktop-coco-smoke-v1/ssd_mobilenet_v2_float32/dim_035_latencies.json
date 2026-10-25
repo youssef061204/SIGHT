@@ -1,0 +1,402 @@
+[
+  {
+    "image_id": 170099,
+    "repetition": 0,
+    "ms": 200.8309
+  },
+  {
+    "image_id": 170099,
+    "repetition": 1,
+    "ms": 141.0441
+  },
+  {
+    "image_id": 170099,
+    "repetition": 2,
+    "ms": 57.9092
+  },
+  {
+    "image_id": 170099,
+    "repetition": 3,
+    "ms": 48.6465
+  },
+  {
+    "image_id": 170099,
+    "repetition": 4,
+    "ms": 38.4929
+  },
+  {
+    "image_id": 249550,
+    "repetition": 0,
+    "ms": 36.3474
+  },
+  {
+    "image_id": 249550,
+    "repetition": 1,
+    "ms": 37.6449
+  },
+  {
+    "image_id": 249550,
+    "repetition": 2,
+    "ms": 34.978
+  },
+  {
+    "image_id": 249550,
+    "repetition": 3,
+    "ms": 33.6026
+  },
+  {
+    "image_id": 249550,
+    "repetition": 4,
+    "ms": 31.4626
+  },
+  {
+    "image_id": 350148,
+    "repetition": 0,
+    "ms": 33.8364
+  },
+  {
+    "image_id": 350148,
+    "repetition": 1,
+    "ms": 36.4282
+  },
+  {
+    "image_id": 350148,
+    "repetition": 2,
+    "ms": 43.875
+  },
+  {
+    "image_id": 350148,
+    "repetition": 3,
+    "ms": 34.3141
+  },
+  {
+    "image_id": 350148,
+    "repetition": 4,
+    "ms": 36.0821
+  },
+  {
+    "image_id": 571804,
+    "repetition": 0,
+    "ms": 31.4251
+  },
+  {
+    "image_id": 571804,
+    "repetition": 1,
+    "ms": 30.267
+  },
+  {
+    "image_id": 571804,
+    "repetition": 2,
+    "ms": 30.5575
+  },
+  {
+    "image_id": 571804,
+    "repetition": 3,
+    "ms": 29.4737
+  },
+  {
+    "image_id": 571804,
+    "repetition": 4,
+    "ms": 30.3909
+  },
+  {
+    "image_id": 410735,
+    "repetition": 0,
+    "ms": 28.4746
+  },
+  {
+    "image_id": 410735,
+    "repetition": 1,
+    "ms": 29.3838
+  },
+  {
+    "image_id": 410735,
+    "repetition": 2,
+    "ms": 35.8822
+  },
+  {
+    "image_id": 410735,
+    "repetition": 3,
+    "ms": 29.9453
+  },
+  {
+    "image_id": 410735,
+    "repetition": 4,
+    "ms": 30.382
+  },
+  {
+    "image_id": 382125,
+    "repetition": 0,
+    "ms": 39.4172
+  },
+  {
+    "image_id": 382125,
+    "repetition": 1,
+    "ms": 37.2463
+  },
+  {
+    "image_id": 382125,
+    "repetition": 2,
+    "ms": 36.2793
+  },
+  {
+    "image_id": 382125,
+    "repetition": 3,
+    "ms": 34.1857
+  },
+  {
+    "image_id": 382125,
+    "repetition": 4,
+    "ms": 31.567
+  },
+  {
+    "image_id": 377882,
+    "repetition": 0,
+    "ms": 27.2288
+  },
+  {
+    "image_id": 377882,
+    "repetition": 1,
+    "ms": 27.7056
+  },
+  {
+    "image_id": 377882,
+    "repetition": 2,
+    "ms": 26.4895
+  },
+  {
+    "image_id": 377882,
+    "repetition": 3,
+    "ms": 27.583
+  },
+  {
+    "image_id": 377882,
+    "repetition": 4,
+    "ms": 26.5107
+  },
+  {
+    "image_id": 301135,
+    "repetition": 0,
+    "ms": 28.4285
+  },
+  {
+    "image_id": 301135,
+    "repetition": 1,
+    "ms": 27.4979
+  },
+  {
+    "image_id": 301135,
+    "repetition": 2,
+    "ms": 28.7174
+  },
+  {
+    "image_id": 301135,
+    "repetition": 3,
+    "ms": 28.4932
+  },
+  {
+    "image_id": 301135,
+    "repetition": 4,
+    "ms": 28.5081
+  },
+  {
+    "image_id": 574702,
+    "repetition": 0,
+    "ms": 29.7408
+  },
+  {
+    "image_id": 574702,
+    "repetition": 1,
+    "ms": 30.1095
+  },
+  {
+    "image_id": 574702,
+    "repetition": 2,
+    "ms": 30.0236
+  },
+  {
+    "image_id": 574702,
+    "repetition": 3,
+    "ms": 29.2036
+  },
+  {
+    "image_id": 574702,
+    "repetition": 4,
+    "ms": 29.3237
+  },
+  {
+    "image_id": 168974,
+    "repetition": 0,
+    "ms": 32.8238
+  },
+  {
+    "image_id": 168974,
+    "repetition": 1,
+    "ms": 28.2815
+  },
+  {
+    "image_id": 168974,
+    "repetition": 2,
+    "ms": 33.0099
+  },
+  {
+    "image_id": 168974,
+    "repetition": 3,
+    "ms": 31.4624
+  },
+  {
+    "image_id": 168974,
+    "repetition": 4,
+    "ms": 31.6035
+  },
+  {
+    "image_id": 277197,
+    "repetition": 0,
+    "ms": 32.7494
+  },
+  {
+    "image_id": 277197,
+    "repetition": 1,
+    "ms": 33.3147
+  },
+  {
+    "image_id": 277197,
+    "repetition": 2,
+    "ms": 37.5204
+  },
+  {
+    "image_id": 277197,
+    "repetition": 3,
+    "ms": 35.6786
+  },
+  {
+    "image_id": 277197,
+    "repetition": 4,
+    "ms": 32.1862
+  },
+  {
+    "image_id": 184324,
+    "repetition": 0,
+    "ms": 32.1816
+  },
+  {
+    "image_id": 184324,
+    "repetition": 1,
+    "ms": 33.7094
+  },
+  {
+    "image_id": 184324,
+    "repetition": 2,
+    "ms": 32.1474
+  },
+  {
+    "image_id": 184324,
+    "repetition": 3,
+    "ms": 34.2087
+  },
+  {
+    "image_id": 184324,
+    "repetition": 4,
+    "ms": 31.9414
+  },
+  {
+    "image_id": 238866,
+    "repetition": 0,
+    "ms": 35.3851
+  },
+  {
+    "image_id": 238866,
+    "repetition": 1,
+    "ms": 36.1549
+  },
+  {
+    "image_id": 238866,
+    "repetition": 2,
+    "ms": 34.0576
+  },
+  {
+    "image_id": 238866,
+    "repetition": 3,
+    "ms": 34.6289
+  },
+  {
+    "image_id": 238866,
+    "repetition": 4,
+    "ms": 32.2617
+  },
+  {
+    "image_id": 134886,
+    "repetition": 0,
+    "ms": 30.4694
+  },
+  {
+    "image_id": 134886,
+    "repetition": 1,
+    "ms": 28.805
+  },
+  {
+    "image_id": 134886,
+    "repetition": 2,
+    "ms": 29.1901
+  },
+  {
+    "image_id": 134886,
+    "repetition": 3,
+    "ms": 29.4174
+  },
+  {
+    "image_id": 134886,
+    "repetition": 4,
+    "ms": 29.7472
+  },
+  {
+    "image_id": 62554,
+    "repetition": 0,
+    "ms": 30.9244
+  },
+  {
+    "image_id": 62554,
+    "repetition": 1,
+    "ms": 185.3605
+  },
+  {
+    "image_id": 62554,
+    "repetition": 2,
+    "ms": 179.5272
+  },
+  {
+    "image_id": 62554,
+    "repetition": 3,
+    "ms": 185.8562
+  },
+  {
+    "image_id": 62554,
+    "repetition": 4,
+    "ms": 194.7813
+  },
+  {
+    "image_id": 292005,
+    "repetition": 0,
+    "ms": 205.0968
+  },
+  {
+    "image_id": 292005,
+    "repetition": 1,
+    "ms": 190.6717
+  },
+  {
+    "image_id": 292005,
+    "repetition": 2,
+    "ms": 190.8891
+  },
+  {
+    "image_id": 292005,
+    "repetition": 3,
+    "ms": 201.3203
+  },
+  {
+    "image_id": 292005,
+    "repetition": 4,
+    "ms": 184.4338
+  }
+]

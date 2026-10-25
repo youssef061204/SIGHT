@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "comparisons": [
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "metric": "subset_AP50",
+      "baseline": 0.36237633528309116,
+      "candidate": 0.3614210847927603,
+      "delta": -0.0009552504903308501,
+      "allowed_absolute_drop": 0.02,
+      "passed": true
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "metric": "recall_at_operating_threshold",
+      "baseline": 0.19402985074626866,
+      "candidate": 0.19402985074626866,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.03,
+      "passed": true
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "metric": "subset_AP50",
+      "baseline": 0.35365419928667235,
+      "candidate": 0.33893728755564,
+      "delta": -0.014716911731032345,
+      "allowed_absolute_drop": 0.02,
+      "passed": true
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "metric": "recall_at_operating_threshold",
+      "baseline": 0.14925373134328357,
+      "candidate": 0.14427860696517414,
+      "delta": -0.00497512437810943,
+      "allowed_absolute_drop": 0.03,
+      "passed": true
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "metric": "subset_AP50",
+      "baseline": 0.16524609635341825,
+      "candidate": 0.17479429768807647,
+      "delta": 0.009548201334658224,
+      "allowed_absolute_drop": 0.02,
+      "passed": true
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "metric": "recall_at_operating_threshold",
+      "baseline": 0.06467661691542288,
+      "candidate": 0.06467661691542288,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.03,
+      "passed": true
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "metric": "subset_AP50",
+      "baseline": 0.3099705433117352,
+      "candidate": 0.3099705433117352,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.02,
+      "passed": true
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "metric": "recall_at_operating_threshold",
+      "baseline": 0.14427860696517414,
+      "candidate": 0.14427860696517414,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.03,
+      "passed": true
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "metric": "subset_AP50",
+      "baseline": 0.2700950382196788,
+      "candidate": 0.2700950382196788,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.02,
+      "passed": true
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "metric": "recall_at_operating_threshold",
+      "baseline": 0.14427860696517414,
+      "candidate": 0.14427860696517414,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.03,
+      "passed": true
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "metric": "subset_AP50",
+      "baseline": 0.19694121192273487,
+      "candidate": 0.19694121192273487,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.02,
+      "passed": true
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "metric": "recall_at_operating_threshold",
+      "baseline": 0.05970149253731343,
+      "candidate": 0.05970149253731343,
+      "delta": 0.0,
+      "allowed_absolute_drop": 0.03,
+      "passed": true
+    }
+  ],
+  "scope": "Accuracy regression gate on identical data/scoring only. Tolerances are engineering settings, not safety certification. Timing excluded because host load/affinity/order must be matched independently.",
+  "baseline": "evaluation\\results\\desktop-coco-smoke-v1\\summary.json",
+  "candidate": "evaluation\\results\\desktop-coco-smoke-v2\\summary.json"
+}

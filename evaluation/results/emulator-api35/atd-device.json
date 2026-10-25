@@ -1,0 +1,7 @@
+{
+  "ro.build.fingerprint": "Android/sdk_slim_x86_64/emu64x:15/AE3A.240806.019/12368160:userdebug/test-keys",
+  "ro.product.cpu.abilist": "x86_64",
+  "ro.build.version.sdk": "35",
+  "sys.boot_completed": "1",
+  "serial": "emulator-5558"
+}
