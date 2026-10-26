@@ -23,6 +23,9 @@ class NativeSpeechQueueTest {
     @Test fun actualOfflineEngineStartsPriorityTaskAfterInterruptingAmbientSpeech() {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val context = instrumentation.targetContext
+        val proof = File(context.cacheDir,"speech-queue-native-v3.json")
+        proof.writeText(JSONObject().put("offlineVoiceAvailable",false).put("taskStarted",false)
+            .put("reason","Native speech check pending").toString(2))
         val ready = CountDownLatch(1)
         val ambientStarted = CountDownLatch(1)
         val taskStarted = CountDownLatch(1)
@@ -41,6 +44,8 @@ class NativeSpeechQueueTest {
         }
         try {
             val available = ready.await(40,TimeUnit.SECONDS) && status.get() == "Offline speech ready"
+            proof.writeText(JSONObject().put("offlineVoiceAvailable",available).put("taskStarted",false)
+                .put("status",status.get()).put("reason","Interruption has not been verified").toString(2))
             assumeTrue("A local Android voice is required to test native speech interruption",available)
             instrumentation.runOnMainSync { output.offer(Announcement(
                 "This is an ambient speech queue test. ".repeat(30),SpeechPriority.AMBIENT)) }
@@ -50,7 +55,7 @@ class NativeSpeechQueueTest {
             assertTrue(taskStarted.await(40,TimeUnit.SECONDS))
             assertTrue(decisions.any { it.code == SpeechDecisionCode.INTERRUPTED && it.event?.priority == SpeechPriority.AMBIENT })
             assertEquals(1,decisions.count { it.code == SpeechDecisionCode.STARTED && it.event?.priority == SpeechPriority.TASK })
-            File(context.cacheDir,"speech-queue-native-v3.json").writeText(JSONObject()
+            proof.writeText(JSONObject().put("offlineVoiceAvailable",true)
                 .put("scope","Actual Android offline TTS callbacks and queue interruption; not audible speaker onset")
                 .put("status",status.get()).put("recordedAtElapsedMs",SystemClock.elapsedRealtime())
                 .put("ambientInterrupted",true).put("taskStarted",true).put("humanHeardAudio",false)

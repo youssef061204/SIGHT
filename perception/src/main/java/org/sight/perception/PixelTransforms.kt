@@ -53,17 +53,23 @@ object PixelTransforms {
     }
     fun orient(input: PixelFrame, rotationDegrees: Int, mirrored: Boolean = false): PixelFrame {
         require(rotationDegrees in setOf(0, 90, 180, 270))
+        // An already oriented frame can be borrowed directly. Besides copying every pixel, the
+        // previous loop allocated a boxed coordinate Pair for every pixel in this common path.
+        if (rotationDegrees == 0 && !mirrored) return input
         val w = if (rotationDegrees % 180 == 0) input.width else input.height
         val h = if (rotationDegrees % 180 == 0) input.height else input.width
         val result = IntArray(w * h)
         for (y in 0 until input.height) for (x in 0 until input.width) {
-            val (dx, dy) = when (rotationDegrees) {
-                90 -> input.height - 1 - y to x
-                180 -> input.width - 1 - x to input.height - 1 - y
-                270 -> y to input.width - 1 - x
-                else -> x to y
+            val dx: Int
+            val dy: Int
+            when (rotationDegrees) {
+                90 -> { dx = input.height - 1 - y; dy = x }
+                180 -> { dx = input.width - 1 - x; dy = input.height - 1 - y }
+                270 -> { dx = y; dy = input.width - 1 - x }
+                else -> { dx = x; dy = y }
             }
-            result[dy * w + if (mirrored) w - 1 - dx else dx] = input.argb[y * input.width + x]
+            val outputX = if (mirrored) w - 1 - dx else dx
+            result[dy * w + outputX] = input.argb[y * input.width + x]
         }
         return PixelFrame(w, h, result)
     }

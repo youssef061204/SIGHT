@@ -132,6 +132,11 @@ class SpeechQueue(
         emit(SpeechDecisionCode.STOPPED, nowMs, event)
     }
 
+    fun clearHistory(nowMs: Long) {
+        stop(nowMs)
+        lastStarted = null; spoken.clear(); lastAmbientStartMs = null
+    }
+
     fun rejectedMuted(event: Announcement, nowMs: Long) = emit(SpeechDecisionCode.MUTED, nowMs, event)
     private fun emit(code: SpeechDecisionCode, nowMs: Long, event: Announcement?) = onDecision(SpeechDecision(code, nowMs, event, pending.size, current != null))
 }

@@ -11,6 +11,7 @@ import com.meta.wearable.dat.core.Wearables
 import com.meta.wearable.dat.core.types.Permission
 import com.meta.wearable.dat.core.types.PermissionStatus
 import com.meta.wearable.dat.core.types.RegistrationState
+import com.meta.wearable.dat.core.types.LinkState
 import com.meta.wearable.dat.mockdevice.MockDeviceKit
 import com.meta.wearable.dat.mockdevice.api.GlassesModel
 import com.meta.wearable.dat.mockdevice.api.MockGlasses
@@ -18,6 +19,7 @@ import java.io.File
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
@@ -60,7 +62,7 @@ class MetaPerceptionIntegrationTest {
             val adapter = MetaDatCameraAdapter(context, scope, true, 60_000)
             try {
                 adapter.start()
-                val frame = nextFrame(adapter)
+                val frame = nextFrame(adapter, "color-chart first frame")
                 MetaFrameCalibration.mockFixture().requireCompatible(frame)
                 val bitmap = FramePixels.i420(frame.bytes, frame.width, frame.height)
                 try {
@@ -89,6 +91,8 @@ class MetaPerceptionIntegrationTest {
             val engine = SightEngine()
             val perception = MetaSightPerception(context, adapter, engine, MetaFrameCalibration.mockFixture())
             val samples = JSONArray()
+            var findCompleted = false
+            var failureDetail: String? = null
             try {
                 perception.start()
                 engine.command("find a person", SystemClock.elapsedRealtime())
@@ -98,17 +102,29 @@ class MetaPerceptionIntegrationTest {
                         val result = perception.processLatest()
                         if (result != null) {
                             samples.put(JSONObject().put("frameId", result.frame.evidence.frameId)
+                                .put("modelId", result.modelId)
                                 .put("devicePresentationTimeUs", result.devicePresentationTimeUs)
                                 .put("receiptElapsedNs", result.receivedElapsedNs)
                                 .put("receiptToResultMs", result.receiptToResultMs)
                                 .put("conversionMs", result.conversionMs).put("inferenceMs", result.inferenceMs)
                                 .put("goalPhase", result.update.goal.phase.name)
+                                .put("sourceState", adapter.status.value.state.name)
+                                .put("reliability", result.update.reliability.name)
+                                .put("diagnostics", JSONArray(result.update.diagnostics.map { it.code }))
+                                .put("entities", JSONArray(result.update.entities.map { entity ->
+                                    JSONObject().put("id", entity.id).put("category", entity.category)
+                                        .put("confidence", entity.confidence).put("visible", entity.visible)
+                                        .put("consecutiveObservations", entity.consecutiveObservations)
+                                }))
                                 .put("detections", JSONArray(result.frame.detections.map { detection ->
                                     JSONObject().put("category", detection.category).put("confidence", detection.confidence)
                                 })))
                             if (result.update.goal.phase == GoalPhase.COMPLETED) completed = result
+                            check(result.update.goal.phase !in setOf(GoalPhase.TIMED_OUT, GoalPhase.UNSUPPORTED, GoalPhase.CANCELLED)) {
+                                "Photo Find ended as ${result.update.goal.phase}; ${result.update.diagnostics.map { it.code }}"
+                            }
                         }
-                        check(adapter.status.value.state != MetaSourceState.FAILED) { adapter.status.value.toString() }
+                        requireSourceActive(adapter, "photo inference")
                         if (completed == null) delay(150)
                     }
                     completed
@@ -121,16 +137,23 @@ class MetaPerceptionIntegrationTest {
                     it.kind == AnnouncementKind.FIND_RESULT && it.evidence?.sourceId == "meta-dat-mock"
                 })
                 assertTrue(adapter.capabilities.value.cameraAttached)
-                File(context.cacheDir, "meta-real-pipeline-proof.json").writeText(JSONObject()
-                    .put("source", "official-DAT-1.0.1-MDK-file-feed")
-                    .put("fixture", "COCO-350148-repeated-photograph-HEVC")
-                    .put("modelId", completion.modelId).put("samples", samples)
-                    .put("findCompleted", true).put("captureClockSynchronized", false)
-                    .put("physicalGlassesTested", false).toString(2))
+                findCompleted = true
                 perception.stop()
                 assertNull(perception.processLatest())
                 assertFalse(engine.tick(SystemClock.elapsedRealtime()).entities.any { it.visible })
-            } finally { perception.close(); kit.unpairDevice(glasses) }
+            } catch (failure: Throwable) {
+                failureDetail = failure.toString()
+                throw failure
+            } finally {
+                File(context.cacheDir, "meta-real-pipeline-proof.json").writeText(JSONObject()
+                    .put("source", "official-DAT-1.0.1-MDK-file-feed")
+                    .put("fixture", "COCO-350148-repeated-photograph-HEVC")
+                    .put("samples", samples).put("findCompleted", findCompleted)
+                    .put("failure", failureDetail ?: JSONObject.NULL)
+                    .put("lastSourceStatus", adapter.status.value.toString())
+                    .put("captureClockSynchronized", false).put("physicalGlassesTested", false).toString(2))
+                perception.close(); kit.unpairDevice(glasses)
+            }
         }
     }
 
@@ -140,7 +163,7 @@ class MetaPerceptionIntegrationTest {
             val adapter = MetaDatCameraAdapter(context, scope, true, 60_000)
             try {
                 adapter.start()
-                val first = nextFrame(adapter)
+                val first = nextFrame(adapter, "permission test initial frame")
                 kit.permissions.set(Permission.CAMERA, PermissionStatus.Denied)
                 withTimeout(20_000) { adapter.status.first { it.state == MetaSourceState.CAMERA_PERMISSION_REQUIRED } }
                 assertNull(adapter.takeLatest())
@@ -150,7 +173,7 @@ class MetaPerceptionIntegrationTest {
                     while (Wearables.checkPermissionStatus(Permission.CAMERA).getOrNull() != PermissionStatus.Granted) delay(100)
                 }
                 adapter.reconnect()
-                val recovered = nextFrame(adapter)
+                val recovered = nextFrame(adapter, "permission test reconnected frame")
                 assertTrue(recovered.streamGeneration > first.streamGeneration)
                 assertEquals("meta-dat-mock", recovered.source)
             } finally { adapter.stop(); kit.unpairDevice(glasses) }
@@ -166,17 +189,37 @@ class MetaPerceptionIntegrationTest {
         instrumentation.context.assets.open(asset).use { input -> file.outputStream().use { input.copyTo(it) } }
         glasses.services.camera.setCameraFeed(Uri.fromFile(file))
         glasses.powerOn(); glasses.unfold(); glasses.don()
+        // Pair/power operations schedule SDK publication. The production adapter correctly refuses
+        // to start if its permission query runs before this actual device becomes available.
+        withTimeout(10_000) { Wearables.devices.first { glasses.deviceIdentifier in it } }
+        withTimeout(10_000) {
+            while (Wearables.devicesMetadata[glasses.deviceIdentifier]?.value?.linkState != LinkState.CONNECTED) delay(50)
+        }
+        withTimeout(10_000) {
+            while (Wearables.checkPermissionStatus(Permission.CAMERA).getOrNull() != PermissionStatus.Granted) delay(50)
+        }
         return glasses
     }
 
-    private suspend fun nextFrame(adapter: MetaDatCameraAdapter): MetaVideoPacket = withTimeout(70_000) {
-        var packet = adapter.takeLatest()
-        while (packet == null) {
-            check(adapter.status.value.state != MetaSourceState.FAILED) { adapter.status.value.toString() }
-            delay(50)
-            packet = adapter.takeLatest()
+    private suspend fun nextFrame(adapter: MetaDatCameraAdapter, stage: String): MetaVideoPacket {
+        try {
+            return withTimeout(70_000) {
+                var packet = adapter.takeLatest()
+                while (packet == null) {
+                    requireSourceActive(adapter, stage)
+                    delay(50)
+                    packet = adapter.takeLatest()
+                }
+                packet
+            }
+        } catch (timeout: TimeoutCancellationException) {
+            throw AssertionError("$stage: timed out; ${adapter.status.value}; capabilities=${adapter.capabilities.value}", timeout)
         }
-        packet
+    }
+
+    private fun requireSourceActive(adapter: MetaDatCameraAdapter, stage: String) {
+        check(adapter.status.value.state in setOf(MetaSourceState.STARTING, MetaSourceState.WAITING_FOR_FRAMES,
+            MetaSourceState.RAW_FRAMES_AVAILABLE)) { "$stage: ${adapter.status.value}; capabilities=${adapter.capabilities.value}" }
     }
 
     private fun assertColor(pixel: Int, red: Int, green: Int, blue: Int) {

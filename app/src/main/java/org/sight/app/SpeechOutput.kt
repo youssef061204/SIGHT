@@ -119,6 +119,7 @@ class SpeechOutput(context: Context, private val valid: (Announcement, Long) -> 
     }
     fun rate(value: Float) { tts?.setSpeechRate(value.coerceIn(0.65f, 1.6f)) }
     fun stop() { queue.stop(SystemClock.elapsedRealtime()); tts?.stop() }
+    fun clearHistory() { queue.clearHistory(SystemClock.elapsedRealtime()); tts?.stop() }
     val queueSize: Int get() = queue.size
     override fun close() {
         if (closed) return

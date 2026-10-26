@@ -27,6 +27,10 @@ try {
     }
     & $Adb -s $Serial install -r $apk
     if ($LASTEXITCODE -ne 0) { throw 'Instrumentation APK install failed.' }
+    if ($Meta) {
+        & $Adb -s $Serial shell cmd package compile -m verify -f org.sight.meta.test
+        if ($LASTEXITCODE -ne 0) { throw 'Installed Meta test bytecode verification failed.' }
+    }
     $instrumentArgs = @('-s', $Serial, 'shell', 'am', 'instrument', '-w')
     if ($Classes) { $instrumentArgs += @('-e', 'class', $Classes) }
     $instrumentArgs += $runner

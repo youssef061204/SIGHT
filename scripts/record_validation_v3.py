@@ -34,14 +34,27 @@ def main():
             shutil.copyfile(path, OUT / f"{name}-{path.name}")
         tests[name] = {**counts, "status": "passed" if files and counts["failures"] == counts["errors"] == 0 else "not_passed"}
     for name, relative, expected in (
-        ("android35_app", "v3-android35/app-suite.txt", 11),
+        ("android35_app", "v3-android35/app-suite.txt", 12),
         ("android35_meta", "v3-android35/meta-suite.txt", 8),
-        ("android30_regression", "v3-android30/app-suite.txt", 6),
+        ("android30_app", "v3-android30/app-suite.txt", 12),
     ):
         raw = read_text(ROOT / "evaluation/results" / relative)
         matched = re.search(r"OK \((\d+) tests?\)", raw)
         passed = matched and int(matched[1]) == expected and not re.search(r"FAILURES!!!|Process crashed|INSTRUMENTATION_FAILED", raw)
         tests[name] = {"status": "passed" if passed else "not_run_or_failed", "expected": expected, "raw": relative}
+    speech_dir = ROOT / "evaluation/results/v3-android35-google"
+    def proof(name):
+        path = speech_dir / name
+        return json.loads(read_text(path)) if path.exists() else {}
+    synthesis = proof("sight-speech-proof.json")
+    interruption = proof("speech-queue-native-v3.json")
+    raw = read_text(speech_dir / "speech-suite.txt")
+    tests["android35_offline_speech"] = {
+        "status": "passed" if "OK (2 tests)" in raw and synthesis.get("synthesized") is True and
+            synthesis.get("networkRequired") is False and synthesis.get("pcmBytes", 0) > 1_000 and
+            interruption.get("taskStarted") is True and interruption.get("ambientInterrupted") is True else "not_run_or_capability_unavailable",
+        "expected": 2, "raw": "v3-android35-google/speech-suite.txt", "humanHeardAudio": False,
+    }
     python_raw = read_text(ROOT / "evaluation/results/v3-python-tests.txt")
     match = re.search(r"Ran (\d+) tests", python_raw)
     tests["python"] = {"tests": int(match[1]) if match else 0, "status": "passed" if match and re.search(r"\nOK\s", python_raw) else "not_passed"}

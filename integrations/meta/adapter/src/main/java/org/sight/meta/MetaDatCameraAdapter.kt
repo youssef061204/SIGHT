@@ -136,6 +136,7 @@ class MetaDatCameraAdapter(
                 val currentSession = session
                 var sessionReady = false
                 var streamReady = false
+                var streamHasDelivered = false
                 launch(start = CoroutineStart.UNDISPATCHED) {
                     currentSession.deviceInfo.collect { device ->
                         mutableCapabilities.value = MetaDeviceCapabilities(
@@ -208,6 +209,7 @@ class MetaDatCameraAdapter(
                                 launch(start = CoroutineStart.UNDISPATCHED) {
                                     attached.stream.state.collect { streamState ->
                                         streamReady = streamState == StreamState.STREAMING
+                                        if (streamReady) streamHasDelivered = true
                                         gate.setStreaming(sessionReady && streamReady)
                                         if (!sessionReady || !streamReady) invalidateFrames()
                                         if (streamState == StreamState.CLOSED) {
@@ -218,7 +220,8 @@ class MetaDatCameraAdapter(
                                         } else when (streamState) {
                                             StreamState.STREAMING -> MetaSourceState.WAITING_FOR_FRAMES
                                             StreamState.PAUSED -> MetaSourceState.PAUSED
-                                            StreamState.STOPPING, StreamState.STOPPED -> MetaSourceState.STOPPED
+                                            StreamState.STOPPING -> MetaSourceState.STOPPED
+                                            StreamState.STOPPED -> if (streamHasDelivered) MetaSourceState.STOPPED else MetaSourceState.STARTING
                                             else -> MetaSourceState.STARTING
                                         })
                                     }

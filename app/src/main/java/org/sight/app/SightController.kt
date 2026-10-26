@@ -16,8 +16,6 @@ import java.text.DateFormat
 import java.util.Date
 import org.sight.perception.DetectorProfile
 
-enum class DetectorMode { AUTO, FAST, INSPECT }
-
 class SightController(private val context: Context) : AutoCloseable {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
     private val engine = SightEngine()
@@ -41,6 +39,7 @@ class SightController(private val context: Context) : AutoCloseable {
     @Volatile private var inspectUntilMs = 0L
     @Volatile var resourceConstrained = false; private set
     private var activeSource: String? = null
+    private var activeGeometryEpoch: Long? = null
     private var lastRuntimeSampleMs = 0L
     private var pssKb = 0L
     private val ocrSamples = ArrayDeque<OcrTiming>()
@@ -50,7 +49,7 @@ class SightController(private val context: Context) : AutoCloseable {
             if (ocrSamples.size >= 300) ocrSamples.removeFirst()
             ocrSamples.addLast(sample); latestOcr = sample
             if (running && evidence.sourceId == activeSource) {
-                if (sample.status == "failed") frameFeedback("The text reader could not finish. Try reading again.", evidence)
+                if (sample.status == "failed") ocrFailure(evidence)
                 else accept(engine.onTextObservation(evidence, text, now()))
             }
         }
@@ -127,17 +126,17 @@ class SightController(private val context: Context) : AutoCloseable {
         .getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
     fun start() {
         if (running) return
-        activeSource = null; stageSamples.clear(); timing = null; cameraGeneration++
+        activeSource = null; activeGeometryEpoch = null; stageSamples.clear(); timing = null; cameraGeneration++
         running = true; accept(engine.setInputAvailable(true, now()))
         lastMessage = "Camera starting. Waiting for fresh visual evidence."
     }
     fun pause() {
-        running = false; activeSource = null; voice.cancel(); speech.stop()
+        running = false; activeSource = null; activeGeometryEpoch = null; voice.cancel(); speech.stop()
         accept(engine.setInputAvailable(false, now()))
         lastMessage = "Camera paused. Visual observations are unavailable."
     }
     fun failure(message: String) {
-        running = false; speech.stop(); accept(engine.setInputAvailable(false, now())); lastMessage = message
+        running = false; activeSource = null; activeGeometryEpoch = null; speech.stop(); accept(engine.setInputAvailable(false, now())); lastMessage = message
     }
     fun perceptionStatus(message: String) {
         lastMessage = message
@@ -154,6 +153,7 @@ class SightController(private val context: Context) : AutoCloseable {
     fun onTiming(sample: StageTiming) {
         if (!running) return
         timing = sample
+        activeGeometryEpoch = sample.geometryEpoch
         if (stageSamples.size >= 300) stageSamples.removeFirst()
         stageSamples.addLast(sample)
     }
@@ -163,15 +163,16 @@ class SightController(private val context: Context) : AutoCloseable {
         if (!listening) speech.offer(Announcement(message, SpeechPriority.TASK, evidence,
             AnnouncementKind.UNCERTAINTY, evidence.capturedAtMs + 1_500, dedupKey = "frame-feedback:$message"))
     }
-    fun chooseDetectorMode(mode: DetectorMode) { detectorMode = mode }
-    fun requestedProfile(): DetectorProfile = when {
-        detectorMode == DetectorMode.FAST -> DetectorProfile.FAST
-        detectorMode == DetectorMode.INSPECT -> DetectorProfile.INSPECT
-        goalType == GoalType.FIND || now() < inspectUntilMs -> DetectorProfile.INSPECT
-        else -> DetectorProfile.FAST
+    private fun ocrFailure(evidence: Evidence) {
+        if (!PerceptionPolicy.canReportOcrFailure(scene.goal, running, activeSource, activeGeometryEpoch, evidence, now())) return
+        lastMessage = "The text reader could not finish that captured view. Try reading again."
+        if (!listening) speech.offer(Announcement(lastMessage, SpeechPriority.TASK, kind = AnnouncementKind.STATUS,
+            dedupKey = "ocr-failure:${scene.goal.startedAtMs}"))
     }
+    fun chooseDetectorMode(mode: DetectorMode) { detectorMode = mode }
+    fun requestedProfile(): DetectorProfile = PerceptionPolicy.detectorProfile(detectorMode, goalType, inspectUntilMs, now())
     private fun accept(update: EngineUpdate) {
-        scene = update; goalType = update.goal.type
+        scene = update; goalType = PerceptionPolicy.operationalGoal(update.goal)
         decisions = update.diagnostics
         update.announcements.forEach { event ->
             lastMessage = event.text
@@ -187,12 +188,16 @@ class SightController(private val context: Context) : AutoCloseable {
         val value = text.trim().take(300)
         if (value.isEmpty()) return
         speech.stop()
+        when (val deletion = PerceptionPolicy.memoryDeletion(value)) {
+            MemoryDeletion.All -> { clearMemory(); return }
+            is MemoryDeletion.Named -> { deleteLandmark(deletion.name); return }
+            null -> Unit
+        }
         when (value.lowercase()) {
             "mute", "quiet" -> { changeMuted(true); return }
             "unmute" -> { changeMuted(false); return }
             "repeat" -> { repeat(); return }
             "pause camera", "stop camera" -> { pause(); return }
-            "forget all", "delete all memories" -> { clearMemory(); return }
         }
         if (externalCommand(value)) return
         if (value.lowercase() in setOf("inspect", "inspect scene", "look carefully")) {
@@ -211,8 +216,14 @@ class SightController(private val context: Context) : AutoCloseable {
     }
     fun stopTalking() { speech.stop(); voice.cancel(); accept(engine.command("cancel", now())) }
     fun clearMemory() {
-        landmarkStore.clear(); savedLandmarks = emptyList(); accept(engine.clearMemory(now()))
-        lastMessage = "Saved landmarks deleted."
+        speech.clearHistory()
+        speechSamples.clear(); speechDecisions.clear()
+        val storageCleared = try { landmarkStore.clear(); savedLandmarks = landmarkStore.load(); true }
+            catch (_: Exception) { false }
+        accept(engine.clearMemory(now()))
+        lastMessage = if (storageCleared) "Saved landmarks and session visual memories deleted."
+            else "Session visual memories deleted, but encrypted saved landmarks could not be deleted. Try again in Memory."
+        speech.offer(Announcement(lastMessage, SpeechPriority.USER_REQUEST, kind = AnnouncementKind.STATUS))
     }
     fun narrationProfile(profile: NarrationProfile) { accept(engine.setNarrationProfile(profile, now())) }
     fun speakProviderText(text: String) {
@@ -220,8 +231,24 @@ class SightController(private val context: Context) : AutoCloseable {
         speech.offer(Announcement(text, SpeechPriority.USER_REQUEST, kind = AnnouncementKind.STATUS))
     }
     fun deleteLandmark(name: String) {
-        try { landmarkStore.delete(name); savedLandmarks = landmarkStore.load(); accept(engine.command("forget $name", now())) }
-        catch (_: Exception) { lastMessage = "Could not delete this saved landmark." }
+        val hadSession = scene.memory.any { it.name.equals(name, ignoreCase = true) }
+        var hadSaved = false
+        var storageDeleted = true
+        try {
+            val storedName = landmarkStore.load().firstOrNull { it.name.equals(name, ignoreCase = true) }?.name
+            hadSaved = storedName != null
+            if (storedName != null) landmarkStore.delete(storedName)
+            savedLandmarks = landmarkStore.load()
+        } catch (_: Exception) {
+            storageDeleted = false
+        }
+        accept(engine.command("forget $name", now()))
+        lastMessage = when {
+            !storageDeleted -> "Session recall for $name was cleared, but its encrypted saved record could not be deleted and may still be present."
+            hadSaved || hadSession -> "Deleted the saved and session memory named $name."
+            else -> "There is no saved or session memory named $name."
+        }
+        speech.offer(Announcement(lastMessage, SpeechPriority.USER_REQUEST, kind = AnnouncementKind.STATUS))
     }
     fun recallSaved(item: SavedLandmark) {
         val timestamp = DateFormat.getDateTimeInstance().format(Date(item.savedAtEpochMs))

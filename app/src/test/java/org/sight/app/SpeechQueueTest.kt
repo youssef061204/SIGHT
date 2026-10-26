@@ -171,4 +171,17 @@ class SpeechQueueTest {
         assertFalse(denied.interrupted)
         assertEquals(current, queue.current)
     }
+
+    @Test fun `privacy clear removes repeat history active work pending work and dedup text`() {
+        val queue = SpeechQueue()
+        val privateEvent = event("private transcript")
+        queue.offer(privateEvent, 0, accept)
+        val active = queue.next(1, accept)!!
+        queue.started(active.token, 2, accept)
+        queue.offer(event("private queued response"), 3, accept)
+        queue.clearHistory(4)
+        assertNull(queue.lastStarted); assertNull(queue.current); assertEquals(0, queue.size)
+        assertEquals(SpeechStartResult.IGNORED, queue.started(active.token, 5, accept))
+        assertTrue(queue.offer(privateEvent, 6, accept).accepted) // No retained dedup key after explicit deletion.
+    }
 }

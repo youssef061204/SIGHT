@@ -35,6 +35,8 @@ class SightEngine(
     private var lastTextEvidence: Evidence? = null
     private var lastOcrCallbackEvidence: Evidence? = null
     private var lastTextIsSnapshot = false
+    private var textClearCutoffMs = -1L
+    private var textAdmissionEnabled = true
     private var lastTextBlocks: List<String> = emptyList()
     private var narrationProfile = NarrationProfile.STANDARD
     private var readIntent = ReadIntent.ALL
@@ -83,7 +85,7 @@ class SightEngine(
         world.observe(entities, evidence, nowMs)
         trace("FRAME_ACCEPTED", "Fresh source evidence admitted to the image tracker.", evidence)
         if (evidence.timeBasis == TimeBasis.RECEIPT) trace("RECEIPT_TIME_ONLY", "Only time since camera-frame receipt is gated; exposure clock alignment and sensor-to-receipt delay are unverified.", evidence)
-        val texts = frame.ocr.filter { it.text.isNotBlank() && (it.confidence == null || it.confidence >= 0.5f) }
+        val texts = (if (textAdmissionEnabled && evidence.capturedAtMs > textClearCutoffMs) frame.ocr else emptyList()).filter { it.text.isNotBlank() && (it.confidence == null || it.confidence >= 0.5f) }
             .sortedWith(compareBy<TextObservation> { it.box.top }.thenBy { it.box.left }).take(100)
         if (texts.isNotEmpty()) {
             lastTextBlocks = texts.flatMap { it.text.trim().split(Regex("\\n\\s*\\n")) }.filter { it.isNotBlank() }.take(100)
@@ -122,6 +124,8 @@ class SightEngine(
                 "OCR_SESSION_CHANGED" to "OCR belongs to another camera session or oriented geometry."
             evidence.capturedAtMs > nowMs -> "OCR_FUTURE" to "OCR capture timestamp is ahead of the shared clock."
             nowMs - evidence.capturedAtMs > config.maxOcrAgeMs -> "OCR_TOO_OLD" to "Captured text exceeded the separately bounded snapshot age."
+            evidence.capturedAtMs <= textClearCutoffMs -> "OCR_MEMORY_CLEARED" to "OCR was captured at or before the user's text-memory deletion."
+            !textAdmissionEnabled -> "OCR_NOT_REQUESTED" to "A new explicit Read request is required after text-memory deletion."
             currentGoal.type != GoalType.READ || currentGoal.phase != GoalPhase.SEARCHING -> "OCR_GOAL_INACTIVE" to "No pending Read task can consume this OCR result."
             evidence.capturedAtMs < currentGoal.startedAtMs -> "OCR_PRE_GOAL" to "OCR was captured before the current Read request."
             prior != null && prior.sourceId == evidence.sourceId && prior.geometryEpoch == evidence.geometryEpoch &&
@@ -227,14 +231,13 @@ class SightEngine(
                     else -> ReadIntent.ALL
                 }
                 currentGoal = GoalState(GoalType.READ, GoalPhase.SEARCHING, message = "Waiting for fresh recognized text.", startedAtMs = nowMs, deadlineAtMs = nowMs + config.readTimeoutMs)
+                textAdmissionEnabled = true
                 lastOcrHintAtMs = null
                 listOf(status("Reading started. Hold the camera steady with text in view."))
             }
             command.startsWith("remember ") || command.startsWith("save this as ") -> remember(command, nowMs)
             command in setOf("forget everything", "forget all", "delete memories", "clear memory") -> {
-                memories.clear()
-                world.clear(nowMs)
-                listOf(status("Session landmark memories deleted."))
+                clearAllMemory(nowMs)
             }
             command.startsWith("forget ") -> {
                 val name = command.removePrefix("forget ").trim()
@@ -263,9 +266,20 @@ class SightEngine(
     @Synchronized
     fun clearMemory(nowMs: Long): EngineUpdate {
         if (!advance(nowMs)) return update(emptyList())
-        memories.clear()
-        world.clear(nowMs)
-        return update(listOf(status("Session landmark memories deleted.")))
+        return update(clearAllMemory(nowMs))
+    }
+
+    private fun clearAllMemory(nowMs: Long): List<Announcement> {
+        memories.clear(); world.clear(nowMs)
+        lastText = null; lastTextEvidence = null; lastTextBlocks = emptyList(); lastTextIsSnapshot = false
+        lastOcrCallbackEvidence = null; textClearCutoffMs = maxOf(textClearCutoffMs, nowMs); textAdmissionEnabled = false
+        lastOcrHintAtMs = null
+        if (resumableGoal?.type == GoalType.READ) resumableGoal = null
+        if (currentGoal.type == GoalType.READ && currentGoal.phase in setOf(GoalPhase.SEARCHING, GoalPhase.VERIFYING))
+            currentGoal = currentGoal.copy(phase = GoalPhase.CANCELLED, message = "Reading cancelled by memory deletion. A new Read request is required.")
+        traces.clear()
+        trace("MEMORY_CLEARED", "Named, temporal and captured-text session memories deleted; pre-deletion OCR cannot return.")
+        return listOf(status("Session visual memories and captured text deleted."))
     }
 
     /** Final speech admission check; call again immediately before speaking queued live output. */
@@ -275,6 +289,7 @@ class SightEngine(
         if (announcement.kind == AnnouncementKind.MEMORY) return announcement.evidence?.let { it.capturedAtMs <= nowMs } ?: true
         if (announcement.kind in setOf(AnnouncementKind.MEMORY, AnnouncementKind.STATUS, AnnouncementKind.UNCERTAINTY) && announcement.evidence == null) return true
         val evidence = announcement.evidence ?: return false
+        if (announcement.kind == AnnouncementKind.OCR && (evidence != lastTextEvidence || evidence.capturedAtMs <= textClearCutoffMs)) return false
         if (currentGoal.phase in setOf(GoalPhase.CANCELLED, GoalPhase.PAUSED)) return false
         if (announcement.kind == AnnouncementKind.OCR && lastTextIsSnapshot && evidence == lastTextEvidence) {
             return inputAvailable && evidence.sourceId == sourceId && evidence.geometryEpoch == lastFrame?.geometryEpoch &&
@@ -428,6 +443,7 @@ class SightEngine(
                 listOf(status("Rechecking ${currentGoal.target}. Waiting for newly captured matching frames."))
             }
             GoalType.READ -> {
+                textAdmissionEnabled = true
                 currentGoal = currentGoal.copy(phase = GoalPhase.SEARCHING, startedAtMs = nowMs, deadlineAtMs = nowMs + config.readTimeoutMs)
                 listOf(status("Rechecking the text in a newly captured view. Hold the camera steady."))
             }
@@ -532,6 +548,7 @@ class SightEngine(
         return when (previous.type) {
             GoalType.FIND -> startFind(previous.target.orEmpty(), nowMs)
             GoalType.READ -> {
+                textAdmissionEnabled = true
                 currentGoal = previous.copy(phase = GoalPhase.SEARCHING, startedAtMs = nowMs, deadlineAtMs = nowMs + config.readTimeoutMs)
                 listOf(status("Reading resumed. Waiting for fresh recognized text."))
             }

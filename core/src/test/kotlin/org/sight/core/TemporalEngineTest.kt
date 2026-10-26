@@ -288,4 +288,44 @@ class TemporalEngineTest {
         assertTrue(uncertain.entities.single().visible)
         assertFalse(engine.isAnnouncementValid(narration, 300))
     }
+
+    @Test fun `forget all clears OCR transcript blocks and legacy admission while preserving fresh object input`() {
+        val engine = SightEngine()
+        engine.command("read", 0)
+        val privateRead = engine.onFrame(FrameObservation(Evidence(1, 100), listOf(chair()), listOf(TextObservation("PRIVATE ORIGINAL", left))), 100)
+        val legacy = privateRead.announcements.single()
+        assertTrue(engine.isAnnouncementValid(legacy, 100))
+        engine.command("remember this as private label", 110)
+        val cleared = engine.clearMemory(200)
+        assertNull(cleared.extractedText); assertNull(cleared.textEvidence)
+        assertEquals(listOf("MEMORY_CLEARED"), cleared.diagnostics.map { it.code })
+        assertFalse(engine.isAnnouncementValid(legacy, 200))
+        assertTrue(engine.command("repeat text", 210).announcements.single().text.contains("No recognized text"))
+        assertTrue(engine.command("read the first block", 220).announcements.single().text.contains("do not have recognized text block"))
+        val unattended = engine.onFrame(FrameObservation(Evidence(2, 300), listOf(chair()), listOf(TextObservation("PRIVATE LATE FRAME", left))), 300)
+        assertNull(unattended.extractedText)
+        assertTrue(unattended.entities.any { it.visible })
+        engine.command("read", 400)
+        val newRead = engine.onFrame(FrameObservation(Evidence(3, 500), listOf(chair()), listOf(TextObservation("NEW REQUEST", left))), 500)
+        assertEquals("NEW REQUEST", newRead.extractedText)
+        assertFalse(engine.isAnnouncementValid(legacy, 500))
+    }
+
+    @Test fun `memory deletion cancels pending read and strictly rejects pre-clear and same-millisecond OCR`() {
+        val engine = SightEngine()
+        engine.command("read", 0)
+        engine.onFrame(FrameObservation(Evidence(1, 100, modelId = "detector"), emptyList()), 100)
+        val cleared = engine.command("forget everything", 200)
+        assertEquals(GoalPhase.CANCELLED, cleared.goal.phase)
+        val sameMs = engine.onTextObservation(Evidence(2, 200, modelId = "ocr"), listOf(TextObservation("PRIVATE LATE", left)), 250)
+        assertNull(sameMs.extractedText)
+        assertTrue(sameMs.diagnostics.any { it.code == "OCR_MEMORY_CLEARED" })
+        assertNull(engine.onTextObservation(Evidence(3, 300, modelId = "ocr"), listOf(TextObservation("UNREQUESTED", left)), 350).extractedText)
+        engine.command("read", 400)
+        val fresh = engine.onTextObservation(Evidence(4, 450, modelId = "ocr"), listOf(TextObservation("FRESH", left)), 500)
+        assertEquals("FRESH", fresh.extractedText)
+        assertTrue(engine.isAnnouncementValid(fresh.announcements.single(), 500))
+        assertNull(engine.clearMemory(600).extractedText)
+        assertFalse(engine.isAnnouncementValid(fresh.announcements.single(), 600))
+    }
 }
