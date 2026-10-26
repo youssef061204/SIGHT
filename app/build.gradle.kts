@@ -1,5 +1,3 @@
-import java.security.MessageDigest
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -12,8 +10,8 @@ android {
         applicationId = "org.sight.app"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 3
+        versionName = "3.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures { compose = true; buildConfig = true }
@@ -25,6 +23,7 @@ android {
 }
 dependencies {
     implementation(project(":core"))
+    implementation(project(":perception"))
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
@@ -37,7 +36,9 @@ dependencies {
     implementation("androidx.camera:camera-camera2:1.4.2")
     implementation("androidx.camera:camera-lifecycle:1.4.2")
     implementation("androidx.camera:camera-view:1.4.2")
-    implementation("com.google.mediapipe:tasks-vision:1.1.1")
+    // CameraX exposes ListenableFuture; MediaPipe's implementation-only Guava no longer exports it.
+    // Match the existing resolved runtime rather than selecting Guava's empty conflict-avoidance jar.
+    implementation("com.google.guava:guava:32.0.1-jre")
     implementation("com.google.mlkit:text-recognition:16.0.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
     testImplementation("junit:junit:4.13.2")
@@ -49,16 +50,3 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
 
-val verifyModel by tasks.registering {
-    val model = layout.projectDirectory.file("src/main/assets/efficientdet_lite0_int8.tflite")
-    inputs.file(model)
-    doLast {
-        check(model.asFile.isFile) { "Run scripts/fetch-models.ps1 before building." }
-        val digest = MessageDigest.getInstance("SHA-256").digest(model.asFile.readBytes())
-            .joinToString("") { "%02x".format(it) }
-        check(digest == "0720bf247bd76e6594ea28fa9c6f7c5242be774818997dbbeffc4da460c723bb") {
-            "Model checksum mismatch; refusing to package unversioned inference weights."
-        }
-    }
-}
-tasks.named("preBuild") { dependsOn(verifyModel) }

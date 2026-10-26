@@ -1,0 +1,23 @@
+{
+  "purpose": "Verify fresh --output propagates to isolated worker subprocesses without altering sealed selection",
+  "original_selection": "evaluation/results/v3-detection/selection-decision.json",
+  "reproduction_output": ".tools/v3-selection-cli-smoke",
+  "rows": [
+    {
+      "model": "efficientdet_lite0_int8",
+      "byte_identical": true,
+      "sha256": "20e6e5f23ec3acb44c3ff6d1121828e8acc4f8da2e00d79d2470a884be26f27a"
+    },
+    {
+      "model": "efficientdet_lite2_int8",
+      "byte_identical": true,
+      "sha256": "737097905050ba0cfc36c481f70f984f70a44a511fc809c99b7a929cef5a9a4f"
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "byte_identical": true,
+      "sha256": "455baec0dafbc63cf7c9a3664c295ee0bca5aedf9226779164a53bb1223a959e"
+    }
+  ],
+  "all_passed": true
+}

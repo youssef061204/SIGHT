@@ -1,0 +1,24 @@
+{
+  "experiment_id": "desktop-coco-smoke-v2",
+  "model_ids": [
+    "efficientdet_lite0_int8",
+    "ssd_mobilenet_v2_float32"
+  ],
+  "dataset_manifest": "evaluation/data/manifest.json",
+  "annotation_path": "evaluation/data/instances_smoke.json",
+  "running_mode": "IMAGE",
+  "delegate": "CPU",
+  "warmup_calls": 5,
+  "repeats": 5,
+  "score_floor": 0.05,
+  "operating_score_threshold": 0.5,
+  "max_results": 100,
+  "iou_threshold": 0.5,
+  "variants": [
+    "clean",
+    "dim_035",
+    "motion_blur_15"
+  ],
+  "notes": "Fixed before first inference comparison. No tuning, no claim of smartphone or assistive performance. Perturbations are synthetic transforms of real photographs.",
+  "runtime_version": "1.1.1"
+}

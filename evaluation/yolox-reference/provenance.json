@@ -1,0 +1,36 @@
+{
+  "commit": "6ddff4824372906469a7fae2dc3206c7aa4bbaee",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "upstream_path": "yolox/data/data_augment.py",
+      "url": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/6ddff4824372906469a7fae2dc3206c7aa4bbaee/yolox/data/data_augment.py",
+      "local_path": "evaluation\\yolox-reference\\yolox__data__data_augment.py",
+      "sha256": "f99b0b1568dafde0acd99f0a1e27a33644885349834d55a9dc632fe691ee352d"
+    },
+    {
+      "upstream_path": "yolox/utils/demo_utils.py",
+      "url": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/6ddff4824372906469a7fae2dc3206c7aa4bbaee/yolox/utils/demo_utils.py",
+      "local_path": "evaluation\\yolox-reference\\yolox__utils__demo_utils.py",
+      "sha256": "e1d6e1d263691ac15fdaa4f891efa83707da4af0fd895be122459105df3ee601"
+    },
+    {
+      "upstream_path": "demo/ONNXRuntime/onnx_inference.py",
+      "url": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/6ddff4824372906469a7fae2dc3206c7aa4bbaee/demo/ONNXRuntime/onnx_inference.py",
+      "local_path": "evaluation\\yolox-reference\\demo__ONNXRuntime__onnx_inference.py",
+      "sha256": "c51aa9e9a86d8561fe9e318e119a4fbe80d1f93639527b039f403d6adc65d68f"
+    },
+    {
+      "upstream_path": "yolox/data/datasets/coco_classes.py",
+      "url": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/6ddff4824372906469a7fae2dc3206c7aa4bbaee/yolox/data/datasets/coco_classes.py",
+      "local_path": "evaluation\\yolox-reference\\yolox__data__datasets__coco_classes.py",
+      "sha256": "b38193c481a73f1f674cedab9e551b15b39b1a7aaed3e09e16505362cc54ad51"
+    },
+    {
+      "upstream_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/6ddff4824372906469a7fae2dc3206c7aa4bbaee/LICENSE",
+      "local_path": "evaluation\\yolox-reference\\LICENSE",
+      "sha256": "0ec3668d3274bcf29e8a29e9576d5a2cd96fc78d3c5bec4387355a796e5d9088"
+    }
+  ]
+}

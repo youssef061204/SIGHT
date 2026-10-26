@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.core.SightEngineTest" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-10-25T20:12:48" hostname="YUNO" time="0.048">
+  <properties/>
+  <testcase name="numbered OCR recall distinguishes blocks from verified paragraphs" classname="org.sight.core.SightEngineTest" time="0.007"/>
+  <testcase name="category-gated one-to-one matching never assigns a detection twice" classname="org.sight.core.SightEngineTest" time="0.002"/>
+  <testcase name="timeouts abstain without asserting absence and cancel-resume resets verification" classname="org.sight.core.SightEngineTest" time="0.002"/>
+  <testcase name="unsupported classes and visual attributes never enter successful search" classname="org.sight.core.SightEngineTest" time="0.004"/>
+  <testcase name="narration waits for persistence and suppresses duplicates" classname="org.sight.core.SightEngineTest" time="0.001"/>
+  <testcase name="price reading labels pattern matches and missing dates abstain" classname="org.sight.core.SightEngineTest" time="0.01"/>
+  <testcase name="low confidence observations cannot verify a target" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="lost input invalidates speech and rejects captured work from prior lifecycle" classname="org.sight.core.SightEngineTest" time="0.002"/>
+  <testcase name="reading uses fresh OCR and preserves verbatim extracted evidence" classname="org.sight.core.SightEngineTest" time="0.002"/>
+  <testcase name="named memories are historical scene labels and never current locations" classname="org.sight.core.SightEngineTest" time="0.003"/>
+  <testcase name="source changes discard image identities and find candidate evidence" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="history tracks traces and memories are bounded" classname="org.sight.core.SightEngineTest" time="0.003"/>
+  <testcase name="one-frame false positive and category change cannot complete a find" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="stale future and out-of-order frames are rejected without updating scene" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="receipt-time evidence explicitly reduces capability" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="memory requires actual recent evidence" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="missing observations become invisible then expire" classname="org.sight.core.SightEngineTest" time="0.001"/>
+  <testcase name="clock regression cannot change accepted state" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="narration profiles limit utterance content without changing perception" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="unchanged scene remains quiet across long continuous observation" classname="org.sight.core.SightEngineTest" time="0.006"/>
+  <testcase name="placeholder detector labels cannot become spoken observations" classname="org.sight.core.SightEngineTest" time="0.001"/>
+  <testcase name="NaN confidence fails at boundary" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="invalid image bounds fail at boundary" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="queued directional speech expires when target moves or disappears" classname="org.sight.core.SightEngineTest" time="0.001"/>
+  <testcase name="image geometry reports image relationships without depth claims" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <testcase name="camera restart permits a fresh session counter and resets image identity" classname="org.sight.core.SightEngineTest" time="0.001"/>
+  <testcase name="find requires two distinct fresh frames after command" classname="org.sight.core.SightEngineTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -26,3 +26,13 @@ tasks.register<JavaExec>("replay") {
         args(input, output)
     }
 }
+
+tasks.register<JavaExec>("temporalEvaluation") {
+    workingDir = rootProject.projectDir
+    description = "Execute production temporal policies on identical explicitly synthetic labelled image trajectories."
+    group = "verification"
+    classpath = sourceSets.test.get().runtimeClasspath
+    mainClass.set("org.sight.core.TemporalEvaluation")
+    dependsOn(tasks.testClasses)
+    doFirst { args(providers.gradleProperty("temporalOutput").orElse("evaluation/results/temporal-v3").get()) }
+}

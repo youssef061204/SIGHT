@@ -1,5 +1,6 @@
 """Query OSV for pinned direct Maven and evaluation Python dependencies (no credentials)."""
 import datetime
+import argparse
 import json
 from pathlib import Path
 import re
@@ -7,9 +8,12 @@ from urllib.request import Request, urlopen
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", default="evaluation/results/dependency-audit.json")
+    args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
     packages = set()
-    for relative in ("app/build.gradle.kts", "core/build.gradle.kts", "integrations/meta/adapter/build.gradle.kts"):
+    for relative in ("app/build.gradle.kts", "core/build.gradle.kts", "perception/build.gradle.kts", "integrations/meta/adapter/build.gradle.kts"):
         text = (root / relative).read_text(encoding="utf-8")
         packages.update(("Maven", f"{group}:{artifact}", version) for group, artifact, version in
                         re.findall(r'"([\w.\-]+):([\w.\-]+):([\w.\-]+)"', text))
@@ -27,7 +31,8 @@ def main():
     output = {"schema": "sight.osv-direct-audit.v1", "executedAtUtc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "scope": "Pinned direct Maven coordinates and full evaluation Python lock; excludes resolved Maven transitives, native binary contents, OS and build plugins",
               "source": "https://osv.dev/", "packages": records}
-    target = root / "evaluation/results/dependency-audit.json"
+    target = root / args.output
+    target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     affected = [record for record in records if record["vulnerabilities"]]
     print(json.dumps({"queriedPackages": len(queries), "affectedPackages": len(affected),

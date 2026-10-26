@@ -1,0 +1,85 @@
+scenario	atMs	identity	category	left	top	right	bottom	detectorPresent	confidence
+translation_detector_misses	100	chair-A	chair	0.05	0.2	0.17	0.5	true	0.9
+translation_detector_misses	100	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	200	chair-A	chair	0.095	0.2	0.215	0.5	true	0.9
+translation_detector_misses	200	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	300	chair-A	chair	0.14	0.2	0.26	0.5	true	0.9
+translation_detector_misses	300	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	400	chair-A	chair	0.185	0.2	0.305	0.5	false	
+translation_detector_misses	400	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	500	chair-A	chair	0.23	0.2	0.35	0.5	true	0.9
+translation_detector_misses	500	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	600	chair-A	chair	0.275	0.2	0.395	0.5	true	0.9
+translation_detector_misses	600	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	700	chair-A	chair	0.32000002	0.2	0.44000003	0.5	false	
+translation_detector_misses	700	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	800	chair-A	chair	0.365	0.2	0.485	0.5	true	0.9
+translation_detector_misses	800	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	900	chair-A	chair	0.41000003	0.2	0.53000003	0.5	true	0.9
+translation_detector_misses	900	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	1000	chair-A	chair	0.45500004	0.2	0.57500005	0.5	true	0.9
+translation_detector_misses	1000	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	1100	chair-A	chair	0.5	0.2	0.62	0.5	true	0.9
+translation_detector_misses	1100	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+translation_detector_misses	1200	chair-A	chair	0.545	0.2	0.665	0.5	true	0.9
+translation_detector_misses	1200	bottle-B	bottle	0.8	0.2	0.9	0.5	true	0.9
+partial_occlusion_score_dip	100	chair-A	chair	0.1	0.2	0.25	0.6	true	0.9
+partial_occlusion_score_dip	200	chair-A	chair	0.115	0.2	0.26500002	0.6	true	0.9
+partial_occlusion_score_dip	300	chair-A	chair	0.13	0.2	0.28	0.6	true	0.9
+partial_occlusion_score_dip	400	chair-A	chair	0.145	0.2	0.29500002	0.6	true	0.55
+partial_occlusion_score_dip	500	chair-A	chair	0.16	0.2	0.26	0.6	true	0.55
+partial_occlusion_score_dip	600	chair-A	chair	0.175	0.2	0.275	0.6	true	0.9
+partial_occlusion_score_dip	700	chair-A	chair	0.19	0.2	0.34	0.6	true	0.9
+partial_occlusion_score_dip	800	chair-A	chair	0.205	0.2	0.35500002	0.6	true	0.9
+partial_occlusion_score_dip	900	chair-A	chair	0.22	0.2	0.37	0.6	true	0.9
+partial_occlusion_score_dip	1000	chair-A	chair	0.23499998	0.2	0.385	0.6	true	0.9
+same_category_crossing	100	chair-A	chair	0.1	0.2	0.22	0.5	true	0.9
+same_category_crossing	100	chair-B	chair	0.75	0.2	0.87	0.5	true	0.9
+same_category_crossing	200	chair-A	chair	0.15	0.2	0.27	0.5	true	0.9
+same_category_crossing	200	chair-B	chair	0.7	0.2	0.82	0.5	true	0.9
+same_category_crossing	300	chair-A	chair	0.2	0.2	0.32	0.5	true	0.9
+same_category_crossing	300	chair-B	chair	0.65	0.2	0.77	0.5	true	0.9
+same_category_crossing	400	chair-A	chair	0.25	0.2	0.37	0.5	true	0.9
+same_category_crossing	400	chair-B	chair	0.6	0.2	0.72	0.5	true	0.9
+same_category_crossing	500	chair-A	chair	0.3	0.2	0.42000002	0.5	true	0.9
+same_category_crossing	500	chair-B	chair	0.55	0.2	0.67	0.5	true	0.9
+same_category_crossing	600	chair-A	chair	0.35	0.2	0.47	0.5	true	0.9
+same_category_crossing	600	chair-B	chair	0.5	0.2	0.62	0.5	true	0.9
+same_category_crossing	700	chair-A	chair	0.4	0.2	0.52	0.5	true	0.9
+same_category_crossing	700	chair-B	chair	0.45	0.2	0.57	0.5	true	0.9
+same_category_crossing	800	chair-A	chair	0.45	0.2	0.57	0.5	true	0.9
+same_category_crossing	800	chair-B	chair	0.4	0.2	0.52	0.5	true	0.9
+same_category_crossing	900	chair-A	chair	0.5	0.2	0.62	0.5	true	0.9
+same_category_crossing	900	chair-B	chair	0.35	0.2	0.47	0.5	true	0.9
+same_category_crossing	1000	chair-A	chair	0.55	0.2	0.67	0.5	true	0.9
+same_category_crossing	1000	chair-B	chair	0.29999998	0.2	0.42	0.5	true	0.9
+same_category_crossing	1100	chair-A	chair	0.6	0.2	0.72	0.5	true	0.9
+same_category_crossing	1100	chair-B	chair	0.25	0.2	0.37	0.5	true	0.9
+same_category_crossing	1200	chair-A	chair	0.65000004	0.2	0.77000004	0.5	true	0.9
+same_category_crossing	1200	chair-B	chair	0.19999999	0.2	0.32	0.5	true	0.9
+long_gap_new_identity	100	chair-A	chair	0.1	0.2	0.3	0.6	true	0.9
+long_gap_new_identity	200	chair-A	chair	0.1	0.2	0.3	0.6	true	0.9
+long_gap_new_identity	300	chair-A	chair	0.1	0.2	0.3	0.6	true	0.9
+long_gap_new_identity	400	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	500	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	600	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	700	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	800	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	900	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	1000	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	1100	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	1200	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	1300	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	1400	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	1500	chair-A	chair	0.1	0.2	0.3	0.6	false	
+long_gap_new_identity	1600	chair-A	chair	0.1	0.2	0.3	0.6	true	0.9
+long_gap_new_identity	1700	chair-A	chair	0.1	0.2	0.3	0.6	true	0.9
+long_gap_new_identity	1800	chair-A	chair	0.1	0.2	0.3	0.6	true	0.9
+single_frame_false_positive	100	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9
+single_frame_false_positive	200	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9
+single_frame_false_positive	300	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9
+single_frame_false_positive	400	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9
+single_frame_false_positive	500	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9
+single_frame_false_positive	600	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9
+single_frame_false_positive	700	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9
+single_frame_false_positive	800	bottle-A	bottle	0.7	0.2	0.8	0.6	true	0.9

@@ -1,0 +1,2129 @@
+{
+  "samples": [
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 463690,
+      "repeat": 1,
+      "trial": 0,
+      "total_ms": 84.4205
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 463690,
+      "repeat": 1,
+      "trial": 0,
+      "total_ms": 225.4374
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 463690,
+      "repeat": 1,
+      "trial": 0,
+      "total_ms": 99.8407
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 210273,
+      "repeat": 1,
+      "trial": 1,
+      "total_ms": 230.0768
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 210273,
+      "repeat": 1,
+      "trial": 1,
+      "total_ms": 100.123
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 210273,
+      "repeat": 1,
+      "trial": 1,
+      "total_ms": 85.2791
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 398742,
+      "repeat": 1,
+      "trial": 2,
+      "total_ms": 97.5316
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 398742,
+      "repeat": 1,
+      "trial": 2,
+      "total_ms": 82.5095
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 398742,
+      "repeat": 1,
+      "trial": 2,
+      "total_ms": 220.479
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 312720,
+      "repeat": 1,
+      "trial": 3,
+      "total_ms": 80.06
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 312720,
+      "repeat": 1,
+      "trial": 3,
+      "total_ms": 198.6928
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 312720,
+      "repeat": 1,
+      "trial": 3,
+      "total_ms": 104.1912
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 248314,
+      "repeat": 1,
+      "trial": 4,
+      "total_ms": 218.0047
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 248314,
+      "repeat": 1,
+      "trial": 4,
+      "total_ms": 98.8729
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 248314,
+      "repeat": 1,
+      "trial": 4,
+      "total_ms": 84.9761
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 463690,
+      "repeat": 0,
+      "trial": 5,
+      "total_ms": 98.9178
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 463690,
+      "repeat": 0,
+      "trial": 5,
+      "total_ms": 83.2199
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 463690,
+      "repeat": 0,
+      "trial": 5,
+      "total_ms": 219.0988
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 188465,
+      "repeat": 1,
+      "trial": 6,
+      "total_ms": 84.1698
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 188465,
+      "repeat": 1,
+      "trial": 6,
+      "total_ms": 213.0569
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 188465,
+      "repeat": 1,
+      "trial": 6,
+      "total_ms": 100.3419
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 340894,
+      "repeat": 0,
+      "trial": 7,
+      "total_ms": 227.5284
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 340894,
+      "repeat": 0,
+      "trial": 7,
+      "total_ms": 99.0778
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 340894,
+      "repeat": 0,
+      "trial": 7,
+      "total_ms": 83.5533
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 88265,
+      "repeat": 0,
+      "trial": 8,
+      "total_ms": 95.7319
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 88265,
+      "repeat": 0,
+      "trial": 8,
+      "total_ms": 80.2421
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 88265,
+      "repeat": 0,
+      "trial": 8,
+      "total_ms": 225.5734
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 520871,
+      "repeat": 0,
+      "trial": 9,
+      "total_ms": 80.7749
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 520871,
+      "repeat": 0,
+      "trial": 9,
+      "total_ms": 215.9694
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 520871,
+      "repeat": 0,
+      "trial": 9,
+      "total_ms": 96.7854
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 187362,
+      "repeat": 0,
+      "trial": 10,
+      "total_ms": 220.1793
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 187362,
+      "repeat": 0,
+      "trial": 10,
+      "total_ms": 94.6993
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 187362,
+      "repeat": 0,
+      "trial": 10,
+      "total_ms": 79.991
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 393226,
+      "repeat": 0,
+      "trial": 11,
+      "total_ms": 98.6171
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 393226,
+      "repeat": 0,
+      "trial": 11,
+      "total_ms": 80.8712
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 393226,
+      "repeat": 0,
+      "trial": 11,
+      "total_ms": 207.6709
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 414795,
+      "repeat": 0,
+      "trial": 12,
+      "total_ms": 87.9776
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 414795,
+      "repeat": 0,
+      "trial": 12,
+      "total_ms": 213.5892
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 414795,
+      "repeat": 0,
+      "trial": 12,
+      "total_ms": 107.0161
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 579307,
+      "repeat": 1,
+      "trial": 13,
+      "total_ms": 217.2612
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 579307,
+      "repeat": 1,
+      "trial": 13,
+      "total_ms": 97.7483
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 579307,
+      "repeat": 1,
+      "trial": 13,
+      "total_ms": 80.4245
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 572517,
+      "repeat": 0,
+      "trial": 14,
+      "total_ms": 97.303
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 572517,
+      "repeat": 0,
+      "trial": 14,
+      "total_ms": 80.0344
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 572517,
+      "repeat": 0,
+      "trial": 14,
+      "total_ms": 211.4375
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 30504,
+      "repeat": 1,
+      "trial": 15,
+      "total_ms": 80.5657
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 30504,
+      "repeat": 1,
+      "trial": 15,
+      "total_ms": 214.6938
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 30504,
+      "repeat": 1,
+      "trial": 15,
+      "total_ms": 97.042
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 65350,
+      "repeat": 1,
+      "trial": 16,
+      "total_ms": 223.65
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 65350,
+      "repeat": 1,
+      "trial": 16,
+      "total_ms": 98.3751
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 65350,
+      "repeat": 1,
+      "trial": 16,
+      "total_ms": 82.9147
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 65350,
+      "repeat": 0,
+      "trial": 17,
+      "total_ms": 97.2026
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 65350,
+      "repeat": 0,
+      "trial": 17,
+      "total_ms": 83.4472
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 65350,
+      "repeat": 0,
+      "trial": 17,
+      "total_ms": 222.7729
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 15746,
+      "repeat": 1,
+      "trial": 18,
+      "total_ms": 80.159
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 15746,
+      "repeat": 1,
+      "trial": 18,
+      "total_ms": 205.5493
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 15746,
+      "repeat": 1,
+      "trial": 18,
+      "total_ms": 115.0769
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 189310,
+      "repeat": 0,
+      "trial": 19,
+      "total_ms": 217.6088
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 189310,
+      "repeat": 0,
+      "trial": 19,
+      "total_ms": 98.661
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 189310,
+      "repeat": 0,
+      "trial": 19,
+      "total_ms": 80.7069
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 352900,
+      "repeat": 0,
+      "trial": 20,
+      "total_ms": 101.0112
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 352900,
+      "repeat": 0,
+      "trial": 20,
+      "total_ms": 85.6986
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 352900,
+      "repeat": 0,
+      "trial": 20,
+      "total_ms": 224.9154
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 66231,
+      "repeat": 1,
+      "trial": 21,
+      "total_ms": 87.7345
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 66231,
+      "repeat": 1,
+      "trial": 21,
+      "total_ms": 210.6886
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 66231,
+      "repeat": 1,
+      "trial": 21,
+      "total_ms": 113.0333
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 78170,
+      "repeat": 1,
+      "trial": 22,
+      "total_ms": 223.0169
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 78170,
+      "repeat": 1,
+      "trial": 22,
+      "total_ms": 104.5776
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 78170,
+      "repeat": 1,
+      "trial": 22,
+      "total_ms": 85.7828
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 325527,
+      "repeat": 1,
+      "trial": 23,
+      "total_ms": 97.2009
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 325527,
+      "repeat": 1,
+      "trial": 23,
+      "total_ms": 82.1674
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 325527,
+      "repeat": 1,
+      "trial": 23,
+      "total_ms": 221.7429
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 441442,
+      "repeat": 0,
+      "trial": 24,
+      "total_ms": 80.3096
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 441442,
+      "repeat": 0,
+      "trial": 24,
+      "total_ms": 213.3873
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 441442,
+      "repeat": 0,
+      "trial": 24,
+      "total_ms": 102.087
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 456292,
+      "repeat": 0,
+      "trial": 25,
+      "total_ms": 219.7915
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 456292,
+      "repeat": 0,
+      "trial": 25,
+      "total_ms": 96.7837
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 456292,
+      "repeat": 0,
+      "trial": 25,
+      "total_ms": 80.6348
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 187362,
+      "repeat": 1,
+      "trial": 26,
+      "total_ms": 95.4145
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 187362,
+      "repeat": 1,
+      "trial": 26,
+      "total_ms": 82.7912
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 187362,
+      "repeat": 1,
+      "trial": 26,
+      "total_ms": 211.2457
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 343937,
+      "repeat": 1,
+      "trial": 27,
+      "total_ms": 79.709
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 343937,
+      "repeat": 1,
+      "trial": 27,
+      "total_ms": 216.6817
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 343937,
+      "repeat": 1,
+      "trial": 27,
+      "total_ms": 93.8965
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 526728,
+      "repeat": 0,
+      "trial": 28,
+      "total_ms": 213.6421
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 526728,
+      "repeat": 0,
+      "trial": 28,
+      "total_ms": 95.8661
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 526728,
+      "repeat": 0,
+      "trial": 28,
+      "total_ms": 82.5833
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 352900,
+      "repeat": 1,
+      "trial": 29,
+      "total_ms": 98.5495
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 352900,
+      "repeat": 1,
+      "trial": 29,
+      "total_ms": 83.8909
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 352900,
+      "repeat": 1,
+      "trial": 29,
+      "total_ms": 218.8785
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 338191,
+      "repeat": 1,
+      "trial": 30,
+      "total_ms": 82.2154
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 338191,
+      "repeat": 1,
+      "trial": 30,
+      "total_ms": 210.4227
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 338191,
+      "repeat": 1,
+      "trial": 30,
+      "total_ms": 96.8694
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 59920,
+      "repeat": 1,
+      "trial": 31,
+      "total_ms": 215.154
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 59920,
+      "repeat": 1,
+      "trial": 31,
+      "total_ms": 96.7804
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 59920,
+      "repeat": 1,
+      "trial": 31,
+      "total_ms": 81.0612
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 472623,
+      "repeat": 1,
+      "trial": 32,
+      "total_ms": 95.9075
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 472623,
+      "repeat": 1,
+      "trial": 32,
+      "total_ms": 80.7599
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 472623,
+      "repeat": 1,
+      "trial": 32,
+      "total_ms": 218.1145
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 504074,
+      "repeat": 0,
+      "trial": 33,
+      "total_ms": 83.1164
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 504074,
+      "repeat": 0,
+      "trial": 33,
+      "total_ms": 207.3448
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 504074,
+      "repeat": 0,
+      "trial": 33,
+      "total_ms": 95.3414
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 12280,
+      "repeat": 0,
+      "trial": 34,
+      "total_ms": 214.1732
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 12280,
+      "repeat": 0,
+      "trial": 34,
+      "total_ms": 95.1901
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 12280,
+      "repeat": 0,
+      "trial": 34,
+      "total_ms": 80.9092
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 286553,
+      "repeat": 1,
+      "trial": 35,
+      "total_ms": 97.8922
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 286553,
+      "repeat": 1,
+      "trial": 35,
+      "total_ms": 81.8493
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 286553,
+      "repeat": 1,
+      "trial": 35,
+      "total_ms": 220.0033
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 393226,
+      "repeat": 1,
+      "trial": 36,
+      "total_ms": 84.7216
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 393226,
+      "repeat": 1,
+      "trial": 36,
+      "total_ms": 209.023
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 393226,
+      "repeat": 1,
+      "trial": 36,
+      "total_ms": 94.5804
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 198641,
+      "repeat": 0,
+      "trial": 37,
+      "total_ms": 211.6285
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 198641,
+      "repeat": 0,
+      "trial": 37,
+      "total_ms": 96.8976
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 198641,
+      "repeat": 0,
+      "trial": 37,
+      "total_ms": 82.9245
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 520871,
+      "repeat": 1,
+      "trial": 38,
+      "total_ms": 96.4343
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 520871,
+      "repeat": 1,
+      "trial": 38,
+      "total_ms": 81.4238
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 520871,
+      "repeat": 1,
+      "trial": 38,
+      "total_ms": 217.013
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 309655,
+      "repeat": 1,
+      "trial": 39,
+      "total_ms": 81.5837
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 309655,
+      "repeat": 1,
+      "trial": 39,
+      "total_ms": 207.849
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 309655,
+      "repeat": 1,
+      "trial": 39,
+      "total_ms": 96.6001
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 49759,
+      "repeat": 0,
+      "trial": 40,
+      "total_ms": 216.4706
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 49759,
+      "repeat": 0,
+      "trial": 40,
+      "total_ms": 100.6231
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 49759,
+      "repeat": 0,
+      "trial": 40,
+      "total_ms": 82.3422
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 479126,
+      "repeat": 1,
+      "trial": 41,
+      "total_ms": 97.1343
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 479126,
+      "repeat": 1,
+      "trial": 41,
+      "total_ms": 81.7548
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 479126,
+      "repeat": 1,
+      "trial": 41,
+      "total_ms": 213.7343
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 484415,
+      "repeat": 0,
+      "trial": 42,
+      "total_ms": 80.0022
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 484415,
+      "repeat": 0,
+      "trial": 42,
+      "total_ms": 210.8762
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 484415,
+      "repeat": 0,
+      "trial": 42,
+      "total_ms": 96.5155
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 248314,
+      "repeat": 0,
+      "trial": 43,
+      "total_ms": 217.8501
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 248314,
+      "repeat": 0,
+      "trial": 43,
+      "total_ms": 98.5453
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 248314,
+      "repeat": 0,
+      "trial": 43,
+      "total_ms": 84.5257
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 446207,
+      "repeat": 1,
+      "trial": 44,
+      "total_ms": 97.5644
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 446207,
+      "repeat": 1,
+      "trial": 44,
+      "total_ms": 85.557
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 446207,
+      "repeat": 1,
+      "trial": 44,
+      "total_ms": 216.2675
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 59920,
+      "repeat": 0,
+      "trial": 45,
+      "total_ms": 80.3697
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 59920,
+      "repeat": 0,
+      "trial": 45,
+      "total_ms": 215.618
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 59920,
+      "repeat": 0,
+      "trial": 45,
+      "total_ms": 121.3591
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 572620,
+      "repeat": 0,
+      "trial": 46,
+      "total_ms": 220.4746
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 572620,
+      "repeat": 0,
+      "trial": 46,
+      "total_ms": 100.4834
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 572620,
+      "repeat": 0,
+      "trial": 46,
+      "total_ms": 86.154
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 499768,
+      "repeat": 1,
+      "trial": 47,
+      "total_ms": 104.8551
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 499768,
+      "repeat": 1,
+      "trial": 47,
+      "total_ms": 80.4495
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 499768,
+      "repeat": 1,
+      "trial": 47,
+      "total_ms": 218.2369
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 58655,
+      "repeat": 1,
+      "trial": 48,
+      "total_ms": 82.4924
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 58655,
+      "repeat": 1,
+      "trial": 48,
+      "total_ms": 197.1175
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 58655,
+      "repeat": 1,
+      "trial": 48,
+      "total_ms": 91.2979
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 504074,
+      "repeat": 1,
+      "trial": 49,
+      "total_ms": 214.199
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 504074,
+      "repeat": 1,
+      "trial": 49,
+      "total_ms": 95.7619
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 504074,
+      "repeat": 1,
+      "trial": 49,
+      "total_ms": 80.8741
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 78170,
+      "repeat": 0,
+      "trial": 50,
+      "total_ms": 98.7962
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 78170,
+      "repeat": 0,
+      "trial": 50,
+      "total_ms": 82.7878
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 78170,
+      "repeat": 0,
+      "trial": 50,
+      "total_ms": 225.6579
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 340894,
+      "repeat": 1,
+      "trial": 51,
+      "total_ms": 82.2106
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 340894,
+      "repeat": 1,
+      "trial": 51,
+      "total_ms": 199.3322
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 340894,
+      "repeat": 1,
+      "trial": 51,
+      "total_ms": 97.1135
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 210273,
+      "repeat": 0,
+      "trial": 52,
+      "total_ms": 228.4499
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 210273,
+      "repeat": 0,
+      "trial": 52,
+      "total_ms": 103.2265
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 210273,
+      "repeat": 0,
+      "trial": 52,
+      "total_ms": 89.0117
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 313130,
+      "repeat": 0,
+      "trial": 53,
+      "total_ms": 100.0677
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 313130,
+      "repeat": 0,
+      "trial": 53,
+      "total_ms": 87.306
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 313130,
+      "repeat": 0,
+      "trial": 53,
+      "total_ms": 226.0437
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 188465,
+      "repeat": 0,
+      "trial": 54,
+      "total_ms": 88.0826
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 188465,
+      "repeat": 0,
+      "trial": 54,
+      "total_ms": 210.2762
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 188465,
+      "repeat": 0,
+      "trial": 54,
+      "total_ms": 103.6311
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 414795,
+      "repeat": 1,
+      "trial": 55,
+      "total_ms": 219.3347
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 414795,
+      "repeat": 1,
+      "trial": 55,
+      "total_ms": 103.5133
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 414795,
+      "repeat": 1,
+      "trial": 55,
+      "total_ms": 89.9509
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 286553,
+      "repeat": 0,
+      "trial": 56,
+      "total_ms": 97.2393
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 286553,
+      "repeat": 0,
+      "trial": 56,
+      "total_ms": 79.3882
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 286553,
+      "repeat": 0,
+      "trial": 56,
+      "total_ms": 221.3029
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 479126,
+      "repeat": 0,
+      "trial": 57,
+      "total_ms": 84.5238
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 479126,
+      "repeat": 0,
+      "trial": 57,
+      "total_ms": 217.1387
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 479126,
+      "repeat": 0,
+      "trial": 57,
+      "total_ms": 97.9023
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 58655,
+      "repeat": 0,
+      "trial": 58,
+      "total_ms": 218.0444
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 58655,
+      "repeat": 0,
+      "trial": 58,
+      "total_ms": 100.2085
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 58655,
+      "repeat": 0,
+      "trial": 58,
+      "total_ms": 81.9226
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 198641,
+      "repeat": 1,
+      "trial": 59,
+      "total_ms": 98.453
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 198641,
+      "repeat": 1,
+      "trial": 59,
+      "total_ms": 80.5566
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 198641,
+      "repeat": 1,
+      "trial": 59,
+      "total_ms": 219.1296
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 6012,
+      "repeat": 1,
+      "trial": 60,
+      "total_ms": 80.1825
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 6012,
+      "repeat": 1,
+      "trial": 60,
+      "total_ms": 204.3642
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 6012,
+      "repeat": 1,
+      "trial": 60,
+      "total_ms": 94.6476
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 312720,
+      "repeat": 0,
+      "trial": 61,
+      "total_ms": 218.7868
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 312720,
+      "repeat": 0,
+      "trial": 61,
+      "total_ms": 96.5084
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 312720,
+      "repeat": 0,
+      "trial": 61,
+      "total_ms": 81.0169
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 338191,
+      "repeat": 0,
+      "trial": 62,
+      "total_ms": 96.8883
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 338191,
+      "repeat": 0,
+      "trial": 62,
+      "total_ms": 81.6893
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 338191,
+      "repeat": 0,
+      "trial": 62,
+      "total_ms": 217.5039
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 256916,
+      "repeat": 0,
+      "trial": 63,
+      "total_ms": 82.0897
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 256916,
+      "repeat": 0,
+      "trial": 63,
+      "total_ms": 212.5428
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 256916,
+      "repeat": 0,
+      "trial": 63,
+      "total_ms": 98.103
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 15746,
+      "repeat": 0,
+      "trial": 64,
+      "total_ms": 214.7918
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 15746,
+      "repeat": 0,
+      "trial": 64,
+      "total_ms": 94.4422
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 15746,
+      "repeat": 0,
+      "trial": 64,
+      "total_ms": 80.1363
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 189310,
+      "repeat": 1,
+      "trial": 65,
+      "total_ms": 94.5427
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 189310,
+      "repeat": 1,
+      "trial": 65,
+      "total_ms": 81.2375
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 189310,
+      "repeat": 1,
+      "trial": 65,
+      "total_ms": 214.792
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 526728,
+      "repeat": 1,
+      "trial": 66,
+      "total_ms": 81.746
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 526728,
+      "repeat": 1,
+      "trial": 66,
+      "total_ms": 213.3519
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 526728,
+      "repeat": 1,
+      "trial": 66,
+      "total_ms": 126.1751
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 79651,
+      "repeat": 1,
+      "trial": 67,
+      "total_ms": 216.8393
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 79651,
+      "repeat": 1,
+      "trial": 67,
+      "total_ms": 94.5841
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 79651,
+      "repeat": 1,
+      "trial": 67,
+      "total_ms": 78.7549
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 456292,
+      "repeat": 1,
+      "trial": 68,
+      "total_ms": 92.0684
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 456292,
+      "repeat": 1,
+      "trial": 68,
+      "total_ms": 77.251
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 456292,
+      "repeat": 1,
+      "trial": 68,
+      "total_ms": 215.7202
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 398742,
+      "repeat": 0,
+      "trial": 69,
+      "total_ms": 82.3767
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 398742,
+      "repeat": 0,
+      "trial": 69,
+      "total_ms": 215.5348
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 398742,
+      "repeat": 0,
+      "trial": 69,
+      "total_ms": 97.8264
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 441442,
+      "repeat": 1,
+      "trial": 70,
+      "total_ms": 216.6157
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 441442,
+      "repeat": 1,
+      "trial": 70,
+      "total_ms": 73.8859
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 441442,
+      "repeat": 1,
+      "trial": 70,
+      "total_ms": 79.0429
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 309655,
+      "repeat": 0,
+      "trial": 71,
+      "total_ms": 98.0054
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 309655,
+      "repeat": 0,
+      "trial": 71,
+      "total_ms": 83.6588
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 309655,
+      "repeat": 0,
+      "trial": 71,
+      "total_ms": 219.3901
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 6012,
+      "repeat": 0,
+      "trial": 72,
+      "total_ms": 80.012
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 6012,
+      "repeat": 0,
+      "trial": 72,
+      "total_ms": 213.237
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 6012,
+      "repeat": 0,
+      "trial": 72,
+      "total_ms": 95.6787
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 12280,
+      "repeat": 1,
+      "trial": 73,
+      "total_ms": 214.6698
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 12280,
+      "repeat": 1,
+      "trial": 73,
+      "total_ms": 95.1894
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 12280,
+      "repeat": 1,
+      "trial": 73,
+      "total_ms": 79.9319
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 343937,
+      "repeat": 0,
+      "trial": 74,
+      "total_ms": 96.9373
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 343937,
+      "repeat": 0,
+      "trial": 74,
+      "total_ms": 81.5673
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 343937,
+      "repeat": 0,
+      "trial": 74,
+      "total_ms": 221.1279
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 572517,
+      "repeat": 1,
+      "trial": 75,
+      "total_ms": 83.133
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 572517,
+      "repeat": 1,
+      "trial": 75,
+      "total_ms": 218.6641
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 572517,
+      "repeat": 1,
+      "trial": 75,
+      "total_ms": 96.443
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 213224,
+      "repeat": 1,
+      "trial": 76,
+      "total_ms": 224.5782
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 213224,
+      "repeat": 1,
+      "trial": 76,
+      "total_ms": 101.2435
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 213224,
+      "repeat": 1,
+      "trial": 76,
+      "total_ms": 85.1569
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 402346,
+      "repeat": 0,
+      "trial": 77,
+      "total_ms": 101.3862
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 402346,
+      "repeat": 0,
+      "trial": 77,
+      "total_ms": 82.5195
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 402346,
+      "repeat": 0,
+      "trial": 77,
+      "total_ms": 229.9933
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 446207,
+      "repeat": 0,
+      "trial": 78,
+      "total_ms": 87.1925
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 446207,
+      "repeat": 0,
+      "trial": 78,
+      "total_ms": 216.5454
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 446207,
+      "repeat": 0,
+      "trial": 78,
+      "total_ms": 94.8746
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 73118,
+      "repeat": 0,
+      "trial": 79,
+      "total_ms": 216.9279
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 73118,
+      "repeat": 0,
+      "trial": 79,
+      "total_ms": 123.3313
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 73118,
+      "repeat": 0,
+      "trial": 79,
+      "total_ms": 83.3704
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 73118,
+      "repeat": 1,
+      "trial": 80,
+      "total_ms": 101.706
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 73118,
+      "repeat": 1,
+      "trial": 80,
+      "total_ms": 80.7498
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 73118,
+      "repeat": 1,
+      "trial": 80,
+      "total_ms": 212.3853
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 484415,
+      "repeat": 1,
+      "trial": 81,
+      "total_ms": 83.5302
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 484415,
+      "repeat": 1,
+      "trial": 81,
+      "total_ms": 211.3214
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 484415,
+      "repeat": 1,
+      "trial": 81,
+      "total_ms": 94.746
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 472623,
+      "repeat": 0,
+      "trial": 82,
+      "total_ms": 221.6297
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 472623,
+      "repeat": 0,
+      "trial": 82,
+      "total_ms": 98.457
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 472623,
+      "repeat": 0,
+      "trial": 82,
+      "total_ms": 81.8509
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 402346,
+      "repeat": 1,
+      "trial": 83,
+      "total_ms": 99.7421
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 402346,
+      "repeat": 1,
+      "trial": 83,
+      "total_ms": 80.7233
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 402346,
+      "repeat": 1,
+      "trial": 83,
+      "total_ms": 226.0214
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 88265,
+      "repeat": 1,
+      "trial": 84,
+      "total_ms": 83.932
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 88265,
+      "repeat": 1,
+      "trial": 84,
+      "total_ms": 209.6753
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 88265,
+      "repeat": 1,
+      "trial": 84,
+      "total_ms": 96.8625
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 418281,
+      "repeat": 0,
+      "trial": 85,
+      "total_ms": 215.1197
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 418281,
+      "repeat": 0,
+      "trial": 85,
+      "total_ms": 94.6415
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 418281,
+      "repeat": 0,
+      "trial": 85,
+      "total_ms": 80.2179
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 325527,
+      "repeat": 0,
+      "trial": 86,
+      "total_ms": 95.8499
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 325527,
+      "repeat": 0,
+      "trial": 86,
+      "total_ms": 82.1334
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 325527,
+      "repeat": 0,
+      "trial": 86,
+      "total_ms": 214.8579
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 579307,
+      "repeat": 0,
+      "trial": 87,
+      "total_ms": 82.0353
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 579307,
+      "repeat": 0,
+      "trial": 87,
+      "total_ms": 212.3261
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 579307,
+      "repeat": 0,
+      "trial": 87,
+      "total_ms": 97.8584
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 66231,
+      "repeat": 0,
+      "trial": 88,
+      "total_ms": 223.7841
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 66231,
+      "repeat": 0,
+      "trial": 88,
+      "total_ms": 102.3594
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 66231,
+      "repeat": 0,
+      "trial": 88,
+      "total_ms": 82.6814
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 418281,
+      "repeat": 1,
+      "trial": 89,
+      "total_ms": 94.9496
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 418281,
+      "repeat": 1,
+      "trial": 89,
+      "total_ms": 98.6057
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 418281,
+      "repeat": 1,
+      "trial": 89,
+      "total_ms": 212.3624
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 49759,
+      "repeat": 1,
+      "trial": 90,
+      "total_ms": 117.6841
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 49759,
+      "repeat": 1,
+      "trial": 90,
+      "total_ms": 321.0271
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 49759,
+      "repeat": 1,
+      "trial": 90,
+      "total_ms": 124.822
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 278705,
+      "repeat": 0,
+      "trial": 91,
+      "total_ms": 221.4981
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 278705,
+      "repeat": 0,
+      "trial": 91,
+      "total_ms": 97.1424
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 278705,
+      "repeat": 0,
+      "trial": 91,
+      "total_ms": 81.5917
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 499768,
+      "repeat": 0,
+      "trial": 92,
+      "total_ms": 96.5573
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 499768,
+      "repeat": 0,
+      "trial": 92,
+      "total_ms": 79.4864
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 499768,
+      "repeat": 0,
+      "trial": 92,
+      "total_ms": 211.274
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 313130,
+      "repeat": 1,
+      "trial": 93,
+      "total_ms": 83.1848
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 313130,
+      "repeat": 1,
+      "trial": 93,
+      "total_ms": 213.4383
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 313130,
+      "repeat": 1,
+      "trial": 93,
+      "total_ms": 97.2701
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 278705,
+      "repeat": 1,
+      "trial": 94,
+      "total_ms": 216.9176
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 278705,
+      "repeat": 1,
+      "trial": 94,
+      "total_ms": 98.0365
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 278705,
+      "repeat": 1,
+      "trial": 94,
+      "total_ms": 81.4637
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 572620,
+      "repeat": 1,
+      "trial": 95,
+      "total_ms": 100.3275
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 572620,
+      "repeat": 1,
+      "trial": 95,
+      "total_ms": 83.3552
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 572620,
+      "repeat": 1,
+      "trial": 95,
+      "total_ms": 216.6517
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 79651,
+      "repeat": 0,
+      "trial": 96,
+      "total_ms": 81.3819
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 79651,
+      "repeat": 0,
+      "trial": 96,
+      "total_ms": 208.7605
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 79651,
+      "repeat": 0,
+      "trial": 96,
+      "total_ms": 94.6725
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 256916,
+      "repeat": 1,
+      "trial": 97,
+      "total_ms": 222.6373
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 256916,
+      "repeat": 1,
+      "trial": 97,
+      "total_ms": 97.6711
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 256916,
+      "repeat": 1,
+      "trial": 97,
+      "total_ms": 83.9473
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 213224,
+      "repeat": 0,
+      "trial": 98,
+      "total_ms": 96.1232
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 213224,
+      "repeat": 0,
+      "trial": 98,
+      "total_ms": 81.0862
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 213224,
+      "repeat": 0,
+      "trial": 98,
+      "total_ms": 217.1406
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "image_id": 30504,
+      "repeat": 0,
+      "trial": 99,
+      "total_ms": 78.2363
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "image_id": 30504,
+      "repeat": 0,
+      "trial": 99,
+      "total_ms": 215.3165
+    },
+    {
+      "model_id": "yolox_tiny_onnx",
+      "image_id": 30504,
+      "repeat": 0,
+      "trial": 99,
+      "total_ms": 96.15
+    }
+  ],
+  "models": {
+    "efficientdet_lite0_int8": {
+      "n": 100,
+      "p50_ms": 82.0625,
+      "p95_ms": 87.98285
+    },
+    "efficientdet_lite2_int8": {
+      "n": 100,
+      "p50_ms": 216.6337,
+      "p95_ms": 226.117935
+    },
+    "yolox_tiny_onnx": {
+      "n": 100,
+      "p50_ms": 97.4173,
+      "p95_ms": 113.13547999999999
+    }
+  },
+  "plan_sha256": "c59b7720d670190b67ab9eaaf6e186f413979fc3e8dc12c81bf59e5ca06710bf",
+  "memory_all_models_coexist": {
+    "working_set_bytes": 240132096,
+    "peak_working_set_bytes": 343719936,
+    "scope": "entire isolated Python process including imports, runtime, model, image decode and scoring; not model-only or Android memory"
+  },
+  "scope": "total synchronous detector call; MediaPipe native preprocessing/inference/postprocess; YOLOX Python preprocessing/ORT/decode/NMS; both exclude file decode and MediaPipe Image construction",
+  "host": "Windows/i7-14700HX/mains; affinitylogical0-3; ORT4intra/1inter threads; MediaPipe runtime defaults; no phone/battery conclusion"
+}

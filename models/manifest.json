@@ -1,9 +1,14 @@
 {
   "schema_version": 1,
   "selected_model": "efficientdet_lite0_int8",
+  "inspection_model": "efficientdet_lite2_int8",
+  "runtime_profiles": {
+    "FAST": {"model_id": "efficientdet_lite0_int8", "score_threshold": 0.5, "role": "Continuous low-cost scene updates"},
+    "INSPECT": {"model_id": "efficientdet_lite2_int8", "score_threshold": 0.55, "role": "Selective higher-detail inspection; deadline/thermal fallback required"}
+  },
   "runtime": "MediaPipe Tasks Vision ObjectDetector",
   "source_documentation": "https://developers.google.com/edge/mediapipe/solutions/vision/object_detector",
-  "retrieved_date": "2026-10-23",
+  "retrieved_date": "2026-10-25",
   "models": [
     {
       "id": "efficientdet_lite0_int8",
@@ -14,7 +19,19 @@
       "input": "320x320 RGB; int8 quantized weights; metadata handles normalization",
       "version": "1",
       "training_dataset": "COCO 80 detection categories",
-      "role": "Phone CPU default candidate, pending device profiling",
+      "role": "FAST CPU model; retained for continuous use and thermal/deadline fallback",
+      "license": "Apache-2.0 upstream EfficientDet implementation/model-family provenance; exact export has no embedded separate license. See NOTICE.md and verify distribution terms before store release."
+    },
+    {
+      "id": "efficientdet_lite2_int8",
+      "path": "models/efficientdet_lite2_int8.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-models/object_detector/efficientdet_lite2/int8/1/efficientdet_lite2.tflite",
+      "sha256": "b3f50554cb0ea559e90328845f7d9ba4d13c8bff372914d24e06bc8bb72fa896",
+      "bytes": 7515971,
+      "input": "448x448 RGB; int8 quantized weights; metadata handles normalization",
+      "version": "1",
+      "training_dataset": "COCO 80 detection categories",
+      "role": "SIGHT 3 INSPECT model; selected on 50 photos, confidence0.55 calibrated on 50 different photos, final 80 evaluated after decisions sealed",
       "license": "Apache-2.0 upstream EfficientDet implementation/model-family provenance; exact export has no embedded separate license. See NOTICE.md and verify distribution terms before store release."
     },
     {

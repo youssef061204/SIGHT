@@ -1,0 +1,451 @@
+{
+  "seed": 20261025,
+  "resamples": 5000,
+  "independent_units": 62,
+  "unit": "creator/near-duplicate scene group",
+  "recall_delta_percentile95": [
+    0.01305947322928587,
+    0.05683570569120331
+  ],
+  "precision_delta_percentile95": [
+    -0.022613129861181937,
+    0.06850050728884657
+  ],
+  "scope": "exploratory paired cluster-bootstrap operating metrics only; not AP confidence intervals, no proof of scene independence or population/assistive-use generalization",
+  "per_group_counts": {
+    "creator-neardup-153229": {
+      "baseline_tp": 9,
+      "baseline_fp": 1,
+      "candidate_tp": 12,
+      "candidate_fp": 0,
+      "gt": 19
+    },
+    "creator-neardup-51938": {
+      "baseline_tp": 4,
+      "baseline_fp": 0,
+      "candidate_tp": 4,
+      "candidate_fp": 0,
+      "gt": 17
+    },
+    "creator-neardup-91654": {
+      "baseline_tp": 4,
+      "baseline_fp": 0,
+      "candidate_tp": 4,
+      "candidate_fp": 0,
+      "gt": 11
+    },
+    "creator-neardup-66038": {
+      "baseline_tp": 8,
+      "baseline_fp": 2,
+      "candidate_tp": 9,
+      "candidate_fp": 0,
+      "gt": 27
+    },
+    "creator-neardup-180560": {
+      "baseline_tp": 9,
+      "baseline_fp": 0,
+      "candidate_tp": 10,
+      "candidate_fp": 0,
+      "gt": 22
+    },
+    "creator-neardup-2473": {
+      "baseline_tp": 3,
+      "baseline_fp": 0,
+      "candidate_tp": 3,
+      "candidate_fp": 0,
+      "gt": 5
+    },
+    "creator-neardup-484404": {
+      "baseline_tp": 2,
+      "baseline_fp": 2,
+      "candidate_tp": 1,
+      "candidate_fp": 1,
+      "gt": 16
+    },
+    "creator-neardup-516677": {
+      "baseline_tp": 5,
+      "baseline_fp": 0,
+      "candidate_tp": 7,
+      "candidate_fp": 0,
+      "gt": 22
+    },
+    "creator-neardup-566436": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-569917": {
+      "baseline_tp": 2,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 5
+    },
+    "creator-neardup-181859": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-213033": {
+      "baseline_tp": 2,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 6
+    },
+    "creator-neardup-451084": {
+      "baseline_tp": 2,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-293390": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 5
+    },
+    "creator-neardup-377575": {
+      "baseline_tp": 4,
+      "baseline_fp": 0,
+      "candidate_tp": 4,
+      "candidate_fp": 1,
+      "gt": 8
+    },
+    "creator-neardup-356505": {
+      "baseline_tp": 2,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-8762": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 7
+    },
+    "creator-neardup-186632": {
+      "baseline_tp": 3,
+      "baseline_fp": 3,
+      "candidate_tp": 2,
+      "candidate_fp": 1,
+      "gt": 14
+    },
+    "creator-neardup-370818": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 5
+    },
+    "creator-neardup-330790": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 3
+    },
+    "creator-neardup-211069": {
+      "baseline_tp": 2,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-43737": {
+      "baseline_tp": 2,
+      "baseline_fp": 1,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 13
+    },
+    "creator-neardup-566758": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-206218": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-785": {
+      "baseline_tp": 3,
+      "baseline_fp": 0,
+      "candidate_tp": 3,
+      "candidate_fp": 0,
+      "gt": 4
+    },
+    "creator-neardup-319369": {
+      "baseline_tp": 8,
+      "baseline_fp": 0,
+      "candidate_tp": 7,
+      "candidate_fp": 0,
+      "gt": 29
+    },
+    "creator-neardup-534639": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 5
+    },
+    "creator-neardup-570736": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-458410": {
+      "baseline_tp": 1,
+      "baseline_fp": 2,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 17
+    },
+    "creator-neardup-326128": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 3
+    },
+    "creator-neardup-402992": {
+      "baseline_tp": 6,
+      "baseline_fp": 0,
+      "candidate_tp": 7,
+      "candidate_fp": 0,
+      "gt": 10
+    },
+    "creator-neardup-281759": {
+      "baseline_tp": 6,
+      "baseline_fp": 0,
+      "candidate_tp": 7,
+      "candidate_fp": 0,
+      "gt": 12
+    },
+    "creator-neardup-191761": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 4
+    },
+    "creator-neardup-64898": {
+      "baseline_tp": 8,
+      "baseline_fp": 0,
+      "candidate_tp": 8,
+      "candidate_fp": 0,
+      "gt": 13
+    },
+    "creator-neardup-190140": {
+      "baseline_tp": 3,
+      "baseline_fp": 0,
+      "candidate_tp": 3,
+      "candidate_fp": 0,
+      "gt": 4
+    },
+    "creator-neardup-201025": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-438304": {
+      "baseline_tp": 3,
+      "baseline_fp": 0,
+      "candidate_tp": 4,
+      "candidate_fp": 0,
+      "gt": 5
+    },
+    "creator-neardup-19402": {
+      "baseline_tp": 4,
+      "baseline_fp": 0,
+      "candidate_tp": 6,
+      "candidate_fp": 0,
+      "gt": 21
+    },
+    "creator-neardup-218424": {
+      "baseline_tp": 3,
+      "baseline_fp": 1,
+      "candidate_tp": 4,
+      "candidate_fp": 0,
+      "gt": 9
+    },
+    "creator-neardup-253835": {
+      "baseline_tp": 3,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 1,
+      "gt": 9
+    },
+    "creator-neardup-74733": {
+      "baseline_tp": 9,
+      "baseline_fp": 1,
+      "candidate_tp": 11,
+      "candidate_fp": 0,
+      "gt": 19
+    },
+    "creator-neardup-9483": {
+      "baseline_tp": 3,
+      "baseline_fp": 1,
+      "candidate_tp": 3,
+      "candidate_fp": 0,
+      "gt": 6
+    },
+    "creator-neardup-434297": {
+      "baseline_tp": 1,
+      "baseline_fp": 1,
+      "candidate_tp": 2,
+      "candidate_fp": 3,
+      "gt": 4
+    },
+    "creator-neardup-440507": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 3
+    },
+    "creator-neardup-465718": {
+      "baseline_tp": 5,
+      "baseline_fp": 0,
+      "candidate_tp": 6,
+      "candidate_fp": 0,
+      "gt": 12
+    },
+    "creator-neardup-148739": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-100238": {
+      "baseline_tp": 6,
+      "baseline_fp": 0,
+      "candidate_tp": 7,
+      "candidate_fp": 0,
+      "gt": 10
+    },
+    "creator-neardup-13348": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 12
+    },
+    "creator-neardup-553664": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 17
+    },
+    "creator-neardup-341469": {
+      "baseline_tp": 3,
+      "baseline_fp": 0,
+      "candidate_tp": 6,
+      "candidate_fp": 0,
+      "gt": 13
+    },
+    "creator-neardup-422836": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 22
+    },
+    "creator-neardup-449406": {
+      "baseline_tp": 1,
+      "baseline_fp": 0,
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "gt": 1
+    },
+    "creator-neardup-274272": {
+      "baseline_tp": 4,
+      "baseline_fp": 0,
+      "candidate_tp": 4,
+      "candidate_fp": 0,
+      "gt": 9
+    },
+    "creator-neardup-455597": {
+      "baseline_tp": 2,
+      "baseline_fp": 0,
+      "candidate_tp": 2,
+      "candidate_fp": 0,
+      "gt": 15
+    },
+    "creator-neardup-329456": {
+      "baseline_tp": 3,
+      "baseline_fp": 0,
+      "candidate_tp": 3,
+      "candidate_fp": 1,
+      "gt": 9
+    },
+    "creator-neardup-521141": {
+      "baseline_tp": 4,
+      "baseline_fp": 0,
+      "candidate_tp": 6,
+      "candidate_fp": 0,
+      "gt": 14
+    },
+    "creator-neardup-214753": {
+      "baseline_tp": 4,
+      "baseline_fp": 0,
+      "candidate_tp": 4,
+      "candidate_fp": 0,
+      "gt": 4
+    },
+    "creator-neardup-540928": {
+      "baseline_tp": 0,
+      "baseline_fp": 0,
+      "candidate_tp": 0,
+      "candidate_fp": 0,
+      "gt": 2
+    },
+    "creator-neardup-529568": {
+      "baseline_tp": 0,
+      "baseline_fp": 0,
+      "candidate_tp": 0,
+      "candidate_fp": 1,
+      "gt": 35
+    },
+    "creator-neardup-423617": {
+      "baseline_tp": 5,
+      "baseline_fp": 0,
+      "candidate_tp": 5,
+      "candidate_fp": 1,
+      "gt": 12
+    },
+    "creator-neardup-384666": {
+      "baseline_tp": 5,
+      "baseline_fp": 0,
+      "candidate_tp": 5,
+      "candidate_fp": 0,
+      "gt": 14
+    },
+    "creator-neardup-27932": {
+      "baseline_tp": 0,
+      "baseline_fp": 0,
+      "candidate_tp": 0,
+      "candidate_fp": 1,
+      "gt": 1
+    }
+  }
+}

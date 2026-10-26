@@ -1,0 +1,13 @@
+{
+  "id": "yolox_tiny_onnx",
+  "path": "models/yolox_tiny.onnx",
+  "url": "https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_tiny.onnx",
+  "version": "0.1.1rc0",
+  "sha256": "427cc366d34e27ff7a03e2899b5e3671425c262ea2291f88bb942bc1cc70b0f7",
+  "bytes": 20219662,
+  "license": "Apache-2.0 upstream YOLOX release/repository; included upstream license and source provenance under evaluation/yolox-reference",
+  "training_dataset": "COCO80",
+  "input": "1x3x416x416 float32 BGR,0..255,no normalization; preserve aspect ratio using top-left anchored resized image and bottom/right114padding",
+  "output": "1x3549x85, grid/stride decode8,16,32; exp widths/heights,objectness*class scores,class-agnostic NMS.45,reference inclusive pixel-area+1 convention",
+  "role": "Isolated additional candidate experiment; not an Android production asset unless independent selection/calibration/new80-photo audit justify integration"
+}

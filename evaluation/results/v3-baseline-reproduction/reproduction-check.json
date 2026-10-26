@@ -1,0 +1,285 @@
+{
+  "baseline": "desktop-coco-smoke-v2",
+  "reproduction": "v3-baseline-reproduction",
+  "accuracy_comparisons": [
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "metric": "subset_AP50",
+      "historical": 0.3614210847927603,
+      "reproduced": 0.3614210847927603,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "metric": "subset_AP50_95",
+      "historical": 0.21251513096449884,
+      "reproduced": 0.21251513096449884,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "metric": "tp",
+      "historical": 39,
+      "reproduced": 39,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "metric": "fp",
+      "historical": 13,
+      "reproduced": 13,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "metric": "fn",
+      "historical": 162,
+      "reproduced": 162,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "metric": "subset_AP50",
+      "historical": 0.33893728755564,
+      "reproduced": 0.33893728755564,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "metric": "subset_AP50_95",
+      "historical": 0.21323959810844764,
+      "reproduced": 0.21323959810844764,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "metric": "tp",
+      "historical": 29,
+      "reproduced": 29,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "metric": "fp",
+      "historical": 8,
+      "reproduced": 8,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "metric": "fn",
+      "historical": 172,
+      "reproduced": 172,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "metric": "subset_AP50",
+      "historical": 0.17479429768807647,
+      "reproduced": 0.17479429768807647,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "metric": "subset_AP50_95",
+      "historical": 0.10368247329620736,
+      "reproduced": 0.10368247329620736,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "metric": "tp",
+      "historical": 13,
+      "reproduced": 13,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "metric": "fp",
+      "historical": 3,
+      "reproduced": 3,
+      "identical": true
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "metric": "fn",
+      "historical": 188,
+      "reproduced": 188,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "metric": "subset_AP50",
+      "historical": 0.3099705433117352,
+      "reproduced": 0.3099705433117352,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "metric": "subset_AP50_95",
+      "historical": 0.1906230100542301,
+      "reproduced": 0.1906230100542301,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "metric": "tp",
+      "historical": 29,
+      "reproduced": 29,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "metric": "fp",
+      "historical": 4,
+      "reproduced": 4,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "metric": "fn",
+      "historical": 172,
+      "reproduced": 172,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "metric": "subset_AP50",
+      "historical": 0.2700950382196788,
+      "reproduced": 0.2700950382196788,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "metric": "subset_AP50_95",
+      "historical": 0.18127950029563497,
+      "reproduced": 0.18127950029563497,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "metric": "tp",
+      "historical": 29,
+      "reproduced": 29,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "metric": "fp",
+      "historical": 1,
+      "reproduced": 1,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "metric": "fn",
+      "historical": 172,
+      "reproduced": 172,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "metric": "subset_AP50",
+      "historical": 0.19694121192273487,
+      "reproduced": 0.19694121192273487,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "metric": "subset_AP50_95",
+      "historical": 0.12390469126985025,
+      "reproduced": 0.12390469126985025,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "metric": "tp",
+      "historical": 12,
+      "reproduced": 12,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "metric": "fp",
+      "historical": 2,
+      "reproduced": 2,
+      "identical": true
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "metric": "fn",
+      "historical": 189,
+      "reproduced": 189,
+      "identical": true
+    }
+  ],
+  "raw_prediction_comparisons": [
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "clean",
+      "byte_identical": true,
+      "sha256_reproduction": "4cd7be6163edf77d77dbbaf427e338e36a0d9dab1fa048521f32b840be657bcf"
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "dim_035",
+      "byte_identical": true,
+      "sha256_reproduction": "0311c5a0756768dfbeca52a6e14ff8585e8b58b00636a0fe183d73d142663bcc"
+    },
+    {
+      "model": "efficientdet_lite0_int8",
+      "variant": "motion_blur_15",
+      "byte_identical": true,
+      "sha256_reproduction": "445369b974510e7b94552a0fd985f3d7c2da94d592190d447efb95d65f1edfa4"
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "clean",
+      "byte_identical": true,
+      "sha256_reproduction": "d9a6a8bd98300061f9706c34bbdaf045616ccf635a224b1482d240fa5d76f9ad"
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "dim_035",
+      "byte_identical": true,
+      "sha256_reproduction": "e02557a517f03d700ab5b1c182e889fb4818dec2970ce1a7a016227a9cef726c"
+    },
+    {
+      "model": "ssd_mobilenet_v2_float32",
+      "variant": "motion_blur_15",
+      "byte_identical": true,
+      "sha256_reproduction": "e949c1375a120891c3aa7004782f196bc2c6a92998a042dc6d037aba0692e233"
+    }
+  ],
+  "passed": true
+}

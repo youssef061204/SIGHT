@@ -1,0 +1,87 @@
+{
+  "created_at_utc": "2026-10-25T20:33:36.182350+00:00",
+  "candidate": {
+    "id": "yolox_tiny_onnx",
+    "path": "models/yolox_tiny.onnx",
+    "url": "https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_tiny.onnx",
+    "version": "0.1.1rc0",
+    "sha256": "427cc366d34e27ff7a03e2899b5e3671425c262ea2291f88bb942bc1cc70b0f7",
+    "bytes": 20219662,
+    "license": "Apache-2.0 upstream YOLOX release/repository; included upstream license and source provenance under evaluation/yolox-reference",
+    "training_dataset": "COCO80",
+    "input": "1x3x416x416 float32 BGR,0..255,no normalization; preserve aspect ratio using top-left anchored resized image and bottom/right114padding",
+    "output": "1x3549x85, grid/stride decode8,16,32; exp widths/heights,objectness*class scores,class-agnostic NMS.45,reference inclusive pixel-area+1 convention",
+    "role": "Isolated additional candidate experiment; not an Android production asset unless independent selection/calibration/new80-photo audit justify integration"
+  },
+  "fresh_audit_manifest_sha256": "71822f90238c22820eda9cb7ca851991b4be4cb712b073d78ec3179570770d67",
+  "selection_calibration_manifest_sha256": "f2e0b5d1ee85dfca3576d73c9dcc1fea68ec419fe3e5d11dd69bb91451a3a081",
+  "prior_test_use": "Old80test is excluded from this additional candidate selection and final claims; it motivated investigating another model only",
+  "selection_rule": {
+    "fast_replacement": "selection AP50>=FAST+.04 AND AP50:95>=FAST+.04 AND paired full-task P50<=FAST*1.30",
+    "inspect_replacement": "selection AP50>=INSPECT-.03 AND AP50:95>=INSPECT-.03 AND paired full-task P50<=INSPECT*.70",
+    "precision_threshold_choice": "Selection uses ranked AP, not confidence probability comparisons. Threshold selection occurs only on calibration; calibration must preserve reference precision and bounded FP/image, and improve recall by.02 before freshaudit"
+  },
+  "calibration_grid": [
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "ranking_score_floor": 0.05,
+  "max_ranked_results": 100,
+  "deployment_cap": 40,
+  "onnxruntime": "1.31.0",
+  "mediapipe": "1.1.1",
+  "onnxruntime_cpu_threads": {
+    "intra_op": 4,
+    "inter_op": 1,
+    "execution": "sequential"
+  },
+  "upstream_verification": [
+    {
+      "width": 320,
+      "height": 240,
+      "pixel_tensor_identical": true,
+      "decode_nms_identical": true,
+      "detections": 5
+    },
+    {
+      "width": 101,
+      "height": 333,
+      "pixel_tensor_identical": true,
+      "decode_nms_identical": true,
+      "detections": 5
+    },
+    {
+      "width": 333,
+      "height": 101,
+      "pixel_tensor_identical": true,
+      "decode_nms_identical": true,
+      "detections": 5
+    },
+    {
+      "width": 416,
+      "height": 416,
+      "pixel_tensor_identical": true,
+      "decode_nms_identical": true,
+      "detections": 5
+    }
+  ],
+  "paired_timing": {
+    "seed": 20261026,
+    "selection_images": 50,
+    "repetitions": 2,
+    "warmups_per_model": 5,
+    "model_order": "rotate all3model orders across shuffled identical image/repeat trials",
+    "affinity": "Windows logical CPUs0-3 (0xF)"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema":"sight.synthetic-temporal-ablation.v1",
+  "recordedAtUtc":"2026-10-25T20:31:59.515712500Z",
+  "scope":"Deterministic constructed labelled image boxes. No real video, camera motion estimation, physical identity, detector accuracy, mobile speed or mobility validation.",
+  "identityMetric":"IDF1 uses maximum one-to-one global identity assignment over actual observed boxes; missed detector frames count as IDFN. Identity switches compare each labelled object across its successive detected appearances.",
+  "scenarioCount":5,
+  "variants":[
+    {"name":"overlap_association_only","observations":71,"truthObservations":84,"identitySwitches":5,"stableTransitions":58,"identityTransitions":63,"idf1":0.6709677419354839,"identityStability":0.9206349206349206,"missedObservationRate":0.16666666666666666,"findCompletions":8,"falseCompletions":0,"liveUtterances":8,"staleSpeechAdmissions":0,"temporalRecallCorrect":true,"groundedActivePrompts":1},
+    {"name":"without_world_memory","observations":71,"truthObservations":84,"identitySwitches":1,"stableTransitions":62,"identityTransitions":63,"idf1":0.864516129032258,"identityStability":0.9841269841269841,"missedObservationRate":0.16666666666666666,"findCompletions":8,"falseCompletions":0,"liveUtterances":8,"staleSpeechAdmissions":0,"temporalRecallCorrect":false,"groundedActivePrompts":1},
+    {"name":"without_goal_continuation","observations":71,"truthObservations":84,"identitySwitches":1,"stableTransitions":62,"identityTransitions":63,"idf1":0.864516129032258,"identityStability":0.9841269841269841,"missedObservationRate":0.16666666666666666,"findCompletions":4,"falseCompletions":0,"liveUtterances":4,"staleSpeechAdmissions":0,"temporalRecallCorrect":true,"groundedActivePrompts":1},
+    {"name":"without_active_perception","observations":71,"truthObservations":84,"identitySwitches":1,"stableTransitions":62,"identityTransitions":63,"idf1":0.864516129032258,"identityStability":0.9841269841269841,"missedObservationRate":0.16666666666666666,"findCompletions":8,"falseCompletions":0,"liveUtterances":8,"staleSpeechAdmissions":0,"temporalRecallCorrect":true,"groundedActivePrompts":0},
+    {"name":"full_temporal_policy","observations":71,"truthObservations":84,"identitySwitches":1,"stableTransitions":62,"identityTransitions":63,"idf1":0.864516129032258,"identityStability":0.9841269841269841,"missedObservationRate":0.16666666666666666,"findCompletions":8,"falseCompletions":0,"liveUtterances":8,"staleSpeechAdmissions":0,"temporalRecallCorrect":true,"groundedActivePrompts":1}
+  ]
+}

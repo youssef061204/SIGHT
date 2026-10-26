@@ -1,5 +1,22 @@
 # Reproducible local evidence
 
+SIGHT 3 adds a separate [180-photo detector experiment](results/v3-detection/report.md):50 model-selection photos,50 calibration photos and80 held-out photos, with recovered CC BY attribution, whole-creator scene grouping and near-duplicate checks. It first [reproduced the original 16](results/v3-baseline-reproduction/reproduction-check.json) exactly and [diagnosed their misses](results/v3-baseline-diagnostics/report.md). On the final 80, Lite2 INSPECT at its independently selected .55 threshold raised clean AP50 .5009 to .6040 and recall .3046 to .3394 while lowering FP/image .1875 to .1375. The slower model remains selective; the old Lite0 FAST path remains. Per-class/area counts, calibration regression, synthetic-condition regressions and uncertainty are preserved in the report. These are desktop detector measurements, not full-system task or physical-phone results.
+
+After the environment/model setup below, use these commands for SIGHT 3. Selection/calibration outputs are sealed, so reproduction goes to a fresh output directory and cannot overwrite decisions behind the reported final-test claims:
+
+```powershell
+evaluation/.venv-modern/Scripts/python.exe evaluation/prepare_v3_corpus.py
+evaluation/.venv-modern/Scripts/python.exe evaluation/v3_detection.py selection --output evaluation/results/v3-reproduction
+evaluation/.venv-modern/Scripts/python.exe evaluation/v3_detection.py calibration --output evaluation/results/v3-reproduction
+evaluation/.venv-modern/Scripts/python.exe evaluation/v3_detection.py held-out --output evaluation/results/v3-reproduction
+evaluation/.venv-modern/Scripts/python.exe evaluation/benchmark_latency.py --id paired-model-latency-v3 --output evaluation/results/v3-paired-latency-reproduction --model-ids efficientdet_lite0_int8,efficientdet_lite2_int8,ssd_mobilenet_v2_float32
+evaluation/.venv-modern/Scripts/python.exe -m unittest discover -s evaluation/tests -v
+```
+
+`prepare_v3_corpus.py` verifies sealed hashes, restoring missing photos from pinned source URLs. It downloads only credited originals and the ranged annotation member if not cached. No unresolved-credit photos enter the new corpus. `v3_detection.py` uses real MediaPipe 1.1.1 CPU inference and official COCOeval, identical scoring for candidates, a .05 ranked-score floor/max100 for AP, separately capped deployment precision/recall, isolated per-model process memory and exact raw boxes. A fresh reproduction still uses the original fixed splits/rules; it is not permission to tune against the final 80. The current evidence also includes 12 passing Python checks.
+
+The remaining sections preserve the smaller SIGHT 2 experiment and its commands as historical evidence.
+
 This laboratory runs genuine desktop inference and records failures alongside successes. Its desktop metrics are separate from the Android camera pipeline. Native CameraX, detector and bundled OCR execution also passed on Android 11 and 15 emulators; see [device validation](../docs/device-validation.md). Physical phone power/thermal performance and participant usability remain unvalidated.
 
 From the repository root on Windows:

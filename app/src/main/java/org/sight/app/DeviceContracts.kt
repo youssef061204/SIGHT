@@ -19,6 +19,17 @@ data class StageTiming(
     val analyzed: Long,
     val skipped: Long,
     val timestampBasis: String,
+    val modelId: String = "unspecified",
+    val initializationMs: Long = 0,
+    val completedAtMs: Long = receivedAtMs + totalMs,
+    val capturedAtMs: Long? = null,
+    val cameraFrames: Long = 0,
+    val receivedFrames: Long = 0,
+    val width: Int = 0,
+    val height: Int = 0,
+    val rotationDegrees: Int = 0,
+    val geometryEpoch: Long = 0,
+    val imageQuality: org.sight.perception.ImageQuality? = null,
 )
 
 interface LocalDetector : AutoCloseable {

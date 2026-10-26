@@ -14,19 +14,20 @@ import org.sight.core.SpeechPriority
 class SpeechOutput(context: Context, private val valid: (Announcement, Long) -> Boolean,
                    private val stillSupported: (Announcement, Long) -> Boolean,
                    private val onStatus: (String) -> Unit,
-                   private val onDispatch: (Announcement, Long) -> Unit) : AutoCloseable {
+                   private val onDispatch: (Announcement, Long) -> Unit,
+                   private val onStart: (Announcement, Long) -> Unit = { _, _ -> },
+                   private val onDecision: (SpeechDecision) -> Unit = {}) : AutoCloseable {
     private val handler = Handler(Looper.getMainLooper())
-    private val pending = ArrayDeque<Announcement>()
+    private val queue = SpeechQueue(onDecision = onDecision)
     private var ready = false
-    private var current: Announcement? = null
-    private var last: Announcement? = null
-    private var generation = 0L
+    private var closed = false
     var muted = false
         set(value) { field = value; if (value) stop() }
     private var tts: TextToSpeech? = null
 
     init {
         tts = TextToSpeech(context) { status -> handler.post {
+            if (closed) return@post
             if (status == TextToSpeech.SUCCESS) {
                 val engine = tts ?: return@post
                 val voice = engine.voices?.firstOrNull {
@@ -51,57 +52,77 @@ class SpeechOutput(context: Context, private val valid: (Announcement, Long) -> 
             } else onStatus("Speech is unavailable. Check Android text-to-speech settings.")
         } }
         tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-            override fun onStart(utteranceId: String?) { handler.post {
-                if (utteranceId == generation.toString() && current?.let { !valid(it, SystemClock.elapsedRealtime()) } == true) stop()
+            override fun onStart(utteranceId: String?) {
+                val callbackAt = SystemClock.elapsedRealtime()
+                handler.post {
+                if (closed) return@post
+                val token = utteranceId?.toLongOrNull() ?: return@post
+                val item = queue.current?.takeIf { it.token == token } ?: return@post
+                val now = SystemClock.elapsedRealtime()
+                when (queue.started(token, now, valid)) {
+                    SpeechStartResult.ACCEPTED -> onStart(item.event, callbackAt)
+                    SpeechStartResult.REJECTED -> { tts?.stop(); pump() }
+                    SpeechStartResult.IGNORED -> Unit
+                }
             } }
-            override fun onDone(utteranceId: String?) = finish(utteranceId)
-            @Deprecated("Platform callback") override fun onError(utteranceId: String?) = finish(utteranceId)
-            private fun finish(id: String?) { handler.post {
-                if (id == generation.toString()) { current = null; pump() }
+            override fun onDone(utteranceId: String?) = finish(utteranceId, false)
+            @Deprecated("Platform callback") override fun onError(utteranceId: String?) = finish(utteranceId, true)
+            override fun onError(utteranceId: String?, errorCode: Int) = finish(utteranceId, true)
+            private fun finish(id: String?, error: Boolean) { handler.post {
+                if (closed) return@post
+                val token = id?.toLongOrNull() ?: return@post
+                if (queue.finish(token, SystemClock.elapsedRealtime(), error)) {
+                    if (error) onStatus("Speech output failed")
+                    pump()
+                }
             } }
         })
     }
 
     fun offer(event: Announcement) {
-        if (muted || !valid(event, SystemClock.elapsedRealtime())) return
-        if (event.priority >= SpeechPriority.USER_REQUEST) {
-            stop()
-        }
-        pending.removeAll { it.dedupKey == event.dedupKey }
-        if (pending.size == 3) pending.removeFirst()
-        pending.addLast(event)
+        offer(event, bypassDedupe = false)
+    }
+
+    private fun offer(event: Announcement, bypassDedupe: Boolean) {
+        if (closed) return
+        val now = SystemClock.elapsedRealtime()
+        if (muted) { queue.rejectedMuted(event, now); return }
+        val result = queue.offer(event, now, valid, bypassDedupe)
+        if (result.interrupted) tts?.stop()
         pump()
     }
 
     private fun pump() {
-        if (!ready || muted || current != null) return
-        while (pending.isNotEmpty()) {
-            val next = pending.removeFirst()
+        if (closed || !ready || muted || queue.current != null) return
+        while (queue.pendingCount > 0) {
             val now = SystemClock.elapsedRealtime()
-            if (!valid(next, now)) continue
-            current = next
-            last = next
-            generation++
-            val result = tts?.speak(next.text, TextToSpeech.QUEUE_FLUSH, null, generation.toString())
-            if (result == TextToSpeech.ERROR) { current = null; onStatus("Speech output failed") }
-            else onDispatch(next, now)
-            break
+            val next = queue.next(now, valid) ?: return
+            val result = tts?.speak(next.event.text, TextToSpeech.QUEUE_FLUSH, null, next.token.toString()) ?: TextToSpeech.ERROR
+            if (result == TextToSpeech.ERROR) {
+                queue.finish(next.token, now, error = true)
+                onStatus("Speech output failed")
+            } else { onDispatch(next.event, now); return }
         }
     }
 
     fun tick(now: Long) {
-        if (current?.let { !stillSupported(it, now) } == true) { stop(); return }
-        pending.removeAll { !valid(it, now) }
+        if (closed) return
+        if (queue.tick(now, valid, stillSupported)) tts?.stop()
         pump()
     }
     fun repeat(): Boolean {
-        val event = last ?: return false
+        val event = queue.lastStarted ?: return false
+        if (closed || muted) return false
         if (!valid(event, SystemClock.elapsedRealtime())) return false
-        offer(event)
+        offer(event.copy(priority = SpeechPriority.USER_REQUEST), bypassDedupe = true)
         return true
     }
     fun rate(value: Float) { tts?.setSpeechRate(value.coerceIn(0.65f, 1.6f)) }
-    fun stop() { generation++; pending.clear(); current = null; tts?.stop() }
-    val queueSize: Int get() = pending.size + if (current != null) 1 else 0
-    override fun close() { stop(); tts?.shutdown(); tts = null; ready = false }
+    fun stop() { queue.stop(SystemClock.elapsedRealtime()); tts?.stop() }
+    val queueSize: Int get() = queue.size
+    override fun close() {
+        if (closed) return
+        closed = true
+        stop(); tts?.shutdown(); tts = null; ready = false
+    }
 }

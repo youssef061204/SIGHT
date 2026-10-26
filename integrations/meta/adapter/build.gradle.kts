@@ -16,6 +16,8 @@ android {
 }
 kotlin { compilerOptions { jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17 } }
 dependencies {
+    implementation(project(":core"))
+    implementation(project(":perception"))
     implementation("com.meta.wearable:mwdat-core:1.0.1")
     implementation("com.meta.wearable:mwdat-camera:1.0.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.11.0")

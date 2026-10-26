@@ -1,0 +1,1728 @@
+{
+  "created_at_utc": "2026-10-25T20:17:44.281318+00:00",
+  "config": {
+    "id": "paired-model-latency-v3",
+    "seed": 20261023,
+    "warmup": 5,
+    "repeats": 5,
+    "cpu_affinity_mask": "0xF (Windows logical CPUs 0-3)",
+    "runtime_threads": "MediaPipe runtime default; not overridden",
+    "score_floor": 0.05,
+    "max_results": 100,
+    "input_count": 16,
+    "scope": "detect() includes native input preprocessing, model and postprocessing; file decode and mp.Image creation excluded"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu": "Intel Core i7-14700HX (host 20 cores,28 logical processors)",
+  "mediapipe": "1.1.1",
+  "dataset_manifest_sha256": "be0ab2b37c6e663b4e48597a6966bd5ca2c4f6ddc1e0c66596e7afa30326fa4a",
+  "model_manifest_sha256": "78e1f89d9fbf02978fe49684acf8d31a8c302feff6bdfd7200f4427f99fea3e9",
+  "models": {
+    "efficientdet_lite0_int8": {
+      "n": 80,
+      "mean_ms": 52.507615,
+      "p50_ms": 57.425,
+      "p95_ms": 68.638335,
+      "min_ms": 18.5234,
+      "max_ms": 76.7066
+    },
+    "efficientdet_lite2_int8": {
+      "n": 80,
+      "mean_ms": 140.45925,
+      "p50_ms": 160.21355,
+      "p95_ms": 182.543515,
+      "min_ms": 50.3154,
+      "max_ms": 204.0735
+    },
+    "ssd_mobilenet_v2_float32": {
+      "n": 80,
+      "mean_ms": 47.4170925,
+      "p50_ms": 53.20755,
+      "p95_ms": 61.617685,
+      "min_ms": 17.0676,
+      "max_ms": 63.6579
+    }
+  },
+  "samples": [
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 0,
+      "image_id": 410735,
+      "repeat": 1,
+      "ms": 19.4293
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 0,
+      "image_id": 410735,
+      "repeat": 1,
+      "ms": 50.3154
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 0,
+      "image_id": 410735,
+      "repeat": 1,
+      "ms": 17.3261
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 1,
+      "image_id": 574702,
+      "repeat": 4,
+      "ms": 20.8564
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 1,
+      "image_id": 574702,
+      "repeat": 4,
+      "ms": 52.9538
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 1,
+      "image_id": 574702,
+      "repeat": 4,
+      "ms": 20.4049
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 2,
+      "image_id": 382125,
+      "repeat": 3,
+      "ms": 20.4707
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 2,
+      "image_id": 382125,
+      "repeat": 3,
+      "ms": 52.2977
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 2,
+      "image_id": 382125,
+      "repeat": 3,
+      "ms": 22.7822
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 3,
+      "image_id": 184324,
+      "repeat": 4,
+      "ms": 18.6482
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 3,
+      "image_id": 184324,
+      "repeat": 4,
+      "ms": 51.532
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 3,
+      "image_id": 184324,
+      "repeat": 4,
+      "ms": 19.761
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 4,
+      "image_id": 377882,
+      "repeat": 4,
+      "ms": 18.9836
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 4,
+      "image_id": 377882,
+      "repeat": 4,
+      "ms": 53.175
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 4,
+      "image_id": 377882,
+      "repeat": 4,
+      "ms": 17.0676
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 5,
+      "image_id": 292005,
+      "repeat": 1,
+      "ms": 17.3353
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 5,
+      "image_id": 292005,
+      "repeat": 1,
+      "ms": 51.1617
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 5,
+      "image_id": 292005,
+      "repeat": 1,
+      "ms": 19.7971
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 6,
+      "image_id": 571804,
+      "repeat": 1,
+      "ms": 23.9464
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 6,
+      "image_id": 571804,
+      "repeat": 1,
+      "ms": 54.6956
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 6,
+      "image_id": 571804,
+      "repeat": 1,
+      "ms": 20.6532
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 7,
+      "image_id": 277197,
+      "repeat": 4,
+      "ms": 19.1107
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 7,
+      "image_id": 277197,
+      "repeat": 4,
+      "ms": 59.4257
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 7,
+      "image_id": 277197,
+      "repeat": 4,
+      "ms": 22.0121
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 8,
+      "image_id": 574702,
+      "repeat": 3,
+      "ms": 30.4488
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 8,
+      "image_id": 574702,
+      "repeat": 3,
+      "ms": 57.9349
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 8,
+      "image_id": 574702,
+      "repeat": 3,
+      "ms": 19.2194
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 9,
+      "image_id": 350148,
+      "repeat": 4,
+      "ms": 20.9202
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 9,
+      "image_id": 350148,
+      "repeat": 4,
+      "ms": 59.7714
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 9,
+      "image_id": 350148,
+      "repeat": 4,
+      "ms": 21.6066
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 10,
+      "image_id": 238866,
+      "repeat": 1,
+      "ms": 23.3017
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 10,
+      "image_id": 238866,
+      "repeat": 1,
+      "ms": 54.06
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 10,
+      "image_id": 238866,
+      "repeat": 1,
+      "ms": 18.4731
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 11,
+      "image_id": 184324,
+      "repeat": 2,
+      "ms": 18.1334
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 11,
+      "image_id": 184324,
+      "repeat": 2,
+      "ms": 56.9696
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 11,
+      "image_id": 184324,
+      "repeat": 2,
+      "ms": 21.5414
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 12,
+      "image_id": 238866,
+      "repeat": 0,
+      "ms": 20.7889
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 12,
+      "image_id": 238866,
+      "repeat": 0,
+      "ms": 52.0076
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 12,
+      "image_id": 238866,
+      "repeat": 0,
+      "ms": 17.9404
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 13,
+      "image_id": 382125,
+      "repeat": 0,
+      "ms": 19.9102
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 13,
+      "image_id": 382125,
+      "repeat": 0,
+      "ms": 54.0913
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 13,
+      "image_id": 382125,
+      "repeat": 0,
+      "ms": 20.8917
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 14,
+      "image_id": 134886,
+      "repeat": 0,
+      "ms": 18.6304
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 14,
+      "image_id": 134886,
+      "repeat": 0,
+      "ms": 53.9059
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 14,
+      "image_id": 134886,
+      "repeat": 0,
+      "ms": 22.0035
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 15,
+      "image_id": 170099,
+      "repeat": 4,
+      "ms": 20.1258
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 15,
+      "image_id": 170099,
+      "repeat": 4,
+      "ms": 50.403
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 15,
+      "image_id": 170099,
+      "repeat": 4,
+      "ms": 18.6368
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 16,
+      "image_id": 170099,
+      "repeat": 3,
+      "ms": 18.5234
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 16,
+      "image_id": 170099,
+      "repeat": 3,
+      "ms": 68.7737
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 16,
+      "image_id": 170099,
+      "repeat": 3,
+      "ms": 49.4118
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 17,
+      "image_id": 377882,
+      "repeat": 0,
+      "ms": 54.5214
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 17,
+      "image_id": 377882,
+      "repeat": 0,
+      "ms": 159.5185
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 17,
+      "image_id": 377882,
+      "repeat": 0,
+      "ms": 53.8584
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 18,
+      "image_id": 301135,
+      "repeat": 0,
+      "ms": 54.5608
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 18,
+      "image_id": 301135,
+      "repeat": 0,
+      "ms": 147.8659
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 18,
+      "image_id": 301135,
+      "repeat": 0,
+      "ms": 59.0573
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 19,
+      "image_id": 574702,
+      "repeat": 2,
+      "ms": 61.3889
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 19,
+      "image_id": 574702,
+      "repeat": 2,
+      "ms": 166.1977
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 19,
+      "image_id": 574702,
+      "repeat": 2,
+      "ms": 56.6183
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 20,
+      "image_id": 410735,
+      "repeat": 0,
+      "ms": 56.3931
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 20,
+      "image_id": 410735,
+      "repeat": 0,
+      "ms": 167.8703
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 20,
+      "image_id": 410735,
+      "repeat": 0,
+      "ms": 57.2949
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 21,
+      "image_id": 184324,
+      "repeat": 1,
+      "ms": 49.0977
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 21,
+      "image_id": 184324,
+      "repeat": 1,
+      "ms": 145.4659
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 21,
+      "image_id": 184324,
+      "repeat": 1,
+      "ms": 56.5039
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 22,
+      "image_id": 170099,
+      "repeat": 0,
+      "ms": 54.8799
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 22,
+      "image_id": 170099,
+      "repeat": 0,
+      "ms": 151.2099
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 22,
+      "image_id": 170099,
+      "repeat": 0,
+      "ms": 52.6631
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 23,
+      "image_id": 184324,
+      "repeat": 0,
+      "ms": 53.256
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 23,
+      "image_id": 184324,
+      "repeat": 0,
+      "ms": 151.7536
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 23,
+      "image_id": 184324,
+      "repeat": 0,
+      "ms": 56.3552
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 24,
+      "image_id": 184324,
+      "repeat": 3,
+      "ms": 56.6486
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 24,
+      "image_id": 184324,
+      "repeat": 3,
+      "ms": 153.9629
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 24,
+      "image_id": 184324,
+      "repeat": 3,
+      "ms": 59.6288
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 25,
+      "image_id": 238866,
+      "repeat": 4,
+      "ms": 57.3382
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 25,
+      "image_id": 238866,
+      "repeat": 4,
+      "ms": 140.7291
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 25,
+      "image_id": 238866,
+      "repeat": 4,
+      "ms": 47.3731
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 26,
+      "image_id": 350148,
+      "repeat": 2,
+      "ms": 56.247
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 26,
+      "image_id": 350148,
+      "repeat": 2,
+      "ms": 126.1212
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 26,
+      "image_id": 350148,
+      "repeat": 2,
+      "ms": 37.3177
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 27,
+      "image_id": 574702,
+      "repeat": 0,
+      "ms": 54.6701
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 27,
+      "image_id": 574702,
+      "repeat": 0,
+      "ms": 182.5361
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 27,
+      "image_id": 574702,
+      "repeat": 0,
+      "ms": 69.2983
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 28,
+      "image_id": 168974,
+      "repeat": 2,
+      "ms": 52.2238
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 28,
+      "image_id": 168974,
+      "repeat": 2,
+      "ms": 141.1684
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 28,
+      "image_id": 168974,
+      "repeat": 2,
+      "ms": 56.2475
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 29,
+      "image_id": 571804,
+      "repeat": 2,
+      "ms": 49.461
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 29,
+      "image_id": 571804,
+      "repeat": 2,
+      "ms": 123.5539
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 29,
+      "image_id": 571804,
+      "repeat": 2,
+      "ms": 57.5935
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 30,
+      "image_id": 277197,
+      "repeat": 0,
+      "ms": 54.2799
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 30,
+      "image_id": 277197,
+      "repeat": 0,
+      "ms": 156.7515
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 30,
+      "image_id": 277197,
+      "repeat": 0,
+      "ms": 56.845
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 31,
+      "image_id": 292005,
+      "repeat": 0,
+      "ms": 54.5296
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 31,
+      "image_id": 292005,
+      "repeat": 0,
+      "ms": 150.1752
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 31,
+      "image_id": 292005,
+      "repeat": 0,
+      "ms": 58.4576
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 32,
+      "image_id": 292005,
+      "repeat": 4,
+      "ms": 54.2129
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 32,
+      "image_id": 292005,
+      "repeat": 4,
+      "ms": 159.1519
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 32,
+      "image_id": 292005,
+      "repeat": 4,
+      "ms": 48.4841
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 33,
+      "image_id": 292005,
+      "repeat": 3,
+      "ms": 57.6906
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 33,
+      "image_id": 292005,
+      "repeat": 3,
+      "ms": 144.9205
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 33,
+      "image_id": 292005,
+      "repeat": 3,
+      "ms": 67.4746
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 34,
+      "image_id": 350148,
+      "repeat": 3,
+      "ms": 56.5952
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 34,
+      "image_id": 350148,
+      "repeat": 3,
+      "ms": 171.893
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 34,
+      "image_id": 350148,
+      "repeat": 3,
+      "ms": 63.6579
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 35,
+      "image_id": 277197,
+      "repeat": 2,
+      "ms": 57.4614
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 35,
+      "image_id": 277197,
+      "repeat": 2,
+      "ms": 180.3292
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 35,
+      "image_id": 277197,
+      "repeat": 2,
+      "ms": 67.039
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 36,
+      "image_id": 249550,
+      "repeat": 1,
+      "ms": 60.256
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 36,
+      "image_id": 249550,
+      "repeat": 1,
+      "ms": 163.1986
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 36,
+      "image_id": 249550,
+      "repeat": 1,
+      "ms": 50.8117
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 37,
+      "image_id": 134886,
+      "repeat": 3,
+      "ms": 51.5449
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 37,
+      "image_id": 134886,
+      "repeat": 3,
+      "ms": 175.2674
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 37,
+      "image_id": 134886,
+      "repeat": 3,
+      "ms": 63.7931
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 38,
+      "image_id": 249550,
+      "repeat": 4,
+      "ms": 65.0716
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 38,
+      "image_id": 249550,
+      "repeat": 4,
+      "ms": 176.6833
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 38,
+      "image_id": 249550,
+      "repeat": 4,
+      "ms": 52.196
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 39,
+      "image_id": 277197,
+      "repeat": 3,
+      "ms": 58.6963
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 39,
+      "image_id": 277197,
+      "repeat": 3,
+      "ms": 173.3424
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 39,
+      "image_id": 277197,
+      "repeat": 3,
+      "ms": 66.7861
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 40,
+      "image_id": 382125,
+      "repeat": 1,
+      "ms": 68.6036
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 40,
+      "image_id": 382125,
+      "repeat": 1,
+      "ms": 177.2082
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 40,
+      "image_id": 382125,
+      "repeat": 1,
+      "ms": 59.4468
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 41,
+      "image_id": 301135,
+      "repeat": 1,
+      "ms": 43.9963
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 41,
+      "image_id": 301135,
+      "repeat": 1,
+      "ms": 150.6511
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 41,
+      "image_id": 301135,
+      "repeat": 1,
+      "ms": 65.8763
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 42,
+      "image_id": 170099,
+      "repeat": 1,
+      "ms": 59.4191
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 42,
+      "image_id": 170099,
+      "repeat": 1,
+      "ms": 148.8705
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 42,
+      "image_id": 170099,
+      "repeat": 1,
+      "ms": 56.594
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 43,
+      "image_id": 571804,
+      "repeat": 4,
+      "ms": 46.0101
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 43,
+      "image_id": 571804,
+      "repeat": 4,
+      "ms": 160.9086
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 43,
+      "image_id": 571804,
+      "repeat": 4,
+      "ms": 60.3308
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 44,
+      "image_id": 168974,
+      "repeat": 3,
+      "ms": 56.4054
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 44,
+      "image_id": 168974,
+      "repeat": 3,
+      "ms": 167.034
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 44,
+      "image_id": 168974,
+      "repeat": 3,
+      "ms": 52.9323
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 45,
+      "image_id": 62554,
+      "repeat": 0,
+      "ms": 55.0367
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 45,
+      "image_id": 62554,
+      "repeat": 0,
+      "ms": 172.2886
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 45,
+      "image_id": 62554,
+      "repeat": 0,
+      "ms": 63.0272
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 46,
+      "image_id": 249550,
+      "repeat": 3,
+      "ms": 63.4645
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 46,
+      "image_id": 249550,
+      "repeat": 3,
+      "ms": 164.44
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 46,
+      "image_id": 249550,
+      "repeat": 3,
+      "ms": 50.7416
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 47,
+      "image_id": 571804,
+      "repeat": 0,
+      "ms": 49.5652
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 47,
+      "image_id": 571804,
+      "repeat": 0,
+      "ms": 163.8677
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 47,
+      "image_id": 571804,
+      "repeat": 0,
+      "ms": 54.0512
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 48,
+      "image_id": 292005,
+      "repeat": 2,
+      "ms": 62.8413
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 48,
+      "image_id": 292005,
+      "repeat": 2,
+      "ms": 165.0662
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 48,
+      "image_id": 292005,
+      "repeat": 2,
+      "ms": 54.1027
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 49,
+      "image_id": 350148,
+      "repeat": 1,
+      "ms": 62.1609
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 49,
+      "image_id": 350148,
+      "repeat": 1,
+      "ms": 161.6329
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 49,
+      "image_id": 350148,
+      "repeat": 1,
+      "ms": 76.7066
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 50,
+      "image_id": 377882,
+      "repeat": 3,
+      "ms": 61.1076
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 50,
+      "image_id": 377882,
+      "repeat": 3,
+      "ms": 143.2837
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 50,
+      "image_id": 377882,
+      "repeat": 3,
+      "ms": 52.9966
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 51,
+      "image_id": 574702,
+      "repeat": 1,
+      "ms": 53.1591
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 51,
+      "image_id": 574702,
+      "repeat": 1,
+      "ms": 158.3303
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 51,
+      "image_id": 574702,
+      "repeat": 1,
+      "ms": 66.4053
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 52,
+      "image_id": 377882,
+      "repeat": 2,
+      "ms": 60.8517
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 52,
+      "image_id": 377882,
+      "repeat": 2,
+      "ms": 138.6849
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 52,
+      "image_id": 377882,
+      "repeat": 2,
+      "ms": 41.5617
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 53,
+      "image_id": 134886,
+      "repeat": 1,
+      "ms": 49.7499
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 53,
+      "image_id": 134886,
+      "repeat": 1,
+      "ms": 153.9828
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 53,
+      "image_id": 134886,
+      "repeat": 1,
+      "ms": 59.9632
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 54,
+      "image_id": 382125,
+      "repeat": 4,
+      "ms": 54.4027
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 54,
+      "image_id": 382125,
+      "repeat": 4,
+      "ms": 159.0637
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 54,
+      "image_id": 382125,
+      "repeat": 4,
+      "ms": 55.4389
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 55,
+      "image_id": 249550,
+      "repeat": 0,
+      "ms": 51.3687
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 55,
+      "image_id": 249550,
+      "repeat": 0,
+      "ms": 161.5713
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 55,
+      "image_id": 249550,
+      "repeat": 0,
+      "ms": 58.806
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 56,
+      "image_id": 134886,
+      "repeat": 4,
+      "ms": 49.584
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 56,
+      "image_id": 134886,
+      "repeat": 4,
+      "ms": 165.5278
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 56,
+      "image_id": 134886,
+      "repeat": 4,
+      "ms": 49.6019
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 57,
+      "image_id": 62554,
+      "repeat": 3,
+      "ms": 56.091
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 57,
+      "image_id": 62554,
+      "repeat": 3,
+      "ms": 170.263
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 57,
+      "image_id": 62554,
+      "repeat": 3,
+      "ms": 53.2163
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 58,
+      "image_id": 301135,
+      "repeat": 4,
+      "ms": 55.1881
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 58,
+      "image_id": 301135,
+      "repeat": 4,
+      "ms": 163.2235
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 58,
+      "image_id": 301135,
+      "repeat": 4,
+      "ms": 59.4673
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 59,
+      "image_id": 377882,
+      "repeat": 1,
+      "ms": 62.7724
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 59,
+      "image_id": 377882,
+      "repeat": 1,
+      "ms": 154.2281
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 59,
+      "image_id": 377882,
+      "repeat": 1,
+      "ms": 66.7611
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 60,
+      "image_id": 301135,
+      "repeat": 3,
+      "ms": 60.4197
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 60,
+      "image_id": 301135,
+      "repeat": 3,
+      "ms": 154.4885
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 60,
+      "image_id": 301135,
+      "repeat": 3,
+      "ms": 52.2383
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 61,
+      "image_id": 238866,
+      "repeat": 3,
+      "ms": 46.5965
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 61,
+      "image_id": 238866,
+      "repeat": 3,
+      "ms": 204.0735
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 61,
+      "image_id": 238866,
+      "repeat": 3,
+      "ms": 67.5179
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 62,
+      "image_id": 410735,
+      "repeat": 2,
+      "ms": 62.6504
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 62,
+      "image_id": 410735,
+      "repeat": 2,
+      "ms": 171.7798
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 62,
+      "image_id": 410735,
+      "repeat": 2,
+      "ms": 53.4224
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 63,
+      "image_id": 62554,
+      "repeat": 4,
+      "ms": 47.9565
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 63,
+      "image_id": 62554,
+      "repeat": 4,
+      "ms": 169.7816
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 63,
+      "image_id": 62554,
+      "repeat": 4,
+      "ms": 65.6895
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 64,
+      "image_id": 382125,
+      "repeat": 2,
+      "ms": 57.2565
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 64,
+      "image_id": 382125,
+      "repeat": 2,
+      "ms": 164.3576
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 64,
+      "image_id": 382125,
+      "repeat": 2,
+      "ms": 61.8169
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 65,
+      "image_id": 238866,
+      "repeat": 2,
+      "ms": 53.7044
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 65,
+      "image_id": 238866,
+      "repeat": 2,
+      "ms": 165.4686
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 65,
+      "image_id": 238866,
+      "repeat": 2,
+      "ms": 65.2251
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 66,
+      "image_id": 301135,
+      "repeat": 2,
+      "ms": 63.5208
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 66,
+      "image_id": 301135,
+      "repeat": 2,
+      "ms": 178.6722
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 66,
+      "image_id": 301135,
+      "repeat": 2,
+      "ms": 61.055
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 67,
+      "image_id": 277197,
+      "repeat": 1,
+      "ms": 59.4577
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 67,
+      "image_id": 277197,
+      "repeat": 1,
+      "ms": 179.1868
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 67,
+      "image_id": 277197,
+      "repeat": 1,
+      "ms": 65.8425
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 68,
+      "image_id": 571804,
+      "repeat": 3,
+      "ms": 58.9394
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 68,
+      "image_id": 571804,
+      "repeat": 3,
+      "ms": 175.6617
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 68,
+      "image_id": 571804,
+      "repeat": 3,
+      "ms": 55.7893
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 69,
+      "image_id": 168974,
+      "repeat": 0,
+      "ms": 53.5964
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 69,
+      "image_id": 168974,
+      "repeat": 0,
+      "ms": 169.0085
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 69,
+      "image_id": 168974,
+      "repeat": 0,
+      "ms": 56.198
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 70,
+      "image_id": 410735,
+      "repeat": 3,
+      "ms": 67.202
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 70,
+      "image_id": 410735,
+      "repeat": 3,
+      "ms": 173.9086
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 70,
+      "image_id": 410735,
+      "repeat": 3,
+      "ms": 58.4318
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 71,
+      "image_id": 350148,
+      "repeat": 0,
+      "ms": 61.6072
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 71,
+      "image_id": 350148,
+      "repeat": 0,
+      "ms": 170.6229
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 71,
+      "image_id": 350148,
+      "repeat": 0,
+      "ms": 72.6131
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 72,
+      "image_id": 62554,
+      "repeat": 2,
+      "ms": 68.0346
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 72,
+      "image_id": 62554,
+      "repeat": 2,
+      "ms": 182.6844
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 72,
+      "image_id": 62554,
+      "repeat": 2,
+      "ms": 60.7833
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 73,
+      "image_id": 168974,
+      "repeat": 4,
+      "ms": 60.7495
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 73,
+      "image_id": 168974,
+      "repeat": 4,
+      "ms": 186.645
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 73,
+      "image_id": 168974,
+      "repeat": 4,
+      "ms": 69.4108
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 74,
+      "image_id": 62554,
+      "repeat": 1,
+      "ms": 67.4077
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 74,
+      "image_id": 62554,
+      "repeat": 1,
+      "ms": 183.7348
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 74,
+      "image_id": 62554,
+      "repeat": 1,
+      "ms": 50.1341
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 75,
+      "image_id": 134886,
+      "repeat": 2,
+      "ms": 55.8974
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 75,
+      "image_id": 134886,
+      "repeat": 2,
+      "ms": 174.941
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 75,
+      "image_id": 134886,
+      "repeat": 2,
+      "ms": 65.5592
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 76,
+      "image_id": 410735,
+      "repeat": 4,
+      "ms": 68.2056
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 76,
+      "image_id": 410735,
+      "repeat": 4,
+      "ms": 176.2612
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 76,
+      "image_id": 410735,
+      "repeat": 4,
+      "ms": 57.1172
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 77,
+      "image_id": 168974,
+      "repeat": 1,
+      "ms": 57.3813
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 77,
+      "image_id": 168974,
+      "repeat": 1,
+      "ms": 170.9065
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 77,
+      "image_id": 168974,
+      "repeat": 1,
+      "ms": 55.033
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 78,
+      "image_id": 249550,
+      "repeat": 2,
+      "ms": 61.1875
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 78,
+      "image_id": 249550,
+      "repeat": 2,
+      "ms": 172.6755
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 78,
+      "image_id": 249550,
+      "repeat": 2,
+      "ms": 54.5286
+    },
+    {
+      "model_id": "ssd_mobilenet_v2_float32",
+      "trial": 79,
+      "image_id": 170099,
+      "repeat": 2,
+      "ms": 54.5319
+    },
+    {
+      "model_id": "efficientdet_lite2_int8",
+      "trial": 79,
+      "image_id": 170099,
+      "repeat": 2,
+      "ms": 168.6137
+    },
+    {
+      "model_id": "efficientdet_lite0_int8",
+      "trial": 79,
+      "image_id": 170099,
+      "repeat": 2,
+      "ms": 63.9892
+    }
+  ]
+}

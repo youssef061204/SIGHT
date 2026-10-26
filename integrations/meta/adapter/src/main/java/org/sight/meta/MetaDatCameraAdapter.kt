@@ -18,6 +18,7 @@ import com.meta.wearable.dat.core.types.PermissionStatus
 import com.meta.wearable.dat.core.types.PermissionError
 import com.meta.wearable.dat.core.types.RegistrationState
 import com.meta.wearable.dat.core.types.WearablesError
+import com.meta.wearable.dat.core.types.LinkState
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -34,17 +35,33 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.concurrent.atomic.AtomicLong
 
 enum class MetaSourceState {
     STOPPED, REGISTRATION_REQUIRED, CAMERA_PERMISSION_REQUIRED, DEVICE_UNAVAILABLE, STARTING,
-    WAITING_FOR_FRAMES, RAW_FRAMES_AVAILABLE, PAUSED, FAILED,
+    WAITING_FOR_FRAMES, RAW_FRAMES_AVAILABLE, PAUSED, DISCONNECTED, FAILED,
 }
 
-data class MetaSourceStatus(val state: MetaSourceState, val detail: String? = null)
+data class MetaSourceStatus(val state: MetaSourceState, val detail: String? = null, val errorCode: String? = null)
+
+/** SDK-observed metadata. Camera attachment does not establish a calibrated RGB image or audio route. */
+data class MetaDeviceCapabilities(
+    val deviceName: String? = null,
+    val deviceType: String? = null,
+    val linkState: String? = null,
+    val compatibility: String? = null,
+    val thermalLevel: String? = null,
+    val batteryPercent: Int? = null,
+    val displayCapable: Boolean = false,
+    val cameraAttached: Boolean = false,
+    val microphoneRequested: Boolean = false,
+)
+
+private class MetaSourceFailure(val sourceState: MetaSourceState, val code: String, message: String) : Exception(message)
 
 /**
- * Owned copy of the SDK's uncompressed buffer; its YUV layout/rotation must be validated
- * before adapting it to the phone application's FrameSource. It is NOT an RGB image.
+ * Owned copy of the SDK's uncompressed buffer. The pinned decoder requests I420;
+ * conversion still requires a matching explicit calibration profile. It is NOT an RGB image.
  * presentationTimeUs belongs to the stream; receivedElapsedNs belongs to the handset.
  */
 data class MetaVideoPacket(
@@ -55,6 +72,7 @@ data class MetaVideoPacket(
     val receivedElapsedNs: Long,
     val source: String,
     val captureClockSynchronized: Boolean = false,
+    val streamGeneration: Long = 0,
 )
 
 /**
@@ -75,6 +93,10 @@ class MetaDatCameraAdapter(
     private val frames = Channel<MetaVideoPacket>(1, BufferOverflow.DROP_OLDEST)
     private val gate = MetaFrameGate()
     private var worker: Job? = null
+    private val generationCounter = AtomicLong()
+    val generation: Long get() = generationCounter.get()
+    private val mutableCapabilities = MutableStateFlow(MetaDeviceCapabilities())
+    val capabilities: StateFlow<MetaDeviceCapabilities> = mutableCapabilities.asStateFlow()
 
     /** Must run from a lifecycle-owned coroutine. Cancellation propagates. */
     suspend fun start() = withContext(Dispatchers.Main.immediate) {
@@ -115,16 +137,51 @@ class MetaDatCameraAdapter(
                 var sessionReady = false
                 var streamReady = false
                 launch(start = CoroutineStart.UNDISPATCHED) {
+                    currentSession.deviceInfo.collect { device ->
+                        mutableCapabilities.value = MetaDeviceCapabilities(
+                            deviceName = device.name, deviceType = device.deviceType.name,
+                            linkState = device.linkState.name, compatibility = device.compatibility.name,
+                            thermalLevel = device.thermalLevel.name,
+                            batteryPercent = device.batteryLevel.takeIf { it in 0..100 },
+                            displayCapable = device.isDisplayCapable(), cameraAttached = camera != null,
+                        )
+                        if (sessionReady && device.linkState == LinkState.DISCONNECTED) {
+                            throw MetaSourceFailure(MetaSourceState.DISCONNECTED, "DEVICE_DISCONNECTED", "Glasses disconnected. Start a new session to reconnect.")
+                        }
+                    }
+                }
+                launch {
+                    while (true) {
+                        delay(2_000)
+                        if (Wearables.registrationState.value != RegistrationState.REGISTERED) {
+                            throw MetaSourceFailure(MetaSourceState.REGISTRATION_REQUIRED, "REGISTRATION_REVOKED", "Meta registration is no longer active.")
+                        }
+                        val currentPermission = Wearables.checkPermissionStatus(Permission.CAMERA)
+                        if (currentPermission.isFailure) {
+                            val failure = currentPermission.errorOrNull()
+                            val disconnected = failure == PermissionError.NO_DEVICE || failure == PermissionError.NO_DEVICE_WITH_CONNECTION
+                            throw MetaSourceFailure(if (disconnected) MetaSourceState.DISCONNECTED else MetaSourceState.FAILED,
+                                failure?.name ?: "PERMISSION_CHECK_FAILED", failure?.description ?: "Cannot establish current camera permission.")
+                        }
+                        if (currentPermission.getOrNull() == PermissionStatus.Denied) {
+                            throw MetaSourceFailure(MetaSourceState.CAMERA_PERMISSION_REQUIRED, "CAMERA_REVOKED", "Glasses camera permission was revoked.")
+                        }
+                    }
+                }
+                launch(start = CoroutineStart.UNDISPATCHED) {
                     currentSession.errors.collect { failure ->
                         // This single compatibility warning is explicitly nonblocking in DAT 1.0.1.
-                        if (failure != DeviceSessionError.DWA_OUT_OF_STU_RANGE) error(failure.description)
+                        if (failure != DeviceSessionError.DWA_OUT_OF_STU_RANGE) {
+                            throw MetaSourceFailure(if (failure == DeviceSessionError.DEVICE_DISCONNECTED) MetaSourceState.DISCONNECTED else MetaSourceState.FAILED,
+                                failure.name, failure.description)
+                        }
                     }
                 }
                 launch(start = CoroutineStart.UNDISPATCHED) {
                     currentSession.state.collect { state ->
                         sessionReady = state == DeviceSessionState.STARTED
                         gate.setStreaming(sessionReady && streamReady)
-                        if (!sessionReady) drainFrames()
+                        if (!sessionReady) invalidateFrames()
                         when (state) {
                             DeviceSessionState.STARTED -> if (camera == null) {
                                 val result = currentSession.addCamera(StreamConfiguration(
@@ -135,22 +192,33 @@ class MetaDatCameraAdapter(
                                 val attached = result.getOrNull()
                                     ?: error(result.errorOrNull()?.description ?: "Cannot attach camera")
                                 camera = attached
+                                mutableCapabilities.value = mutableCapabilities.value.copy(cameraAttached = true)
                                 launch(start = CoroutineStart.UNDISPATCHED) {
                                     attached.stream.errorStream.collect { failure ->
-                                        error(failure.description)
+                                        // DAT documents STREAM_ERROR as informational; all other failures
+                                        // disable observations rather than admitting uncertain source state.
+                                        if (failure == StreamError.STREAM_ERROR) {
+                                            mutableStatus.value = mutableStatus.value.copy(detail = failure.description, errorCode = failure.name)
+                                        } else {
+                                            throw MetaSourceFailure(if (failure == StreamError.PERMISSIONS_DENIED) MetaSourceState.CAMERA_PERMISSION_REQUIRED else MetaSourceState.FAILED,
+                                                failure.name, failure.description)
+                                        }
                                     }
                                 }
                                 launch(start = CoroutineStart.UNDISPATCHED) {
                                     attached.stream.state.collect { streamState ->
                                         streamReady = streamState == StreamState.STREAMING
                                         gate.setStreaming(sessionReady && streamReady)
-                                        if (!sessionReady || !streamReady) drainFrames()
+                                        if (!sessionReady || !streamReady) invalidateFrames()
+                                        if (streamState == StreamState.CLOSED) {
+                                            throw MetaSourceFailure(MetaSourceState.DISCONNECTED, "STREAM_CLOSED", "DAT stream closed; create a new session to reconnect.")
+                                        }
                                         mutableStatus.value = MetaSourceStatus(if (!sessionReady) {
                                             MetaSourceState.PAUSED
                                         } else when (streamState) {
                                             StreamState.STREAMING -> MetaSourceState.WAITING_FOR_FRAMES
                                             StreamState.PAUSED -> MetaSourceState.PAUSED
-                                            StreamState.CLOSED -> MetaSourceState.STOPPED
+                                            StreamState.STOPPING, StreamState.STOPPED -> MetaSourceState.STOPPED
                                             else -> MetaSourceState.STARTING
                                         })
                                     }
@@ -173,7 +241,8 @@ class MetaDatCameraAdapter(
                                             buffer.get(bytes)
                                             frames.trySend(MetaVideoPacket(bytes, frame.width, frame.height,
                                                 frame.presentationTimeUs, receivedNs,
-                                                if (simulated) "meta-dat-mock" else "meta-dat-glasses"))
+                                                if (simulated) "meta-dat-mock" else "meta-dat-glasses",
+                                                streamGeneration = generation))
                                             mutableStatus.value = MetaSourceStatus(MetaSourceState.RAW_FRAMES_AVAILABLE)
                                         }
                                     }
@@ -182,10 +251,10 @@ class MetaDatCameraAdapter(
                             }
                             DeviceSessionState.PAUSED -> {
                                 gate.setStreaming(false)
-                                drainFrames()
+                                invalidateFrames()
                                 mutableStatus.value = MetaSourceStatus(MetaSourceState.PAUSED)
                             }
-                            DeviceSessionState.STOPPED -> error("DAT session ended; create a new session to reconnect")
+                            DeviceSessionState.STOPPED -> throw MetaSourceFailure(MetaSourceState.DISCONNECTED, "SESSION_STOPPED", "DAT session ended; create a new session to reconnect")
                             else -> Unit
                         }
                     }
@@ -202,11 +271,12 @@ class MetaDatCameraAdapter(
             } catch (cancelled: CancellationException) {
                 throw cancelled
             } catch (failure: Exception) {
-                mutableStatus.value = MetaSourceStatus(MetaSourceState.FAILED,
-                    failure.message ?: failure.javaClass.simpleName)
+                mutableStatus.value = MetaSourceStatus((failure as? MetaSourceFailure)?.sourceState ?: MetaSourceState.FAILED,
+                    failure.message ?: failure.javaClass.simpleName, (failure as? MetaSourceFailure)?.code)
             } finally {
                 gate.setStreaming(false)
-                drainFrames()
+                invalidateFrames()
+                mutableCapabilities.value = mutableCapabilities.value.copy(cameraAttached = false)
                 camera?.stop()
                 session?.stop()
             }
@@ -219,16 +289,23 @@ class MetaDatCameraAdapter(
         if (mutableStatus.value.state != MetaSourceState.RAW_FRAMES_AVAILABLE) return null
         val frame = frames.tryReceive().getOrNull() ?: return null
         val ageNs = SystemClock.elapsedRealtimeNanos() - frame.receivedElapsedNs
-        return frame.takeIf { ageNs in 0..maxQueueAgeNs }
+        return frame.takeIf { ageNs in 0..maxQueueAgeNs && it.streamGeneration == generation }
     }
 
     suspend fun stop() = withContext(Dispatchers.Main.immediate) {
+        // Invalidate already-taken frames before waiting for the SDK collectors to unwind.
+        generationCounter.incrementAndGet()
         worker?.cancelAndJoin()
         worker = null
         gate.setStreaming(false)
         drainFrames()
         mutableStatus.value = MetaSourceStatus(MetaSourceState.STOPPED)
+        mutableCapabilities.value = mutableCapabilities.value.copy(cameraAttached = false)
     }
 
+    /** Recreates terminal SDK handles; permissions are checked again. No hidden pairing or retry loop. */
+    suspend fun reconnect() = start()
+
     private fun drainFrames() { while (frames.tryReceive().isSuccess) { /* bounded queue */ } }
+    private fun invalidateFrames() { generationCounter.incrementAndGet(); drainFrames() }
 }

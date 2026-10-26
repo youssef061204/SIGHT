@@ -1,0 +1,706 @@
+{
+  "model_id": "ssd_mobilenet_v2_float32",
+  "model_sha256": "b8ccb1a25d45455ba52e85f26531948e1cb75efeb94c7c3d456d54fd4d6fbdd2",
+  "model_bytes": 11316189,
+  "startup_ms": 41.9255,
+  "memory_before": {
+    "working_set_bytes": 92704768,
+    "peak_working_set_bytes": 103985152,
+    "scope": "entire isolated Python process including imports, runtime, model, image decode and scoring; not model-only or Android memory"
+  },
+  "memory_after_warmup": {
+    "working_set_bytes": 160305152,
+    "peak_working_set_bytes": 164769792,
+    "scope": "entire isolated Python process including imports, runtime, model, image decode and scoring; not model-only or Android memory"
+  },
+  "variants": {
+    "clean": {
+      "subset_AP50_95": 0.3154304351171042,
+      "subset_AP50": 0.47572513516703013,
+      "tp": 103,
+      "fp": 8,
+      "fn": 290,
+      "precision_at_operating_threshold": 0.9279279279279279,
+      "recall_at_operating_threshold": 0.26208651399491095,
+      "per_class_AP50": {
+        "person": 0.6161137062467815,
+        "bicycle": 0.09945994599459947,
+        "car": 0.5314248816185966,
+        "bus": 0.46534653465346537,
+        "train": 0.9999999999999999,
+        "truck": 1.0,
+        "traffic light": 0.0029529268716345317,
+        "fire hydrant": 0.8452970297029705,
+        "bird": 0.25,
+        "cat": 1.0,
+        "horse": 1.0,
+        "cow": 1.0,
+        "elephant": 0.8415841584158416,
+        "bear": 0.9999999999999999,
+        "backpack": 0.30863776032775686,
+        "umbrella": 0.0,
+        "handbag": 0.17371737173717372,
+        "tie": 0.0,
+        "suitcase": 0.6180502665651182,
+        "skis": 0.04950495049504951,
+        "snowboard": 0.5049504950495048,
+        "sports ball": 0.16831683168316833,
+        "kite": 0.5049504950495048,
+        "baseball bat": 0.0,
+        "baseball glove": 0.0,
+        "skateboard": 0.6435643564356436,
+        "surfboard": 0.9999999999999999,
+        "bottle": 0.36903690369036907,
+        "wine glass": 0.0,
+        "cup": 0.12623762376237624,
+        "fork": 0.5462046204620461,
+        "knife": 0.07425742574257425,
+        "spoon": 0.0,
+        "bowl": 0.24092409240924087,
+        "banana": 0.6435643564356436,
+        "apple": 0.0,
+        "orange": 0.0,
+        "broccoli": 0.39624319574814615,
+        "pizza": 1.0,
+        "chair": 0.14402732826474135,
+        "dining table": 0.42244224422442234,
+        "toilet": 0.6633663366336634,
+        "tv": 0.6919691969196919,
+        "laptop": 0.5980198019801979,
+        "mouse": 1.0,
+        "keyboard": 0.9009900990099011,
+        "cell phone": 0.2574257425742574,
+        "microwave": 0.9999999999999999,
+        "sink": 0.0,
+        "refrigerator": 0.5049504950495048,
+        "clock": 0.5049504950495048,
+        "vase": 0.504950495049505,
+        "teddy bear": 1.0
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 42,
+          "fp": 2,
+          "fn": 80,
+          "precision": 0.9545454545454546,
+          "recall": 0.3442622950819672
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 25,
+          "precision": 1.0,
+          "recall": 0.21875
+        },
+        "bus": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.3076923076923077
+        },
+        "train": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "traffic light": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "fire hydrant": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 8,
+          "precision": 1.0,
+          "recall": 0.2727272727272727
+        },
+        "bird": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cat": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "horse": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "cow": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "elephant": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.3076923076923077
+        },
+        "bear": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "backpack": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.25
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "suitcase": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 5,
+          "precision": 0.6666666666666666,
+          "recall": 0.2857142857142857
+        },
+        "skis": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "snowboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "sports ball": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "kite": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "baseball bat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "baseball glove": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skateboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 12,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "wine glass": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "banana": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": null,
+          "recall": 0.0
+        },
+        "apple": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "orange": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "broccoli": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 31,
+          "precision": 0.3333333333333333,
+          "recall": 0.03125
+        },
+        "dining table": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.5
+        },
+        "toilet": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6666666666666666
+        },
+        "tv": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.6
+        },
+        "laptop": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.8,
+          "recall": 0.6666666666666666
+        },
+        "mouse": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "keyboard": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.5
+        },
+        "cell phone": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.25
+        },
+        "microwave": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "refrigerator": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "teddy bear": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 40,
+      "false_positives_per_image": 0.16,
+      "image_count": 50,
+      "area_operating_counts": {
+        "all": {
+          "tp": 103,
+          "fn": 290,
+          "recall": 0.26208651399491095
+        },
+        "small": {
+          "tp": 1,
+          "fn": 129,
+          "recall": 0.007692307692307693
+        },
+        "medium": {
+          "tp": 40,
+          "fn": 128,
+          "recall": 0.23809523809523808
+        },
+        "large": {
+          "tp": 62,
+          "fn": 33,
+          "recall": 0.6526315789473685
+        }
+      },
+      "latency_ms": {
+        "n": 50,
+        "p50": 20.818550000000002,
+        "p95": 23.975525,
+        "scope": "detect call includes native resize/inference/postprocess; decode/mp.Image creation excluded; exploratory samples"
+      },
+      "latencies": [
+        {
+          "image_id": 526728,
+          "ms": 18.708
+        },
+        {
+          "image_id": 278705,
+          "ms": 18.4761
+        },
+        {
+          "image_id": 441442,
+          "ms": 20.2411
+        },
+        {
+          "image_id": 59920,
+          "ms": 18.5858
+        },
+        {
+          "image_id": 338191,
+          "ms": 18.8254
+        },
+        {
+          "image_id": 189310,
+          "ms": 21.0887
+        },
+        {
+          "image_id": 446207,
+          "ms": 18.4713
+        },
+        {
+          "image_id": 504074,
+          "ms": 19.2212
+        },
+        {
+          "image_id": 65350,
+          "ms": 18.8562
+        },
+        {
+          "image_id": 286553,
+          "ms": 19.6145
+        },
+        {
+          "image_id": 520871,
+          "ms": 20.1195
+        },
+        {
+          "image_id": 499768,
+          "ms": 20.2926
+        },
+        {
+          "image_id": 572620,
+          "ms": 24.0725
+        },
+        {
+          "image_id": 484415,
+          "ms": 19.957
+        },
+        {
+          "image_id": 30504,
+          "ms": 20.2347
+        },
+        {
+          "image_id": 198641,
+          "ms": 21.62
+        },
+        {
+          "image_id": 6012,
+          "ms": 18.8388
+        },
+        {
+          "image_id": 79651,
+          "ms": 20.094
+        },
+        {
+          "image_id": 414795,
+          "ms": 23.0732
+        },
+        {
+          "image_id": 313130,
+          "ms": 20.0405
+        },
+        {
+          "image_id": 188465,
+          "ms": 21.766
+        },
+        {
+          "image_id": 312720,
+          "ms": 20.7926
+        },
+        {
+          "image_id": 187362,
+          "ms": 20.9911
+        },
+        {
+          "image_id": 479126,
+          "ms": 22.9118
+        },
+        {
+          "image_id": 418281,
+          "ms": 21.8572
+        },
+        {
+          "image_id": 12280,
+          "ms": 21.1092
+        },
+        {
+          "image_id": 343937,
+          "ms": 20.7303
+        },
+        {
+          "image_id": 402346,
+          "ms": 20.3475
+        },
+        {
+          "image_id": 463690,
+          "ms": 21.544
+        },
+        {
+          "image_id": 213224,
+          "ms": 20.8445
+        },
+        {
+          "image_id": 78170,
+          "ms": 20.6189
+        },
+        {
+          "image_id": 572517,
+          "ms": 19.6924
+        },
+        {
+          "image_id": 88265,
+          "ms": 22.7865
+        },
+        {
+          "image_id": 456292,
+          "ms": 20.1974
+        },
+        {
+          "image_id": 472623,
+          "ms": 19.7924
+        },
+        {
+          "image_id": 248314,
+          "ms": 23.857
+        },
+        {
+          "image_id": 256916,
+          "ms": 22.2863
+        },
+        {
+          "image_id": 210273,
+          "ms": 23.3189
+        },
+        {
+          "image_id": 340894,
+          "ms": 21.8634
+        },
+        {
+          "image_id": 398742,
+          "ms": 22.6476
+        },
+        {
+          "image_id": 393226,
+          "ms": 21.8974
+        },
+        {
+          "image_id": 15746,
+          "ms": 21.3959
+        },
+        {
+          "image_id": 579307,
+          "ms": 24.6966
+        },
+        {
+          "image_id": 325527,
+          "ms": 22.0616
+        },
+        {
+          "image_id": 49759,
+          "ms": 23.0877
+        },
+        {
+          "image_id": 66231,
+          "ms": 24.4341
+        },
+        {
+          "image_id": 352900,
+          "ms": 23.0374
+        },
+        {
+          "image_id": 73118,
+          "ms": 22.3755
+        },
+        {
+          "image_id": 58655,
+          "ms": 20.7558
+        },
+        {
+          "image_id": 309655,
+          "ms": 20.6456
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.12.15",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "mediapipe": "1.1.1",
+    "cpu": "Intel Core i7-14700HX",
+    "cpu_affinity": "Windows logical CPUs0-3 (0xF)",
+    "runtime_threads": "MediaPipe default; not overridden",
+    "delegate": "CPU",
+    "timing_caveat": "accuracy-sweep timing only; host work can add noise; no phone or battery claim"
+  },
+  "dataset_manifest_sha256": "f2e0b5d1ee85dfca3576d73c9dcc1fea68ec419fe3e5d11dd69bb91451a3a081",
+  "annotation_sha256": "720e1df7610ca577c5102e6fed2c40dab8c8225c3cff9df852685bb849f55bfd",
+  "memory_end": {
+    "working_set_bytes": 170315776,
+    "peak_working_set_bytes": 193536000,
+    "scope": "entire isolated Python process including imports, runtime, model, image decode and scoring; not model-only or Android memory"
+  }
+}

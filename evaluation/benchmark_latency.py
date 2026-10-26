@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 import platform
 import random
+import shutil
 import time
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -32,6 +33,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default="evaluation/results/paired-clean-latency-v2")
     parser.add_argument("--id", default="paired-clean-latency-v2")
+    parser.add_argument("--model-ids", default="efficientdet_lite0_int8,ssd_mobilenet_v2_float32")
     args = parser.parse_args()
     manifest = json.loads((ROOT / "models/manifest.json").read_text())
     dataset = json.loads((ROOT / "evaluation/data/manifest.json").read_text())
@@ -40,12 +42,15 @@ def main():
         if hashlib.sha256(path.read_bytes()).hexdigest() != entry["sha256"]:
             raise RuntimeError("Dataset image hash mismatch: " + entry["local_path"])
     config = {"id": args.id, "seed": 20261023, "warmup": 5, "repeats": 5,
+              "model_ids": args.model_ids.split(","),
               "cpu_affinity_mask": "0xF (Windows logical CPUs 0-3)", "runtime_threads": "MediaPipe runtime default; not overridden",
               "score_floor": .05, "max_results": 100, "input_count": len(dataset["images"]),
               "scope": "detect() includes native input preprocessing, model and postprocessing; file decode and mp.Image creation excluded"}
     frames = [(image["id"], mp.Image(image_format=mp.ImageFormat.SRGB, data=np.asarray(Image.open(ROOT / "evaluation/data" / image["local_path"]).convert("RGB")))) for image in dataset["images"]]
     detectors = {}
     for model in manifest["models"]:
+        if model["id"] not in args.model_ids.split(","):
+            continue
         path = ROOT / model["path"]
         if hashlib.sha256(path.read_bytes()).hexdigest() != model["sha256"]:
             raise RuntimeError("Model hash mismatch")
@@ -73,11 +78,13 @@ def main():
         metrics[model_id] = {"n": len(latencies), "mean_ms": float(np.mean(latencies)), "p50_ms": float(np.median(latencies)), "p95_ms": float(np.percentile(latencies, 95)), "min_ms": float(np.min(latencies)), "max_ms": float(np.max(latencies))}
     output = ROOT / args.output
     output.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(ROOT / "models/manifest.json", output / "model_manifest_at_run.json")
     (output / "summary.json").write_text(json.dumps({"created_at_utc": datetime.now(timezone.utc).isoformat(), "config": config, "platform": platform.platform(), "cpu": "Intel Core i7-14700HX (host 20 cores,28 logical processors)", "mediapipe": mp.__version__, "dataset_manifest_sha256": hashlib.sha256((ROOT / "evaluation/data/manifest.json").read_bytes()).hexdigest(), "model_manifest_sha256": hashlib.sha256((ROOT / "models/manifest.json").read_bytes()).hexdigest(), "models": metrics, "samples": samples}, indent=2))
     lines = ["# Paired desktop CPU latency", "", f"Real inference; 16 original COCO photographs, five repetitions each (80 calls per model). Five unmeasured warmups per model. Shuffled image/repeat pairs; model order alternates within pairs. Windows CPU affinity fixed to logical CPUs 0-3 (`0xF`) to reduce scheduling variation. MediaPipe runtime thread count is left at its default. Intel Core i7-14700HX, Windows, Python 3.12, MediaPipe {mp.__version__}.", "", "| Model | n | p50 ms | p95 ms |", "| --- | ---: | ---: | ---: |"]
     for model_id, values in metrics.items():
         lines.append(f"| {model_id} | {values['n']} | {values['p50_ms']:.2f} | {values['p95_ms']:.2f} |")
-    lines += ["", "P95 is exploratory (only 80 correlated calls/model); P99 omitted. Detect-call scope includes native resize/inference/postprocessing and excludes disk decode and mp.Image creation. Host load, caching and power policy still matter. This does not measure phone latency, capture FPS, energy, end-to-end speech or memory usage. Accuracy is in `../desktop-coco-smoke-v2/report.md`; compare latency only within this explicitly bounded run.", "", "Reproduce: `evaluation/.venv-modern/Scripts/python.exe evaluation/benchmark_latency.py`. Exact config and all raw latency samples are in `summary.json`."]
+    reproduce = f"evaluation/.venv-modern/Scripts/python.exe evaluation/benchmark_latency.py --id {args.id} --output {args.output} --model-ids {args.model_ids}"
+    lines += ["", "P95 is exploratory (only 80 correlated calls/model); P99 omitted. Detect-call scope includes native resize/inference/postprocessing and excludes disk decode and mp.Image creation. Host load, caching and power policy still matter. This does not measure phone latency, capture FPS, energy, end-to-end speech or memory usage. Compare latency only within this explicitly bounded run. Model-selection/held-out accuracy is reported separately.", "", f"Reproduce: `{reproduce}`. Exact config and all raw latency samples are in `summary.json`."]
     (output / "report.md").write_text("\n".join(lines) + "\n")
     print(json.dumps(metrics, indent=2))
 

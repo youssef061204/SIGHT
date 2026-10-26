@@ -17,7 +17,7 @@ jobs:
       - name: Fetch and verify inference weights
         shell: pwsh
         run: ./scripts/fetch-models.ps1
-      - run: chmod +x gradlew && ./gradlew :core:test :app:testDebugUnitTest :app:assembleDebug :app:lintDebug :app:assembleDebugAndroidTest --console=plain
+      - run: chmod +x gradlew && ./gradlew :core:test :perception:testDebugUnitTest :app:testDebugUnitTest :app:assembleDebug :app:lintDebug :app:assembleDebugAndroidTest --console=plain
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -26,6 +26,7 @@ jobs:
             app/build/outputs/apk/**/*.apk
             app/build/reports/
             core/build/reports/tests/
+            perception/build/reports/tests/
   evaluation-tools:
     runs-on: ubuntu-latest
     steps:

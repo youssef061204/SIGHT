@@ -1,0 +1,23 @@
+{
+  "scope": "FAST deployment cap40 versus historical cap20 does not change any saved held-out operating detections; every image has at most10 above threshold",
+  "rows": [
+    {
+      "file": "evaluation/results/v3-detection/held_out/efficientdet_lite0_int8/clean_predictions.json",
+      "sha256": "ed9e99f8b81baf086c89ddd99cdf19f0dd3e463587cdb81fde21122f25d46bf7",
+      "max_above_threshold": 10,
+      "threshold": 0.5
+    },
+    {
+      "file": "evaluation/results/v3-detection/held_out/efficientdet_lite0_int8/dim_035_predictions.json",
+      "sha256": "e933c6f9defa1c4f8fa0ba70fa36de6363dd3acaab9f8a82fd71962abe814b2c",
+      "max_above_threshold": 8,
+      "threshold": 0.5
+    },
+    {
+      "file": "evaluation/results/v3-detection/held_out/efficientdet_lite0_int8/motion_blur_15_predictions.json",
+      "sha256": "871a1b671f5a79d8f5447d2d330add5f0aa20614ddcdc9501de1c72303c7eb94",
+      "max_above_threshold": 8,
+      "threshold": 0.5
+    }
+  ]
+}

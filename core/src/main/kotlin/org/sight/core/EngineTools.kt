@@ -16,6 +16,7 @@ data class ToolResult<T>(
 data class ObservedScene(val entities: List<TrackedEntity>, val relationships: List<SceneRelationship>)
 data class RecognizedText(val originalText: String, val readingOrder: String = "OCR image order; columns and paragraph boundaries are unverified")
 data class MemoryRecall(val snapshot: MemorySnapshot, val ageMs: Long, val presentLocationKnown: Boolean = false)
+data class TemporalRecall(val observations: List<WorldEntity>, val physicalIdentityVerified: Boolean = false)
 enum class InformationGap { TARGET_NOT_DETECTED, TEXT_NOT_RECOGNIZED, CAMERA_UNAVAILABLE }
 data class ViewRequest(val gap: InformationGap, val message: String)
 enum class UncertaintyReason { UNVALIDATED_DEPTH, UNSUPPORTED_ATTRIBUTES, TARGET_NOT_DETECTED, STALE_OBSERVATION }
@@ -27,6 +28,24 @@ data class UncertaintyReport(val reason: UncertaintyReason, val message: String)
  * saveLandmark must be called only for an explicit user request; it stores a user-named scene.
  */
 class EngineTools(private val engine: SightEngine) {
+    /** Retained metadata stays explicitly historical when it is not present in the current view. */
+    fun queryTemporalMemory(nowMs: Long, category: String? = null, direction: ImageDirection? = null): ToolResult<TemporalRecall> {
+        val update = engine.tick(nowMs)
+        val selected = update.world.filter { (category == null || it.entity.category.equals(category.trim(), ignoreCase = true)) &&
+            (direction == null || it.entity.direction == direction) }
+        if (selected.isEmpty()) return ToolResult(ToolStatus.NO_EVIDENCE, nowMs,
+            errors = listOf(ToolError("NO_RETAINED_OBSERVATION", "No matching observation metadata remains within the short-term retention window; absence is not established.")))
+        return ToolResult(ToolStatus.SUCCESS, nowMs, TemporalRecall(selected), selected.first().entity.evidence)
+    }
+
+    fun compareRecentViews(nowMs: Long): ToolResult<SceneChangeSet> {
+        val changes = engine.tick(nowMs).sceneChanges ?: return ToolResult(ToolStatus.NO_EVIDENCE, nowMs,
+            errors = listOf(ToolError("INSUFFICIENT_VIEWS", "Two retained detector views are required.")))
+        if (!changes.identitiesComparable) return ToolResult(ToolStatus.NEEDS_CONFIRMATION, nowMs, changes, changes.currentEvidence,
+            errors = listOf(ToolError("IMAGE_CONTINUITY_CHANGED", "Source, model, lifecycle or oriented geometry changed; image identities cannot be compared.")))
+        return ToolResult(ToolStatus.SUCCESS, nowMs, changes, changes.currentEvidence)
+    }
+
     fun observeScene(nowMs: Long): ToolResult<ObservedScene> {
         val update = engine.tick(nowMs)
         val evidence = update.liveEvidence

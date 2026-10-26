@@ -1,0 +1,6886 @@
+{
+  "scope": "legacy16diagnostic only; confidence sweeps never tune new held-out80",
+  "reproduced_predictions_sha256": "4cd7be6163edf77d77dbbaf427e338e36a0d9dab1fa048521f32b840be657bcf",
+  "threshold_sweep": [
+    {
+      "threshold": 0.1,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 78,
+        "fp": 128,
+        "fn": 123,
+        "precision_at_operating_threshold": 0.3786407766990291,
+        "recall_at_operating_threshold": 0.3880597014925373,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 25,
+            "fp": 11,
+            "fn": 37,
+            "precision": 0.6944444444444444,
+            "recall": 0.4032258064516129
+          },
+          "bicycle": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 3,
+            "precision": 0.3333333333333333,
+            "recall": 0.25
+          },
+          "car": {
+            "tp": 5,
+            "fp": 9,
+            "fn": 8,
+            "precision": 0.35714285714285715,
+            "recall": 0.38461538461538464
+          },
+          "motorcycle": {
+            "tp": 5,
+            "fp": 7,
+            "fn": 1,
+            "precision": 0.4166666666666667,
+            "recall": 0.8333333333333334
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 4,
+            "fn": 0,
+            "precision": 0.2,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "traffic light": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.3333333333333333,
+            "recall": 0.5
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 3,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "cup": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 4,
+            "precision": 0.6,
+            "recall": 0.42857142857142855
+          },
+          "fork": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 5,
+            "fp": 7,
+            "fn": 6,
+            "precision": 0.4166666666666667,
+            "recall": 0.45454545454545453
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 6,
+            "fn": 0,
+            "precision": 0.14285714285714285,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 6,
+            "fn": 0,
+            "precision": 0.14285714285714285,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 12,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "donut": {
+            "tp": 9,
+            "fp": 11,
+            "fn": 3,
+            "precision": 0.45,
+            "recall": 0.75
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 4,
+            "fp": 12,
+            "fn": 8,
+            "precision": 0.25,
+            "recall": 0.3333333333333333
+          },
+          "couch": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666
+          },
+          "potted plant": {
+            "tp": 1,
+            "fp": 4,
+            "fn": 2,
+            "precision": 0.2,
+            "recall": 0.3333333333333333
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 4,
+            "precision": 0.6,
+            "recall": 0.42857142857142855
+          },
+          "toilet": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 3,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.5,
+            "recall": 0.25
+          },
+          "book": {
+            "tp": 0,
+            "fp": 6,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 6,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 3,
+            "precision": 0.3333333333333333,
+            "recall": 0.25
+          }
+        },
+        "operating_score_threshold": 0.1,
+        "deployment_limit": 20,
+        "false_positives_per_image": 8.0,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 78,
+            "fn": 123,
+            "recall": 0.3880597014925373
+          },
+          "small": {
+            "tp": 10,
+            "fn": 72,
+            "recall": 0.12195121951219512
+          },
+          "medium": {
+            "tp": 46,
+            "fn": 44,
+            "recall": 0.5111111111111111
+          },
+          "large": {
+            "tp": 22,
+            "fn": 7,
+            "recall": 0.7586206896551724
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.2,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 76,
+        "fp": 70,
+        "fn": 125,
+        "precision_at_operating_threshold": 0.5205479452054794,
+        "recall_at_operating_threshold": 0.3781094527363184,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 25,
+            "fp": 5,
+            "fn": 37,
+            "precision": 0.8333333333333334,
+            "recall": 0.4032258064516129
+          },
+          "bicycle": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 3,
+            "precision": 0.3333333333333333,
+            "recall": 0.25
+          },
+          "car": {
+            "tp": 5,
+            "fp": 8,
+            "fn": 8,
+            "precision": 0.38461538461538464,
+            "recall": 0.38461538461538464
+          },
+          "motorcycle": {
+            "tp": 5,
+            "fp": 5,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.8333333333333334
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.25,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "traffic light": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "cup": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.42857142857142855
+          },
+          "fork": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 4,
+            "fp": 4,
+            "fn": 7,
+            "precision": 0.5,
+            "recall": 0.36363636363636365
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 6,
+            "fn": 0,
+            "precision": 0.14285714285714285,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "donut": {
+            "tp": 9,
+            "fp": 11,
+            "fn": 3,
+            "precision": 0.45,
+            "recall": 0.75
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 4,
+            "fp": 6,
+            "fn": 8,
+            "precision": 0.4,
+            "recall": 0.3333333333333333
+          },
+          "couch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6666666666666666
+          },
+          "potted plant": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 2,
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 4,
+            "precision": 0.6,
+            "recall": 0.42857142857142855
+          },
+          "toilet": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "precision": 1.0,
+            "recall": 0.25
+          },
+          "book": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 3,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.5,
+            "recall": 0.25
+          }
+        },
+        "operating_score_threshold": 0.2,
+        "deployment_limit": 20,
+        "false_positives_per_image": 4.375,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 76,
+            "fn": 125,
+            "recall": 0.3781094527363184
+          },
+          "small": {
+            "tp": 10,
+            "fn": 72,
+            "recall": 0.12195121951219512
+          },
+          "medium": {
+            "tp": 45,
+            "fn": 45,
+            "recall": 0.5
+          },
+          "large": {
+            "tp": 21,
+            "fn": 8,
+            "recall": 0.7241379310344828
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.25,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 71,
+        "fp": 51,
+        "fn": 130,
+        "precision_at_operating_threshold": 0.5819672131147541,
+        "recall_at_operating_threshold": 0.35323383084577115,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 24,
+            "fp": 5,
+            "fn": 38,
+            "precision": 0.8275862068965517,
+            "recall": 0.3870967741935484
+          },
+          "bicycle": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 4,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "car": {
+            "tp": 5,
+            "fp": 4,
+            "fn": 8,
+            "precision": 0.5555555555555556,
+            "recall": 0.38461538461538464
+          },
+          "motorcycle": {
+            "tp": 4,
+            "fp": 3,
+            "fn": 2,
+            "precision": 0.5714285714285714,
+            "recall": 0.6666666666666666
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.25,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "cup": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 5,
+            "precision": 1.0,
+            "recall": 0.2857142857142857
+          },
+          "fork": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 7,
+            "precision": 0.6666666666666666,
+            "recall": 0.36363636363636365
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.16666666666666666,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "donut": {
+            "tp": 9,
+            "fp": 11,
+            "fn": 3,
+            "precision": 0.45,
+            "recall": 0.75
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 9,
+            "precision": 0.6,
+            "recall": 0.25
+          },
+          "couch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6666666666666666
+          },
+          "potted plant": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "precision": 0.5,
+            "recall": 0.3333333333333333
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 4,
+            "precision": 0.75,
+            "recall": 0.42857142857142855
+          },
+          "toilet": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "precision": 1.0,
+            "recall": 0.25
+          },
+          "book": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 3,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.5,
+            "recall": 0.25
+          }
+        },
+        "operating_score_threshold": 0.25,
+        "deployment_limit": 20,
+        "false_positives_per_image": 3.1875,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 71,
+            "fn": 130,
+            "recall": 0.35323383084577115
+          },
+          "small": {
+            "tp": 8,
+            "fn": 74,
+            "recall": 0.0975609756097561
+          },
+          "medium": {
+            "tp": 42,
+            "fn": 48,
+            "recall": 0.4666666666666667
+          },
+          "large": {
+            "tp": 21,
+            "fn": 8,
+            "recall": 0.7241379310344828
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.3,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 61,
+        "fp": 39,
+        "fn": 140,
+        "precision_at_operating_threshold": 0.61,
+        "recall_at_operating_threshold": 0.3034825870646766,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 21,
+            "fp": 2,
+            "fn": 41,
+            "precision": 0.9130434782608695,
+            "recall": 0.3387096774193548
+          },
+          "bicycle": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 4,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "car": {
+            "tp": 4,
+            "fp": 3,
+            "fn": 9,
+            "precision": 0.5714285714285714,
+            "recall": 0.3076923076923077
+          },
+          "motorcycle": {
+            "tp": 3,
+            "fp": 3,
+            "fn": 3,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333
+          },
+          "cup": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 5,
+            "precision": 1.0,
+            "recall": 0.2857142857142857
+          },
+          "fork": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 8,
+            "precision": 0.6,
+            "recall": 0.2727272727272727
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 4,
+            "fn": 0,
+            "precision": 0.2,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "donut": {
+            "tp": 9,
+            "fp": 11,
+            "fn": 3,
+            "precision": 0.45,
+            "recall": 0.75
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 9,
+            "precision": 0.75,
+            "recall": 0.25
+          },
+          "couch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6666666666666666
+          },
+          "potted plant": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "precision": 0.5,
+            "recall": 0.3333333333333333
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.42857142857142855
+          },
+          "toilet": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "precision": 1.0,
+            "recall": 0.25
+          },
+          "book": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 3,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          }
+        },
+        "operating_score_threshold": 0.3,
+        "deployment_limit": 20,
+        "false_positives_per_image": 2.4375,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 61,
+            "fn": 140,
+            "recall": 0.3034825870646766
+          },
+          "small": {
+            "tp": 4,
+            "fn": 78,
+            "recall": 0.04878048780487805
+          },
+          "medium": {
+            "tp": 37,
+            "fn": 53,
+            "recall": 0.4111111111111111
+          },
+          "large": {
+            "tp": 20,
+            "fn": 9,
+            "recall": 0.6896551724137931
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.35,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 55,
+        "fp": 27,
+        "fn": 146,
+        "precision_at_operating_threshold": 0.6707317073170732,
+        "recall_at_operating_threshold": 0.2736318407960199,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 19,
+            "fp": 1,
+            "fn": 43,
+            "precision": 0.95,
+            "recall": 0.3064516129032258
+          },
+          "bicycle": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 4,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "car": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 10,
+            "precision": 0.75,
+            "recall": 0.23076923076923078
+          },
+          "motorcycle": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 3,
+            "precision": 0.6,
+            "recall": 0.5
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cup": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 5,
+            "precision": 1.0,
+            "recall": 0.2857142857142857
+          },
+          "fork": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 8,
+            "precision": 0.6,
+            "recall": 0.2727272727272727
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "donut": {
+            "tp": 9,
+            "fp": 11,
+            "fn": 3,
+            "precision": 0.45,
+            "recall": 0.75
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 9,
+            "precision": 0.75,
+            "recall": 0.25
+          },
+          "couch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6666666666666666
+          },
+          "potted plant": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "precision": 0.5,
+            "recall": 0.3333333333333333
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 5,
+            "precision": 1.0,
+            "recall": 0.2857142857142857
+          },
+          "toilet": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          }
+        },
+        "operating_score_threshold": 0.35,
+        "deployment_limit": 20,
+        "false_positives_per_image": 1.6875,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 55,
+            "fn": 146,
+            "recall": 0.2736318407960199
+          },
+          "small": {
+            "tp": 1,
+            "fn": 81,
+            "recall": 0.012195121951219513
+          },
+          "medium": {
+            "tp": 35,
+            "fn": 55,
+            "recall": 0.3888888888888889
+          },
+          "large": {
+            "tp": 19,
+            "fn": 10,
+            "recall": 0.6551724137931034
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.4,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 52,
+        "fp": 19,
+        "fn": 149,
+        "precision_at_operating_threshold": 0.7323943661971831,
+        "recall_at_operating_threshold": 0.25870646766169153,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 17,
+            "fp": 1,
+            "fn": 45,
+            "precision": 0.9444444444444444,
+            "recall": 0.27419354838709675
+          },
+          "bicycle": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 4,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "car": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 10,
+            "precision": 0.75,
+            "recall": 0.23076923076923078
+          },
+          "motorcycle": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.75,
+            "recall": 0.5
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cup": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 5,
+            "precision": 1.0,
+            "recall": 0.2857142857142857
+          },
+          "fork": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 8,
+            "precision": 0.75,
+            "recall": 0.2727272727272727
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "donut": {
+            "tp": 9,
+            "fp": 9,
+            "fn": 3,
+            "precision": 0.5,
+            "recall": 0.75
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 9,
+            "precision": 1.0,
+            "recall": 0.25
+          },
+          "couch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6666666666666666
+          },
+          "potted plant": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 5,
+            "precision": 1.0,
+            "recall": 0.2857142857142857
+          },
+          "toilet": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          }
+        },
+        "operating_score_threshold": 0.4,
+        "deployment_limit": 20,
+        "false_positives_per_image": 1.1875,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 52,
+            "fn": 149,
+            "recall": 0.25870646766169153
+          },
+          "small": {
+            "tp": 0,
+            "fn": 82,
+            "recall": 0.0
+          },
+          "medium": {
+            "tp": 33,
+            "fn": 57,
+            "recall": 0.36666666666666664
+          },
+          "large": {
+            "tp": 19,
+            "fn": 10,
+            "recall": 0.6551724137931034
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.5,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 39,
+        "fp": 13,
+        "fn": 162,
+        "precision_at_operating_threshold": 0.75,
+        "recall_at_operating_threshold": 0.19402985074626866,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 14,
+            "fp": 0,
+            "fn": 48,
+            "precision": 1.0,
+            "recall": 0.22580645161290322
+          },
+          "bicycle": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 4,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "car": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 10,
+            "precision": 1.0,
+            "recall": 0.23076923076923078
+          },
+          "motorcycle": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cup": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 6,
+            "precision": 1.0,
+            "recall": 0.14285714285714285
+          },
+          "fork": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 10,
+            "precision": 0.5,
+            "recall": 0.09090909090909091
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5
+          },
+          "donut": {
+            "tp": 7,
+            "fp": 7,
+            "fn": 5,
+            "precision": 0.5,
+            "recall": 0.5833333333333334
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 11,
+            "precision": 1.0,
+            "recall": 0.08333333333333333
+          },
+          "couch": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333
+          },
+          "potted plant": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 6,
+            "precision": 1.0,
+            "recall": 0.14285714285714285
+          },
+          "toilet": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          }
+        },
+        "operating_score_threshold": 0.5,
+        "deployment_limit": 20,
+        "false_positives_per_image": 0.8125,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 39,
+            "fn": 162,
+            "recall": 0.19402985074626866
+          },
+          "small": {
+            "tp": 0,
+            "fn": 82,
+            "recall": 0.0
+          },
+          "medium": {
+            "tp": 23,
+            "fn": 67,
+            "recall": 0.25555555555555554
+          },
+          "large": {
+            "tp": 16,
+            "fn": 13,
+            "recall": 0.5517241379310345
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.6,
+      "metrics": {
+        "subset_AP50_95": 0.21251513096449884,
+        "subset_AP50": 0.3614210847927603,
+        "tp": 22,
+        "fp": 5,
+        "fn": 179,
+        "precision_at_operating_threshold": 0.8148148148148148,
+        "recall_at_operating_threshold": 0.10945273631840796,
+        "per_class_AP50": {
+          "person": 0.4243492941991824,
+          "bicycle": 0.0858085808580858,
+          "car": 0.36177903504636183,
+          "motorcycle": 0.6469039761118969,
+          "airplane": 0.9999999999999999,
+          "bus": 0.0,
+          "truck": 0.9999999999999999,
+          "boat": 0.0,
+          "stop sign": 0.0,
+          "bench": 0.6699669966996696,
+          "backpack": 0.16831683168316833,
+          "umbrella": 0.0,
+          "handbag": 0.0,
+          "tie": 0.9999999999999999,
+          "surfboard": 0.0,
+          "bottle": 1.0,
+          "cup": 0.42574257425742573,
+          "fork": 0.5049504950495048,
+          "knife": 0.0,
+          "spoon": 0.0,
+          "bowl": 0.3118811881188118,
+          "sandwich": 0.5,
+          "broccoli": 0.9999999999999999,
+          "carrot": 0.0,
+          "pizza": 0.5049504950495048,
+          "donut": 0.6163759233066163,
+          "cake": 0.0,
+          "chair": 0.3199065248139721,
+          "couch": 0.6633663366336634,
+          "potted plant": 0.33663366336633654,
+          "bed": 0.9999999999999999,
+          "dining table": 0.42574257425742573,
+          "toilet": 0.2524752475247525,
+          "remote": 0.0,
+          "cell phone": 0.0,
+          "sink": 0.2574257425742574,
+          "clock": 0.0,
+          "vase": 0.2574257425742574
+        },
+        "per_class_operating_counts": {
+          "person": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 53,
+            "precision": 1.0,
+            "recall": 0.14516129032258066
+          },
+          "bicycle": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          },
+          "car": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 13,
+            "precision": null,
+            "recall": 0.0
+          },
+          "motorcycle": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333
+          },
+          "airplane": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "bus": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "truck": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "boat": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "precision": null,
+            "recall": 0.0
+          },
+          "stop sign": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bench": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "backpack": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "umbrella": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "handbag": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "tie": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "surfboard": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bottle": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cup": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": null,
+            "recall": 0.0
+          },
+          "fork": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "knife": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spoon": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bowl": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 11,
+            "precision": null,
+            "recall": 0.0
+          },
+          "sandwich": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "broccoli": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "carrot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "pizza": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "donut": {
+            "tp": 4,
+            "fp": 4,
+            "fn": 8,
+            "precision": 0.5,
+            "recall": 0.3333333333333333
+          },
+          "cake": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "chair": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12,
+            "precision": null,
+            "recall": 0.0
+          },
+          "couch": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333
+          },
+          "potted plant": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "dining table": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 6,
+            "precision": 1.0,
+            "recall": 0.14285714285714285
+          },
+          "toilet": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "remote": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "cell phone": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "sink": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          },
+          "clock": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "vase": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": null,
+            "recall": 0.0
+          }
+        },
+        "operating_score_threshold": 0.6,
+        "deployment_limit": 20,
+        "false_positives_per_image": 0.3125,
+        "image_count": 16,
+        "area_operating_counts": {
+          "all": {
+            "tp": 22,
+            "fn": 179,
+            "recall": 0.10945273631840796
+          },
+          "small": {
+            "tp": 0,
+            "fn": 82,
+            "recall": 0.0
+          },
+          "medium": {
+            "tp": 8,
+            "fn": 82,
+            "recall": 0.08888888888888889
+          },
+          "large": {
+            "tp": 14,
+            "fn": 15,
+            "recall": 0.4827586206896552
+          }
+        }
+      }
+    }
+  ],
+  "baseline": {
+    "subset_AP50_95": 0.21251513096449884,
+    "subset_AP50": 0.3614210847927603,
+    "tp": 39,
+    "fp": 13,
+    "fn": 162,
+    "precision_at_operating_threshold": 0.75,
+    "recall_at_operating_threshold": 0.19402985074626866,
+    "per_class_AP50": {
+      "person": 0.4243492941991824,
+      "bicycle": 0.0858085808580858,
+      "car": 0.36177903504636183,
+      "motorcycle": 0.6469039761118969,
+      "airplane": 0.9999999999999999,
+      "bus": 0.0,
+      "truck": 0.9999999999999999,
+      "boat": 0.0,
+      "stop sign": 0.0,
+      "bench": 0.6699669966996696,
+      "backpack": 0.16831683168316833,
+      "umbrella": 0.0,
+      "handbag": 0.0,
+      "tie": 0.9999999999999999,
+      "surfboard": 0.0,
+      "bottle": 1.0,
+      "cup": 0.42574257425742573,
+      "fork": 0.5049504950495048,
+      "knife": 0.0,
+      "spoon": 0.0,
+      "bowl": 0.3118811881188118,
+      "sandwich": 0.5,
+      "broccoli": 0.9999999999999999,
+      "carrot": 0.0,
+      "pizza": 0.5049504950495048,
+      "donut": 0.6163759233066163,
+      "cake": 0.0,
+      "chair": 0.3199065248139721,
+      "couch": 0.6633663366336634,
+      "potted plant": 0.33663366336633654,
+      "bed": 0.9999999999999999,
+      "dining table": 0.42574257425742573,
+      "toilet": 0.2524752475247525,
+      "remote": 0.0,
+      "cell phone": 0.0,
+      "sink": 0.2574257425742574,
+      "clock": 0.0,
+      "vase": 0.2574257425742574
+    },
+    "per_class_operating_counts": {
+      "person": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 48,
+        "precision": 1.0,
+        "recall": 0.22580645161290322
+      },
+      "bicycle": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "car": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 10,
+        "precision": 1.0,
+        "recall": 0.23076923076923078
+      },
+      "motorcycle": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "airplane": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0
+      },
+      "bus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "truck": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "boat": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "precision": null,
+        "recall": 0.0
+      },
+      "stop sign": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "bench": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "backpack": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "umbrella": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "handbag": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "precision": null,
+        "recall": 0.0
+      },
+      "tie": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "surfboard": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": null,
+        "recall": 0.0
+      },
+      "bottle": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "cup": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1.0,
+        "recall": 0.14285714285714285
+      },
+      "fork": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0
+      },
+      "knife": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "spoon": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "bowl": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 10,
+        "precision": 0.5,
+        "recall": 0.09090909090909091
+      },
+      "sandwich": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0
+      },
+      "broccoli": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "carrot": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "pizza": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "donut": {
+        "tp": 7,
+        "fp": 7,
+        "fn": 5,
+        "precision": 0.5,
+        "recall": 0.5833333333333334
+      },
+      "cake": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "chair": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 11,
+        "precision": 1.0,
+        "recall": 0.08333333333333333
+      },
+      "couch": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "potted plant": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "bed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "dining table": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1.0,
+        "recall": 0.14285714285714285
+      },
+      "toilet": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0
+      },
+      "remote": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "cell phone": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "sink": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0
+      },
+      "clock": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "vase": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0
+      }
+    },
+    "operating_score_threshold": 0.5,
+    "deployment_limit": 20,
+    "false_positives_per_image": 0.8125,
+    "image_count": 16,
+    "area_operating_counts": {
+      "all": {
+        "tp": 39,
+        "fn": 162,
+        "recall": 0.19402985074626866
+      },
+      "small": {
+        "tp": 0,
+        "fn": 82,
+        "recall": 0.0
+      },
+      "medium": {
+        "tp": 23,
+        "fn": 67,
+        "recall": 0.25555555555555554
+      },
+      "large": {
+        "tp": 16,
+        "fn": 13,
+        "recall": 0.5517241379310345
+      }
+    }
+  },
+  "image_count": 16,
+  "maximum_count_per_image_above_05": 14,
+  "invalid_nonpositive_boxes": 0,
+  "posthoc_extra_nms": {
+    "0.3": {
+      "subset_AP50_95": 0.21251513096449884,
+      "subset_AP50": 0.3614210847927603,
+      "tp": 39,
+      "fp": 13,
+      "fn": 162,
+      "precision_at_operating_threshold": 0.75,
+      "recall_at_operating_threshold": 0.19402985074626866,
+      "per_class_AP50": {
+        "person": 0.4243492941991824,
+        "bicycle": 0.0858085808580858,
+        "car": 0.36177903504636183,
+        "motorcycle": 0.6469039761118969,
+        "airplane": 0.9999999999999999,
+        "bus": 0.0,
+        "truck": 0.9999999999999999,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.6699669966996696,
+        "backpack": 0.16831683168316833,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 1.0,
+        "cup": 0.42574257425742573,
+        "fork": 0.5049504950495048,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.3118811881188118,
+        "sandwich": 0.5,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.5049504950495048,
+        "donut": 0.6163759233066163,
+        "cake": 0.0,
+        "chair": 0.3199065248139721,
+        "couch": 0.6633663366336634,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.42574257425742573,
+        "toilet": 0.2524752475247525,
+        "remote": 0.0,
+        "cell phone": 0.0,
+        "sink": 0.2574257425742574,
+        "clock": 0.0,
+        "vase": 0.2574257425742574
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 48,
+          "precision": 1.0,
+          "recall": 0.22580645161290322
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 10,
+          "precision": 1.0,
+          "recall": 0.23076923076923078
+        },
+        "motorcycle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 10,
+          "precision": 0.5,
+          "recall": 0.09090909090909091
+        },
+        "sandwich": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        "donut": {
+          "tp": 7,
+          "fp": 7,
+          "fn": 5,
+          "precision": 0.5,
+          "recall": 0.5833333333333334
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.8125,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 39,
+          "fn": 162,
+          "recall": 0.19402985074626866
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 23,
+          "fn": 67,
+          "recall": 0.25555555555555554
+        },
+        "large": {
+          "tp": 16,
+          "fn": 13,
+          "recall": 0.5517241379310345
+        }
+      }
+    },
+    "0.5": {
+      "subset_AP50_95": 0.21251513096449884,
+      "subset_AP50": 0.3614210847927603,
+      "tp": 39,
+      "fp": 13,
+      "fn": 162,
+      "precision_at_operating_threshold": 0.75,
+      "recall_at_operating_threshold": 0.19402985074626866,
+      "per_class_AP50": {
+        "person": 0.4243492941991824,
+        "bicycle": 0.0858085808580858,
+        "car": 0.36177903504636183,
+        "motorcycle": 0.6469039761118969,
+        "airplane": 0.9999999999999999,
+        "bus": 0.0,
+        "truck": 0.9999999999999999,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.6699669966996696,
+        "backpack": 0.16831683168316833,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 1.0,
+        "cup": 0.42574257425742573,
+        "fork": 0.5049504950495048,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.3118811881188118,
+        "sandwich": 0.5,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.5049504950495048,
+        "donut": 0.6163759233066163,
+        "cake": 0.0,
+        "chair": 0.3199065248139721,
+        "couch": 0.6633663366336634,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.42574257425742573,
+        "toilet": 0.2524752475247525,
+        "remote": 0.0,
+        "cell phone": 0.0,
+        "sink": 0.2574257425742574,
+        "clock": 0.0,
+        "vase": 0.2574257425742574
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 48,
+          "precision": 1.0,
+          "recall": 0.22580645161290322
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 10,
+          "precision": 1.0,
+          "recall": 0.23076923076923078
+        },
+        "motorcycle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 10,
+          "precision": 0.5,
+          "recall": 0.09090909090909091
+        },
+        "sandwich": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        "donut": {
+          "tp": 7,
+          "fp": 7,
+          "fn": 5,
+          "precision": 0.5,
+          "recall": 0.5833333333333334
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.8125,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 39,
+          "fn": 162,
+          "recall": 0.19402985074626866
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 23,
+          "fn": 67,
+          "recall": 0.25555555555555554
+        },
+        "large": {
+          "tp": 16,
+          "fn": 13,
+          "recall": 0.5517241379310345
+        }
+      }
+    },
+    "0.7": {
+      "subset_AP50_95": 0.21251513096449884,
+      "subset_AP50": 0.3614210847927603,
+      "tp": 39,
+      "fp": 13,
+      "fn": 162,
+      "precision_at_operating_threshold": 0.75,
+      "recall_at_operating_threshold": 0.19402985074626866,
+      "per_class_AP50": {
+        "person": 0.4243492941991824,
+        "bicycle": 0.0858085808580858,
+        "car": 0.36177903504636183,
+        "motorcycle": 0.6469039761118969,
+        "airplane": 0.9999999999999999,
+        "bus": 0.0,
+        "truck": 0.9999999999999999,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.6699669966996696,
+        "backpack": 0.16831683168316833,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 1.0,
+        "cup": 0.42574257425742573,
+        "fork": 0.5049504950495048,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.3118811881188118,
+        "sandwich": 0.5,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.5049504950495048,
+        "donut": 0.6163759233066163,
+        "cake": 0.0,
+        "chair": 0.3199065248139721,
+        "couch": 0.6633663366336634,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.42574257425742573,
+        "toilet": 0.2524752475247525,
+        "remote": 0.0,
+        "cell phone": 0.0,
+        "sink": 0.2574257425742574,
+        "clock": 0.0,
+        "vase": 0.2574257425742574
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 48,
+          "precision": 1.0,
+          "recall": 0.22580645161290322
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 10,
+          "precision": 1.0,
+          "recall": 0.23076923076923078
+        },
+        "motorcycle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 10,
+          "precision": 0.5,
+          "recall": 0.09090909090909091
+        },
+        "sandwich": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        "donut": {
+          "tp": 7,
+          "fp": 7,
+          "fn": 5,
+          "precision": 0.5,
+          "recall": 0.5833333333333334
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.8125,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 39,
+          "fn": 162,
+          "recall": 0.19402985074626866
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 23,
+          "fn": 67,
+          "recall": 0.25555555555555554
+        },
+        "large": {
+          "tp": 16,
+          "fn": 13,
+          "recall": 0.5517241379310345
+        }
+      }
+    }
+  },
+  "preprocessing_variants": {
+    "bgr_wrong_order": {
+      "subset_AP50_95": 0.21422512925574674,
+      "subset_AP50": 0.35943224008030084,
+      "tp": 32,
+      "fp": 12,
+      "fn": 169,
+      "precision_at_operating_threshold": 0.7272727272727273,
+      "recall_at_operating_threshold": 0.15920398009950248,
+      "per_class_AP50": {
+        "person": 0.44120054345061666,
+        "bicycle": 0.0858085808580858,
+        "car": 0.31683168316831684,
+        "motorcycle": 0.9438943894389441,
+        "airplane": 0.9999999999999999,
+        "bus": 0.9999999999999999,
+        "truck": 0.0,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.6699669966996696,
+        "backpack": 0.0,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 1.0,
+        "cup": 0.3702970297029703,
+        "fork": 0.5049504950495048,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.25495049504950495,
+        "sandwich": 0.0,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.0,
+        "donut": 0.6024280999528525,
+        "cake": 0.0,
+        "chair": 0.2981298129812981,
+        "couch": 1.0,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.42574257425742573,
+        "toilet": 0.5049504950495048,
+        "remote": 0.0,
+        "cell phone": 0.3333333333333334,
+        "sink": 0.504950495049505,
+        "clock": 0.0,
+        "vase": 0.06435643564356436
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 51,
+          "precision": 1.0,
+          "recall": 0.1774193548387097
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.15384615384615385
+        },
+        "motorcycle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.2857142857142857
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.18181818181818182
+        },
+        "sandwich": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "donut": {
+          "tp": 4,
+          "fp": 6,
+          "fn": 8,
+          "precision": 0.4,
+          "recall": 0.3333333333333333
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.75,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 32,
+          "fn": 169,
+          "recall": 0.15920398009950248
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 17,
+          "fn": 73,
+          "recall": 0.18888888888888888
+        },
+        "large": {
+          "tp": 15,
+          "fn": 14,
+          "recall": 0.5172413793103449
+        }
+      }
+    },
+    "manual_stretch_320": {
+      "subset_AP50_95": 0.20639656467831205,
+      "subset_AP50": 0.3428438357018577,
+      "tp": 38,
+      "fp": 13,
+      "fn": 163,
+      "precision_at_operating_threshold": 0.7450980392156863,
+      "recall_at_operating_threshold": 0.1890547263681592,
+      "per_class_AP50": {
+        "person": 0.4871247371027985,
+        "bicycle": 0.0858085808580858,
+        "car": 0.48132956152758133,
+        "motorcycle": 0.7251925192519252,
+        "airplane": 0.9999999999999999,
+        "bus": 0.0,
+        "truck": 0.9999999999999999,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.7524752475247525,
+        "backpack": 0.1122112211221122,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 1.0,
+        "cup": 0.4363036303630363,
+        "fork": 0.0,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.33258325832583263,
+        "sandwich": 0.5,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.5049504950495048,
+        "donut": 0.5456152758132957,
+        "cake": 0.0,
+        "chair": 0.20308509111780743,
+        "couch": 0.6633663366336634,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.42574257425742573,
+        "toilet": 0.0,
+        "remote": 0.0,
+        "cell phone": 0.0,
+        "sink": 0.12871287128712872,
+        "clock": 0.0,
+        "vase": 0.30693069306930687
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 12,
+          "fp": 1,
+          "fn": 50,
+          "precision": 0.9230769230769231,
+          "recall": 0.1935483870967742
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 10,
+          "precision": 1.0,
+          "recall": 0.23076923076923078
+        },
+        "motorcycle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 8,
+          "precision": 0.75,
+          "recall": 0.2727272727272727
+        },
+        "sandwich": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "donut": {
+          "tp": 6,
+          "fp": 7,
+          "fn": 6,
+          "precision": 0.46153846153846156,
+          "recall": 0.5
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.8125,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 38,
+          "fn": 163,
+          "recall": 0.1890547263681592
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 20,
+          "fn": 70,
+          "recall": 0.2222222222222222
+        },
+        "large": {
+          "tp": 18,
+          "fn": 11,
+          "recall": 0.6206896551724138
+        }
+      }
+    },
+    "manual_letterbox_0": {
+      "subset_AP50_95": 0.1913517006294441,
+      "subset_AP50": 0.3047847861641876,
+      "tp": 40,
+      "fp": 15,
+      "fn": 161,
+      "precision_at_operating_threshold": 0.7272727272727273,
+      "recall_at_operating_threshold": 0.19900497512437812,
+      "per_class_AP50": {
+        "person": 0.5142183663967047,
+        "bicycle": 0.0,
+        "car": 0.3051305130513052,
+        "motorcycle": 0.6633663366336634,
+        "airplane": 0.9999999999999999,
+        "bus": 0.0,
+        "truck": 0.0,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.5049504950495048,
+        "backpack": 0.0,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 0.1122112211221122,
+        "cup": 0.20207020702070205,
+        "fork": 0.5049504950495048,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.22153465346534654,
+        "sandwich": 0.9999999999999999,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.5049504950495048,
+        "donut": 0.658796648895659,
+        "cake": 0.0,
+        "chair": 0.3170351817790475,
+        "couch": 0.6633663366336634,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.3910891089108911,
+        "toilet": 0.0,
+        "remote": 0.0,
+        "cell phone": 0.1666666666666667,
+        "sink": 0.2574257425742574,
+        "clock": 0.0,
+        "vase": 0.2574257425742574
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 15,
+          "fp": 1,
+          "fn": 47,
+          "precision": 0.9375,
+          "recall": 0.24193548387096775
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 10,
+          "precision": 1.0,
+          "recall": 0.23076923076923078
+        },
+        "motorcycle": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.5,
+          "recall": 0.14285714285714285
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.18181818181818182
+        },
+        "sandwich": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.25,
+          "recall": 0.5
+        },
+        "donut": {
+          "tp": 5,
+          "fp": 7,
+          "fn": 7,
+          "precision": 0.4166666666666667,
+          "recall": 0.4166666666666667
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.9375,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 40,
+          "fn": 161,
+          "recall": 0.19900497512437812
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 24,
+          "fn": 66,
+          "recall": 0.26666666666666666
+        },
+        "large": {
+          "tp": 16,
+          "fn": 13,
+          "recall": 0.5517241379310345
+        }
+      }
+    },
+    "manual_letterbox_114": {
+      "subset_AP50_95": 0.1809257012966033,
+      "subset_AP50": 0.28589987024950775,
+      "tp": 41,
+      "fp": 16,
+      "fn": 160,
+      "precision_at_operating_threshold": 0.7192982456140351,
+      "recall_at_operating_threshold": 0.20398009950248755,
+      "per_class_AP50": {
+        "person": 0.4511977649027443,
+        "bicycle": 0.0,
+        "car": 0.36183618361836184,
+        "motorcycle": 0.6633663366336634,
+        "airplane": 0.9999999999999999,
+        "bus": 0.0,
+        "truck": 0.0,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.5049504950495048,
+        "backpack": 0.0,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 0.06732673267326733,
+        "cup": 0.2191807416035721,
+        "fork": 0.0,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.3485148514851485,
+        "sandwich": 0.9999999999999999,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.5049504950495048,
+        "donut": 0.6311716171617162,
+        "cake": 0.0,
+        "chair": 0.3173104123599173,
+        "couch": 0.6633663366336634,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.3702970297029703,
+        "toilet": 0.0,
+        "remote": 0.0,
+        "cell phone": 0.1666666666666667,
+        "sink": 0.2574257425742574,
+        "clock": 0.0,
+        "vase": 0.0
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 14,
+          "fp": 2,
+          "fn": 48,
+          "precision": 0.875,
+          "recall": 0.22580645161290322
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 10,
+          "precision": 1.0,
+          "recall": 0.23076923076923078
+        },
+        "motorcycle": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.18181818181818182
+        },
+        "sandwich": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.25,
+          "recall": 0.5
+        },
+        "donut": {
+          "tp": 7,
+          "fp": 8,
+          "fn": 5,
+          "precision": 0.4666666666666667,
+          "recall": 0.5833333333333334
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 1.0,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 41,
+          "fn": 160,
+          "recall": 0.20398009950248755
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 25,
+          "fn": 65,
+          "recall": 0.2777777777777778
+        },
+        "large": {
+          "tp": 16,
+          "fn": 13,
+          "recall": 0.5517241379310345
+        }
+      }
+    },
+    "wrong_90deg_then_box_reproject": {
+      "subset_AP50_95": 0.04867732002081233,
+      "subset_AP50": 0.08573572969857798,
+      "tp": 10,
+      "fp": 12,
+      "fn": 191,
+      "precision_at_operating_threshold": 0.45454545454545453,
+      "recall_at_operating_threshold": 0.04975124378109453,
+      "per_class_AP50": {
+        "person": 0.1254125412541254,
+        "bicycle": 0.0,
+        "car": 0.0,
+        "motorcycle": 0.04207920792079208,
+        "airplane": 0.0,
+        "bus": 0.0,
+        "truck": 0.0,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.0,
+        "backpack": 0.0,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.0,
+        "surfboard": 0.0,
+        "bottle": 0.0,
+        "cup": 0.14851485148514848,
+        "fork": 0.0,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.18811881188118812,
+        "sandwich": 0.0,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.12623762376237624,
+        "donut": 0.45679567956795675,
+        "cake": 0.0,
+        "chair": 0.05387303436225976,
+        "couch": 0.0,
+        "potted plant": 0.16831683168316833,
+        "bed": 0.0,
+        "dining table": 0.2871287128712871,
+        "toilet": 0.0,
+        "remote": 0.0,
+        "cell phone": 0.3333333333333334,
+        "sink": 0.0,
+        "clock": 0.0,
+        "vase": 0.32814710042432804
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 57,
+          "precision": 1.0,
+          "recall": 0.08064516129032258
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 13,
+          "precision": null,
+          "recall": 0.0
+        },
+        "motorcycle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "airplane": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 11,
+          "precision": null,
+          "recall": 0.0
+        },
+        "sandwich": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "broccoli": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "hot dog": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null
+        },
+        "pizza": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "donut": {
+          "tp": 3,
+          "fp": 7,
+          "fn": 9,
+          "precision": 0.3,
+          "recall": 0.25
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 12,
+          "precision": null,
+          "recall": 0.0
+        },
+        "couch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "potted plant": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.75,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 10,
+          "fn": 191,
+          "recall": 0.04975124378109453
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 1,
+          "fn": 89,
+          "recall": 0.011111111111111112
+        },
+        "large": {
+          "tp": 9,
+          "fn": 20,
+          "recall": 0.3103448275862069
+        }
+      }
+    }
+  },
+  "unsupported_categories": [
+    "door",
+    "stairs",
+    "curb",
+    "crosswalk",
+    "elevator",
+    "keys"
+  ],
+  "unsupported_note": "Absent from the80model classes; not annotated as negatives or positives by COCO. Cannot estimate recall for unsupported categories here.",
+  "clip_to_image_like_android": {
+    "subset_AP50_95": 0.21260371877064788,
+    "subset_AP50": 0.3614210847927603,
+    "tp": 39,
+    "fp": 13,
+    "fn": 162,
+    "precision_at_operating_threshold": 0.75,
+    "recall_at_operating_threshold": 0.19402985074626866,
+    "per_class_AP50": {
+      "person": 0.4243492941991824,
+      "bicycle": 0.0858085808580858,
+      "car": 0.36177903504636183,
+      "motorcycle": 0.6469039761118969,
+      "airplane": 0.9999999999999999,
+      "bus": 0.0,
+      "truck": 0.9999999999999999,
+      "boat": 0.0,
+      "stop sign": 0.0,
+      "bench": 0.6699669966996696,
+      "backpack": 0.16831683168316833,
+      "umbrella": 0.0,
+      "handbag": 0.0,
+      "tie": 0.9999999999999999,
+      "surfboard": 0.0,
+      "bottle": 1.0,
+      "cup": 0.42574257425742573,
+      "fork": 0.5049504950495048,
+      "knife": 0.0,
+      "spoon": 0.0,
+      "bowl": 0.3118811881188118,
+      "sandwich": 0.5,
+      "broccoli": 0.9999999999999999,
+      "carrot": 0.0,
+      "pizza": 0.5049504950495048,
+      "donut": 0.6163759233066163,
+      "cake": 0.0,
+      "chair": 0.3199065248139721,
+      "couch": 0.6633663366336634,
+      "potted plant": 0.33663366336633654,
+      "bed": 0.9999999999999999,
+      "dining table": 0.42574257425742573,
+      "toilet": 0.2524752475247525,
+      "remote": 0.0,
+      "cell phone": 0.0,
+      "sink": 0.2574257425742574,
+      "clock": 0.0,
+      "vase": 0.2574257425742574
+    },
+    "per_class_operating_counts": {
+      "person": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 48,
+        "precision": 1.0,
+        "recall": 0.22580645161290322
+      },
+      "bicycle": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "car": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 10,
+        "precision": 1.0,
+        "recall": 0.23076923076923078
+      },
+      "motorcycle": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "airplane": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0
+      },
+      "bus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "truck": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "boat": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "precision": null,
+        "recall": 0.0
+      },
+      "stop sign": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "bench": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "backpack": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "umbrella": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "handbag": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "precision": null,
+        "recall": 0.0
+      },
+      "tie": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "surfboard": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": null,
+        "recall": 0.0
+      },
+      "bottle": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "cup": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1.0,
+        "recall": 0.14285714285714285
+      },
+      "fork": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0
+      },
+      "knife": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "spoon": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "bowl": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 10,
+        "precision": 0.5,
+        "recall": 0.09090909090909091
+      },
+      "sandwich": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0
+      },
+      "broccoli": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "carrot": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "pizza": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "donut": {
+        "tp": 7,
+        "fp": 7,
+        "fn": 5,
+        "precision": 0.5,
+        "recall": 0.5833333333333334
+      },
+      "cake": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "chair": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 11,
+        "precision": 1.0,
+        "recall": 0.08333333333333333
+      },
+      "couch": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "potted plant": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "bed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "dining table": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1.0,
+        "recall": 0.14285714285714285
+      },
+      "toilet": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0
+      },
+      "remote": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "cell phone": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "sink": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0
+      },
+      "clock": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "vase": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0
+      }
+    },
+    "operating_score_threshold": 0.5,
+    "deployment_limit": 20,
+    "false_positives_per_image": 0.8125,
+    "image_count": 16,
+    "area_operating_counts": {
+      "all": {
+        "tp": 39,
+        "fn": 162,
+        "recall": 0.19402985074626866
+      },
+      "small": {
+        "tp": 0,
+        "fn": 82,
+        "recall": 0.0
+      },
+      "medium": {
+        "tp": 23,
+        "fn": 67,
+        "recall": 0.25555555555555554
+      },
+      "large": {
+        "tp": 16,
+        "fn": 13,
+        "recall": 0.5517241379310345
+      }
+    }
+  },
+  "float32_probe": {
+    "url": "https://storage.googleapis.com/mediapipe-models/object_detector/efficientdet_lite0/float32/1/efficientdet_lite0.tflite",
+    "sha256": "40338edf5ec70d43e318b0a716a84d4564cd1802759a7a07170c7e43796dbf58",
+    "bytes": 13836895,
+    "metrics": {
+      "subset_AP50_95": 0.22751237911446293,
+      "subset_AP50": 0.3722109712262354,
+      "tp": 39,
+      "fp": 11,
+      "fn": 162,
+      "precision_at_operating_threshold": 0.78,
+      "recall_at_operating_threshold": 0.19402985074626866,
+      "per_class_AP50": {
+        "person": 0.4756626535892297,
+        "bicycle": 0.33663366336633666,
+        "car": 0.3920930554593921,
+        "motorcycle": 0.668151815181518,
+        "airplane": 0.9999999999999999,
+        "bus": 0.0,
+        "truck": 0.5,
+        "boat": 0.0,
+        "stop sign": 0.0,
+        "bench": 0.834983498349835,
+        "backpack": 0.33663366336633654,
+        "umbrella": 0.0,
+        "handbag": 0.0,
+        "tie": 0.9999999999999999,
+        "surfboard": 0.0,
+        "bottle": 1.0,
+        "cup": 0.42574257425742573,
+        "fork": 0.2524752475247525,
+        "knife": 0.0,
+        "spoon": 0.0,
+        "bowl": 0.5,
+        "sandwich": 0.5,
+        "broccoli": 0.9999999999999999,
+        "carrot": 0.0,
+        "pizza": 0.0,
+        "donut": 0.5587694483734089,
+        "cake": 0.0,
+        "chair": 0.37112211221122116,
+        "couch": 1.0,
+        "potted plant": 0.33663366336633654,
+        "bed": 0.9999999999999999,
+        "dining table": 0.42574257425742573,
+        "toilet": 0.0,
+        "remote": 0.0,
+        "cell phone": 0.5,
+        "sink": 0.42244224422442234,
+        "clock": 0.0,
+        "vase": 0.30693069306930687
+      },
+      "per_class_operating_counts": {
+        "person": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 48,
+          "precision": 1.0,
+          "recall": 0.22580645161290322
+        },
+        "bicycle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "car": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.15384615384615385
+        },
+        "motorcycle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "airplane": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "bus": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "truck": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "boat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "stop sign": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bench": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "backpack": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "umbrella": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "handbag": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "tie": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "surfboard": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bottle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cup": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "fork": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "knife": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spoon": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bowl": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 7,
+          "precision": 1.0,
+          "recall": 0.36363636363636365
+        },
+        "sandwich": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "broccoli": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "carrot": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        "pizza": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "donut": {
+          "tp": 8,
+          "fp": 10,
+          "fn": 4,
+          "precision": 0.4444444444444444,
+          "recall": 0.6666666666666666
+        },
+        "cake": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "chair": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333
+        },
+        "couch": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6666666666666666
+        },
+        "potted plant": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "bed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "dining table": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285
+        },
+        "toilet": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "remote": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "cell phone": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "sink": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "clock": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "vase": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "operating_score_threshold": 0.5,
+      "deployment_limit": 20,
+      "false_positives_per_image": 0.6875,
+      "image_count": 16,
+      "area_operating_counts": {
+        "all": {
+          "tp": 39,
+          "fn": 162,
+          "recall": 0.19402985074626866
+        },
+        "small": {
+          "tp": 0,
+          "fn": 82,
+          "recall": 0.0
+        },
+        "medium": {
+          "tp": 21,
+          "fn": 69,
+          "recall": 0.23333333333333334
+        },
+        "large": {
+          "tp": 18,
+          "fn": 11,
+          "recall": 0.6206896551724138
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "image_id": 301135,
+      "file": "example_000000301135.jpg",
+      "counts": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 16
+      },
+      "attribution": {
+        "image_id": 301135,
+        "flickr_photo_id": 4856973633,
+        "short_url": "https://flic.kr/p/8pcg3H",
+        "source_url": "https://www.flickr.com/photos/zoetnet/4856973633/",
+        "author_name": "zoetnet",
+        "author_url": "https://www.flickr.com/photos/zoetnet/",
+        "title": "waiting on the bench",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "status": "resolved",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fzoetnet%2F4856973633%2F&format=json"
+      },
+      "false_negative_categories": {
+        "person": 6,
+        "bicycle": 1,
+        "car": 3,
+        "bench": 1,
+        "backpack": 2,
+        "handbag": 3
+      }
+    },
+    {
+      "image_id": 238866,
+      "file": "example_000000238866.jpg",
+      "counts": {
+        "tp": 7,
+        "fp": 7,
+        "fn": 5
+      },
+      "attribution": {
+        "image_id": 238866,
+        "flickr_photo_id": 6610035555,
+        "short_url": "https://flic.kr/p/b57ahg",
+        "source_url": "https://www.flickr.com/photos/stevensnodgrass/6610035555/",
+        "author_name": "Steve Snodgrass",
+        "author_url": "https://www.flickr.com/photos/stevensnodgrass/",
+        "title": "Glazed Donuts at Mr. Donuts & Kolaches",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "status": "resolved",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fstevensnodgrass%2F6610035555%2F&format=json"
+      },
+      "false_negative_categories": {
+        "donut": 5
+      }
+    },
+    {
+      "image_id": 184324,
+      "file": "example_000000184324.jpg",
+      "counts": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 29
+      },
+      "attribution": {
+        "image_id": 184324,
+        "flickr_photo_id": 3364389746,
+        "short_url": "https://flic.kr/p/68inRL",
+        "source_url": "https://www.flickr.com/photos/sergemelki/3364389746/",
+        "author_name": "Serge Melki",
+        "author_url": "https://www.flickr.com/photos/sergemelki/",
+        "title": "Carrefour - St. Andr\u00e9 des Arts",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "status": "resolved",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fsergemelki%2F3364389746%2F&format=json"
+      },
+      "false_negative_categories": {
+        "person": 12,
+        "bicycle": 3,
+        "car": 5,
+        "bus": 1,
+        "truck": 1,
+        "stop sign": 1,
+        "backpack": 1,
+        "umbrella": 1,
+        "handbag": 4
+      }
+    }
+  ],
+  "limitations": "These controlled RGB stills cannot validate Android YUV/RGBA conversion, sensor timestamps, rotation/mirror implementation, lifecycle, physical camera domain shift or real video tracking. App pixel tests and emulator camera tests are separate. Extra NMS cannot recover proposals already suppressed inside model. Float vs int8 artifacts can differ beyond quantization; not isolated quantizer causal inference.",
+  "false_positive_overlap_diagnosis": {
+    "rows": [
+      {
+        "image_id": 184324,
+        "category": "bicycle",
+        "score": 0.5234375,
+        "bbox": [
+          458,
+          293,
+          85,
+          109
+        ],
+        "best_same_class_annotation_iou": 0.4799556844563938,
+        "interpretation": "localization mismatch at IoU.5"
+      },
+      {
+        "image_id": 377882,
+        "category": "airplane",
+        "score": 0.59375,
+        "bbox": [
+          45,
+          72,
+          576,
+          276
+        ],
+        "best_same_class_annotation_iou": 0,
+        "interpretation": "no appreciable same-class annotation overlap"
+      },
+      {
+        "image_id": 410735,
+        "category": "bowl",
+        "score": 0.546875,
+        "bbox": [
+          267,
+          22,
+          348,
+          129
+        ],
+        "best_same_class_annotation_iou": 0.06758151052414363,
+        "interpretation": "no appreciable same-class annotation overlap"
+      },
+      {
+        "image_id": 350148,
+        "category": "sandwich",
+        "score": 0.75390625,
+        "bbox": [
+          232,
+          475,
+          107,
+          146
+        ],
+        "best_same_class_annotation_iou": 0.3807366090849867,
+        "interpretation": "localization mismatch at IoU.5"
+      },
+      {
+        "image_id": 410735,
+        "category": "pizza",
+        "score": 0.5,
+        "bbox": [
+          31,
+          197,
+          184,
+          129
+        ],
+        "best_same_class_annotation_iou": 0,
+        "interpretation": "no appreciable same-class annotation overlap"
+      },
+      {
+        "image_id": 238866,
+        "category": "donut",
+        "score": 0.65625,
+        "bbox": [
+          54,
+          169,
+          96,
+          62
+        ],
+        "best_same_class_annotation_iou": 0.05405178193043004,
+        "interpretation": "no appreciable same-class annotation overlap"
+      },
+      {
+        "image_id": 238866,
+        "category": "donut",
+        "score": 0.63671875,
+        "bbox": [
+          216,
+          382,
+          135,
+          55
+        ],
+        "best_same_class_annotation_iou": 0.12095753468658504,
+        "interpretation": "localization mismatch at IoU.5"
+      },
+      {
+        "image_id": 238866,
+        "category": "donut",
+        "score": 0.63671875,
+        "bbox": [
+          110,
+          124,
+          97,
+          67
+        ],
+        "best_same_class_annotation_iou": 0.12318629115390385,
+        "interpretation": "localization mismatch at IoU.5"
+      },
+      {
+        "image_id": 238866,
+        "category": "donut",
+        "score": 0.61328125,
+        "bbox": [
+          170,
+          269,
+          125,
+          93
+        ],
+        "best_same_class_annotation_iou": 0.09322999675989983,
+        "interpretation": "no appreciable same-class annotation overlap"
+      },
+      {
+        "image_id": 238866,
+        "category": "donut",
+        "score": 0.5703125,
+        "bbox": [
+          247,
+          228,
+          107,
+          75
+        ],
+        "best_same_class_annotation_iou": 0.10672856420183004,
+        "interpretation": "localization mismatch at IoU.5"
+      },
+      {
+        "image_id": 238866,
+        "category": "donut",
+        "score": 0.5703125,
+        "bbox": [
+          349,
+          250,
+          118,
+          82
+        ],
+        "best_same_class_annotation_iou": 0.07129661475126074,
+        "interpretation": "no appreciable same-class annotation overlap"
+      },
+      {
+        "image_id": 238866,
+        "category": "donut",
+        "score": 0.546875,
+        "bbox": [
+          392,
+          321,
+          125,
+          104
+        ],
+        "best_same_class_annotation_iou": 0.09911073414135338,
+        "interpretation": "no appreciable same-class annotation overlap"
+      },
+      {
+        "image_id": 168974,
+        "category": "cell phone",
+        "score": 0.546875,
+        "bbox": [
+          109,
+          314,
+          66,
+          43
+        ],
+        "best_same_class_annotation_iou": 0.2900674447374064,
+        "interpretation": "localization mismatch at IoU.5"
+      }
+    ],
+    "counts": {
+      "localization mismatch at IoU.5": 6,
+      "no appreciable same-class annotation overlap": 7
+    },
+    "scope": "COCO unmatched prediction diagnosis, not independent human annotation adjudication; some counted false positives may depict a real object with insufficient box overlap"
+  }
+}

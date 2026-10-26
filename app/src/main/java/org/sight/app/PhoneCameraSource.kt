@@ -2,30 +2,33 @@ package org.sight.app
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.Matrix
-import android.os.SystemClock
+import android.hardware.camera2.CameraCaptureSession
 import android.hardware.camera2.CameraCharacteristics
+import android.hardware.camera2.CaptureRequest
+import android.hardware.camera2.TotalCaptureResult
+import android.os.SystemClock
+import android.util.Size
 import androidx.camera.camera2.interop.Camera2CameraInfo
+import androidx.camera.camera2.interop.Camera2Interop
 import androidx.camera.camera2.interop.ExperimentalCamera2Interop
-import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.camera.core.Preview
+import androidx.camera.core.resolutionselector.ResolutionSelector
+import androidx.camera.core.resolutionselector.ResolutionStrategy
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
-import com.google.android.gms.tasks.Tasks
-import com.google.mlkit.vision.common.InputImage
-import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import org.sight.core.*
+import org.sight.perception.DetectorProfile
+import org.sight.perception.FramePixels
 import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
+import java.util.concurrent.atomic.AtomicLong
 
-/** A single analyzer plus CameraX's one-frame latest buffer bounds work and raw media lifetime. */
+/** CameraX owns one latest pending image. One worker owns all model switches and inference. */
 @androidx.annotation.OptIn(ExperimentalCamera2Interop::class)
 class PhoneCameraSource(
     private val context: Context,
@@ -36,116 +39,146 @@ class PhoneCameraSource(
     private val onObservation: (FrameObservation, StageTiming) -> Unit,
     private val onFailure: (String) -> Unit,
     private val onStatus: (String) -> Unit = {},
+    private val requestedProfile: () -> DetectorProfile = { DetectorProfile.FAST },
+    private val textReader: AsyncTextReader? = null,
+    private val onTiming: (StageTiming) -> Unit = {},
+    private val onFeedback: (String, Evidence) -> Unit = { _, _ -> },
+    private val constrained: () -> Boolean = { false },
 ) : VisualSource {
-    override val sourceId = "phone-camera"
+    // Distinguish restarted cameras so an old, asynchronous OCR task cannot enter a new session.
+    override val sourceId = "phone-camera/${sessions.incrementAndGet()}"
     private val executor = Executors.newSingleThreadExecutor()
     private val mainExecutor = ContextCompat.getMainExecutor(context)
     private val active = AtomicBoolean(false)
     private val closed = AtomicBoolean(false)
+    private val cameraFrames = AtomicLong()
     private var provider: ProcessCameraProvider? = null
-    private var detector: LocalDetector? = null
-    private val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+    private var detector: MediaPipeDetector? = null
     private val scheduler = AdaptiveScheduler()
     private var nextId = 0L
     private var analyzed = 0L
+    private var received = 0L
     private var skipped = 0L
     private var lastTimestamp = -1L
-    private val ocrBusy = AtomicBoolean(false)
-    private var nextOcrRetryMs = 0L
+    private var geometryKey = ""
+    private var geometryEpoch = 0L
+    private var feedbackAtMs = -10_000L
+    private var lastPoorOcrAttemptMs = -10_000L
+    private var slowRuns = 0
+    private var fallbackUntilMs = 0L
     @Volatile private var realtimeClock = false
 
     fun start() {
-        if (closed.get()) return
-        if (!active.compareAndSet(false, true)) return
+        if (closed.get() || !active.compareAndSet(false, true)) return
         val future = ProcessCameraProvider.getInstance(context)
         future.addListener({
             if (!active.get()) return@addListener
             try {
                 provider = future.get()
-                val preview = Preview.Builder().setTargetAspectRatio(AspectRatio.RATIO_4_3).build().also { it.surfaceProvider = previewView.surfaceProvider }
-                val analysis = ImageAnalysis.Builder()
-                    .setTargetAspectRatio(AspectRatio.RATIO_4_3)
+                val resolution = ResolutionSelector.Builder().setResolutionStrategy(
+                    ResolutionStrategy(Size(640, 480), ResolutionStrategy.FALLBACK_RULE_CLOSEST_HIGHER_THEN_LOWER)).build()
+                val preview = Preview.Builder().setResolutionSelector(resolution).build().also { it.surfaceProvider = previewView.surfaceProvider }
+                val builder = ImageAnalysis.Builder().setResolutionSelector(resolution)
                     .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                     .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
-                    .build()
-                analysis.setAnalyzer(executor, ::analyze)
+                Camera2Interop.Extender(builder).setSessionCaptureCallback(object : CameraCaptureSession.CaptureCallback() {
+                    override fun onCaptureCompleted(session: CameraCaptureSession, request: CaptureRequest, result: TotalCaptureResult) {
+                        if (active.get()) cameraFrames.incrementAndGet()
+                    }
+                })
+                val analysis = builder.build().also { it.setAnalyzer(executor, ::analyze) }
                 val camera = provider!!.bindToLifecycle(owner, CameraSelector.DEFAULT_BACK_CAMERA, preview, analysis)
-                realtimeClock = Camera2CameraInfo.from(camera.cameraInfo)
-                    .getCameraCharacteristic(CameraCharacteristics.SENSOR_INFO_TIMESTAMP_SOURCE) ==
-                    CameraCharacteristics.SENSOR_INFO_TIMESTAMP_SOURCE_REALTIME
-            } catch (error: Exception) {
-                active.set(false)
-                onFailure("Camera unavailable: ${error.javaClass.simpleName}. Check camera permission and try again.")
-            }
+                realtimeClock = Camera2CameraInfo.from(camera.cameraInfo).getCameraCharacteristic(
+                    CameraCharacteristics.SENSOR_INFO_TIMESTAMP_SOURCE) == CameraCharacteristics.SENSOR_INFO_TIMESTAMP_SOURCE_REALTIME
+            } catch (error: Exception) { fail("Camera unavailable: ${error.javaClass.simpleName}. Check camera permission and try again.") }
         }, mainExecutor)
     }
-
     private fun analyze(proxy: ImageProxy) {
         var bitmap: Bitmap? = null
         try {
             if (!active.get()) return
+            received++
             val receivedAt = SystemClock.elapsedRealtime()
-            val useExposureClock = realtimeClock
-            val plan = scheduler.plan(receivedAt, goal(), thermal())
-            if (!plan.runDetection && !plan.runOcr) { skipped++; return }
-            if (detector == null) detector = MediaPipeDetector(context)
-            val raw = proxy.toBitmap()
-            val frameBitmap = if (proxy.imageInfo.rotationDegrees == 0) raw else {
-                Bitmap.createBitmap(raw, 0, 0, raw.width, raw.height,
-                    Matrix().apply { postRotate(proxy.imageInfo.rotationDegrees.toFloat()) }, true).also { raw.recycle() }
+            val exposureClock = realtimeClock
+            val actualThermal = thermal()
+            val limited = constrained()
+            val scheduleThermal = if (limited && actualThermal == ThermalLevel.NORMAL) ThermalLevel.WARM else actualThermal
+            val plan = scheduler.plan(receivedAt, goal(), scheduleThermal)
+            val runOcr = plan.runOcr && textReader?.inFlight == false
+            if (!plan.runDetection && !runOcr) { skipped++; return }
+            val rotation = proxy.imageInfo.rotationDegrees
+            val geometry = "${proxy.width}x${proxy.height}:$rotation:false"
+            if (geometryKey != geometry) { geometryKey = geometry; geometryEpoch++ }
+            val basis = if (exposureClock) TimeBasis.CAPTURE else TimeBasis.RECEIPT
+            val capturedAt = if (exposureClock) proxy.imageInfo.timestamp / 1_000_000 else null
+            val observedAt = capturedAt ?: receivedAt
+            val profile = if (limited || actualThermal >= ThermalLevel.HOT || receivedAt < fallbackUntilMs) DetectorProfile.FAST else requestedProfile()
+            var initialized = 0L
+            if (plan.runDetection && detector?.profile != profile) {
+                val initializationStarted = SystemClock.elapsedRealtime()
+                detector?.close(); detector = null
+                detector = MediaPipeDetector(context.applicationContext, profile)
+                initialized = SystemClock.elapsedRealtime() - initializationStarted
+                slowRuns = 0
             }
-            bitmap = frameBitmap
+            val preprocessingAt = SystemClock.elapsedRealtime()
+            val plane = proxy.planes.first()
+            val raw = FramePixels.rgba(plane.buffer, proxy.width, proxy.height, plane.rowStride, plane.pixelStride)
+            val frame = try { FramePixels.orient(raw, rotation) } catch (e: Exception) { raw.recycle(); throw e }
+            if (frame !== raw) raw.recycle()
+            bitmap = frame
+            val quality = if (goal() == GoalType.READ) FramePixels.quality(frame) else null
             val conversionEnd = SystemClock.elapsedRealtime()
-            // Exposure time is used only when Camera2 declares the elapsedRealtime clock domain.
-            val observedAt = if (useExposureClock) proxy.imageInfo.timestamp / 1_000_000 else receivedAt
-            val inferenceTimestamp = maxOf(receivedAt, lastTimestamp + 1)
-            lastTimestamp = inferenceTimestamp
-            // OCR updates include real detections: an empty detection list means observed absence.
-            val detections = detector!!.detect(frameBitmap, inferenceTimestamp)
+            val inferenceAt = maxOf(receivedAt, lastTimestamp + 1)
+            lastTimestamp = inferenceAt
+            val detections = if (plan.runDetection) detector!!.detect(frame, inferenceAt) else emptyList()
             val detectionEnd = SystemClock.elapsedRealtime()
-            val text = if (plan.runOcr && receivedAt >= nextOcrRetryMs && ocrBusy.compareAndSet(false, true)) try {
-                // ML Kit may outlive our timeout. Its owned copy is released only on native completion.
-                val ocrBitmap = frameBitmap.copy(Bitmap.Config.ARGB_8888, false)
-                val task = try { recognizer.process(InputImage.fromBitmap(ocrBitmap, 0)) }
-                catch (error: Exception) { ocrBitmap.recycle(); ocrBusy.set(false); throw error }
-                task.addOnCompleteListener(mainExecutor) { ocrBitmap.recycle(); ocrBusy.set(false) }
-                val result = Tasks.await(task, 1800, TimeUnit.MILLISECONDS)
-                result.textBlocks.mapNotNull { block ->
-                    val b = block.boundingBox ?: return@mapNotNull null
-                    val box = normalizedBox(b.left.toFloat(), b.top.toFloat(), b.right.toFloat(), b.bottom.toFloat(),
-                        frameBitmap.width, frameBitmap.height) ?: return@mapNotNull null
-                    TextObservation(block.text, box)
+            val detectionMs = if (plan.runDetection) detectionEnd - conversionEnd else 0
+            if (plan.runDetection) {
+                analyzed++
+                slowRuns = if (profile == DetectorProfile.INSPECT && detectionMs > 1_100) slowRuns + 1 else 0
+                if (slowRuns >= 3) {
+                    fallbackUntilMs = detectionEnd + 15_000
+                    mainExecutor.execute { if (active.get()) onStatus("Detailed inspection is too slow on this device. Using the fast model temporarily.") }
                 }
-            } catch (_: Exception) {
-                nextOcrRetryMs = SystemClock.elapsedRealtime() + 3_000
-                mainExecutor.execute { if (active.get()) onStatus("Text recognition is warming up or unavailable. Object detection continues; hold text steady to retry.") }
-                emptyList()
-            } else emptyList()
-            val end = SystemClock.elapsedRealtime()
-            analyzed++
+            }
             val id = ++nextId
-            val observation = FrameObservation(Evidence(id, observedAt, sourceId,
-                if (useExposureClock) TimeBasis.CAPTURE else TimeBasis.RECEIPT), detections, text)
-            val timing = StageTiming(id, receivedAt, proxy.imageInfo.timestamp, conversionEnd-receivedAt,
-                detectionEnd-conversionEnd, end-detectionEnd, end-receivedAt, analyzed, skipped,
-                if (useExposureClock) "Camera2 exposure / elapsedRealtime" else "analyzer receipt (exposure clock uncalibrated)")
-            mainExecutor.execute { if (active.get()) onObservation(observation, timing) }
-        } catch (error: Exception) {
-            // A model failure invalidates visual availability; never replay the last successful result.
-            val wasActive = active.getAndSet(false)
-            if (wasActive) mainExecutor.execute { onFailure("Local perception failed: ${error.javaClass.simpleName}. Pause and restart to retry.") }
-        } catch (error: LinkageError) {
-            val wasActive = active.getAndSet(false)
-            if (wasActive) mainExecutor.execute { onFailure("The local model runtime is unavailable on this device architecture. Visual assistance is paused.") }
-        } finally { bitmap?.recycle(); proxy.close() }
+            val evidence = Evidence(id, observedAt, sourceId, basis, detector?.modelId ?: profile.modelId, geometryEpoch)
+            val sample = StageTiming(id, receivedAt, proxy.imageInfo.timestamp, conversionEnd - preprocessingAt,
+                detectionMs, 0, detectionEnd - receivedAt, analyzed, skipped,
+                if (exposureClock) "Camera2 exposure / elapsedRealtime" else "analyzer receipt (capture clock unavailable)",
+                detector?.modelId ?: profile.modelId, initialized, detectionEnd, capturedAt, cameraFrames.get(), received,
+                frame.width, frame.height, rotation, geometryEpoch, quality)
+            mainExecutor.execute {
+                if (active.get()) {
+                    if (plan.runDetection) onObservation(FrameObservation(evidence, detections), sample) else onTiming(sample)
+                }
+            }
+            if (runOcr) {
+                if (quality?.feedback != null && detectionEnd - feedbackAtMs >= 6_000) {
+                    feedbackAtMs = detectionEnd
+                    mainExecutor.execute { if (active.get()) onFeedback(quality.feedback!!, evidence) }
+                }
+                // Prefer detailed frames, but never let an uncalibrated heuristic permanently veto
+                // a real document (e.g. sparse dark text on an otherwise white page).
+                if (quality != null && (quality.usableForText || detectionEnd - lastPoorOcrAttemptMs >= 3_000)) {
+                    if (!quality.usableForText) lastPoorOcrAttemptMs = detectionEnd
+                    textReader?.submit(frame, evidence.copy(modelId = "mlkit-latin-16.0.1"))
+                }
+            }
+        } catch (_: OutOfMemoryError) { fail("Memory is low. Visual assistance is paused; close other apps and restart the camera.") }
+        catch (error: LinkageError) { fail("Local inference is unavailable on this architecture: ${error.javaClass.simpleName}.") }
+        catch (error: Exception) { fail("Local perception failed: ${error.javaClass.simpleName}. Pause and restart to retry.") }
+        finally { bitmap?.recycle(); proxy.close() }
     }
-
+    private fun fail(message: String) {
+        if (active.getAndSet(false)) mainExecutor.execute { if (!closed.get()) onFailure(message) }
+    }
     override fun stop() {
         if (!closed.compareAndSet(false, true)) return
-        active.set(false)
-        provider?.unbindAll()
-        // Cleanup follows in-flight inference on the same executor, avoiding closing native models mid-call.
-        executor.execute { detector?.close(); detector = null; recognizer.close() }
+        active.set(false); provider?.unbindAll()
+        executor.execute { detector?.close(); detector = null }
         executor.shutdown()
     }
+    private companion object { val sessions = AtomicLong() }
 }

@@ -33,6 +33,7 @@ class NavigationController(private val context: Context, private val say: (Strin
     private var lastSpokenStep: Int? = null
     private var lastProgressState: RouteProgressState? = null
     private var latestFix: GpsFix? = null
+    private var gpsStartedAtMs = 0L
 
     private val listener = object : LocationListener {
         override fun onLocationChanged(location: Location) {
@@ -53,9 +54,11 @@ class NavigationController(private val context: Context, private val say: (Strin
 
     init { scope.launch {
         while (isActive) {
-            if (gpsActive) latestFix?.let { fix ->
-                if (SystemClock.elapsedRealtime() - fix.capturedElapsedMs > 10_000) {
-                    progress = RouteProgress(RouteProgressState.GPS_UNCERTAIN, detail = "GPS fix expired. Waiting for a fresh location.")
+            if (gpsActive) {
+                if (SystemClock.elapsedRealtime() - (latestFix?.capturedElapsedMs ?: gpsStartedAtMs) > 10_000) {
+                    progress = RouteProgress(RouteProgressState.GPS_UNCERTAIN, detail =
+                        if (latestFix == null) "No GPS fix received. Check Android location settings and open sky. Route progress is uncertain."
+                        else "GPS fix expired. Waiting for a fresh location.")
                     if (lastProgressState != RouteProgressState.GPS_UNCERTAIN) say(progress!!.detail)
                     lastProgressState = RouteProgressState.GPS_UNCERTAIN
                 }
@@ -112,14 +115,30 @@ class NavigationController(private val context: Context, private val say: (Strin
         }
     }
     fun rehearse() { route?.let { say(it.rehearsal()) } }
+    fun handleVoiceCommand(command: String): Boolean {
+        when (val action = RouteVoiceAction.parse(command) ?: return false) {
+            is RouteVoiceAction.Search -> {
+                if (!consent) { message = "Open Routes and enable route services before sending a place name to the map provider."; say(message) }
+                else { search(action.query, action.start); say("Searching public map data. Choose a matching place in Routes.") }
+            }
+            RouteVoiceAction.Overview -> if (route == null) say("Load a provider route in Routes first.") else rehearse()
+            RouteVoiceAction.PauseGps -> { stopGps(); message = "GPS progress paused."; say(message) }
+            RouteVoiceAction.Recalculate -> { requestRoute(fromGps = true); if (!busy) say(message) }
+        }
+        return true
+    }
     fun startGps() {
         if (!consent || route == null) { message = "Load a provider route before starting GPS progress."; return }
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
             ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             message = "Location permission is required for GPS progress."; return
         }
+        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            message = "GPS is disabled in Android location settings. Route progress is unavailable."; say(message); return
+        }
         try {
             gpsActive = true
+            gpsStartedAtMs = SystemClock.elapsedRealtime()
             latestFix = null
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2_000, 1f, listener, android.os.Looper.getMainLooper())
             message = "Foreground GPS active. Waiting for a sufficiently accurate fix."

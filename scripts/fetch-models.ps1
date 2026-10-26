@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $manifest = Get-Content -Raw -LiteralPath (Join-Path $repoRoot 'models/manifest.json') | ConvertFrom-Json
 foreach ($model in $manifest.models) {
-    if (-not $All -and $model.id -ne $manifest.selected_model) { continue }
+    if (-not $All -and $model.id -notin @('efficientdet_lite0_int8', 'efficientdet_lite2_int8')) { continue }
     $target = Join-Path $repoRoot $model.path
     $needsDownload = -not (Test-Path -LiteralPath $target)
     if (-not $needsDownload) {
@@ -21,7 +21,10 @@ foreach ($model in $manifest.models) {
     }
     Write-Output "Verified $($model.id) $($model.sha256)"
 }
-$assetDir = Join-Path $repoRoot 'app/src/main/assets'
+$assetDir = Join-Path $repoRoot 'perception/src/main/assets'
 New-Item -ItemType Directory -Force -Path $assetDir | Out-Null
-$chosenModel = $manifest.models | Where-Object { $_.id -eq $manifest.selected_model }
-Copy-Item -LiteralPath (Join-Path $repoRoot $chosenModel.path) -Destination (Join-Path $assetDir 'efficientdet_lite0_int8.tflite') -Force
+foreach ($bundleId in @('efficientdet_lite0_int8', 'efficientdet_lite2_int8')) {
+    $bundle = $manifest.models | Where-Object { $_.id -eq $bundleId }
+    if (-not $bundle) { throw "Missing bundled model manifest entry: $bundleId" }
+    Copy-Item -LiteralPath (Join-Path $repoRoot $bundle.path) -Destination (Join-Path $assetDir "$bundleId.tflite") -Force
+}

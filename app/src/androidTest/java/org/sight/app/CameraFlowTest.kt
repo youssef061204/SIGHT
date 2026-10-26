@@ -7,6 +7,8 @@ import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
+import androidx.lifecycle.ViewModelProvider
+import java.io.File
 
 /** Exercises CameraX -> real native inference -> core -> diagnostic UI on a device/emulator. */
 class CameraFlowTest {
@@ -25,6 +27,29 @@ class CameraFlowTest {
         val first = frameNumber()
         rule.waitUntil(30_000) { frameNumber() > first }
         assertTrue("Actual detector frame updates reached the UI", frameNumber() > first)
+        // Capture real Android stage/counter evidence, with enough warm frames for P95.
+        rule.waitUntil(90_000) {
+            var enough = false
+            rule.activityRule.scenario.onActivity { activity ->
+                enough = (ViewModelProvider(activity)[SightSession::class.java].controller.timing?.analyzed ?: 0) >= 30
+            }
+            enough
+        }
+        var generation = -1L
+        rule.activityRule.scenario.onActivity { activity ->
+            val controller = ViewModelProvider(activity)[SightSession::class.java].controller
+            generation = controller.cameraGeneration
+            File(activity.cacheDir,"camera-runtime-v3.json").writeText(controller.exportDiagnostics())
+        }
+        // Switching destinations must not recreate the preview source or restart its model.
+        listOf("Memory", "Settings", "Routes", "Developer").forEach { destination ->
+            rule.onNodeWithText(destination).performClick()
+            rule.activityRule.scenario.onActivity { activity ->
+                val controller = ViewModelProvider(activity)[SightSession::class.java].controller
+                assertTrue(controller.running)
+                org.junit.Assert.assertEquals(generation,controller.cameraGeneration)
+            }
+        }
 
         rule.onNodeWithText("Assist").performClick()
         rule.onNodeWithText("Pause camera").performScrollTo().performClick()
