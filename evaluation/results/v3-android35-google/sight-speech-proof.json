@@ -1,0 +1,10 @@
+{
+  "offlineVoiceAvailable": true,
+  "synthesized": true,
+  "voice": "en-us-x-tpf-local",
+  "locale": "en-US",
+  "networkRequired": false,
+  "waveBytes": 183930,
+  "pcmBytes": 183886,
+  "audioHeardByHuman": false
+}

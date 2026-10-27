@@ -22,16 +22,16 @@ The isolated project uses Kotlin 2.2.21 because DAT's published dependencies hav
 
 ## Official Mock Device Kit checks
 
-The official SDK's five instrumentation tests **passed on the WHPX-backed API 35 Google APIs x86_64 emulator**. [The raw result](../../evaluation/results/emulator-api35/meta-instrumentation.txt) records `OK (5 tests)`. On an attached, fully booted and unlocked Android API 31+ emulator or phone:
+The upgraded suite's **eight instrumentation tests passed on the API 35 AOSP ATD x86_64 emulator** on 2026-10-25, including all five preserved MDK contracts and three new conversion/inference/recovery checks. [Current raw result](../../evaluation/results/v3-android35/meta-suite.txt) records `OK (8 tests)` in 22.928 seconds. All eight adapter JVM tests also passed. The historical five-test pass on the API 35 Google APIs image remains in [the original raw result](../../evaluation/results/emulator-api35/meta-instrumentation.txt). On an attached, fully booted and unlocked Android API 31+ emulator or phone:
 
 ```powershell
 ./gradlew.bat -p integrations/meta :adapter:assembleDebugAndroidTest
-./scripts/test-emulator.ps1 -Meta -Serial emulator-5554 -Adb .tools/android-sdk/platform-tools/adb.exe -Output evaluation/results/emulator-api35/meta-instrumentation.txt
+./scripts/test-emulator.ps1 -Meta -Serial emulator-5558 -Adb .tools/android-sdk/platform-tools/adb.exe -Output evaluation/results/v3-android35/meta-suite.txt
 ```
 
 Choose the actual serial from `adb devices -l`. `MetaMockDeviceContractTest` uses the real `mwdat-mockdevice` artifact for simulated pair/unpair, lack of registration, camera denial, registered-without-device handling and ordered camera-frame delivery/stop. The stream test feeds a [generated HEVC mathematical pattern](adapter/src/androidTest/assets/README.md) through the official MDK, verifies nonempty owned frame bytes and increasing presentation timestamps, and verifies that stop clears pending frames. This establishes a delivered **simulated file-fed stream**, not Bluetooth transport, physical glasses imaging, microphone audio or hardware reliability.
 
-SIGHT 3.0 adds `MetaPerceptionIntegrationTest`: decoded color-chart values, a licensed photograph through actual RGB inference and the core Find workflow, and permission revocation followed by explicit session recovery. These new scenarios must be executed separately from the historical five-test result; their current execution status is in [Meta 3.0](../../docs/meta-v3.md). Test-host cache JSON files record actual color samples and detector/core output. Physical-camera conversion still requires its own calibration record.
+SIGHT 3.0 adds `MetaPerceptionIntegrationTest`: decoded color-chart values, a licensed photograph through actual RGB inference and the core Find workflow, and permission revocation followed by explicit session recovery. All three passed. [Actual color samples](../../evaluation/results/v3-android35/meta-color-chart-proof.json) and [actual detector/core output](../../evaluation/results/v3-android35/meta-real-pipeline-proof.json) are archived from the test host. Find completed on result four with actual person confidence 0.8008–0.8164; the first result was rejected by the lifecycle cutoff. Four short emulator samples measured 44.38–91.30 ms conversion and 456.64–1075.83 ms receipt-to-result; these are not sustained or physical-device performance claims. See [Meta 3.0](../../docs/meta-v3.md) for the initial failures, subsequent changes and limits. Physical-camera conversion still requires its own calibration record.
 
 The adapter's default first-frame timeout is 20 seconds; the emulator stream test explicitly extends it to 60 seconds. These are deadlines, not measured latency. The initial emulator-camera feed failed to emit HEVC codec configuration; the passing file feed avoids claiming that the emulator camera path succeeded. [Initial failures](../../evaluation/results/emulator-api35/meta-initial-failures.txt) remain inspectable. Mock capture-clock synchronization is explicitly false. The separate API 30 emulator cannot run this API 31+ adapter.
 
@@ -39,4 +39,4 @@ A production host must supply its Wearables Developer Center application ID/clie
 
 See [the readiness record](../../docs/meta-readiness.md) for evidence, current API references, and the hardware acceptance checklist.
 
-The five MDK tests were also executed successfully on API 35 AOSP ATD x86_64. [Second raw run](../../evaluation/results/emulator-api35/atd-meta-instrumentation.txt).
+The original five MDK tests were also executed successfully on API 35 AOSP ATD x86_64 before the overhaul. [Historical second raw run](../../evaluation/results/emulator-api35/atd-meta-instrumentation.txt).

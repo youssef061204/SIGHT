@@ -14,6 +14,7 @@ def main():
     parser.add_argument("--output", required=True)
     parser.add_argument("--adb", default=str(ROOT / ".tools/android-sdk/platform-tools/adb.exe"))
     parser.add_argument("--meta", action="store_true")
+    parser.add_argument("--audio", action="store_true", help="Also copy the fixed native TTS test WAV when its RIFF/WAVE header is valid")
     args = parser.parse_args()
     out = ROOT / args.output
     out.mkdir(parents=True, exist_ok=True)
@@ -35,6 +36,15 @@ def main():
                 proofs[name] = "copied"
         else:
             proofs[name] = "not available; no capability pass inferred"
+    if args.audio and not args.meta:
+        name = "sight-speech-proof.wav"
+        result = adb("exec-out", "run-as", package, "cat", "cache/" + name)
+        raw = result.stdout
+        if result.returncode == 0 and len(raw) > 44 and raw[:4] == b"RIFF" and raw[8:12] == b"WAVE":
+            (out / name).write_bytes(raw)
+            proofs[name] = "copied original native test audio; synthesis assertions are recorded in the JSON proof"
+        else:
+            proofs[name] = "not available or invalid WAV; no audio pass inferred"
     properties = {}
     for prop in ("ro.build.fingerprint", "ro.product.cpu.abilist", "ro.build.version.sdk", "ro.hardware", "sys.boot_completed", "debug.hwui.drawing_enabled"):
         result = adb("shell", "getprop", prop)

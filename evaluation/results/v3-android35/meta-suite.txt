@@ -1,0 +1,9 @@
+﻿
+org.sight.meta.MetaMockDeviceContractTest:.....
+org.sight.meta.MetaPerceptionIntegrationTest:...
+
+Time: 22.928
+
+OK (8 tests)
+
+

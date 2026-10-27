@@ -36,7 +36,7 @@ Build the application and instrumentation APKs, then run against a booted, unloc
 
 On a memory-limited host, stop build daemons and run one emulator at a time. The script wakes/unlocks the screen and verifies installed bytecode before starting the suite. For the final API 35 AOSP run, use serial `emulator-5558` and the two perception/camera classes, writing `atd-final-suite.txt`.
 
-Pass the comma-separated `-Classes` value as one argument; individual classes may also run separately to reproduce the linked per-suite outputs. The API 35 serial was `emulator-5554`; select the current API 30 serial rather than assuming the example `emulator-5556` is present. Camera tests keep the emulator awake and exercise actual app controls; their waits accommodate emulator startup rather than establishing a latency target. To reproduce the separate official Meta suite, build its Android test APK and use the same script with `-Meta`, as documented in [Meta readiness](meta-readiness.md).
+Pass the comma-separated `-Classes` value as one argument; individual classes may also run separately to reproduce the linked per-suite outputs. The API 35 serial was `emulator-5554`; select the current API 30 serial rather than assuming the example `emulator-5556` is present. Camera tests keep the emulator awake and exercise actual app controls; their waits accommodate emulator startup rather than establishing a latency target. To reproduce the project's separate suite against the official Meta MDK, build its Android test APK and use the same script with `-Meta`, as documented in [Meta readiness](meta-readiness.md).
 
 ## Install
 

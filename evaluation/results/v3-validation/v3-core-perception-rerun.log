@@ -1,0 +1,157 @@
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar
+> Task :core:compileTestKotlin
+> Task :core:compileTestJava NO-SOURCE
+> Task :core:processTestResources NO-SOURCE
+> Task :core:testClasses UP-TO-DATE
+
+> Task :core:test
+
+TemporalEngineTest > queued live speech is rejected after latest evidence drops below confidence policy PASSED
+
+TemporalEngineTest > same chair means a retained image hypothesis and abstains when ambiguous or expired PASSED
+
+TemporalEngineTest > completed search reports loss once and requires fresh verification on return PASSED
+
+TemporalEngineTest > direct change query cannot resurrect an expired comparison PASSED
+
+TemporalEngineTest > bounded prediction reconnects translated observations across a detector miss without inventing visibility PASSED
+
+TemporalEngineTest > unsupported attributes support relations and door history abstain PASSED
+
+TemporalEngineTest > clear memory prevents pre-clear tracker history from returning in the next frame PASSED
+
+TemporalEngineTest > historical side uses actual earlier boxes after current box moves PASSED
+
+TemporalEngineTest > async OCR rejects old read requests changed geometry expired snapshots and cancelled tasks PASSED
+
+TemporalEngineTest > scene comparison labels detector differences without asserting physical departure PASSED
+
+TemporalEngineTest > pre-request capture can update scene but cannot verify search PASSED
+
+TemporalEngineTest > async OCR snapshot preserves original time while detector tracks remain independent PASSED
+
+TemporalEngineTest > category confirmation policy requires its configured post-request frame count PASSED
+
+TemporalEngineTest > unconfirmed one-frame candidates cannot become confident spoken historical answers PASSED
+
+TemporalEngineTest > aggregation describes model scores and cannot turn a low latest confidence into confirmation PASSED
+
+TemporalEngineTest > queued image-relation speech is invalidated when relation changes inside the same image side PASSED
+
+TemporalEngineTest > find scheduling is faster without enabling OCR or bypassing thermal critical PASSED
+
+TemporalEngineTest > world distinguishes current recent and remembered then expires process metadata PASSED
+
+TemporalEngineTest > user rejection excludes that image track without relabelling detector evidence PASSED
+
+TemporalEngineTest > model and geometry discontinuities reset identities and preserve only historical metadata PASSED
+
+TemporalEngineTest > reinspection does not answer from pre-request captures PASSED
+
+AdaptiveSchedulerTest > latest-frame slot drops superseded frames and closes resources exactly once PASSED
+
+AdaptiveSchedulerTest > scheduler rates limit detection and expensive OCR separately PASSED
+
+AdaptiveSchedulerTest > thermal throttling reduces load and critical admits no inference PASSED
+
+EngineToolsTest > no location depth or route provider can produce a success PASSED
+
+EngineToolsTest > tool memory remains historical after live evidence expires PASSED
+
+EngineToolsTest > receipt-clock tools require confirmation rather than silently succeeding PASSED
+
+EngineToolsTest > requesting text is pending and historical OCR cannot become fresh tool text PASSED
+
+EngineToolsTest > tool access shares actual scene and rejects stale live facts PASSED
+
+SightEngineTest > numbered OCR recall distinguishes blocks from verified paragraphs PASSED
+
+SightEngineTest > category-gated one-to-one matching never assigns a detection twice PASSED
+
+SightEngineTest > timeouts abstain without asserting absence and cancel-resume resets verification PASSED
+
+SightEngineTest > unsupported classes and visual attributes never enter successful search PASSED
+
+SightEngineTest > narration waits for persistence and suppresses duplicates PASSED
+
+SightEngineTest > price reading labels pattern matches and missing dates abstain PASSED
+
+SightEngineTest > low confidence observations cannot verify a target PASSED
+
+SightEngineTest > lost input invalidates speech and rejects captured work from prior lifecycle PASSED
+
+SightEngineTest > reading uses fresh OCR and preserves verbatim extracted evidence PASSED
+
+SightEngineTest > named memories are historical scene labels and never current locations PASSED
+
+SightEngineTest > source changes discard image identities and find candidate evidence PASSED
+
+SightEngineTest > history tracks traces and memories are bounded PASSED
+
+SightEngineTest > one-frame false positive and category change cannot complete a find PASSED
+
+SightEngineTest > stale future and out-of-order frames are rejected without updating scene PASSED
+
+SightEngineTest > receipt-time evidence explicitly reduces capability PASSED
+
+SightEngineTest > memory requires actual recent evidence PASSED
+
+SightEngineTest > missing observations become invisible then expire PASSED
+
+SightEngineTest > clock regression cannot change accepted state PASSED
+
+SightEngineTest > narration profiles limit utterance content without changing perception PASSED
+
+SightEngineTest > unchanged scene remains quiet across long continuous observation PASSED
+
+SightEngineTest > placeholder detector labels cannot become spoken observations PASSED
+
+SightEngineTest > NaN confidence fails at boundary PASSED
+
+SightEngineTest > invalid image bounds fail at boundary PASSED
+
+SightEngineTest > queued directional speech expires when target moves or disappears PASSED
+
+SightEngineTest > image geometry reports image relationships without depth claims PASSED
+
+SightEngineTest > camera restart permits a fresh session counter and resets image identity PASSED
+
+SightEngineTest > find requires two distinct fresh frames after command PASSED
+
+TemporalMetricTest > fragmenting a labelled identity cannot claim all fragments as the same matched identity PASSED
+
+TemporalMetricTest > global identity matching chooses one prediction per truth and preserves the best complete assignment PASSED
+
+> Task :core:temporalEvaluation
+Synthetic temporal ablation written to C:\Users\joeso\Projects\SIGHT\evaluation\results\v3-temporal
+
+> Task :perception:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :perception:verifyModels
+> Task :perception:preBuild
+> Task :perception:preDebugBuild
+> Task :perception:generateDebugResValues
+> Task :perception:generateDebugResources
+> Task :perception:packageDebugResources
+> Task :perception:parseDebugLocalResources
+> Task :perception:generateDebugRFile
+> Task :perception:compileDebugKotlin
+> Task :perception:javaPreCompileDebug
+> Task :perception:compileDebugJavaWithJavac NO-SOURCE
+> Task :perception:bundleLibRuntimeToJarDebug
+> Task :perception:bundleLibCompileToJarDebug
+> Task :perception:preDebugUnitTestBuild
+> Task :perception:generateDebugUnitTestStubRFile
+> Task :perception:compileDebugUnitTestKotlin
+> Task :perception:javaPreCompileDebugUnitTest
+> Task :perception:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :perception:processDebugJavaRes
+> Task :perception:processDebugUnitTestJavaRes
+> Task :perception:testDebugUnitTest
+
+BUILD SUCCESSFUL in 2m 11s
+21 actionable tasks: 21 executed

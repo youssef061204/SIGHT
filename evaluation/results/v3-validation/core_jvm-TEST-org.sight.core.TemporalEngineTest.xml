@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.core.TemporalEngineTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2026-10-26T01:36:34" hostname="YUNO" time="0.016">
+  <properties/>
+  <testcase name="queued live speech is rejected after latest evidence drops below confidence policy" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="same chair means a retained image hypothesis and abstains when ambiguous or expired" classname="org.sight.core.TemporalEngineTest" time="0.002"/>
+  <testcase name="completed search reports loss once and requires fresh verification on return" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="memory deletion cancels pending read and strictly rejects pre-clear and same-millisecond OCR" classname="org.sight.core.TemporalEngineTest" time="0.002"/>
+  <testcase name="direct change query cannot resurrect an expired comparison" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="bounded prediction reconnects translated observations across a detector miss without inventing visibility" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="unsupported attributes support relations and door history abstain" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="clear memory prevents pre-clear tracker history from returning in the next frame" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="historical side uses actual earlier boxes after current box moves" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="async OCR rejects old read requests changed geometry expired snapshots and cancelled tasks" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="scene comparison labels detector differences without asserting physical departure" classname="org.sight.core.TemporalEngineTest" time="0.002"/>
+  <testcase name="pre-request capture can update scene but cannot verify search" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="async OCR snapshot preserves original time while detector tracks remain independent" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="category confirmation policy requires its configured post-request frame count" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="unconfirmed one-frame candidates cannot become confident spoken historical answers" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="aggregation describes model scores and cannot turn a low latest confidence into confirmation" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="queued image-relation speech is invalidated when relation changes inside the same image side" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="forget all clears OCR transcript blocks and legacy admission while preserving fresh object input" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="find scheduling is faster without enabling OCR or bypassing thermal critical" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="world distinguishes current recent and remembered then expires process metadata" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="user rejection excludes that image track without relabelling detector evidence" classname="org.sight.core.TemporalEngineTest" time="0.001"/>
+  <testcase name="model and geometry discontinuities reset identities and preserve only historical metadata" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <testcase name="reinspection does not answer from pre-request captures" classname="org.sight.core.TemporalEngineTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

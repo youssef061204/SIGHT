@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -13,7 +14,8 @@ OUT = ROOT / "evaluation/results/v3-validation"
 
 def read_text(path):
     raw = path.read_bytes() if path.exists() else b""
-    return raw.decode("utf-16" if raw.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig", errors="replace")
+    decoded = raw.decode("utf-16" if raw.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig", errors="replace")
+    return re.sub(r"\r+\n", "\n", decoded)
 
 
 def main():
@@ -72,9 +74,16 @@ def main():
     for name in ("v3-core-perception-rerun.log", "v3-app-build-final.log", "v3-meta-build.log"):
         path = ROOT / ".tools" / name
         if path.exists():
-            (OUT / name).write_text(read_text(path), encoding="utf-8")
+            (OUT / name).write_text(read_text(path), encoding="utf-8", newline="\n")
+    source_commit = subprocess.check_output(
+        ["git", "log", "-1", "--format=%H", "--", "app/src", "core/src", "perception/src", "integrations/meta/adapter/src"],
+        cwd=ROOT, text=True).strip()
+    lint = read_text(ROOT / "app/build/reports/lint-results-debug.txt")
+    lint_summary = re.search(r"(\d+) errors, (\d+) warnings", lint)
     value = {"schema": "sight.validation.v3", "recordedAtUtc": datetime.now(timezone.utc).isoformat(),
-             "baselineCommit": "f37f85d", "tests": tests, "artifacts": artifacts,
+             "baselineCommit": "f37f85d", "sourceCommit": source_commit,
+             "lint": {"errors": int(lint_summary[1]), "warnings": int(lint_summary[2])} if lint_summary else {"status": "unavailable"},
+             "tests": tests, "artifacts": artifacts,
              "boundary": "Android emulators and official Meta MDK simulated media. No physical phone/glasses, human TalkBack, assistive usability, battery or calibrated audible-onset validation."}
     (OUT / "summary.json").write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(value, indent=2))

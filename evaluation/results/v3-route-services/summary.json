@@ -1,0 +1,23 @@
+{
+  "recordedAtUtc": "2026-10-26T01:27:58.138948+00:00",
+  "requests": {
+    "search": {
+      "url": "https://photon.komoot.io/api/?q=Union%20Station%20Toronto&limit=5&lang=en",
+      "input": "Fixed public Toronto landmarks; not a user's GPS location",
+      "httpStatus": 200,
+      "results": 5,
+      "status": "returned_results"
+    },
+    "walking-route": {
+      "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/-79.3803000,43.6452000;-79.3871000,43.6426000?overview=full&geometries=geojson&steps=true&alternatives=false",
+      "input": "Fixed public Toronto landmarks; not a user's GPS location",
+      "httpStatus": 200,
+      "providerCode": "Ok",
+      "routes": 1,
+      "steps": 13,
+      "status": "returned_route"
+    }
+  },
+  "boundary": "Desktop HTTP availability only. Not an Android, GPS, accessibility or physical safety validation.",
+  "attribution": "OpenStreetMap contributors; Photon/komoot search; FOSSGIS OSRM foot routing"
+}

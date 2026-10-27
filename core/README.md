@@ -14,6 +14,8 @@ Commands cover current image sides/center, historical sides, recent observations
 
 `onTextObservation(evidence, text, nowMs)` accepts independently completed OCR. It does not update object tracks or reset the detector's model continuity. The source, geometry, lifecycle, pending Read request, original capture time and independent callback order are checked. An admitted async snapshot is prefixed `Captured text:` and expires after at most eight seconds at initial speech admission. Legacy in-frame OCR remains subject to the 1.5-second live admission gate. This snapshot exception never admits old live scene claims; already admitted fixed text may finish through the Android speech policy.
 
+Deleting all memory also clears captured OCR text, blocks, evidence and text-bearing decision traces, invalidates earlier OCR announcements, and cancels a pending Read task. OCR captured at or before the deletion timestamp cannot re-enter, including through an in-flight callback; a new explicit Read request is required. Other goals and current visual input remain available. The Android controller also deletes encrypted landmarks and clears old speech/diagnostic text buffers; this is logical application-data deletion, not a physical memory or storage erasure guarantee.
+
 `AdaptiveScheduler` admits Find detection at 150 ms, Explore/Read detection at 250 ms and Read OCR at 1,000 ms by default. These are configurable admission intervals, not measured throughput. Thermal multipliers and critical suspension apply to all modes. Camera adapters remain responsible for capacity-one work and resource ownership.
 
 From the repository root:

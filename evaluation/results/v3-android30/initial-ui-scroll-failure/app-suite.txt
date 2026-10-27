@@ -1,0 +1,26 @@
+﻿
+org.sight.app.PixelPipelineTest:...
+org.sight.app.NativePerceptionTest:..
+org.sight.app.InspectionRuntimeTest:..
+org.sight.app.CameraFlowTest:.
+org.sight.app.SessionUiTest:..
+Error in everyDestinationExposesSensorStateAndIndependentScrollPosition(org.sight.app.SessionUiTest):
+java.lang.AssertionError: Assist has actually scrolled
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.sight.app.SessionUiTest.everyDestinationExposesSensorStateAndIndependentScrollPosition(SessionUiTest.kt:53)
+
+org.sight.app.MemoryDeletionTest:.
+
+Time: 112.679
+There was 1 failure:
+1) everyDestinationExposesSensorStateAndIndependentScrollPosition(org.sight.app.SessionUiTest)
+java.lang.AssertionError: Assist has actually scrolled
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.sight.app.SessionUiTest.everyDestinationExposesSensorStateAndIndependentScrollPosition(SessionUiTest.kt:53)
+
+FAILURES!!!
+Tests run: 12,  Failures: 1
+
+

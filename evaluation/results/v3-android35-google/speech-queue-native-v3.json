@@ -1,0 +1,31 @@
+{
+  "offlineVoiceAvailable": true,
+  "scope": "Actual Android offline TTS callbacks and queue interruption; not audible speaker onset",
+  "status": "Offline speech ready",
+  "recordedAtElapsedMs": 188153,
+  "ambientInterrupted": true,
+  "taskStarted": true,
+  "humanHeardAudio": false,
+  "callbacks": [
+    {
+      "kind": "request",
+      "text": "This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. ",
+      "atMs": 185457
+    },
+    {
+      "kind": "engineStart",
+      "text": "This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. This is an ambient speech queue test. ",
+      "atMs": 186277
+    },
+    {
+      "kind": "request",
+      "text": "SIGHT speech queue test. Higher priority task.",
+      "atMs": 186306
+    },
+    {
+      "kind": "engineStart",
+      "text": "SIGHT speech queue test. Higher priority task.",
+      "atMs": 188120
+    }
+  ]
+}

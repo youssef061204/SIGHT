@@ -1,0 +1,45 @@
+﻿
+org.sight.meta.MetaMockDeviceContractTest:.....
+org.sight.meta.MetaPerceptionIntegrationTest:
+Error in permissionRevocationClearsFramesAndExplicitReconnectCreatesFreshSession(org.sight.meta.MetaPerceptionIntegrationTest):
+kotlinx.coroutines.TimeoutCancellationException: Timed out waiting for 70000 ms
+	at kotlinx.coroutines.TimeoutKt.TimeoutCancellationException(Timeout.kt:281)
+	at kotlinx.coroutines.TimeoutCoroutine.run(Timeout.kt:243)
+	at kotlinx.coroutines.EventLoopImplBase$DelayedRunnableTask.run(EventLoop.common.kt:498)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
+	at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+	at java.lang.Thread.run(Thread.java:1012)
+.
+Error in officialMockPhotographCompletesFindThroughSharedDetectorAndCore(org.sight.meta.MetaPerceptionIntegrationTest):
+kotlinx.coroutines.TimeoutCancellationException: Timed out waiting for 90000 ms
+	at kotlinx.coroutines.TimeoutKt.TimeoutCancellationException(Timeout.kt:281)
+	at kotlinx.coroutines.TimeoutCoroutine.run(Timeout.kt:243)
+	at kotlinx.coroutines.EventLoopImplBase$DelayedRunnableTask.run(EventLoop.common.kt:498)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
+	at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+	at java.lang.Thread.run(Thread.java:1012)
+
+
+Time: 182.418
+There were 2 failures:
+1) permissionRevocationClearsFramesAndExplicitReconnectCreatesFreshSession(org.sight.meta.MetaPerceptionIntegrationTest)
+kotlinx.coroutines.TimeoutCancellationException: Timed out waiting for 70000 ms
+	at kotlinx.coroutines.TimeoutKt.TimeoutCancellationException(Timeout.kt:281)
+	at kotlinx.coroutines.TimeoutCoroutine.run(Timeout.kt:243)
+	at kotlinx.coroutines.EventLoopImplBase$DelayedRunnableTask.run(EventLoop.common.kt:498)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
+	at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+	at java.lang.Thread.run(Thread.java:1012)
+2) officialMockPhotographCompletesFindThroughSharedDetectorAndCore(org.sight.meta.MetaPerceptionIntegrationTest)
+kotlinx.coroutines.TimeoutCancellationException: Timed out waiting for 90000 ms
+	at kotlinx.coroutines.TimeoutKt.TimeoutCancellationException(Timeout.kt:281)
+	at kotlinx.coroutines.TimeoutCoroutine.run(Timeout.kt:243)
+	at kotlinx.coroutines.EventLoopImplBase$DelayedRunnableTask.run(EventLoop.common.kt:498)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
+	at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+	at java.lang.Thread.run(Thread.java:1012)
+
+FAILURES!!!
+Tests run: 8,  Failures: 2
+
+

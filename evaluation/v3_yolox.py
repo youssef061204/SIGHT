@@ -204,6 +204,8 @@ def quiet_selection():
     # identified concurrent Gradle load before calibration/final inference.
     # Accuracy outputs are unchanged. Only the same predeclared timing gate is
     # reevaluated under a root-coordinated quiet host interval.
+    if (OUT / "calibration-decision.json").exists() or (OUT / "paired-selection-timing-quiet.json").exists():
+        raise RuntimeError("Quiet timing or calibration already sealed; use a fresh output directory for reproduction")
     for source, archived in (("paired-selection-timing.json", "paired-selection-timing-contended.json"),
                              ("selection-decision.json", "selection-decision-contended.json")):
         path = OUT / source
@@ -288,9 +290,13 @@ def audit():
 
 
 def main():
+    global OUT
     parser = argparse.ArgumentParser()
     parser.add_argument("stage", choices=("selection", "quiet-timing", "calibration", "audit", "verify-reference"))
+    parser.add_argument("--output", default="evaluation/results/v3-yolox",
+                        help="Fresh experiment directory, repository-relative or absolute; existing decisions remain sealed")
     args = parser.parse_args()
+    OUT = (ROOT / args.output).resolve()
     OUT.mkdir(parents=True, exist_ok=True)
     if args.stage == "verify-reference":
         print(verify_reference())

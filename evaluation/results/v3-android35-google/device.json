@@ -1,0 +1,23 @@
+{
+  "collectedAtUtc": "2026-10-26T02:05:05.395773+00:00",
+  "serial": "emulator-5554",
+  "package": "org.sight.app",
+  "properties": {
+    "ro.build.fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.043/12960925:userdebug/dev-keys",
+    "ro.product.cpu.abilist": "x86_64,arm64-v8a",
+    "ro.build.version.sdk": "35",
+    "ro.hardware": "ranchu",
+    "sys.boot_completed": "1",
+    "debug.hwui.drawing_enabled": "",
+    "display-size": "Physical size: 540x1200",
+    "display-density": "Physical density: 420\r\nOverride density: 210"
+  },
+  "proofs": {
+    "inspection-runtime-v3.json": "invalid JSON; not accepted as evidence",
+    "camera-runtime-v3.json": "invalid JSON; not accepted as evidence",
+    "sight-speech-proof.json": "copied",
+    "speech-queue-native-v3.json": "copied",
+    "sight-speech-proof.wav": "copied original native test audio; synthesis assertions are recorded in the JSON proof"
+  },
+  "boundary": "Emulated Android; JSON proofs carry their own measurement scope. Missing artifacts never establish a pass."
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.core.AdaptiveSchedulerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-26T01:36:34" hostname="YUNO" time="0.015">
+  <properties/>
+  <testcase name="latest-frame slot drops superseded frames and closes resources exactly once" classname="org.sight.core.AdaptiveSchedulerTest" time="0.011"/>
+  <testcase name="scheduler rates limit detection and expensive OCR separately" classname="org.sight.core.AdaptiveSchedulerTest" time="0.004"/>
+  <testcase name="thermal throttling reduces load and critical admits no inference" classname="org.sight.core.AdaptiveSchedulerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

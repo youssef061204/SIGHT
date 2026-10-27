@@ -1,0 +1,22 @@
+{
+  "collectedAtUtc": "2026-10-26T02:01:28.356036+00:00",
+  "serial": "emulator-5556",
+  "package": "org.sight.app",
+  "properties": {
+    "ro.build.fingerprint": "Android/sdk_slim_x86/generic_x86:11/RSR1.210722.009/7752727:userdebug/test-keys",
+    "ro.product.cpu.abilist": "x86,armeabi-v7a,armeabi",
+    "ro.build.version.sdk": "30",
+    "ro.hardware": "ranchu",
+    "sys.boot_completed": "1",
+    "debug.hwui.drawing_enabled": "0",
+    "display-size": "Physical size: 1080x2280",
+    "display-density": "Physical density: 440"
+  },
+  "proofs": {
+    "inspection-runtime-v3.json": "copied",
+    "camera-runtime-v3.json": "copied",
+    "sight-speech-proof.json": "invalid JSON; not accepted as evidence",
+    "speech-queue-native-v3.json": "invalid JSON; not accepted as evidence"
+  },
+  "boundary": "Emulated Android; JSON proofs carry their own measurement scope. Missing artifacts never establish a pass."
+}

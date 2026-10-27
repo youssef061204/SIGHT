@@ -30,15 +30,23 @@ The original stream `presentationTimeUs` is retained independently from handset 
 
 ## Validation status
 
-The original five official MDK tests are preserved. Four existing frame-gate tests are preserved. Four calibration-contract tests and three native integration tests were added. Added native scenarios are decoded color quadrants, a real detector/core Find result from the official mock photo feed, and permission revocation followed by explicit fresh-session recovery.
+The original five project tests against the official MDK are preserved. Four existing frame-gate tests are preserved. Four calibration-contract tests and three native integration tests were added. Added native scenarios are decoded color quadrants, a real detector/core Find result from the official mock photo feed, and permission revocation followed by explicit fresh-session recovery. These are project-authored integration checks, not Meta certification.
 
-**Execution status:** new SIGHT 3.0 checks are authored and await the coordinated build/emulator run. Historical five-test passes are recorded in [Meta readiness](meta-readiness.md); they must not be confused with execution of the newly added tests. This section will be updated with actual results after validation.
+**Executed on 2026-10-25:** all **eight native instrumentation tests passed** on the API 35 AOSP ATD x86_64 Android emulator (`emulator-5558`), including the preserved five MDK contracts and all three new integration tests. The full run took 22.928 seconds. [Raw result](../evaluation/results/v3-android35/meta-suite.txt), [emulated device properties](../evaluation/results/v3-android35/meta-device.json). All **eight adapter JVM tests passed**: [four frame-gate tests](../evaluation/results/v3-validation/meta_jvm-TEST-org.sight.meta.MetaFrameGateTest.xml) and [four calibration tests](../evaluation/results/v3-validation/meta_jvm-TEST-org.sight.meta.MetaFrameCalibrationTest.xml).
+
+The official decoded 320 x 240 chart produced RGB `[255,0,0]`, `[0,254,0]`, `[0,0,255]` and `[255,255,255]` in the four sampled quadrants. This establishes the generated mock fixture's I420 chroma order, limited-range conversion and zero-degree unmirrored geometry. It does not establish a physical glasses color standard. [Actual chart samples](../evaluation/results/v3-android35/meta-color-chart-proof.json).
+
+The licensed photo feed completed Find on its fourth inference result using `efficientdet_lite0_int8`. The first result was intentionally rejected at the new-session lifecycle cutoff; the next three were admitted, progressing through VERIFYING, VERIFYING and COMPLETED. Person confidence ranged from 0.8008 to 0.8164. The fourth result contained the actual evidence-grounded Find announcement, and stop invalidated visibility. [Actual detector/core proof](../evaluation/results/v3-android35/meta-real-pipeline-proof.json).
+
+These four short emulator samples measured conversion at **44.38–91.30 ms**, native inference at **356.94–947.16 ms**, and receipt-to-result at **456.64–1075.83 ms**. They are integration timings, not a sustained runtime benchmark, percentile estimate, physical-phone measurement or capture-to-audio latency. The 1.152-second receipt gap between the second and third samples exceeded the core's one-second association window, so the earlier image identity expired and a new track was confirmed on the fourth sample. That conservative reset preserves uncertainty; it also shows sensitivity to processing gaps.
+
+The initial upgraded run preserved the five original passes and passed the chart check, but failed first-frame waiting in the permission scenario and timed out during photo Find. [Initial failure record](../evaluation/results/v3-android35/initial-ef1ba30/meta-suite.txt). Subsequent changes await actual mock-device readiness, distinguish initial stream STOPPED from a later stop, persist failure diagnostics, and remove per-pixel boxed coordinate allocation from shared orientation. The final eight-test run passed after those changes. No isolated timing experiment attributes a measured speedup to an individual fix, and the initial failed photo run had no saved per-stage proof. No freshness limit or confidence threshold was relaxed.
 
 Build from the repository root with the configured Android SDK:
 
 ```powershell
 ./gradlew.bat -p integrations/meta :adapter:testDebugUnitTest :adapter:assembleDebug :adapter:assembleDebugAndroidTest --max-workers=2 --console=plain
-./scripts/test-emulator.ps1 -Meta -Serial emulator-5554 -Adb .tools/android-sdk/platform-tools/adb.exe -Output evaluation/results/v3/meta-instrumentation.txt
+./scripts/test-emulator.ps1 -Meta -Serial emulator-5558 -Adb .tools/android-sdk/platform-tools/adb.exe -Output evaluation/results/v3-android35/meta-suite.txt
 ```
 
 The isolated project assigns shared modules separate build directories to avoid mixing the phone's Kotlin compilation cache with the SDK's Kotlin 2.2.21 toolchain. The MDK artifact stays in `androidTestImplementation`; it cannot silently replace a physical device in production.

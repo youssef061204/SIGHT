@@ -1,0 +1,30 @@
+{
+  "source": "meta-dat-mock",
+  "width": 320,
+  "height": 240,
+  "rgb": [
+    [
+      255,
+      0,
+      0
+    ],
+    [
+      0,
+      254,
+      0
+    ],
+    [
+      0,
+      0,
+      255
+    ],
+    [
+      255,
+      255,
+      255
+    ]
+  ],
+  "layout": "packed-I420",
+  "rotationDegrees": 0,
+  "captureClockSynchronized": false
+}

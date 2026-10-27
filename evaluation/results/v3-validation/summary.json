@@ -1,0 +1,88 @@
+{
+  "schema": "sight.validation.v3",
+  "recordedAtUtc": "2026-10-27T02:36:10.906316+00:00",
+  "baselineCommit": "f37f85d",
+  "sourceCommit": "2814defb7d27d66f6d9fde085d781851f7ef26c3",
+  "lint": {
+    "errors": 0,
+    "warnings": 16
+  },
+  "tests": {
+    "core_jvm": {
+      "tests": 60,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "perception_jvm": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "app_jvm": {
+      "tests": 38,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "meta_jvm": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "android35_app": {
+      "status": "passed",
+      "expected": 12,
+      "raw": "v3-android35/app-suite.txt"
+    },
+    "android35_meta": {
+      "status": "passed",
+      "expected": 8,
+      "raw": "v3-android35/meta-suite.txt"
+    },
+    "android30_app": {
+      "status": "passed",
+      "expected": 12,
+      "raw": "v3-android30/app-suite.txt"
+    },
+    "android35_offline_speech": {
+      "status": "passed",
+      "expected": 2,
+      "raw": "v3-android35-google/speech-suite.txt",
+      "humanHeardAudio": false
+    },
+    "python": {
+      "tests": 12,
+      "status": "passed"
+    }
+  },
+  "artifacts": {
+    "app/build/outputs/apk/debug/app-debug.apk": {
+      "bytes": 133326951,
+      "sha256": "a3d37e2282498cd95a74c87172df34047ababceb6128a5612b5a2d84b150c492"
+    },
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": {
+      "bytes": 1229447,
+      "sha256": "d0fe63b9b8c46005af77fe0cc46ad3d5b19833036aac28ed036ea40ed1abef35"
+    },
+    "integrations/meta/adapter/build/outputs/apk/androidTest/debug/adapter-debug-androidTest.apk": {
+      "bytes": 122368130,
+      "sha256": "ef1034f1acbde9da9062c455127c19d205c0dfa0076785b96f9a2c0d6c19883e"
+    },
+    "perception/src/main/assets/efficientdet_lite0_int8.tflite": {
+      "bytes": 4602795,
+      "sha256": "0720bf247bd76e6594ea28fa9c6f7c5242be774818997dbbeffc4da460c723bb"
+    },
+    "perception/src/main/assets/efficientdet_lite2_int8.tflite": {
+      "bytes": 7515971,
+      "sha256": "b3f50554cb0ea559e90328845f7d9ba4d13c8bff372914d24e06bc8bb72fa896"
+    }
+  },
+  "boundary": "Android emulators and official Meta MDK simulated media. No physical phone/glasses, human TalkBack, assistive usability, battery or calibrated audible-onset validation."
+}

@@ -1,6 +1,6 @@
 {
   "schema":"sight.synthetic-temporal-ablation.v1",
-  "recordedAtUtc":"2026-10-25T20:31:59.515712500Z",
+  "recordedAtUtc":"2026-10-26T01:39:07.421889800Z",
   "scope":"Deterministic constructed labelled image boxes. No real video, camera motion estimation, physical identity, detector accuracy, mobile speed or mobility validation.",
   "identityMetric":"IDF1 uses maximum one-to-one global identity assignment over actual observed boxes; missed detector frames count as IDFN. Identity switches compare each labelled object across its successive detected appearances.",
   "scenarioCount":5,

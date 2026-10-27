@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.app.PerceptionPolicyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-26T01:41:05" hostname="YUNO" time="0.056">
+  <properties/>
+  <testcase name="OCR failure from old request session geometry future or expired capture cannot enter current task feedback" classname="org.sight.app.PerceptionPolicyTest" time="0.007"/>
+  <testcase name="completed find keeps monitoring while unsupported and paused goals do not request detailed automatic inference" classname="org.sight.app.PerceptionPolicyTest" time="0.041"/>
+  <testcase name="all supported deletion aliases reach persistent deletion before named parsing" classname="org.sight.app.PerceptionPolicyTest" time="0.001"/>
+  <testcase name="cancelled reading stops OCR and an explicit resume can schedule it again" classname="org.sight.app.PerceptionPolicyTest" time="0.002"/>
+  <testcase name="cancelled and timed-out searches return automatic model and cadence to fast idle policy" classname="org.sight.app.PerceptionPolicyTest" time="0.001"/>
+  <testcase name="current pending OCR failure may speak status without falsely adopting detector model provenance" classname="org.sight.app.PerceptionPolicyTest" time="0.001"/>
+  <testcase name="completed reading stops scheduling OCR rather than repeatedly producing rejected callbacks" classname="org.sight.app.PerceptionPolicyTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

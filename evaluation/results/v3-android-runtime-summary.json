@@ -1,0 +1,346 @@
+{
+  "schema": "sight.android-runtime-summary.v3",
+  "scope": "Saved Android 15 x86_64 and Android 11 x86 emulator measurements",
+  "method": {
+    "percentiles": "Nearest rank: ascending sample at ceil(p*n)-1; no interpolation",
+    "fixedPhoto": "One licensed photograph repeated; three warmups excluded, initialization separate",
+    "liveIntervals": "Analyzer receipt to processing completion, using declared receipt clock",
+    "sourceStartExclusion": "Remove frame 1 only; any later initialization remains included",
+    "rates": "Counter delta divided by elapsed first-to-last completion time"
+  },
+  "limits": [
+    "No P99 estimates from these short samples",
+    "No speech latency or audible-onset measurement is derived",
+    "Receipt timing does not establish exposure-to-receipt delay or capture freshness",
+    "Cold timing alone is not proof that a particular result was rejected by the core",
+    "Fixed-photo calls are not live camera FPS; whole-process PSS is not model-only memory",
+    "Different AVDs are not a controlled OS or ABI comparison",
+    "No physical-phone performance, battery, sustained thermal or assistive-use claim"
+  ],
+  "runs": [
+    {
+      "run": "v3-android35",
+      "androidApi": 35,
+      "hardware": "ranchu",
+      "model": "Android ATD built for x86_64",
+      "inputs": [
+        {
+          "path": "evaluation/results/v3-android35/inspection-runtime-v3.json",
+          "sha256": "eec7ffe4b456ff216fcf7afb43db348fea5017576d1f395bb78ab037b54f750a"
+        },
+        {
+          "path": "evaluation/results/v3-android35/camera-runtime-v3.json",
+          "sha256": "d28db10afc604087fe8c785e39662ff709d8c9b61393e5d33454c1da1f41e9a7"
+        }
+      ],
+      "fixedPhotoProfiles": [
+        {
+          "profile": "FAST",
+          "modelId": "efficientdet_lite0_int8",
+          "initializationMs": 439,
+          "unmeasuredWarmupCalls": 3,
+          "timedCalls": {
+            "n": 30,
+            "p50Ms": 230,
+            "p95Ms": 285,
+            "minMs": 132,
+            "maxMs": 285
+          },
+          "processPssKiB": 115902,
+          "processPssMiB": 113.185547,
+          "scope": "Whole-process PSS snapshot, not model-only memory or peak memory"
+        },
+        {
+          "profile": "INSPECT",
+          "modelId": "efficientdet_lite2_int8",
+          "initializationMs": 360,
+          "unmeasuredWarmupCalls": 3,
+          "timedCalls": {
+            "n": 30,
+            "p50Ms": 591,
+            "p95Ms": 682,
+            "minMs": 430,
+            "maxMs": 733
+          },
+          "processPssKiB": 143747,
+          "processPssMiB": 140.37793,
+          "scope": "Whole-process PSS snapshot, not model-only memory or peak memory"
+        }
+      ],
+      "liveCamera": {
+        "source": "phone-camera/1",
+        "declaredTimestampBasis": "analyzer receipt (capture clock unavailable)",
+        "detectorMode": "AUTO",
+        "modelsObserved": [
+          "efficientdet_lite0_int8"
+        ],
+        "includingFirstSourceStartResult": {
+          "receiptToResult": {
+            "n": 30,
+            "p50Ms": 744,
+            "p95Ms": 1178,
+            "minMs": 406,
+            "maxMs": 2237
+          },
+          "detection": {
+            "n": 30,
+            "p50Ms": 502,
+            "p95Ms": 681,
+            "minMs": 336,
+            "maxMs": 722
+          },
+          "conversion": {
+            "n": 30,
+            "p50Ms": 193,
+            "p95Ms": 529,
+            "minMs": 26,
+            "maxMs": 557
+          }
+        },
+        "excludingOnlyFirstSourceStartResult": {
+          "receiptToResult": {
+            "n": 29,
+            "p50Ms": 744,
+            "p95Ms": 1143,
+            "minMs": 406,
+            "maxMs": 1178
+          },
+          "detection": {
+            "n": 29,
+            "p50Ms": 502,
+            "p95Ms": 641,
+            "minMs": 336,
+            "maxMs": 681
+          },
+          "conversion": {
+            "n": 29,
+            "p50Ms": 193,
+            "p95Ms": 529,
+            "minMs": 26,
+            "maxMs": 557
+          }
+        },
+        "firstSourceStartResult": {
+          "frameId": 1,
+          "receivedAtMs": 159394,
+          "completedAtMs": 161631,
+          "initializationMs": 1261,
+          "conversionMs": 251,
+          "detectionMs": 722,
+          "totalMs": 2237,
+          "width": 480,
+          "height": 640,
+          "rotation": 90,
+          "geometryEpoch": 1
+        },
+        "counterWindow": {
+          "basis": "First retained source-start completion to last retained completion",
+          "firstCompletedAtMs": 161631,
+          "lastCompletedAtMs": 183631,
+          "durationSeconds": 22.0,
+          "firstCounters": {
+            "cameraFrames": 48,
+            "analyzerFrames": 1,
+            "analyzed": 1,
+            "skipped": 0
+          },
+          "lastCounters": {
+            "cameraFrames": 494,
+            "analyzerFrames": 30,
+            "analyzed": 30,
+            "skipped": 0
+          },
+          "counterDeltas": {
+            "cameraFrames": 446,
+            "analyzerFrames": 29,
+            "analyzed": 29,
+            "skipped": 0
+          },
+          "deltaPerSecond": {
+            "cameraFrames": 20.272727,
+            "analyzerFrames": 1.318182,
+            "analyzed": 1.318182,
+            "skipped": 0.0
+          },
+          "counterMeaning": {
+            "cameraFrames": "Camera capture callbacks",
+            "analyzerFrames": "Analyzer deliveries",
+            "analyzed": "Completed detector calls",
+            "skipped": "Scheduler skips"
+          },
+          "cameraXDrops": "Unknown; callback-minus-analyzer counts are not a drop measurement"
+        },
+        "memory": {
+          "processPssKiB": 180680,
+          "processPssMiB": 176.445312,
+          "scope": "Whole-process PSS snapshot, not model-only memory or peak memory"
+        },
+        "thermalStateAtExport": "NORMAL",
+        "cachedUiSummary": "Camera callbacks 20.3/s; analyzer 1.4/s; inference 1.4/s.\nDetection n=25, P50 506 ms, P95 681 ms, P99 needs 200 samples.\nProcess PSS 176.4 MiB; managed heap 9 MiB.\nTTS engine callbacks are measured; audible speaker onset is unavailable. CameraX drops are unknown.",
+        "cachedUiSummaryScope": "May precede final stage; statistics above use raw stages, not this text"
+      }
+    },
+    {
+      "run": "v3-android30",
+      "androidApi": 30,
+      "hardware": "ranchu",
+      "model": "Android SDK built for x86",
+      "inputs": [
+        {
+          "path": "evaluation/results/v3-android30/inspection-runtime-v3.json",
+          "sha256": "f59258bf8402646fa636403c5e1e37f018a45abc74c61f9abc6a95a8f4925eda"
+        },
+        {
+          "path": "evaluation/results/v3-android30/camera-runtime-v3.json",
+          "sha256": "25b5427caf3f32d94683cfdde13341d89df96bdd266e97811495dcb567b366a4"
+        }
+      ],
+      "fixedPhotoProfiles": [
+        {
+          "profile": "FAST",
+          "modelId": "efficientdet_lite0_int8",
+          "initializationMs": 247,
+          "unmeasuredWarmupCalls": 3,
+          "timedCalls": {
+            "n": 30,
+            "p50Ms": 270,
+            "p95Ms": 307,
+            "minMs": 232,
+            "maxMs": 308
+          },
+          "processPssKiB": 145461,
+          "processPssMiB": 142.051758,
+          "scope": "Whole-process PSS snapshot, not model-only memory or peak memory"
+        },
+        {
+          "profile": "INSPECT",
+          "modelId": "efficientdet_lite2_int8",
+          "initializationMs": 582,
+          "unmeasuredWarmupCalls": 3,
+          "timedCalls": {
+            "n": 30,
+            "p50Ms": 686,
+            "p95Ms": 775,
+            "minMs": 519,
+            "maxMs": 798
+          },
+          "processPssKiB": 169221,
+          "processPssMiB": 165.254883,
+          "scope": "Whole-process PSS snapshot, not model-only memory or peak memory"
+        }
+      ],
+      "liveCamera": {
+        "source": "phone-camera/1",
+        "declaredTimestampBasis": "analyzer receipt (capture clock unavailable)",
+        "detectorMode": "AUTO",
+        "modelsObserved": [
+          "efficientdet_lite0_int8"
+        ],
+        "includingFirstSourceStartResult": {
+          "receiptToResult": {
+            "n": 30,
+            "p50Ms": 630,
+            "p95Ms": 968,
+            "minMs": 424,
+            "maxMs": 3182
+          },
+          "detection": {
+            "n": 30,
+            "p50Ms": 587,
+            "p95Ms": 916,
+            "minMs": 408,
+            "maxMs": 1035
+          },
+          "conversion": {
+            "n": 30,
+            "p50Ms": 40,
+            "p95Ms": 130,
+            "minMs": 15,
+            "maxMs": 790
+          }
+        },
+        "excludingOnlyFirstSourceStartResult": {
+          "receiptToResult": {
+            "n": 29,
+            "p50Ms": 630,
+            "p95Ms": 894,
+            "minMs": 424,
+            "maxMs": 968
+          },
+          "detection": {
+            "n": 29,
+            "p50Ms": 587,
+            "p95Ms": 820,
+            "minMs": 408,
+            "maxMs": 916
+          },
+          "conversion": {
+            "n": 29,
+            "p50Ms": 40,
+            "p95Ms": 110,
+            "minMs": 15,
+            "maxMs": 130
+          }
+        },
+        "firstSourceStartResult": {
+          "frameId": 1,
+          "receivedAtMs": 456956,
+          "completedAtMs": 460138,
+          "initializationMs": 1353,
+          "conversionMs": 790,
+          "detectionMs": 1035,
+          "totalMs": 3182,
+          "width": 480,
+          "height": 640,
+          "rotation": 90,
+          "geometryEpoch": 1
+        },
+        "counterWindow": {
+          "basis": "First retained source-start completion to last retained completion",
+          "firstCompletedAtMs": 460138,
+          "lastCompletedAtMs": 481261,
+          "durationSeconds": 21.123,
+          "firstCounters": {
+            "cameraFrames": 39,
+            "analyzerFrames": 1,
+            "analyzed": 1,
+            "skipped": 0
+          },
+          "lastCounters": {
+            "cameraFrames": 383,
+            "analyzerFrames": 30,
+            "analyzed": 30,
+            "skipped": 0
+          },
+          "counterDeltas": {
+            "cameraFrames": 344,
+            "analyzerFrames": 29,
+            "analyzed": 29,
+            "skipped": 0
+          },
+          "deltaPerSecond": {
+            "cameraFrames": 16.285565,
+            "analyzerFrames": 1.372911,
+            "analyzed": 1.372911,
+            "skipped": 0.0
+          },
+          "counterMeaning": {
+            "cameraFrames": "Camera capture callbacks",
+            "analyzerFrames": "Analyzer deliveries",
+            "analyzed": "Completed detector calls",
+            "skipped": "Scheduler skips"
+          },
+          "cameraXDrops": "Unknown; callback-minus-analyzer counts are not a drop measurement"
+        },
+        "memory": {
+          "processPssKiB": 205552,
+          "processPssMiB": 200.734375,
+          "scope": "Whole-process PSS snapshot, not model-only memory or peak memory"
+        },
+        "thermalStateAtExport": "NORMAL",
+        "cachedUiSummary": "Camera callbacks 16.1/s; analyzer 1.3/s; inference 1.3/s.\nDetection n=24, P50 597 ms, P95 916 ms, P99 needs 200 samples.\nProcess PSS 200.7 MiB; managed heap 8 MiB.\nTTS engine callbacks are measured; audible speaker onset is unavailable. CameraX drops are unknown.",
+        "cachedUiSummaryScope": "May precede final stage; statistics above use raw stages, not this text"
+      }
+    }
+  ]
+}

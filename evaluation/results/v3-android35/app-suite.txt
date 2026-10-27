@@ -1,0 +1,13 @@
+﻿
+org.sight.app.PixelPipelineTest:...
+org.sight.app.NativePerceptionTest:..
+org.sight.app.InspectionRuntimeTest:..
+org.sight.app.CameraFlowTest:.
+org.sight.app.SessionUiTest:...
+org.sight.app.MemoryDeletionTest:.
+
+Time: 108.416
+
+OK (12 tests)
+
+

@@ -1,5 +1,7 @@
 # Architecture
 
+Historical SIGHT 2 snapshot. See the [SIGHT 3 architecture](architecture-v3.md) for current shared perception, asynchronous OCR and temporal state.
+
 ## Boundaries
 
 ```mermaid

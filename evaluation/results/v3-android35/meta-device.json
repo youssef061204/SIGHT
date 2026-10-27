@@ -1,0 +1,20 @@
+{
+  "collectedAtUtc": "2026-10-26T01:34:13.359830+00:00",
+  "serial": "emulator-5558",
+  "package": "org.sight.meta.test",
+  "properties": {
+    "ro.build.fingerprint": "Android/sdk_slim_x86_64/emu64x:15/AE3A.240806.019/12368160:userdebug/test-keys",
+    "ro.product.cpu.abilist": "x86_64",
+    "ro.build.version.sdk": "35",
+    "ro.hardware": "ranchu",
+    "sys.boot_completed": "1",
+    "debug.hwui.drawing_enabled": "0",
+    "display-size": "Physical size: 320x640\r\nOverride size: 540x1200",
+    "display-density": "Physical density: 160\r\nOverride density: 210"
+  },
+  "proofs": {
+    "meta-color-chart-proof.json": "copied",
+    "meta-real-pipeline-proof.json": "copied"
+  },
+  "boundary": "Emulated Android; JSON proofs carry their own measurement scope. Missing artifacts never establish a pass."
+}

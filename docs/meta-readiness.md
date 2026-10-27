@@ -1,5 +1,7 @@
 # Meta integration evidence and remaining work
 
+Historical SIGHT 2 snapshot. The current shared inference pipeline and executed eight-test MDK suite are documented in [Meta 3 readiness](meta-v3.md).
+
 Research date: **2026-10-23**. No Meta glasses were available. No physical pairing, glasses camera inference, wearable microphone audio, or validated navigation result is claimed.
 
 ## Verified release and provenance
