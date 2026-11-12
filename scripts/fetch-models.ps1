@@ -1,7 +1,9 @@
 [CmdletBinding()]
 param([switch]$All)
 $ErrorActionPreference = 'Stop'
-$curlBinary = if (Get-Command curl.exe -ErrorAction SilentlyContinue) { (Get-Command curl.exe).Source } else { (Get-Command curl -CommandType Application).Source }
+$curlBinary = if (Get-Command curl.exe -CommandType Application -ErrorAction SilentlyContinue) {
+    (Get-Command curl.exe -CommandType Application | Select-Object -First 1).Source
+} else { (Get-Command curl -CommandType Application | Select-Object -First 1).Source }
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $manifest = Get-Content -Raw -LiteralPath (Join-Path $repoRoot 'models/manifest.json') | ConvertFrom-Json
 foreach ($model in $manifest.models) {

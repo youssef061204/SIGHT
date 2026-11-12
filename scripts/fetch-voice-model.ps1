@@ -1,5 +1,7 @@
 $ErrorActionPreference = 'Stop'
-$curlBinary = if (Get-Command curl.exe -ErrorAction SilentlyContinue) { (Get-Command curl.exe).Source } else { (Get-Command curl -CommandType Application).Source }
+$curlBinary = if (Get-Command curl.exe -CommandType Application -ErrorAction SilentlyContinue) {
+    (Get-Command curl.exe -CommandType Application | Select-Object -First 1).Source
+} else { (Get-Command curl -CommandType Application | Select-Object -First 1).Source }
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $assetDirectory = Join-Path $projectRoot 'app/src/main/assets'
 New-Item -ItemType Directory -Force -Path $assetDirectory | Out-Null
