@@ -1,0 +1,44 @@
+{
+  "verifiedAtUtc": "2026-11-12T05:02:27Z",
+  "repository": "https://github.com/youssef061204/YoussefElsokkary",
+  "branch": "main",
+  "commit": "1ebbc81dce7c02f89b7299e166a8dbd64ab836cf",
+  "remoteMainMatchesCommit": true,
+  "worktreeCleanAfterPush": true,
+  "project": "youssefelsokkary",
+  "productionUrl": "https://youssefelsokkary.vercel.app",
+  "caseStudyUrl": "https://youssefelsokkary.vercel.app/projects/sight",
+  "githubDeploymentStatus": {
+    "context": "Vercel – youssefelsokkary",
+    "state": "success",
+    "targetUrl": "https://vercel.com/youssef061204s-projects/youssefelsokkary/5ZtBSWYJep6pPGT6ogr7gCmrM3VG",
+    "reportedForCommit": "1ebbc81dce7c02f89b7299e166a8dbd64ab836cf"
+  },
+  "vercelMcpInspection": {
+    "status": 403,
+    "scope": "youssef061204s-projects",
+    "reason": "Connection lacks the existing team grant. No alternate CLI credentials or project were used.",
+    "verification": "Existing GitHub deployment status and unauthenticated public production browser/HTTP checks."
+  },
+  "checks": {
+    "lint": { "command": "npm run lint", "exitCode": 0 },
+    "typecheck": { "command": "npm run typecheck", "exitCode": 0 },
+    "productionBuild": { "command": "npm run build", "exitCode": 0, "nextVersion": "16.3.8", "generatedPages": 11 },
+    "links": { "command": "npm run check:links", "exitCode": 0, "allRepositoryDocumentationAndReleaseLinks": 200, "linkedinBotBlock": 999 },
+    "diffWhitespace": { "command": "git -c core.whitespace=cr-at-eol diff --check", "exitCode": 0 },
+    "localBrowser": "local/summary.json",
+    "productionBrowser": "production/summary.json",
+    "visualReview": "Fresh route/destination-choice images, responsive actions and portrait gallery confirmed in local and public desktop/mobile screenshots."
+  },
+  "publicAssets": [
+    { "file": "assist-route.png", "status": 200, "sha256": "f9d10973663d71cacd8990b447159f7624c0f3ebd86437d2c4236e8d33592d9d", "byteMatchesLocal": true },
+    { "file": "destination-choices.png", "status": 200, "sha256": "adb79269c633f3107ca91d49dda6ec3372645281689d35d5839b5ac687cf4e9b", "byteMatchesLocal": true },
+    { "file": "entrance-text-search.png", "status": 200, "sha256": "420e221e7e1b735ace91618266091974199b421171ab476796708658c0ec9f72", "byteMatchesLocal": true },
+    { "file": "developer-camera.png", "status": 200, "sha256": "bbe25d03007f7b15a1429938c215cf31028d3611d2f56334c07a9c569f4fe977", "byteMatchesLocal": true },
+    { "file": "large-text-settings.png", "status": 200, "sha256": "cf236233a8a0bea35cde0c2cabfd8d37814a28917c5f7b2d752ad0ab4e375029", "byteMatchesLocal": true },
+    { "file": "demo.mp4", "status": 200, "sha256": "4eb12cd7d1a765df03555d4b9f4df201b287b619bbd3516da8d8aff51d639695", "byteMatchesLocal": true },
+    { "file": "demo-provenance.json", "status": 200, "matchesLocalAfterGitCrLfNormalization": true },
+    { "file": "screenshots.json", "status": 200, "matchesLocalAfterGitCrLfNormalization": true }
+  ],
+  "scope": "Portfolio publication and browser/media checks only. Native app/model/field evidence is separately scoped in SIGHT's product validation."
+}

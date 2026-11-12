@@ -1,0 +1,38 @@
+{
+  "portfolioCommit": "1ebbc81dce7c02f89b7299e166a8dbd64ab836cf",
+  "repository": "https://github.com/youssef061204/YoussefElsokkary",
+  "productionPage": "https://youssefelsokkary.vercel.app/projects/sight",
+  "httpStatus": 200,
+  "containsGithubLink": true,
+  "containsReleaseLink": true,
+  "containsVideo": true,
+  "deploymentState": "success",
+  "deploymentStatuses": [
+    {
+      "context": "Vercel \u2013 youssefelsokkary",
+      "state": "success",
+      "url": "https://vercel.com/youssef061204s-projects/youssefelsokkary/5ZtBSWYJep6pPGT6ogr7gCmrM3VG",
+      "description": "Deployment has completed"
+    },
+    {
+      "context": "Vercel \u2013 portfolio",
+      "state": "success",
+      "url": "https://vercel.com/youssef061204s-projects/portfolio/H6ytSDT9vBWskXF5xDeRv78itsti",
+      "description": "Deployment has completed"
+    }
+  ],
+  "media": [
+    {
+      "path": "demo.mp4",
+      "bytes": 2344178,
+      "sha256": "4eb12cd7d1a765df03555d4b9f4df201b287b619bbd3516da8d8aff51d639695",
+      "matchesSource": true
+    },
+    {
+      "path": "assist-route.png",
+      "bytes": 142623,
+      "sha256": "f9d10973663d71cacd8990b447159f7624c0f3ebd86437d2c4236e8d33592d9d",
+      "matchesSource": true
+    }
+  ]
+}

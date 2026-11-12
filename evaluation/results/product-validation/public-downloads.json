@@ -1,0 +1,46 @@
+{
+  "verifiedAtUtc": "2026-11-12T05:00:18.163259+00:00",
+  "scope": "Unauthenticated full public asset downloads, SHA-256 compared with released checksums. No application or hardware test inferred.",
+  "assets": [
+    {
+      "name": "sight-android-debug.apk",
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/sight-android-debug.apk",
+      "status": 200,
+      "downloadedBytes": 236261986,
+      "sha256": "cf5d8ab8e95fa3e6788d98ac4cbb97b52aaff7b334bc9b631aebcc6ce528c242",
+      "matchesPublishedChecksum": true
+    },
+    {
+      "name": "sight-demo.mp4",
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/sight-demo.mp4",
+      "status": 200,
+      "downloadedBytes": 2344178,
+      "sha256": "4eb12cd7d1a765df03555d4b9f4df201b287b619bbd3516da8d8aff51d639695",
+      "matchesPublishedChecksum": true
+    },
+    {
+      "name": "road_segmentation_adas_0001.tflite",
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/road_segmentation_adas_0001.tflite",
+      "status": 200,
+      "downloadedBytes": 817520,
+      "sha256": "8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4",
+      "matchesPublishedChecksum": true
+    },
+    {
+      "name": "LICENSE",
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/LICENSE",
+      "status": 200,
+      "downloadedBytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "matchesPublishedChecksum": true
+    },
+    {
+      "name": "NOTICE",
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/NOTICE",
+      "status": 200,
+      "downloadedBytes": 904,
+      "sha256": "a60867a37508489adeba9769e7398c9d45b243c10b987be77c31fb5027941569",
+      "matchesPublishedChecksum": true
+    }
+  ]
+}

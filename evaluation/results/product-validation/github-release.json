@@ -1,0 +1,45 @@
+{
+  "url": "https://github.com/youssef061204/SIGHT/releases/tag/public-preview",
+  "tag": "public-preview",
+  "targetCommit": "50b83d2cc10e90a320beec712d23ffab4fe87ac1",
+  "draft": false,
+  "prerelease": true,
+  "assets": [
+    {
+      "name": "LICENSE",
+      "bytes": 11358,
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/LICENSE",
+      "digest": "sha256:cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "name": "NOTICE",
+      "bytes": 904,
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/NOTICE",
+      "digest": "sha256:a60867a37508489adeba9769e7398c9d45b243c10b987be77c31fb5027941569"
+    },
+    {
+      "name": "road_segmentation_adas_0001.tflite",
+      "bytes": 817520,
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/road_segmentation_adas_0001.tflite",
+      "digest": "sha256:8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 424,
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/SHA256SUMS.txt",
+      "digest": "sha256:591fd6537e306b1d5a9193a1658b2eb91b190248f8f2ea9b047d723df6d974bf"
+    },
+    {
+      "name": "sight-android-debug.apk",
+      "bytes": 236261986,
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/sight-android-debug.apk",
+      "digest": "sha256:cf5d8ab8e95fa3e6788d98ac4cbb97b52aaff7b334bc9b631aebcc6ce528c242"
+    },
+    {
+      "name": "sight-demo.mp4",
+      "bytes": 2344178,
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/sight-demo.mp4",
+      "digest": "sha256:4eb12cd7d1a765df03555d4b9f4df201b287b619bbd3516da8d8aff51d639695"
+    }
+  ]
+}

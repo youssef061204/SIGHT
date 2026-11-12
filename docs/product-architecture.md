@@ -14,11 +14,16 @@ User command / Routes controls
 Route selection → fresh location permission/fix → walking provider
   → route geometry + maneuvers → GPS-to-route progress → gated spoken cues
 
-CameraX → latest-frame analyzer → shared perception → evidence/goal policy
-  → bounded priority speech queue → freshness and support checks → offline TTS
+CameraX → latest-frame analyzer → MediaPipe COCO object detector → evidence/goal policy
+  ├─ Explore / Find / Read / recent visual recall
+  ├─ optional traffic-object awareness → evidence + safety checks → offline TTS
+  └─ async ML Kit OCR → captured text / bounded text-landmark matching
 
-Camera frame → separate async road segmentation diagnostic
-  → manual diagnostic result only; automatic road speech is disabled
+Camera frame → separate async Intel road-segmentation-adas-0001 LiteRT model
+  → road / curb / marking diagnostic; automatic surface speech is disabled
+
+Rotation-vector sensor → recent rear-camera pitch / magnetic camera heading
+  → never body direction or walking-lane direction
 ```
 
 ## Navigation path
@@ -31,13 +36,17 @@ Network requests are scoped to destination search and route coordinates, with se
 
 ## Visual and spoken assistance
 
-CameraX uses a latest-frame policy and a serialized worker for the shared Lite0/Lite2 MediaPipe detectors. OCR is asynchronous and tied to its captured image. Evidence carries timestamps, source/model/geometry identity, and bounded temporal history. Find requires fresh observations and can continue through loss and reacquisition; a matched track is an image continuity hypothesis, not proof of physical identity. Read speaks text from its captured frame. Explicit encrypted memory is separate from short-term visual history.
+CameraX uses a latest-frame policy and a serialized worker for the Lite0/Lite2 MediaPipe object detectors. A separate single-worker LiteRT interpreter runs the Intel road-segmentation model only after the user starts road diagnostics; it owns one copied frame and drops new work while busy. Its classes are background, road, curb, and marking. The model is separate from MediaPipe and has no sidewalk, crosswalk, signal-state, or depth output. Automatic road descriptions remain disabled after the balanced held-out false-event gate failed; the class labels remain diagnostic only.
 
-Speech commands are single-turn and user initiated. Platform on-device recognition is preferred; bundled offline English recognition supports fallback configurations. No wake-word or background listening is present. A bounded speech queue prioritizes route and task announcements, suppresses duplicates, and rejects stale live observations. The app requires an offline-capable installed TTS voice for spoken output. Voice input and speech synthesis have different validation evidence; neither is proven as human-audible or reliably understood in outdoor use.
+OCR is asynchronous and tied to its captured image. Besides reading text, a bounded search maps selected requests for door/entrance/exit, elevator/lift, or bus-stop wording to ML Kit recognized text. This reports matching captured words; it does not detect the corresponding physical object or establish where it is. Evidence carries timestamps, source/model/geometry identity, and bounded temporal history. Find requires fresh observations and can continue through loss and reacquisition; a matched track is an image continuity hypothesis, not proof of physical identity. Explicit encrypted memory is separate from short-term visual history.
+
+When the user enables walking awareness, or route guidance is active, the environmental object policy can speak a selected eligible object track after two consecutive observations. It requires per-frame and aggregate confidence of at least 0.70, box area at least 0.02, and live evidence no more than 1.5 seconds old. It speaks a camera-image side and says movement is unverified; traffic-light state is explicitly unknown. It chooses at most the largest eligible object for an update and suppresses the same category/direction pair for 20 seconds. This is object visibility narration, not vehicle-motion or hazard-event detection. The camera-alignment command can report a recent rear-camera pitch and a magnetic camera heading only when sensor accuracy permits; it never derives body heading or gait direction.
+
+Speech commands are single-turn and user initiated. Platform on-device recognition is preferred; bundled offline English recognition supports fallback configurations. No wake-word or background listening is present. A bounded speech queue prioritizes route and task announcements, suppresses duplicates, and rejects stale live observations. A deterministic safety layer checks freshness and grounding at final admission and again during playback, blocks safe-crossing/clear-path/avoidance language and visual metric-distance claims, and invalidates route cues on navigation revision change or expiry deadline. The app requires an offline-capable installed TTS voice for spoken output. No physical microphone use or human audibility is established.
 
 ## Road diagnostic boundary
 
-The road reader is a separate asynchronous path with one owned frame copy and one native task. Its diagnostic/status can be inspected by the user or developer; it does not drive autonomous spoken warnings. Automatic road voice remains disabled: the balanced 40-image held-out presence set scored 17 TP, 1 FP, 3 FN, 19 TN, with 0.025 false events per image against a maximum of 0.02. Strict road-pixel IoU was 0.6448. The frozen calibration operating point (coverage ≥0.02, mean score ≥0.75) yielded 11 TP, 0 FP, 4 FN, and 15 TN on a separate 30-image split. See the [balanced road report](../evaluation/results/pedestrian-balanced/report.md) and its [protocol](../evaluation/results/pedestrian-balanced/protocol.json), [calibration](../evaluation/results/pedestrian-balanced/calibration.json), and [held-out result](../evaluation/results/pedestrian-balanced/held-out.json). Output does not establish crossing markings, signal state, vehicle approach, obstacle presence/absence, free space, or safe movement. Do not feed this output into navigation speech as a clearance decision.
+The separate road model is a direct LiteRT interpreter, not MediaPipe. It produces diagnostic road/curb/marking masks; automatic road speech is disabled. The balanced 40-image held-out presence set scored 17 TP, 1 FP, 3 FN, 19 TN; 0.025 false events per image exceeded the maximum 0.02. Strict road-pixel IoU was 0.6448. The frozen calibration operating point (coverage ≥0.02, mean score ≥0.75) yielded 11 TP, 0 FP, 4 FN, and 15 TN on a separate 30-image split. See the [balanced road report](../evaluation/results/pedestrian-balanced/report.md) and its [protocol](../evaluation/results/pedestrian-balanced/protocol.json), [calibration](../evaluation/results/pedestrian-balanced/calibration.json), and [held-out result](../evaluation/results/pedestrian-balanced/held-out.json). Road markings do not identify crosswalks; curb output is not independently validated. The model does not establish signal state, vehicle approach, obstacle presence/absence, free space, or safe movement.
 
 ## Lifecycle, consent, and accessibility
 
@@ -49,4 +58,4 @@ The Meta Wearables Mock Device Kit adapter is an isolated mock integration and s
 
 ## Validation record
 
-Current JVM checks pass core 67, app 59, and perception 12 (138 total). Final Meta/native/lint totals are pending. Older detector/runtime/native results are in [SIGHT 3 report](engineering-report-v3.md) and [validation manifest](../evaluation/results/v3-validation/summary.json). New integrated totals are pending in [product-validation summary](../evaluation/results/product-validation/summary.json). No diagram or architecture boundary implies physical-world safety validation.
+The [passed product-validation manifest](../evaluation/results/product-validation/summary.json) records JVM 146, Python 14, API 35 app 15, API 30 app 15, offline speech 2, and Meta MDK 8. Lint reported zero errors and 18 warnings. See [API 35 app output](../evaluation/results/product-android35/instrumentation-suite.txt), [API 30 app output](../evaluation/results/product-android30/instrumentation-suite.txt), [Meta output](../evaluation/results/product-meta/instrumentation-suite.txt), and [navigation evidence](../evaluation/results/product-navigation/summary.json). Remote CI passed on `61c9069`; proof and media artifacts are in `50b83d2`. No diagram or architecture boundary implies physical-world safety validation.

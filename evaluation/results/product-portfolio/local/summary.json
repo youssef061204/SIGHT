@@ -1,0 +1,41 @@
+{
+  "scope": "local",
+  "baseUrl": "http://127.0.0.1:3107",
+  "verifiedAtUtc": "2026-11-12T05:00:12.809Z",
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "homepageStatus": 200,
+      "caseStudy": "http://127.0.0.1:3107/projects/sight",
+      "galleryImages": 5,
+      "repositoryHref": "https://github.com/youssef061204/SIGHT",
+      "video": {
+        "duration": 112.85,
+        "width": 1280,
+        "height": 900
+      },
+      "consoleErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "homepageStatus": 200,
+      "caseStudy": "http://127.0.0.1:3107/projects/sight",
+      "galleryImages": 5,
+      "repositoryHref": "https://github.com/youssef061204/SIGHT",
+      "video": {
+        "duration": 112.85,
+        "width": 1280,
+        "height": 900
+      },
+      "consoleErrors": [],
+      "horizontalOverflow": false
+    }
+  ]
+}

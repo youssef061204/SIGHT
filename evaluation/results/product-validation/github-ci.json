@@ -1,0 +1,18 @@
+{
+  "commit": "50b83d2cc10e90a320beec712d23ffab4fe87ac1",
+  "url": "https://github.com/youssef061204/SIGHT/actions/runs/43158217750",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "evaluation-tools",
+      "conclusion": "success",
+      "url": "https://github.com/youssef061204/SIGHT/actions/runs/43158217750/job/130983031018"
+    },
+    {
+      "name": "build",
+      "conclusion": "success",
+      "url": "https://github.com/youssef061204/SIGHT/actions/runs/43158217750/job/130983031273"
+    }
+  ]
+}
