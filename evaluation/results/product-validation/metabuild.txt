@@ -1,0 +1,117 @@
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar
+> Task :adapter:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :adapter:preBuild UP-TO-DATE
+> Task :adapter:preDebugBuild UP-TO-DATE
+> Task :adapter:generateDebugResValues UP-TO-DATE
+> Task :adapter:generateDebugResources UP-TO-DATE
+> Task :adapter:packageDebugResources UP-TO-DATE
+> Task :adapter:parseDebugLocalResources UP-TO-DATE
+> Task :adapter:generateDebugRFile UP-TO-DATE
+> Task :perception:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :perception:verifyModels
+> Task :perception:preBuild
+> Task :perception:preDebugBuild
+> Task :perception:generateDebugResValues UP-TO-DATE
+> Task :perception:generateDebugResources UP-TO-DATE
+> Task :perception:packageDebugResources UP-TO-DATE
+> Task :perception:parseDebugLocalResources UP-TO-DATE
+> Task :perception:generateDebugRFile UP-TO-DATE
+> Task :perception:compileDebugKotlin
+> Task :perception:javaPreCompileDebug UP-TO-DATE
+> Task :perception:compileDebugJavaWithJavac NO-SOURCE
+> Task :perception:bundleLibCompileToJarDebug
+> Task :adapter:compileDebugKotlin
+> Task :adapter:javaPreCompileDebug UP-TO-DATE
+> Task :adapter:compileDebugJavaWithJavac NO-SOURCE
+> Task :adapter:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :adapter:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :adapter:preDebugUnitTestBuild UP-TO-DATE
+> Task :adapter:generateDebugUnitTestStubRFile
+> Task :adapter:compileDebugUnitTestKotlin
+> Task :adapter:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :adapter:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :adapter:processDebugJavaRes UP-TO-DATE
+> Task :adapter:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :perception:bundleLibRuntimeToJarDebug
+> Task :perception:processDebugJavaRes UP-TO-DATE
+> Task :adapter:testDebugUnitTest
+> Task :adapter:mergeDebugJniLibFolders UP-TO-DATE
+> Task :adapter:mergeDebugNativeLibs NO-SOURCE
+> Task :adapter:stripDebugDebugSymbols NO-SOURCE
+> Task :adapter:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :adapter:extractDebugAnnotations
+> Task :adapter:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :adapter:mergeDebugShaders UP-TO-DATE
+> Task :adapter:compileDebugShaders NO-SOURCE
+> Task :adapter:generateDebugAssets UP-TO-DATE
+> Task :adapter:mergeDebugAssets UP-TO-DATE
+> Task :adapter:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :adapter:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :adapter:prepareDebugArtProfile UP-TO-DATE
+> Task :adapter:prepareLintJarForPublish UP-TO-DATE
+> Task :adapter:processDebugManifest UP-TO-DATE
+> Task :adapter:mergeDebugJavaResource UP-TO-DATE
+> Task :adapter:syncDebugLibJars
+> Task :adapter:writeDebugAarMetadata UP-TO-DATE
+> Task :adapter:bundleDebugAar
+> Task :adapter:assembleDebug
+> Task :adapter:preDebugAndroidTestBuild UP-TO-DATE
+> Task :perception:writeDebugAarMetadata UP-TO-DATE
+> Task :adapter:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :adapter:compileDebugLibraryResources UP-TO-DATE
+> Task :adapter:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :adapter:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :adapter:generateDebugAndroidTestResources UP-TO-DATE
+> Task :adapter:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :adapter:extractDeepLinksDebug UP-TO-DATE
+> Task :perception:extractDeepLinksDebug UP-TO-DATE
+> Task :perception:processDebugManifest UP-TO-DATE
+> Task :adapter:processDebugAndroidTestManifest
+> Task :perception:compileDebugLibraryResources UP-TO-DATE
+> Task :adapter:processDebugAndroidTestResources
+> Task :adapter:compileDebugAndroidTestKotlin
+> Task :adapter:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :adapter:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :adapter:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :adapter:compileDebugAndroidTestShaders NO-SOURCE
+> Task :adapter:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :perception:mergeDebugShaders UP-TO-DATE
+> Task :perception:compileDebugShaders NO-SOURCE
+> Task :perception:generateDebugAssets UP-TO-DATE
+> Task :perception:mergeDebugAssets
+> Task :adapter:mergeDebugAndroidTestAssets
+> Task :adapter:compressDebugAndroidTestAssets
+> Task :adapter:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :adapter:dexBuilderDebugAndroidTest
+> Task :adapter:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :adapter:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :adapter:mergeDebugAndroidTestJavaResource
+> Task :adapter:checkDebugAndroidTestDuplicateClasses
+> Task :adapter:mergeExtDexDebugAndroidTest
+> Task :adapter:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :perception:bundleLibRuntimeToDirDebug
+> Task :adapter:mergeLibDexDebugAndroidTest
+> Task :adapter:mergeProjectDexDebugAndroidTest
+> Task :adapter:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :adapter:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :perception:mergeDebugJniLibFolders UP-TO-DATE
+> Task :perception:mergeDebugNativeLibs NO-SOURCE
+> Task :perception:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :adapter:mergeDebugAndroidTestNativeLibs
+
+> Task :adapter:stripDebugAndroidTestDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libtensorflowlite_jni.so.
+
+> Task :adapter:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :adapter:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :adapter:packageDebugAndroidTest
+> Task :adapter:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :adapter:assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 38s
+84 actionable tasks: 29 executed, 55 up-to-date

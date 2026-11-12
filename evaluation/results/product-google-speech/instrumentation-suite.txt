@@ -1,0 +1,9 @@
+
+org.sight.app.NativeSpeechTest:.
+org.sight.app.NativeSpeechQueueTest:.
+
+Time: 2.117
+
+OK (2 tests)
+
+

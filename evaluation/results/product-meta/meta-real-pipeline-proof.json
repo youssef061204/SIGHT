@@ -1,0 +1,197 @@
+{
+  "source": "official-DAT-1.0.1-MDK-file-feed",
+  "fixture": "COCO-350148-repeated-photograph-HEVC",
+  "samples": [
+    {
+      "frameId": 1,
+      "modelId": "efficientdet_lite0_int8",
+      "devicePresentationTimeUs": 99988,
+      "receiptElapsedNs": 125632356723,
+      "receiptToResultMs": 45.548695,
+      "conversionMs": 6.448464,
+      "inferenceMs": 35.226078,
+      "goalPhase": "SEARCHING",
+      "sourceState": "RAW_FRAMES_AVAILABLE",
+      "reliability": "NEEDS_CONFIRMATION",
+      "diagnostics": [
+        "INPUT_LIFECYCLE",
+        "INPUT_LIFECYCLE",
+        "LIFECYCLE_RESULT"
+      ],
+      "entities": [],
+      "detections": [
+        {
+          "category": "person",
+          "confidence": 0.81640625
+        },
+        {
+          "category": "sandwich",
+          "confidence": 0.73828125
+        },
+        {
+          "category": "sandwich",
+          "confidence": 0.71875
+        },
+        {
+          "category": "dining table",
+          "confidence": 0.65625
+        }
+      ]
+    },
+    {
+      "frameId": 2,
+      "modelId": "efficientdet_lite0_int8",
+      "devicePresentationTimeUs": 233322,
+      "receiptElapsedNs": 125799174773,
+      "receiptToResultMs": 59.972688,
+      "conversionMs": 6.007066,
+      "inferenceMs": 22.791465,
+      "goalPhase": "VERIFYING",
+      "sourceState": "RAW_FRAMES_AVAILABLE",
+      "reliability": "REDUCED_CAPABILITY",
+      "diagnostics": [
+        "INPUT_LIFECYCLE",
+        "INPUT_LIFECYCLE",
+        "LIFECYCLE_RESULT",
+        "FRAME_ACCEPTED",
+        "RECEIPT_TIME_ONLY",
+        "FIND_VERIFYING"
+      ],
+      "entities": [
+        {
+          "id": 1,
+          "category": "person",
+          "confidence": 0.80078125,
+          "visible": true,
+          "consecutiveObservations": 1
+        },
+        {
+          "id": 2,
+          "category": "sandwich",
+          "confidence": 0.73828125,
+          "visible": true,
+          "consecutiveObservations": 1
+        },
+        {
+          "id": 3,
+          "category": "sandwich",
+          "confidence": 0.73828125,
+          "visible": true,
+          "consecutiveObservations": 1
+        },
+        {
+          "id": 4,
+          "category": "dining table",
+          "confidence": 0.65625,
+          "visible": true,
+          "consecutiveObservations": 1
+        }
+      ],
+      "detections": [
+        {
+          "category": "person",
+          "confidence": 0.80078125
+        },
+        {
+          "category": "sandwich",
+          "confidence": 0.73828125
+        },
+        {
+          "category": "sandwich",
+          "confidence": 0.73828125
+        },
+        {
+          "category": "dining table",
+          "confidence": 0.65625
+        }
+      ]
+    },
+    {
+      "frameId": 3,
+      "modelId": "efficientdet_lite0_int8",
+      "devicePresentationTimeUs": 399988,
+      "receiptElapsedNs": 125973468908,
+      "receiptToResultMs": 67.637212,
+      "conversionMs": 5.494522,
+      "inferenceMs": 23.578247,
+      "goalPhase": "COMPLETED",
+      "sourceState": "RAW_FRAMES_AVAILABLE",
+      "reliability": "REDUCED_CAPABILITY",
+      "diagnostics": [
+        "INPUT_LIFECYCLE",
+        "INPUT_LIFECYCLE",
+        "LIFECYCLE_RESULT",
+        "FRAME_ACCEPTED",
+        "RECEIPT_TIME_ONLY",
+        "FIND_VERIFYING",
+        "FRAME_ACCEPTED",
+        "RECEIPT_TIME_ONLY",
+        "FIND_CONFIRMED"
+      ],
+      "entities": [
+        {
+          "id": 1,
+          "category": "person",
+          "confidence": 0.80078125,
+          "visible": true,
+          "consecutiveObservations": 2
+        },
+        {
+          "id": 2,
+          "category": "sandwich",
+          "confidence": 0.73828125,
+          "visible": true,
+          "consecutiveObservations": 2
+        },
+        {
+          "id": 3,
+          "category": "sandwich",
+          "confidence": 0.73828125,
+          "visible": true,
+          "consecutiveObservations": 2
+        },
+        {
+          "id": 4,
+          "category": "dining table",
+          "confidence": 0.65625,
+          "visible": true,
+          "consecutiveObservations": 2
+        },
+        {
+          "id": 5,
+          "category": "person",
+          "confidence": 0.5,
+          "visible": true,
+          "consecutiveObservations": 1
+        }
+      ],
+      "detections": [
+        {
+          "category": "person",
+          "confidence": 0.80078125
+        },
+        {
+          "category": "sandwich",
+          "confidence": 0.73828125
+        },
+        {
+          "category": "sandwich",
+          "confidence": 0.73828125
+        },
+        {
+          "category": "dining table",
+          "confidence": 0.65625
+        },
+        {
+          "category": "person",
+          "confidence": 0.5
+        }
+      ]
+    }
+  ],
+  "findCompleted": true,
+  "failure": null,
+  "lastSourceStatus": "MetaSourceStatus(state=STOPPED, detail=null, errorCode=null)",
+  "captureClockSynchronized": false,
+  "physicalGlassesTested": false
+}

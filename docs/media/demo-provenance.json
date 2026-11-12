@@ -1,0 +1,86 @@
+{
+  "createdAtUtc": "2026-11-12T04:53:15.173242+00:00",
+  "sourceCommit": "61c90690c154b189b922564160349630b45ff495",
+  "runtimeSourceCommit": "23f5dbcb24c64c010d9a36055dfe0cf6e068d7ce",
+  "sourceRecording": {
+    "path": ".tools/sight-demo-raw.mp4",
+    "bytes": 18573228,
+    "sha256": "e9f800e9e1144ae955290ab662d594bb6ce71ad1e340a4ccae3c2c8431325068",
+    "durationSeconds": 112.8396,
+    "width": 540,
+    "height": 1200,
+    "videoCodec": "h264",
+    "frameRate": "60/1",
+    "hasAudio": false
+  },
+  "renderedVideo": {
+    "path": "docs/media/sight-demo.mp4",
+    "bytes": 2344178,
+    "sha256": "4eb12cd7d1a765df03555d4b9f4df201b287b619bbd3516da8d8aff51d639695",
+    "durationSeconds": 112.85,
+    "width": 1280,
+    "height": 900,
+    "videoCodec": "h264",
+    "frameRate": "20/1",
+    "hasAudio": false
+  },
+  "apk": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 236261986,
+    "sha256": "cf5d8ab8e95fa3e6788d98ac4cbb97b52aaff7b334bc9b631aebcc6ce528c242"
+  },
+  "render": {
+    "canvas": "1280x900",
+    "fps": 20,
+    "crf": 27,
+    "audio": "omitted",
+    "phoneVideo": "aspect ratio preserved; no generated or fabricated app screens"
+  },
+  "scope": [
+    "Android emulator capture",
+    "Simulated GPS",
+    "Virtual camera",
+    "Commands entered in app",
+    "Not a field mobility test",
+    "Automatic road voice is disabled"
+  ],
+  "chapters": null,
+  "timestamps": [
+    {
+      "atSeconds": 2.01,
+      "action": "Live Android15 app, public-routing consent initially off"
+    },
+    {
+      "atSeconds": 4.63,
+      "action": "Explicit consent enabled in app"
+    },
+    {
+      "atSeconds": 15.59,
+      "action": "Destination query submitted to live Photon service"
+    },
+    {
+      "atSeconds": 39.61,
+      "action": "Numbered destination selected through app command field"
+    },
+    {
+      "atSeconds": 52.89,
+      "action": "Simulated GPS origin supplied to LocationManager; live OSRM route requested"
+    },
+    {
+      "atSeconds": 74.75,
+      "action": "Actual CameraX pipeline running on emulator virtual camera"
+    },
+    {
+      "atSeconds": 88.82,
+      "action": "Text-label fallback requested while route context retained"
+    },
+    {
+      "atSeconds": 101.05,
+      "action": "Actual virtual camera and native diagnostic view"
+    },
+    {
+      "atSeconds": 112.94,
+      "action": "Hardware VolumeDown stops camera, microphone and navigation"
+    }
+  ]
+}

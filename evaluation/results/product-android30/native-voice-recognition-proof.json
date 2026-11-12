@@ -1,0 +1,47 @@
+{
+  "scope": "Native Vosk decoding of three declared synthetic clean single-voice WAV files, then actual command parsing; no microphone or field-recognition claim",
+  "audioSource": "Windows System.Speech.Synthesis.SpeechSynthesizer",
+  "voice": "Microsoft David Desktop",
+  "modelAssetSha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498",
+  "androidApi": 30,
+  "abi": "x86",
+  "cases": [
+    {
+      "file": "destination.wav",
+      "sha256": "14cfeb72600f9d88506bf27d20f08458c96c2ee926e90d15ba39ae525c2c816a",
+      "referenceText": "Take me to the library.",
+      "recognizedText": "take me to the library",
+      "expectedIntent": "route-search",
+      "intentMatched": true,
+      "audioMs": 2130,
+      "offlineDecodeMs": 598
+    },
+    {
+      "file": "find-chair.wav",
+      "sha256": "f2de0557e80df03a8a0c2f5d9a59148650b60abd2eddc065fa57664d787cdebe",
+      "referenceText": "Find a chair.",
+      "recognizedText": "find a chair",
+      "expectedIntent": "find",
+      "intentMatched": true,
+      "audioMs": 1710,
+      "offlineDecodeMs": 434
+    },
+    {
+      "file": "stop-navigation.wav",
+      "sha256": "aca4a47f8f4e02b2da083ef0de89c657b3747cd9ee063e0d5385494891bdfca8",
+      "referenceText": "Stop navigation.",
+      "recognizedText": "stop navigation",
+      "expectedIntent": "cancel-route",
+      "intentMatched": true,
+      "audioMs": 2010,
+      "offlineDecodeMs": 468
+    }
+  ],
+  "allCasesPassed": true,
+  "microphoneTested": false,
+  "networkRecognizerUsed": false,
+  "modelPreparationMs": 3118,
+  "oneSecondSyntheticSilenceTranscript": "",
+  "processPssKb": 327484,
+  "closedDecoderRejectsReuse": true
+}

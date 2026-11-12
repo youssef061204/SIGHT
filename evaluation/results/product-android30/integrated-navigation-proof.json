@@ -1,0 +1,12 @@
+{
+  "scope": "Actual Android Activity, CameraX, provider parsing, command\/task and lifecycle integration; recorded HTTP, constructed GPS, transcript input after recognition",
+  "recordedHttpRequests": 2,
+  "liveCameraDetectorFrames": 3,
+  "explicitConsent": true,
+  "explicitDestinationChoice": true,
+  "routePreservedDuringTextSearch": true,
+  "backgroundStoppedSensors": true,
+  "actualCameraReachedRoadModel": true,
+  "allAssistanceStopped": true,
+  "physicalGpsOrMicrophone": false
+}

@@ -1,0 +1,866 @@
+{
+  "schema": "sight.product-validation.v1",
+  "recordedAtUtc": "2026-11-12T04:53:32.484031+00:00",
+  "status": "passed",
+  "tests": {
+    "core_jvm": {
+      "tests": 67,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed",
+      "xml": [
+        "evaluation/results/product-validation/core_jvm-TEST-org.sight.core.AdaptiveSchedulerTest.xml",
+        "evaluation/results/product-validation/core_jvm-TEST-org.sight.core.EngineToolsTest.xml",
+        "evaluation/results/product-validation/core_jvm-TEST-org.sight.core.ProductSafetyTest.xml",
+        "evaluation/results/product-validation/core_jvm-TEST-org.sight.core.SightEngineTest.xml",
+        "evaluation/results/product-validation/core_jvm-TEST-org.sight.core.TemporalEngineTest.xml",
+        "evaluation/results/product-validation/core_jvm-TEST-org.sight.core.TemporalMetricTest.xml",
+        "evaluation/results/product-validation/core_jvm-TEST-org.sight.core.TextLandmarkSearchTest.xml"
+      ],
+      "xmlInternal": [
+        "core/build/test-results/test/TEST-org.sight.core.AdaptiveSchedulerTest.xml",
+        "core/build/test-results/test/TEST-org.sight.core.EngineToolsTest.xml",
+        "core/build/test-results/test/TEST-org.sight.core.ProductSafetyTest.xml",
+        "core/build/test-results/test/TEST-org.sight.core.SightEngineTest.xml",
+        "core/build/test-results/test/TEST-org.sight.core.TemporalEngineTest.xml",
+        "core/build/test-results/test/TEST-org.sight.core.TemporalMetricTest.xml",
+        "core/build/test-results/test/TEST-org.sight.core.TextLandmarkSearchTest.xml"
+      ]
+    },
+    "app_jvm": {
+      "tests": 59,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed",
+      "xml": [
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.navigation.NavigationProductReplayTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.navigation.NavigationProductTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.navigation.RouteProgressEngineTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.navigation.RouteProviderTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.navigation.RouteVoiceActionTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.navigation.ValhallaWalkingRouteProviderTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.NormalizedBoxTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.PerceptionPolicyTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.SpeechQueueTest.xml",
+        "evaluation/results/product-validation/app_jvm-TEST-org.sight.app.VoiceTranscriptTest.xml"
+      ],
+      "xmlInternal": [
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.navigation.NavigationProductReplayTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.navigation.NavigationProductTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.navigation.RouteProgressEngineTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.navigation.RouteProviderTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.navigation.RouteVoiceActionTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.navigation.ValhallaWalkingRouteProviderTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.NormalizedBoxTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.PerceptionPolicyTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.SpeechQueueTest.xml",
+        "app/build/test-results/testDebugUnitTest/TEST-org.sight.app.VoiceTranscriptTest.xml"
+      ]
+    },
+    "perception_jvm": {
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed",
+      "xml": [
+        "evaluation/results/product-validation/perception_jvm-TEST-org.sight.perception.PixelTransformsTest.xml",
+        "evaluation/results/product-validation/perception_jvm-TEST-org.sight.perception.RoadMaskProcessorTest.xml"
+      ],
+      "xmlInternal": [
+        "perception/build/test-results/testDebugUnitTest/TEST-org.sight.perception.PixelTransformsTest.xml",
+        "perception/build/test-results/testDebugUnitTest/TEST-org.sight.perception.RoadMaskProcessorTest.xml"
+      ]
+    },
+    "meta_jvm": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "passed",
+      "xml": [
+        "evaluation/results/product-validation/meta_jvm-TEST-org.sight.meta.MetaFrameCalibrationTest.xml",
+        "evaluation/results/product-validation/meta_jvm-TEST-org.sight.meta.MetaFrameGateTest.xml"
+      ],
+      "xmlInternal": [
+        "integrations/meta/adapter/build/test-results/testDebugUnitTest/TEST-org.sight.meta.MetaFrameCalibrationTest.xml",
+        "integrations/meta/adapter/build/test-results/testDebugUnitTest/TEST-org.sight.meta.MetaFrameGateTest.xml"
+      ]
+    },
+    "android35_app": {
+      "status": "passed",
+      "expectedTests": 15,
+      "reportedTests": 15,
+      "raw": "evaluation/results/product-android35/instrumentation-suite.txt",
+      "reason": null
+    },
+    "android30_app": {
+      "status": "passed",
+      "expectedTests": 15,
+      "reportedTests": 15,
+      "raw": "evaluation/results/product-android30/instrumentation-suite.txt",
+      "reason": null
+    },
+    "android35_google_speech": {
+      "status": "passed",
+      "expectedTests": 2,
+      "reportedTests": 2,
+      "raw": "evaluation/results/product-google-speech/instrumentation-suite.txt",
+      "reason": null
+    },
+    "android35_meta": {
+      "status": "passed",
+      "expectedTests": 8,
+      "reportedTests": 8,
+      "raw": "evaluation/results/product-meta/instrumentation-suite.txt",
+      "reason": null
+    },
+    "python": {
+      "status": "passed",
+      "expectedTests": 14,
+      "reportedTests": 14,
+      "raw": "evaluation/results/product-python-tests.txt"
+    }
+  },
+  "proofs": {
+    "native_road_pipeline_android35": {
+      "status": "present",
+      "path": "evaluation/results/product-android35/native-road-pipeline-proof.json",
+      "gate": "passed"
+    },
+    "native_road_pipeline_android30": {
+      "status": "present",
+      "path": "evaluation/results/product-android30/native-road-pipeline-proof.json",
+      "gate": "passed"
+    },
+    "native_voice_recognition_android35": {
+      "status": "present",
+      "path": "evaluation/results/product-android35/native-voice-recognition-proof.json",
+      "gate": "passed"
+    },
+    "native_voice_recognition_android30": {
+      "status": "present",
+      "path": "evaluation/results/product-android30/native-voice-recognition-proof.json",
+      "gate": "passed"
+    },
+    "native_speech_synthesis": {
+      "status": "present",
+      "path": "evaluation/results/product-google-speech/sight-speech-proof.json",
+      "gate": "passed"
+    },
+    "native_speech_interruption": {
+      "status": "present",
+      "path": "evaluation/results/product-google-speech/speech-queue-native-v3.json",
+      "gate": "passed"
+    },
+    "integrated_navigation_android35": {
+      "status": "present",
+      "path": "evaluation/results/product-android35/integrated-navigation-proof.json",
+      "gate": "passed"
+    },
+    "integrated_navigation_android30": {
+      "status": "present",
+      "path": "evaluation/results/product-android30/integrated-navigation-proof.json",
+      "gate": "passed"
+    },
+    "android35_inspection-runtime-v3": {
+      "status": "present",
+      "path": "evaluation/results/product-android35/inspection-runtime-v3.json",
+      "gate": "passed"
+    },
+    "android35_camera-runtime-v3": {
+      "status": "present",
+      "path": "evaluation/results/product-android35/camera-runtime-v3.json",
+      "gate": "passed"
+    },
+    "android30_inspection-runtime-v3": {
+      "status": "present",
+      "path": "evaluation/results/product-android30/inspection-runtime-v3.json",
+      "gate": "passed"
+    },
+    "android30_camera-runtime-v3": {
+      "status": "present",
+      "path": "evaluation/results/product-android30/camera-runtime-v3.json",
+      "gate": "passed"
+    },
+    "meta_color_chart": {
+      "status": "present",
+      "path": "evaluation/results/product-meta/meta-color-chart-proof.json",
+      "gate": "passed"
+    },
+    "meta_real_pipeline": {
+      "status": "present",
+      "path": "evaluation/results/product-meta/meta-real-pipeline-proof.json",
+      "gate": "passed"
+    }
+  },
+  "artifacts": {
+    "app/src/androidTest/assets/ATTRIBUTION.md": {
+      "bytes": 355,
+      "sha256": "42fbf3f2fc380bdedcf271ec0691c2a3c26771346cef1d762b9a9c3408ef1690",
+      "modifiedAtUtc": "2026-10-23T22:20:45.477303+00:00"
+    },
+    "app/src/androidTest/assets/coco_350148.jpg": {
+      "bytes": 147236,
+      "sha256": "887b3caf92b74588d54005ebdf8dfbf925af064c64fb0c6ca64549b121684b46",
+      "modifiedAtUtc": "2026-10-23T22:11:09.280441+00:00"
+    },
+    "app/src/androidTest/assets/navigation/provenance.json": {
+      "bytes": 5569,
+      "sha256": "a04ef1f417c68da7620fc032bd452c19f76efb05550a82ba744915c567281229",
+      "modifiedAtUtc": "2026-10-27T03:13:20.388054+00:00"
+    },
+    "app/src/androidTest/assets/navigation/toronto-destination-search.json": {
+      "bytes": 2723,
+      "sha256": "5469a8ba24c5fbc960701c68e944c1ca9a22474040cd654eb04ab1884cdf9457",
+      "modifiedAtUtc": "2026-10-27T03:11:44.903163+00:00"
+    },
+    "app/src/androidTest/assets/navigation/toronto-route.json": {
+      "bytes": 32081,
+      "sha256": "b4ce4f3cc4a69de759190259e6f0b672e4da61c775d314c15b308dc661579b55",
+      "modifiedAtUtc": "2026-10-27T03:11:49.638952+00:00"
+    },
+    "app/src/androidTest/assets/pedestrian/ATTRIBUTION.md": {
+      "bytes": 872,
+      "sha256": "78aaed981a540d064d8ad0b668466748c236c4f3edc1ea8a3df8da2c1774b9d2",
+      "modifiedAtUtc": "2026-10-28T03:58:34.177193+00:00"
+    },
+    "app/src/androidTest/assets/pedestrian/provenance.json": {
+      "bytes": 1794,
+      "sha256": "7f54a338db77fa9b0e2c1d2a8eec3e1a70b176546526a3732202e31a78ff1913",
+      "modifiedAtUtc": "2026-10-28T03:58:34.177193+00:00"
+    },
+    "app/src/androidTest/assets/pedestrian/road-context-truth.png": {
+      "bytes": 1981,
+      "sha256": "ddbf841fdecb4a471723a3fee1de5d9bac0e8aa962c4eeee06664516cbb45180",
+      "modifiedAtUtc": "2026-10-28T03:58:33.596064+00:00"
+    },
+    "app/src/androidTest/assets/pedestrian/road-context.jpg": {
+      "bytes": 243134,
+      "sha256": "116519cb932504866058215a0cca5e5d03b4af04a71e540db38c5caefb8d4725",
+      "modifiedAtUtc": "2026-10-28T03:58:33.596064+00:00"
+    },
+    "app/src/androidTest/assets/voice/destination.wav": {
+      "bytes": 68206,
+      "sha256": "14cfeb72600f9d88506bf27d20f08458c96c2ee926e90d15ba39ae525c2c816a",
+      "modifiedAtUtc": "2026-10-28T03:55:37.921607+00:00"
+    },
+    "app/src/androidTest/assets/voice/find-chair.wav": {
+      "bytes": 54766,
+      "sha256": "f2de0557e80df03a8a0c2f5d9a59148650b60abd2eddc065fa57664d787cdebe",
+      "modifiedAtUtc": "2026-10-28T03:55:37.987401+00:00"
+    },
+    "app/src/androidTest/assets/voice/manifest.json": {
+      "bytes": 1910,
+      "sha256": "6961606980260338c1b7c8bf4b02934aa31a753a8374a843e7ac36939654097f",
+      "modifiedAtUtc": "2026-10-28T03:55:38.050129+00:00"
+    },
+    "app/src/androidTest/assets/voice/README.md": {
+      "bytes": 878,
+      "sha256": "5c0c3f6caf12792addfe441a113286e29d6aed825b3b70baf8d4988f9453b087",
+      "modifiedAtUtc": "2026-10-28T03:57:18.007660+00:00"
+    },
+    "app/src/androidTest/assets/voice/stop-navigation.wav": {
+      "bytes": 64366,
+      "sha256": "aca4a47f8f4e02b2da083ef0de89c657b3747cd9ee063e0d5385494891bdfca8",
+      "modifiedAtUtc": "2026-10-28T03:55:37.995061+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/CameraFlowTest.kt": {
+      "bytes": 4233,
+      "sha256": "8e0141d0fe7533bab8f3d8fcfb55ba792922302ff754f167df7560f7f296425c",
+      "modifiedAtUtc": "2026-10-26T00:46:09.000980+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/InspectionRuntimeTest.kt": {
+      "bytes": 4772,
+      "sha256": "699155f08dcf3d7081898dc2b637bdeb55beacb4c6118a08a40b78ffb380226a",
+      "modifiedAtUtc": "2026-10-25T20:33:16.541127+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/IntegratedNavigationTest.kt": {
+      "bytes": 5851,
+      "sha256": "94c4bccd0d5304c1e99e885fb4c4fcd55a0eab414b53691aa7e1463094446e21",
+      "modifiedAtUtc": "2026-10-28T04:03:55.844880+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/MemoryDeletionTest.kt": {
+      "bytes": 5096,
+      "sha256": "f609d2b1a2082d27da644e50736376374f05f08b8c71f0510745ef74bf669b56",
+      "modifiedAtUtc": "2026-10-26T01:24:45.815591+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/NativePerceptionTest.kt": {
+      "bytes": 3360,
+      "sha256": "cba3dddcf40b1a0326693212f1fde73fdb695bba0b18a2d194881a44d12c61ec",
+      "modifiedAtUtc": "2026-10-24T03:17:41.165817+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/NativeRoadPipelineTest.kt": {
+      "bytes": 3362,
+      "sha256": "c62c8c32db05df63dd95f448915b271c685601de3d3724709a3890902ce38ba4",
+      "modifiedAtUtc": "2026-10-28T04:00:10.012940+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/NativeSpeechQueueTest.kt": {
+      "bytes": 4083,
+      "sha256": "488ab90ff39460e5aee63e5c2975fa6f38431c3e5e348c7f6f09eae01243d2f6",
+      "modifiedAtUtc": "2026-10-27T03:12:31.012823+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/NativeSpeechTest.kt": {
+      "bytes": 4308,
+      "sha256": "539a9d5456ea34c794b305b64f33986289a1968630571db04170f716f0ab1fa7",
+      "modifiedAtUtc": "2026-10-24T03:34:31.099132+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/NativeVoiceRecognitionTest.kt": {
+      "bytes": 5807,
+      "sha256": "3afed2e03be20374256fd308258a15d70e29577fe2af4ee7a3a776faff1fc353",
+      "modifiedAtUtc": "2026-10-28T03:56:41.533076+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/PixelPipelineTest.kt": {
+      "bytes": 2810,
+      "sha256": "5d323434d9a12b6bb286061bd161cb8872a0c667e32fba9e976e77fecb09c684",
+      "modifiedAtUtc": "2026-10-25T20:33:16.537647+00:00"
+    },
+    "app/src/androidTest/java/org/sight/app/SessionUiTest.kt": {
+      "bytes": 5805,
+      "sha256": "23f50e265f32f1f17d97c8d2de671517dbdf5f5ed792ed8f89cfc3947e3e5dfe",
+      "modifiedAtUtc": "2026-10-26T00:50:03.172928+00:00"
+    },
+    "app/src/main/AndroidManifest.xml": {
+      "bytes": 1461,
+      "sha256": "b8923db2845aed91fb138e677727291cbcdb26df17f27708f347f8d1384b5bb4",
+      "modifiedAtUtc": "2026-10-24T02:27:49.025913+00:00"
+    },
+    "app/src/main/assets/.gitignore": {
+      "bytes": 33,
+      "sha256": "3c90671370802e2375572a89661c77660a2084add06156ad1cbf4d94f022546b",
+      "modifiedAtUtc": "2026-10-27T03:22:24.717289+00:00"
+    },
+    "app/src/main/assets/licenses/LICENSE-Google-Research.txt": {
+      "bytes": 11401,
+      "sha256": "9e1d2eb8c31e22dd7c7a0999ee1db23de8dde21215b14fa4b6f396789d594b3d",
+      "modifiedAtUtc": "2026-10-23T22:20:14.334563+00:00"
+    },
+    "app/src/main/assets/licenses/LICENSE-JNA.txt": {
+      "bytes": 797,
+      "sha256": "07c938b23950ab7d47a24ef35f9f5da3a05ae164278dc959ad6994135ed59ff1",
+      "modifiedAtUtc": "2026-10-28T03:57:46.295502+00:00"
+    },
+    "app/src/main/assets/licenses/LICENSE-road-conversion-MIT.txt": {
+      "bytes": 1070,
+      "sha256": "ee7cc5c44d3b34aa9b2278c640d94f474315548aab1e88561123ff5bf50b97a0",
+      "modifiedAtUtc": "2026-10-27T03:15:38.816008+00:00"
+    },
+    "app/src/main/assets/licenses/LICENSE-SIGHT.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "modifiedAtUtc": "2026-10-28T03:57:58.145817+00:00"
+    },
+    "app/src/main/assets/licenses/LICENSE-Vosk.txt": {
+      "bytes": 10173,
+      "sha256": "bb618af833c817ab01c1564bd3ec75ba4b4f9cf30910a4a2168e30a674ee8cc6",
+      "modifiedAtUtc": "2026-10-28T03:57:45.990884+00:00"
+    },
+    "app/src/main/assets/licenses/NOTICE-road-model.md": {
+      "bytes": 3496,
+      "sha256": "5e13ff62897dfbe9139aa497d24fde37aa10e43da3528696f4f35901bd1d0753",
+      "modifiedAtUtc": "2026-10-28T04:01:39.833296+00:00"
+    },
+    "app/src/main/assets/licenses/NOTICE-SIGHT.txt": {
+      "bytes": 904,
+      "sha256": "a60867a37508489adeba9769e7398c9d45b243c10b987be77c31fb5027941569",
+      "modifiedAtUtc": "2026-10-28T03:57:58.442559+00:00"
+    },
+    "app/src/main/assets/licenses/NOTICE-voice-model.md": {
+      "bytes": 3784,
+      "sha256": "ddef5f05662e30a3e74748e78870c1aebac2c8d96aedf7f24527bffef6055a12",
+      "modifiedAtUtc": "2026-10-28T03:57:47.038881+00:00"
+    },
+    "app/src/main/assets/voice-model-small-en-us-0.15.zip": {
+      "bytes": 41205931,
+      "sha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498",
+      "modifiedAtUtc": "2026-10-27T03:18:27.015534+00:00"
+    },
+    "app/src/main/java/org/sight/app/AsyncRoadReader.kt": {
+      "bytes": 2354,
+      "sha256": "c16d0f30991094c540287b49fde50ca219f736b8b5acc5c1a0b1cf6b4e6520db",
+      "modifiedAtUtc": "2026-10-27T03:06:27.140936+00:00"
+    },
+    "app/src/main/java/org/sight/app/AsyncTextReader.kt": {
+      "bytes": 3138,
+      "sha256": "7b5d6737ad48e9de8ed038ee3fc2685f4944b31a6e1e157ec9273531a8d0d4c5",
+      "modifiedAtUtc": "2026-10-26T00:53:56.470444+00:00"
+    },
+    "app/src/main/java/org/sight/app/BundledVoiceModel.kt": {
+      "bytes": 4073,
+      "sha256": "c2e248bb30bbddaa8be61a64b04dbd97ee5d8ec72aca7ca9232ea09583d15282",
+      "modifiedAtUtc": "2026-10-27T03:22:45.376199+00:00"
+    },
+    "app/src/main/java/org/sight/app/CameraOrientation.kt": {
+      "bytes": 2473,
+      "sha256": "43cf5dbee5699b34a18f66f3fa018bf9fed46233837b6dbd2b26cc72a2426460",
+      "modifiedAtUtc": "2026-10-27T03:05:21.230374+00:00"
+    },
+    "app/src/main/java/org/sight/app/DeviceContracts.kt": {
+      "bytes": 1119,
+      "sha256": "c5e95ec124182042f82a46e4ddc29f286a98719353a6ec3cc2ef6455b6f94e41",
+      "modifiedAtUtc": "2026-10-25T20:21:09.048994+00:00"
+    },
+    "app/src/main/java/org/sight/app/LandmarkStore.kt": {
+      "bytes": 3334,
+      "sha256": "2cff9dc22846c27ab9403235dd2665f98433a3a64b3a0cd36f93f98f0ae1ae63",
+      "modifiedAtUtc": "2026-10-23T22:12:06.025244+00:00"
+    },
+    "app/src/main/java/org/sight/app/LocalVoiceDecoder.kt": {
+      "bytes": 1745,
+      "sha256": "e227279b83e6cd24b64d879397ae277d8ef450e1f749cd7cc1116f9fc71cd3c8",
+      "modifiedAtUtc": "2026-10-28T03:56:23.754069+00:00"
+    },
+    "app/src/main/java/org/sight/app/MainActivity.kt": {
+      "bytes": 36964,
+      "sha256": "8050426f8e283c7fd84f3ea39125cbe50cc0e0ec4fc837b73c7d8ec81b53b5f7",
+      "modifiedAtUtc": "2026-11-12T04:40:24.808542+00:00"
+    },
+    "app/src/main/java/org/sight/app/MediaPipeDetector.kt": {
+      "bytes": 608,
+      "sha256": "6c84d99d5c442ea4b2c3a87e3bcf4fa88f9bb799d91d946084f7f18dcf2c2b07",
+      "modifiedAtUtc": "2026-10-25T20:21:09.396553+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/BoundedHttpsTransport.kt": {
+      "bytes": 4252,
+      "sha256": "eb643dc66312d7dadfecb0130f17285f3beda23c68085f5bbdd958436cbdd946",
+      "modifiedAtUtc": "2026-10-23T22:22:45.163049+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/NavigationController.kt": {
+      "bytes": 27351,
+      "sha256": "59f732f7387806f64749585f20080f9518832acf578304f2120abbe5a083b508",
+      "modifiedAtUtc": "2026-10-28T04:11:35.964163+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/NavigationScreen.kt": {
+      "bytes": 10281,
+      "sha256": "d15afb931b430a37e0dd5abdc80a64fb37b53d325bd0cedbe553b4f43880c668",
+      "modifiedAtUtc": "2026-10-28T03:55:55.980420+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/PublicWalkingRouteProvider.kt": {
+      "bytes": 7791,
+      "sha256": "179ec78d864ea42643727d8704fcb2748ff8898b6d18023f35ef605d22b0a3d9",
+      "modifiedAtUtc": "2026-10-27T03:16:56.977700+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/RouteGeometry.kt": {
+      "bytes": 2744,
+      "sha256": "55d42997f3ebbdbfe8497d2613c0c07aacbbf801e4143cc2c64ddbeaf1bd07eb",
+      "modifiedAtUtc": "2026-10-27T03:02:54.854701+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/RouteModels.kt": {
+      "bytes": 6118,
+      "sha256": "7da80ae9cbe0c52034b4a38b377305fb22699b9916f7d9eecb8411645a884c07",
+      "modifiedAtUtc": "2026-10-28T03:55:27.655101+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/RouteProgressEngine.kt": {
+      "bytes": 8902,
+      "sha256": "0c0307288cf68d76b72e47778611d5b51b1793ee9e7d2a0a1b9fbed91102214e",
+      "modifiedAtUtc": "2026-10-27T03:14:30.324777+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/RouteVoiceAction.kt": {
+      "bytes": 4802,
+      "sha256": "b2823f663923b41a5d414c7a4a82302197c6da0728830272e29ecdfaccbed6d3",
+      "modifiedAtUtc": "2026-10-28T03:54:54.168028+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/SavedDestinationStore.kt": {
+      "bytes": 3674,
+      "sha256": "d53d4d33095674eeb46b61c9ec60e8ad1d105f0e9efb83d05880caf8b2bc51ea",
+      "modifiedAtUtc": "2026-10-27T03:06:04.083240+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/ValhallaWalkingRouteProvider.kt": {
+      "bytes": 8729,
+      "sha256": "0226d2f46a3be107fe913e110eee6ada4e9990b383b267be522cc5a6793233c1",
+      "modifiedAtUtc": "2026-10-28T03:55:55.979601+00:00"
+    },
+    "app/src/main/java/org/sight/app/navigation/WalkingRouteService.kt": {
+      "bytes": 328,
+      "sha256": "c1e4d09bc76abde4a9020399fe514b37ebd5b492aba9b54032bd00f661e3770c",
+      "modifiedAtUtc": "2026-10-27T03:01:31.486373+00:00"
+    },
+    "app/src/main/java/org/sight/app/NormalizedBox.kt": {
+      "bytes": 598,
+      "sha256": "5186586f6fb2717162c061888e33b43139ccd86335b590cf2ca9aeab03d1e65c",
+      "modifiedAtUtc": "2026-10-23T22:24:11.652404+00:00"
+    },
+    "app/src/main/java/org/sight/app/OfflineVoiceInput.kt": {
+      "bytes": 10369,
+      "sha256": "14e0bb5bb59e864d062c2e9e6d91235677c2cac564220d468063d2a3882a00d0",
+      "modifiedAtUtc": "2026-11-12T04:40:24.808542+00:00"
+    },
+    "app/src/main/java/org/sight/app/PerceptionPolicy.kt": {
+      "bytes": 2685,
+      "sha256": "35588b77cadb72ba4b65e5f5554c928740a639e99d9b2ef0a01667c5aaca2a48",
+      "modifiedAtUtc": "2026-10-26T01:39:01.793227+00:00"
+    },
+    "app/src/main/java/org/sight/app/PhoneCameraSource.kt": {
+      "bytes": 11271,
+      "sha256": "934e9dd0f861b77f96064f3f25d87b4089a9f278694df861566939d4466d2c0a",
+      "modifiedAtUtc": "2026-10-27T03:20:07.795794+00:00"
+    },
+    "app/src/main/java/org/sight/app/SightController.kt": {
+      "bytes": 27842,
+      "sha256": "04155552ca2b788ce7696229b28f0620b012c42486b4c146c417f8a0f7515f2d",
+      "modifiedAtUtc": "2026-11-12T04:40:24.808542+00:00"
+    },
+    "app/src/main/java/org/sight/app/SightSession.kt": {
+      "bytes": 2183,
+      "sha256": "bfe8b86cb77d10c8cf7927bce3f31dc9311586e4e339c32d9b460fbce2a618b3",
+      "modifiedAtUtc": "2026-10-28T04:11:01.324912+00:00"
+    },
+    "app/src/main/java/org/sight/app/SpeechOutput.kt": {
+      "bytes": 8716,
+      "sha256": "2ecaf6ba85dbfcc090e195166eebd745470608ccb8905fac23e1dee88cd7ed80",
+      "modifiedAtUtc": "2026-10-28T04:11:01.321235+00:00"
+    },
+    "app/src/main/java/org/sight/app/SpeechQueue.kt": {
+      "bytes": 7684,
+      "sha256": "5729d8554411d10b692727e3d6420678a689c95182bc6b8fc812cf81c086a54c",
+      "modifiedAtUtc": "2026-10-28T04:10:20.892923+00:00"
+    },
+    "app/src/main/java/org/sight/app/VoiceTranscript.kt": {
+      "bytes": 651,
+      "sha256": "c647719bca2f2d75ad0c52eb849a6cc8e7bfa54144d047a344b0997dc5e800ba",
+      "modifiedAtUtc": "2026-10-28T03:57:17.991635+00:00"
+    },
+    "app/src/main/res/drawable/sight_icon.xml": {
+      "bytes": 538,
+      "sha256": "1a592f12b273ba65c6703283a2a053e199c41a935e2740741f72df936c3d3d27",
+      "modifiedAtUtc": "2026-10-24T02:27:49.044583+00:00"
+    },
+    "app/src/main/res/values/styles.xml": {
+      "bytes": 412,
+      "sha256": "895945d15f2b7aafb27cc82a4fdaa879a3eaab9f3a9c8c4b4ee61610fd8317b2",
+      "modifiedAtUtc": "2026-10-24T02:27:49.013136+00:00"
+    },
+    "app/src/main/res/xml/data_extraction_rules.xml": {
+      "bytes": 591,
+      "sha256": "f2f358d89c06fa712f6887b9bac1d9859b8843ec79f614084d32029efb76db5c",
+      "modifiedAtUtc": "2026-10-24T02:27:49.047957+00:00"
+    },
+    "app/src/test/java/org/sight/app/navigation/NavigationProductReplayTest.kt": {
+      "bytes": 8010,
+      "sha256": "2bc1ed21158a8dc6bccf82c82988560d3c5f02107ebc159717e0cad889460b37",
+      "modifiedAtUtc": "2026-10-27T03:17:31.048741+00:00"
+    },
+    "app/src/test/java/org/sight/app/navigation/NavigationProductTest.kt": {
+      "bytes": 7501,
+      "sha256": "e36b1f6da13817d8f6b8da17dd5ce52f89578ea6f90ed538e22937695fd50f70",
+      "modifiedAtUtc": "2026-10-27T03:14:30.328452+00:00"
+    },
+    "app/src/test/java/org/sight/app/navigation/RouteProgressEngineTest.kt": {
+      "bytes": 4660,
+      "sha256": "f7b073c9c0b0ca984615ec1dfc09266babf52aeca56cc76d2ffc5244d838bad8",
+      "modifiedAtUtc": "2026-10-23T22:26:18.848692+00:00"
+    },
+    "app/src/test/java/org/sight/app/navigation/RouteProviderTest.kt": {
+      "bytes": 4603,
+      "sha256": "cc1b5a0c56389f0f22a1f801e7929130c5a5f303734d55957e473c4aeb198cfa",
+      "modifiedAtUtc": "2026-10-23T22:24:50.107025+00:00"
+    },
+    "app/src/test/java/org/sight/app/navigation/RouteVoiceActionTest.kt": {
+      "bytes": 1038,
+      "sha256": "a5199c4989acf3bba49a79d257aece40ddc445f7c641ff0f061f362fb13098b1",
+      "modifiedAtUtc": "2026-10-25T20:32:29.259767+00:00"
+    },
+    "app/src/test/java/org/sight/app/navigation/ValhallaWalkingRouteProviderTest.kt": {
+      "bytes": 6946,
+      "sha256": "62c6d4641982bca81e44258617116fbd8e91177fcf0da8fafea486d46ae31679",
+      "modifiedAtUtc": "2026-10-28T04:09:17.907996+00:00"
+    },
+    "app/src/test/java/org/sight/app/NormalizedBoxTest.kt": {
+      "bytes": 615,
+      "sha256": "db6bf510edb0953996cfe7999586683dfc92ea345462f1e563e730ec13e6c039",
+      "modifiedAtUtc": "2026-10-23T22:24:11.670309+00:00"
+    },
+    "app/src/test/java/org/sight/app/PerceptionPolicyTest.kt": {
+      "bytes": 6807,
+      "sha256": "952f79ba8ee2fc6f4b1c48d902d06b7879f414ea38e918339d0d392828d86774",
+      "modifiedAtUtc": "2026-10-26T01:23:56.361850+00:00"
+    },
+    "app/src/test/java/org/sight/app/SpeechQueueTest.kt": {
+      "bytes": 12522,
+      "sha256": "f088fadb2f4bdd603c48bfd48384f5382a08b75b3fa2f77e41beb8ddb6f3c892",
+      "modifiedAtUtc": "2026-10-28T04:10:20.893928+00:00"
+    },
+    "app/src/test/java/org/sight/app/VoiceTranscriptTest.kt": {
+      "bytes": 951,
+      "sha256": "cc868efa0e43f1cb6b6e88a107b9ef1997811b64b31e88496d8d370428b7737b",
+      "modifiedAtUtc": "2026-10-28T03:57:17.999709+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/AdaptiveScheduler.kt": {
+      "bytes": 2877,
+      "sha256": "f07891a87ce3865bf55a2cd654d02be1d04b8d64a25fa2991e732cfff3849c93",
+      "modifiedAtUtc": "2026-10-25T20:12:48.795589+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/EngineTools.kt": {
+      "bytes": 10414,
+      "sha256": "19d655d3c6da6a2f358aef9e358dd195cddd01032787c7a72c562db58f875eed",
+      "modifiedAtUtc": "2026-10-25T20:14:09.783236+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/EnvironmentalAwareness.kt": {
+      "bytes": 6453,
+      "sha256": "6e8afcc765b3c2ab221bf44076ad3eb6421c10fbc82e79446c49a5eea142ad1e",
+      "modifiedAtUtc": "2026-10-28T03:55:56.237922+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/ImageTracker.kt": {
+      "bytes": 8097,
+      "sha256": "7699a4a9754660f0a204b57d2077b0c49d6938c855d91e84c23002c58b4a8f25",
+      "modifiedAtUtc": "2026-10-25T20:16:33.086538+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/Models.kt": {
+      "bytes": 10649,
+      "sha256": "df89ffc23c50f8246bc66970c3ad9268e4771366ecd9d4316bb9c42ccff0e661",
+      "modifiedAtUtc": "2026-10-28T04:09:51.922085+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/SightEngine.kt": {
+      "bytes": 55678,
+      "sha256": "8617093c159a5b338319d2d042c63562908a7646052deab898f1e02f885812d1",
+      "modifiedAtUtc": "2026-10-26T01:23:17.746171+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/SpeechSafety.kt": {
+      "bytes": 1716,
+      "sha256": "e3e81a8ad242c33060741f788fec8d6c3fff25e4093cb7766c8c2b4eb2ea302f",
+      "modifiedAtUtc": "2026-10-28T04:11:01.320240+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/TemporalWorld.kt": {
+      "bytes": 5282,
+      "sha256": "8443d5ccb2d47c1d505afa2152ee3f7acab53c630894643378928c7294b0b79b",
+      "modifiedAtUtc": "2026-10-25T20:27:03.786885+00:00"
+    },
+    "core/src/main/kotlin/org/sight/core/TextLandmarkSearch.kt": {
+      "bytes": 1412,
+      "sha256": "848603607efd7776b134d5e9610bf4212089e7dfa20920636a9b8f15ef63d553",
+      "modifiedAtUtc": "2026-10-27T03:10:00.511292+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/AdaptiveSchedulerTest.kt": {
+      "bytes": 1779,
+      "sha256": "0129de27887f0eaebad083f405017f1ae636bca660604d5994a06280a35df6bd",
+      "modifiedAtUtc": "2026-10-23T22:13:48.940730+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/EngineToolsTest.kt": {
+      "bytes": 3366,
+      "sha256": "0ba952036430925cfcb1ac51b5be28b4a96a8386feb8c6da0a24108cbb2ee099",
+      "modifiedAtUtc": "2026-10-23T22:19:44.508110+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/ProductSafetyTest.kt": {
+      "bytes": 3754,
+      "sha256": "9349a46909668fd0645b32bc102d88d3162b8d08837133a1f6f9237952c6b7e6",
+      "modifiedAtUtc": "2026-10-28T04:11:01.326903+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/ReplayRunner.kt": {
+      "bytes": 6216,
+      "sha256": "29deaa66e26f64980b16e974ed316de13444f0bf43a23b5bd2c146d79096bf1e",
+      "modifiedAtUtc": "2026-10-23T22:15:57.856167+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/SightEngineTest.kt": {
+      "bytes": 16431,
+      "sha256": "510e3f1bfd3e8423f51c3c4e190a8206a1c2b191d2d253fc6ddf873368e9ef9c",
+      "modifiedAtUtc": "2026-10-23T22:22:55.947683+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/TemporalEngineTest.kt": {
+      "bytes": 20629,
+      "sha256": "ca15d6be034ab214a6fe21bb726ea6f8c6f032dd1d3afdfcdd3d51e50400d092",
+      "modifiedAtUtc": "2026-10-26T01:23:56.361850+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/TemporalEvaluation.kt": {
+      "bytes": 15445,
+      "sha256": "b24e7a8afc0c6e0514dcaacb482a4e282515b451d8048bbd90a798866352b2cd",
+      "modifiedAtUtc": "2026-10-25T20:19:37.677221+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/TemporalMetricTest.kt": {
+      "bytes": 956,
+      "sha256": "b63ebf38067dc3d4024f4ba2a3b4d74b575af7fc9c1310f48c1dadd746d7433e",
+      "modifiedAtUtc": "2026-10-25T20:19:37.679138+00:00"
+    },
+    "core/src/test/kotlin/org/sight/core/TextLandmarkSearchTest.kt": {
+      "bytes": 1182,
+      "sha256": "4e855371cf09f94dd34c038a68080530346384c1ae9dcf5152064374739183d8",
+      "modifiedAtUtc": "2026-10-27T03:10:00.515373+00:00"
+    },
+    "perception/src/main/AndroidManifest.xml": {
+      "bytes": 13,
+      "sha256": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+      "modifiedAtUtc": "2026-10-25T20:16:41.318336+00:00"
+    },
+    "perception/src/main/assets/efficientdet_lite0_int8.tflite": {
+      "bytes": 4602795,
+      "sha256": "0720bf247bd76e6594ea28fa9c6f7c5242be774818997dbbeffc4da460c723bb",
+      "modifiedAtUtc": "2026-10-23T22:09:58.141800+00:00"
+    },
+    "perception/src/main/assets/efficientdet_lite2_int8.tflite": {
+      "bytes": 7515971,
+      "sha256": "b3f50554cb0ea559e90328845f7d9ba4d13c8bff372914d24e06bc8bb72fa896",
+      "modifiedAtUtc": "2026-10-25T20:10:22.440358+00:00"
+    },
+    "perception/src/main/assets/road_segmentation_adas_0001.tflite": {
+      "bytes": 817520,
+      "sha256": "8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4",
+      "modifiedAtUtc": "2026-10-27T03:13:55.689785+00:00"
+    },
+    "perception/src/main/java/org/sight/perception/FramePixels.kt": {
+      "bytes": 2405,
+      "sha256": "a107fe0f4f5d07ea1275854d73242546a5d19417e5f9049a2f3c5d0ea4304a31",
+      "modifiedAtUtc": "2026-10-25T20:21:09.042988+00:00"
+    },
+    "perception/src/main/java/org/sight/perception/ImageQuality.kt": {
+      "bytes": 1683,
+      "sha256": "c336e4518b6129c3879f3f8d64f816e93218cac76315ecc22730fd52152d3da8",
+      "modifiedAtUtc": "2026-10-25T20:16:41.337300+00:00"
+    },
+    "perception/src/main/java/org/sight/perception/MediaPipeDetector.kt": {
+      "bytes": 2310,
+      "sha256": "8537e51a07e371e3a35410564b42b70da00fd2a91e2b7e91529ee3ca43ab8f0f",
+      "modifiedAtUtc": "2026-10-25T20:16:41.339301+00:00"
+    },
+    "perception/src/main/java/org/sight/perception/PixelTransforms.kt": {
+      "bytes": 5616,
+      "sha256": "9299e4cf408565f6de5ed90e8a1c2c0aecb9ae148c198f645c32c8e4811c1493",
+      "modifiedAtUtc": "2026-10-26T01:18:29.224257+00:00"
+    },
+    "perception/src/main/java/org/sight/perception/RoadMaskProcessor.kt": {
+      "bytes": 4198,
+      "sha256": "af7352742feb9f623020f614d5408fb2b7e7e5aab4279c5d3ea9c48076952230",
+      "modifiedAtUtc": "2026-10-27T03:07:23.683503+00:00"
+    },
+    "perception/src/main/java/org/sight/perception/RoadSegmenter.kt": {
+      "bytes": 2758,
+      "sha256": "4dc4018e9d8fce40c3c0a72fa3aa5db4342806a50b78555193e155c08a90f5dd",
+      "modifiedAtUtc": "2026-10-28T03:58:09.001795+00:00"
+    },
+    "perception/src/test/java/org/sight/perception/PixelTransformsTest.kt": {
+      "bytes": 3164,
+      "sha256": "6cb98ede6d14c7f8737940d80c27f5a55c42df4968e551b21a6b3de0e83fae2f",
+      "modifiedAtUtc": "2026-10-25T20:16:41.350088+00:00"
+    },
+    "perception/src/test/java/org/sight/perception/RoadMaskProcessorTest.kt": {
+      "bytes": 2792,
+      "sha256": "bfcdc385edc8d91deab88dba3541475df49353bb87341e3d03be3600625a0df3",
+      "modifiedAtUtc": "2026-10-27T03:07:23.690345+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/AndroidManifest.xml": {
+      "bytes": 463,
+      "sha256": "99856b7c8928fb3b464de8bf92ee586a635adad44ca3b4be78a7a22d6de4eeb5",
+      "modifiedAtUtc": "2026-10-24T02:54:34.908549+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/assets/mock-coco-person-hevc.mp4": {
+      "bytes": 833297,
+      "sha256": "d51bfb40aab8bff1618d06a18a010f91a552641017b95f8e6d3847a305e0a785",
+      "modifiedAtUtc": "2026-10-25T20:16:58.318146+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/assets/mock-color-chart-hevc.mp4": {
+      "bytes": 25425,
+      "sha256": "430a8a2e5a4f373a615f2eb40a816034f92dc35ecff355a14ecc081a209356a1",
+      "modifiedAtUtc": "2026-10-25T20:16:57.377216+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/assets/mock-test-pattern-hevc.mp4": {
+      "bytes": 81193,
+      "sha256": "c60b359184b06862c3fa3ea1eee6e42ed9f67edee634ec9ee5cb0840e9a7bfe3",
+      "modifiedAtUtc": "2026-10-24T02:41:24.630049+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/assets/README.md": {
+      "bytes": 3486,
+      "sha256": "e9ac0ef276599ab412a958e618bc9e4e7bb8173ca39c10b51003548423a958ee",
+      "modifiedAtUtc": "2026-10-25T20:17:10.837529+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/java/org/sight/meta/MetaMockDeviceContractTest.kt": {
+      "bytes": 7121,
+      "sha256": "9df7abe6ef421bfd8ce22eb24b3d5b5494c4cf05c3be01ba574c68b3db1eca8c",
+      "modifiedAtUtc": "2026-10-24T02:54:34.903452+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/java/org/sight/meta/MetaPerceptionIntegrationTest.kt": {
+      "bytes": 12946,
+      "sha256": "d9a8fd4b5048a8285c69f9de4ba59a43d04b1e72fd0718cbea387e074d57dd36",
+      "modifiedAtUtc": "2026-10-26T01:15:49.604234+00:00"
+    },
+    "integrations/meta/adapter/src/androidTest/java/org/sight/meta/MockHostActivity.kt": {
+      "bytes": 160,
+      "sha256": "f198b8796be2fb646146737bec4f2f2cf1d25264b4e67c7dc445d1858d112e75",
+      "modifiedAtUtc": "2026-10-24T02:21:17.701990+00:00"
+    },
+    "integrations/meta/adapter/src/main/AndroidManifest.xml": {
+      "bytes": 563,
+      "sha256": "92e44972bc86148cfb40a9e6f96a7d8c28dc286a8cb062910e2296537a1a3929",
+      "modifiedAtUtc": "2026-10-23T22:11:21.452463+00:00"
+    },
+    "integrations/meta/adapter/src/main/java/org/sight/meta/MetaAudioPorts.kt": {
+      "bytes": 1603,
+      "sha256": "5582efddfd5f5d5f6b25bab1132855b6885006f5265e4526858922f70511c029",
+      "modifiedAtUtc": "2026-10-25T20:13:05.477298+00:00"
+    },
+    "integrations/meta/adapter/src/main/java/org/sight/meta/MetaDatCameraAdapter.kt": {
+      "bytes": 18363,
+      "sha256": "12e10e607b5bb669e34204d89b2146a4f9ccc3bff943a39fb4ff1d7861563fd1",
+      "modifiedAtUtc": "2026-10-26T01:15:26.763855+00:00"
+    },
+    "integrations/meta/adapter/src/main/java/org/sight/meta/MetaFrameCalibration.kt": {
+      "bytes": 1648,
+      "sha256": "cae5d1f29a695627fa73135ee7e8ebedc34f22068f3bdaf533c545e3b357257d",
+      "modifiedAtUtc": "2026-10-25T20:17:20.174570+00:00"
+    },
+    "integrations/meta/adapter/src/main/java/org/sight/meta/MetaFrameGate.kt": {
+      "bytes": 1179,
+      "sha256": "44a057630ca7029abfc3cba196c81c6b34665504053f1fcdd98da3a30030134f",
+      "modifiedAtUtc": "2026-10-23T22:11:21.464596+00:00"
+    },
+    "integrations/meta/adapter/src/main/java/org/sight/meta/MetaSightPerception.kt": {
+      "bytes": 5823,
+      "sha256": "3d27387cd06a83037f5e683e730dd48bdb4f8fe4e4a65d42614c705b7bba7ad3",
+      "modifiedAtUtc": "2026-10-25T20:18:29.081763+00:00"
+    },
+    "integrations/meta/adapter/src/test/java/org/sight/meta/MetaFrameCalibrationTest.kt": {
+      "bytes": 1386,
+      "sha256": "2a2b44e66ae9b51679930d216cef4a3f9c2fc958aeeb11a1d57493cd04b12af1",
+      "modifiedAtUtc": "2026-10-25T20:12:28.186917+00:00"
+    },
+    "integrations/meta/adapter/src/test/java/org/sight/meta/MetaFrameGateTest.kt": {
+      "bytes": 2061,
+      "sha256": "750150c0b7bb34eebe92ba6b135d0fc01b9a0ba92b7ce18b871707172c139eb6",
+      "modifiedAtUtc": "2026-10-23T22:11:21.479204+00:00"
+    },
+    "app/build/outputs/apk/debug/app-debug.apk": {
+      "bytes": 236261986,
+      "sha256": "cf5d8ab8e95fa3e6788d98ac4cbb97b52aaff7b334bc9b631aebcc6ce528c242",
+      "modifiedAtUtc": "2026-11-12T04:40:50.343882+00:00"
+    },
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": {
+      "bytes": 1676493,
+      "sha256": "74872b581b742db2cb9185b92bba0168be067ff56bcbce08b253c658945874e6",
+      "modifiedAtUtc": "2026-11-12T04:38:54.274085+00:00"
+    },
+    "integrations/meta/adapter/build/outputs/apk/androidTest/debug/adapter-debug-androidTest.apk": {
+      "bytes": 146248238,
+      "sha256": "2a408afed17880798b6a053fa7cdb5a52dfcd073156df96bbcb34b623dbc3f26",
+      "modifiedAtUtc": "2026-11-12T04:42:22.084070+00:00"
+    }
+  },
+  "artifactFreshness": {
+    "app": {
+      "latestSourceModifiedAtUtc": "2026-11-12T04:40:24.808542+00:00",
+      "apkAtOrAfterSources": true,
+      "testXmlAtOrAfterSources": true
+    },
+    "app_android_test": {
+      "latestSourceModifiedAtUtc": "2026-10-28T04:03:55.844880+00:00",
+      "apkAtOrAfterSources": true,
+      "testXmlAtOrAfterSources": true
+    },
+    "meta": {
+      "latestSourceModifiedAtUtc": "2026-10-28T04:11:01.326903+00:00",
+      "apkAtOrAfterSources": true,
+      "testXmlAtOrAfterSources": true
+    }
+  },
+  "buildLogs": {
+    "android": {
+      "status": "passed",
+      "path": "evaluation/results/product-validation/android-build.txt"
+    },
+    "meta": {
+      "status": "passed",
+      "path": "evaluation/results/product-validation/metabuild.txt"
+    }
+  },
+  "artifactGate": "passed",
+  "sourceHashes": "All files under app/src, core/src, perception/src and integrations/meta/adapter/src are SHA-256 hashed in artifacts.",
+  "boundary": "Current product outputs only. No historical v3/emulator results are read. Android tests ran in emulators; fixtures, recorded HTTP and constructed GPS do not establish field use, physical microphone/GPS, independent held-out accuracy or human assistive usability."
+}

@@ -1,0 +1,66 @@
+{
+  "runtimeSourceCommit": "23f5dbcb24c64c010d9a36055dfe0cf6e068d7ce",
+  "boundary": "Actual Android15 emulator app screenshots. Live Photon/OSRM public map services; fixed simulated Toronto GPS origin and emulator virtual camera. Commands typed in app; physical microphone, outdoor walking and glasses hardware are untested. GPS expiration shown after stationary simulated fixes is an actual app state.",
+  "screenshots": [
+    {
+      "path": "docs/media/assist-camera.png",
+      "bytes": 96798,
+      "sha256": "eef3c995931221c975ce6dac3cf77dc6f07c25f7355cbaaeebf59070f15a7b2c",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/assist-route.png",
+      "bytes": 142623,
+      "sha256": "f9d10973663d71cacd8990b447159f7624c0f3ebd86437d2c4236e8d33592d9d",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/assistance-stopped.png",
+      "bytes": 153375,
+      "sha256": "3c45251cca3320eb1ca5fcaf4e0839af9aa0b0acfca3c3a28c54ebd2ee058a10",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/destination-choices.png",
+      "bytes": 194846,
+      "sha256": "adb79269c633f3107ca91d49dda6ec3372645281689d35d5839b5ac687cf4e9b",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/developer-camera.png",
+      "bytes": 192597,
+      "sha256": "bbe25d03007f7b15a1429938c215cf31028d3611d2f56334c07a9c569f4fe977",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/entrance-text-search.png",
+      "bytes": 151465,
+      "sha256": "420e221e7e1b735ace91618266091974199b421171ab476796708658c0ec9f72",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/large-text-settings.png",
+      "bytes": 84305,
+      "sha256": "cf236233a8a0bea35cde0c2cabfd8d37814a28917c5f7b2d752ad0ab4e375029",
+      "fontScale": 2.0
+    },
+    {
+      "path": "docs/media/route-guidance.png",
+      "bytes": 109917,
+      "sha256": "67eaa561f3b553ba3c41f988322c8354e71eb77158091d807f33fcf70fd5c6e0",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/routes-consent.png",
+      "bytes": 135571,
+      "sha256": "df69b23c5dc069bf16bdee2a0a74ab4d9f9aff17cae40d53536d7a68e0c59eb7",
+      "fontScale": 1.0
+    },
+    {
+      "path": "docs/media/settings.png",
+      "bytes": 80001,
+      "sha256": "793c91da94a5a62983ca2fcedefa05f165a9c9917a42fe9e698a801c85107573",
+      "fontScale": 1.0
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.app.navigation.RouteProgressEngineTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-12T04:40:47" hostname="YUNO" time="0.002">
+  <properties/>
+  <testcase name="invalidGeometryAndCoordinatesAreRejected" classname="org.sight.app.navigation.RouteProgressEngineTest" time="0.0"/>
+  <testcase name="dateLineSegmentDoesNotPassThroughGreenwich" classname="org.sight.app.navigation.RouteProgressEngineTest" time="0.0"/>
+  <testcase name="projectsOntoPolylineAndEstimatesRemainingDistance" classname="org.sight.app.navigation.RouteProgressEngineTest" time="0.001"/>
+  <testcase name="staleInaccurateFutureAndDuplicateFixesCannotAdvanceProgress" classname="org.sight.app.navigation.RouteProgressEngineTest" time="0.0"/>
+  <testcase name="requiresThreeConsecutiveFreshAccurateOffRouteFixes" classname="org.sight.app.navigation.RouteProgressEngineTest" time="0.0"/>
+  <testcase name="upcomingManeuverUsesStartOfNextStepRatherThanPreviousTurn" classname="org.sight.app.navigation.RouteProgressEngineTest" time="0.001"/>
+  <testcase name="arrivalRequiresFreshProximityAndExplicitUserConfirmation" classname="org.sight.app.navigation.RouteProgressEngineTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

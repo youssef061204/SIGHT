@@ -5,6 +5,7 @@ import json
 from datetime import datetime as dt
 from pathlib import Path
 import re
+import shutil
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -13,7 +14,8 @@ OUT = ROOT / "evaluation/results/product-validation"
 def read_text(path):
     if not path.is_file(): return ""
     raw = path.read_bytes()
-    return raw.decode("utf-16" if raw.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig", errors="replace").replace("\r\n", "\n")
+    decoded = raw.decode("utf-16" if raw.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig", errors="replace")
+    return re.sub(r"\r+\n", "\n", decoded)
 
 def digest(path):
     h = hashlib.sha256()
@@ -22,19 +24,22 @@ def digest(path):
     return {"bytes": path.stat().st_size, "sha256": h.hexdigest(),
             "modifiedAtUtc": dt.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat()}
 
-def xml_counts(paths):
+def xml_counts(paths, key):
     counts = {"tests": 0, "failures": 0, "errors": 0, "skipped": 0}
-    found = []
+    found, published = [], []
     for path in paths:
         try: root = ET.parse(path).getroot()
         except (ET.ParseError, OSError): continue
         suites = [root] if root.tag.endswith("testsuite") else [x for x in root.iter() if x.tag.endswith("testsuite")]
         for s in suites:
-            for key in counts:
-                try: counts[key] += int(s.get(key, 0))
+            for count_key in counts:
+                try: counts[count_key] += int(s.get(count_key, 0))
                 except ValueError: pass
         found.append(path.relative_to(ROOT).as_posix())
-    return counts, found
+        destination = OUT / f"{key}-{path.name}"
+        shutil.copyfile(path, destination)
+        published.append(destination.relative_to(ROOT).as_posix())
+    return counts, found, published
 
 def suite_gate(name, phase, expected):
     folder = ROOT / "evaluation/results" / ("product-" + phase)
@@ -67,12 +72,15 @@ def proof(name, phase):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    for old_xml in OUT.glob("*-TEST-*.xml"):
+        old_xml.unlink()
     tests = {}
     for key, relative in (("core_jvm", "core/build/test-results/test"), ("app_jvm", "app/build/test-results/testDebugUnitTest"),
                           ("perception_jvm", "perception/build/test-results/testDebugUnitTest"),
                           ("meta_jvm", "integrations/meta/adapter/build/test-results/testDebugUnitTest")):
-        counts, files = xml_counts((ROOT / relative).glob("TEST-*.xml"))
-        tests[key] = {**counts, "status": "passed" if files and counts["tests"] > 0 and not counts["failures"] and not counts["errors"] else ("failed" if counts["failures"] or counts["errors"] else "missing"), "xml": files}
+        counts, files, public_files = xml_counts((ROOT / relative).glob("TEST-*.xml"), key)
+        tests[key] = {**counts, "status": "passed" if files and counts["tests"] > 0 and not counts["failures"] and not counts["errors"] else ("failed" if counts["failures"] or counts["errors"] else "missing"),
+                      "xml": public_files, "xmlInternal": files}
     tests["android35_app"] = suite_gate("android35_app", "android35", 15)
     tests["android30_app"] = suite_gate("android30_app", "android30", 15)
     tests["android35_google_speech"] = suite_gate("android35_google_speech", "google-speech", 2)
@@ -143,14 +151,16 @@ def main():
     freshness = {}
     for key, source_roots, apk, xml_key in (
         ("app", ("app/src", "core/src", "perception/src"), required_artifacts[0], "app_jvm"),
-        ("app_android_test", ("app/src", "core/src", "perception/src"), required_artifacts[1], "app_jvm"),
+        # Test code lives in a separate APK. Main implementation changes can legitimately
+        # leave this APK UP-TO-DATE; the installed main APK is checked independently above.
+        ("app_android_test", ("app/src/androidTest",), required_artifacts[1], "app_jvm"),
         ("meta", ("integrations/meta/adapter/src", "core/src", "perception/src"), required_artifacts[2], "meta_jvm"),
     ):
         srcs = [p for root in source_roots for p in (ROOT / root).rglob("*") if p.is_file()]
         newest_src = max((p.stat().st_mtime for p in srcs), default=0)
         apk_path = ROOT / apk
         apk_fresh = apk_path.is_file() and apk_path.stat().st_mtime >= newest_src
-        xml_files = [ROOT / x for x in tests[xml_key].get("xml", [])]
+        xml_files = [ROOT / x for x in tests[xml_key].get("xmlInternal", [])]
         xml_fresh = bool(xml_files) and all(x.is_file() and x.stat().st_mtime >= newest_src for x in xml_files)
         freshness[key] = {"latestSourceModifiedAtUtc": dt.fromtimestamp(newest_src, timezone.utc).isoformat() if newest_src else None,
                           "apkAtOrAfterSources": apk_fresh, "testXmlAtOrAfterSources": xml_fresh}

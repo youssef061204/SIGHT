@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.app.navigation.NavigationProductTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-12T04:40:47" hostname="YUNO" time="0.014">
+  <properties/>
+  <testcase name="savedDestinationCommandsRequireAnExplicitNameAndDoNotBecomeSearchText" classname="org.sight.app.navigation.NavigationProductTest" time="0.004"/>
+  <testcase name="spokenWorkflowRecognizesDestinationNumberedChoiceAndLifecycleCommands" classname="org.sight.app.navigation.NavigationProductTest" time="0.004"/>
+  <testcase name="buildingCentroidOffsetIsDisclosedAndCannotAuthorizeAutomaticArrival" classname="org.sight.app.navigation.NavigationProductTest" time="0.001"/>
+  <testcase name="navigationDistancesAndTurnCuesComeFromThePolyline" classname="org.sight.app.navigation.NavigationProductTest" time="0.0"/>
+  <testcase name="choicesAreSpokenAndNeverSilentlySelectEvenOneMatch" classname="org.sight.app.navigation.NavigationProductTest" time="0.0"/>
+  <testcase name="ordinaryGpsDriftDoesNotBecomeAnOffRouteOrArrivalClaim" classname="org.sight.app.navigation.NavigationProductTest" time="0.001"/>
+  <testcase name="selfCrossingBranchIsNotMatchedWithoutPositionHistory" classname="org.sight.app.navigation.NavigationProductTest" time="0.0"/>
+  <testcase name="locationSpikeCannotCompleteTheRouteOrIssueAnEndInstruction" classname="org.sight.app.navigation.NavigationProductTest" time="0.0"/>
+  <testcase name="accuracyCircleMustFitNearDestinationBeforeAskingForConfirmation" classname="org.sight.app.navigation.NavigationProductTest" time="0.0"/>
+  <testcase name="untrustedMapNamesCannotInjectCrossingClearanceIntoSpeech" classname="org.sight.app.navigation.NavigationProductTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

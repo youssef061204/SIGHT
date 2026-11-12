@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.core.ProductSafetyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-12T04:37:55" hostname="YUNO" time="0.012">
+  <properties/>
+  <testcase name="trafficNeedsStableEvidenceAndLosesSupportWhenItsImageDirectionChanges" classname="org.sight.core.ProductSafetyTest" time="0.007"/>
+  <testcase name="unsupportedSurfaceClassesAndUnstableObjectsAreSilent" classname="org.sight.core.ProductSafetyTest" time="0.001"/>
+  <testcase name="visualDistancesAndExpiredProviderCuesCannotPassFinalAdmission" classname="org.sight.core.ProductSafetyTest" time="0.001"/>
+  <testcase name="crossingClearanceIsBlockedRegardlessOfOrigin" classname="org.sight.core.ProductSafetyTest" time="0.001"/>
+  <testcase name="surfaceEvidenceNeedsIndependentFramesAndNeverImpliesCrosswalkOrClearance" classname="org.sight.core.ProductSafetyTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

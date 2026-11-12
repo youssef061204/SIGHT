@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.app.navigation.RouteProviderTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-12T04:40:47" hostname="YUNO" time="0.051">
+  <properties/>
+  <testcase name="parsesActualPhotonResponseAndKeepsGeoJsonCoordinateOrder" classname="org.sight.app.navigation.RouteProviderTest" time="0.004"/>
+  <testcase name="footUrlSelectsActualFootBackendAndUsesLocaleIndependentLongitudeLatitude" classname="org.sight.app.navigation.RouteProviderTest" time="0.003"/>
+  <testcase name="rejectsUnavailableOrMalformedRouteInsteadOfCreatingSuccess" classname="org.sight.app.navigation.RouteProviderTest" time="0.001"/>
+  <testcase name="deniesNetworkBeforeTransportAndDiscardsAfterConsentRevocation" classname="org.sight.app.navigation.RouteProviderTest" time="0.038"/>
+  <testcase name="parsesActualFootRouteAndRehearsalIsExplicitlyProviderSourced" classname="org.sight.app.navigation.RouteProviderTest" time="0.003"/>
+  <testcase name="propagatesCancellationInsteadOfTurningItIntoProviderFailure" classname="org.sight.app.navigation.RouteProviderTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

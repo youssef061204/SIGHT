@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sight.app.SpeechQueueTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-11-12T04:40:47" hostname="YUNO" time="0.019">
+  <properties/>
+  <testcase name="privacy clear removes repeat history active work pending work and dedup text" classname="org.sight.app.SpeechQueueTest" time="0.004"/>
+  <testcase name="duplicate and obsolete start callbacks cannot create extra start events or replace active speech" classname="org.sight.app.SpeechQueueTest" time="0.001"/>
+  <testcase name="ongoing live statement interrupts on lost support while admitted fixed OCR can finish" classname="org.sight.app.SpeechQueueTest" time="0.002"/>
+  <testcase name="lower priority requests cannot supersede pending environment or navigation cues" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <testcase name="latest explicit user request supersedes older queued conversation responses" classname="org.sight.app.SpeechQueueTest" time="0.001"/>
+  <testcase name="dispatch respects priority with FIFO ordering inside a priority" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <testcase name="environment interruption resumes only a still fresh navigation cue" classname="org.sight.app.SpeechQueueTest" time="0.001"/>
+  <testcase name="lower-priority work cannot evict task results from a full queue" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <testcase name="real core grounding change between dispatch and TTS callback rejects contradicted directional speech" classname="org.sight.app.SpeechQueueTest" time="0.005"/>
+  <testcase name="task speech interrupts ambient and stale callbacks cannot finish the new utterance" classname="org.sight.app.SpeechQueueTest" time="0.001"/>
+  <testcase name="a changed route revision invalidates dispatched and queued navigation immediately" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <testcase name="before actual start even an OCR snapshot must pass full freshness rather than continuation policy" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <testcase name="duplicates are silent while pending active and recently started but explicit repeat can bypass dedup" classname="org.sight.app.SpeechQueueTest" time="0.001"/>
+  <testcase name="capacity remains three pending plus one active and fresh equal-priority work replaces oldest pending" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <testcase name="expired work cannot enter dispatch or actual TTS start and rejected work does not block following speech" classname="org.sight.app.SpeechQueueTest" time="0.001"/>
+  <testcase name="ambient cooldown suppresses unnecessary new narration without suppressing task evidence" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <testcase name="invalid high-priority input cannot interrupt a currently supported task" classname="org.sight.app.SpeechQueueTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

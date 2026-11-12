@@ -1,0 +1,20 @@
+{
+  "android35": {
+    "samples": 30,
+    "receiptToResultMs": {
+      "p50": 24,
+      "p95": 46
+    },
+    "runtimeSummary": "Camera callbacks 29.8/s; analyzer 29.2/s; inference 3.8/s.\nDetection n=14, P50 22 ms, P95 29 ms, P99 needs 200 samples.\nProcess PSS 165.2 MiB; managed heap 19 MiB.\nTTS engine callbacks are measured; audible speaker onset is unavailable. CameraX drops are unknown.",
+    "scope": "Short actual CameraX emulator run; virtual camera; analyzer-receipt timestamp, capture clock unavailable; no physical-device, sustained or battery claim"
+  },
+  "android30": {
+    "samples": 30,
+    "receiptToResultMs": {
+      "p50": 42,
+      "p95": 114
+    },
+    "runtimeSummary": "Camera callbacks 28.1/s; analyzer 25.2/s; inference 3.8/s.\nDetection n=14, P50 43 ms, P95 111 ms, P99 needs 200 samples.\nProcess PSS 184.9 MiB; managed heap 5 MiB.\nTTS engine callbacks are measured; audible speaker onset is unavailable. CameraX drops are unknown.",
+    "scope": "Short actual CameraX emulator run; virtual camera; analyzer-receipt timestamp, capture clock unavailable; no physical-device, sustained or battery claim"
+  }
+}
