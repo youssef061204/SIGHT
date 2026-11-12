@@ -1,0 +1,157 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "R",
+        "osm_id": 20513072,
+        "osm_key": "amenity",
+        "osm_value": "university",
+        "type": "house",
+        "name": "Queen's University",
+        "street": "King Street West",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7M 6G4",
+        "countrycode": "CA",
+        "extent": [
+          -76.5176203,
+          44.2307949,
+          -76.490403,
+          44.2195154
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4957555,
+          44.2263489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "N",
+        "osm_id": 633587053,
+        "osm_key": "information",
+        "osm_value": "map",
+        "type": "house",
+        "name": "Queen's University",
+        "street": "Union Street",
+        "locality": "University District",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 3N6",
+        "countrycode": "CA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4950892,
+          44.2279934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 5145336,
+        "osm_key": "tourism",
+        "osm_value": "gallery",
+        "type": "house",
+        "housenumber": "36",
+        "name": "Agnes Queen’s Art Gallery",
+        "street": "University Avenue",
+        "locality": "University District",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 3N6",
+        "countrycode": "CA",
+        "extent": [
+          -76.496557,
+          44.225595,
+          -76.4958853,
+          44.2251153
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4962825,
+          44.2253584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 790025539,
+        "osm_key": "amenity",
+        "osm_value": "university",
+        "type": "house",
+        "name": "Queen's University - Heating Plant",
+        "street": "King Street West",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 3N6",
+        "countrycode": "CA",
+        "extent": [
+          -76.4950015,
+          44.2229671,
+          -76.4935979,
+          44.2222445
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4942994,
+          44.2225418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 5106955,
+        "osm_key": "amenity",
+        "osm_value": "university",
+        "type": "house",
+        "name": "Queen's University - West Campus",
+        "street": "Hargreaves Way",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7M 6G4",
+        "countrycode": "CA",
+        "extent": [
+          -76.5176203,
+          44.2307949,
+          -76.513,
+          44.2229594
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5153064,
+          44.2268306
+        ]
+      }
+    }
+  ]
+}

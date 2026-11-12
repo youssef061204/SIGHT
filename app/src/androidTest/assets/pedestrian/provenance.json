@@ -1,0 +1,58 @@
+{
+  "scope": "Native positive smoke fixture chosen only from previously evaluated selection images; not independent accuracy or live-camera evidence",
+  "imageId": 568290,
+  "split": "selection",
+  "imageSha256": "116519cb932504866058215a0cca5e5d03b4af04a71e540db38c5caefb8d4725",
+  "groundTruthMaskSha256": "ddbf841fdecb4a471723a3fee1de5d9bac0e8aa962c4eeee06664516cbb45180",
+  "truthMaskClasses": {
+    "0": "other annotated classes",
+    "1": "road149",
+    "2": "pavement140",
+    "255": "ignored"
+  },
+  "attribution": {
+    "image_id": 568290,
+    "status": "resolved",
+    "author_name": "Alfenaar",
+    "author_url": "https://www.flickr.com/photos/alfenaar/",
+    "title": "Qbuzz 3078, Groningen Hereplein",
+    "source_url": "https://www.flickr.com/photos/alfenaar/9305416099/",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FfbhG1B&format=json"
+  },
+  "modelId": "intel-road-segmentation-adas-0001-fp32",
+  "pixelPosteriorCutoff": 0.0,
+  "desktopSelectionPixelCounts": {
+    "tp": 98247,
+    "fp": 1358,
+    "fn": 1100,
+    "tn": 172006
+  },
+  "desktopSelectionRoadIoU": 0.9755920758651507,
+  "desktopReferenceRegions": [
+    {
+      "category": 1,
+      "coverage": 0.3651580810546875,
+      "meanPosterior": 0.9532000023944579,
+      "box": [
+        0.0,
+        0.509765625,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "category": 2,
+      "coverage": 0.006875174386160714,
+      "meanPosterior": 0.8854523617289984,
+      "box": [
+        0.0,
+        0.642578125,
+        0.3091517857142857,
+        0.73828125
+      ]
+    }
+  ],
+  "datasetManifestSha256": "bdc8dfe9aa6e9e6641f69e17157de039a78f0aafbc7e1879e5289d66bc7366df"
+}

@@ -1,0 +1,162 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 25374703,
+        "osm_key": "amenity",
+        "osm_value": "townhall",
+        "type": "house",
+        "name": "Kingston City Hall",
+        "street": "Springer Market Square",
+        "locality": "Sydenham",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 1W8",
+        "countrycode": "CA",
+        "extent": [
+          -76.480937,
+          44.230198,
+          -76.4800331,
+          44.229534
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4804296,
+          44.2298681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 5150001,
+        "osm_key": "building",
+        "osm_value": "university",
+        "type": "house",
+        "housenumber": "85",
+        "name": "Theological Hall",
+        "street": "Stuart Street",
+        "locality": "Sydenham",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 2N7",
+        "countrycode": "CA",
+        "extent": [
+          -76.4938776,
+          44.2258659,
+          -76.4931896,
+          44.2255459
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4937168,
+          44.2257139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "R",
+        "osm_id": 14040741,
+        "osm_key": "building",
+        "osm_value": "university",
+        "type": "house",
+        "housenumber": "143",
+        "name": "Goodes Hall",
+        "street": "Union Street",
+        "locality": "University District",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 3S7",
+        "countrycode": "CA",
+        "extent": [
+          -76.4981996,
+          44.2285908,
+          -76.496939,
+          44.2278881
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4975732,
+          44.2282785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 5144995,
+        "osm_key": "building",
+        "osm_value": "university",
+        "type": "house",
+        "housenumber": "128",
+        "name": "The Law Building",
+        "street": "Union Street",
+        "locality": "University District",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 3S7",
+        "countrycode": "CA",
+        "extent": [
+          -76.4970148,
+          44.2277036,
+          -76.4964239,
+          44.2271165
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4968757,
+          44.227431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "N",
+        "osm_id": 456701119,
+        "osm_key": "highway",
+        "osm_value": "bus_stop",
+        "type": "house",
+        "name": "King Street E at City Hall (east side)",
+        "street": "Market Street",
+        "locality": "Sydenham",
+        "city": "Kingston",
+        "county": "Kingston (city)",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K7L 1W8",
+        "countrycode": "CA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.481614,
+          44.2298511
+        ]
+      }
+    }
+  ]
+}

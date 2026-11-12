@@ -27,12 +27,15 @@ object RouteGeometry {
 
     /** Local tangent-plane projection for short pedestrian segments; no altitude/floor matching. */
     fun project(point: GeoPoint, geometry: List<GeoPoint>): Projection {
+        return projections(point, geometry).minBy { it.distanceFromRouteMeters }
+    }
+
+    /** Retain candidate branches for continuity checks instead of snapping blindly across a loop. */
+    fun projections(point: GeoPoint, geometry: List<GeoPoint>): List<Projection> {
         require(geometry.size >= 2)
         val scaleX = cos(Math.toRadians(point.latitude)) * EARTH_METERS
         var total = 0.0
-        var bestDistance = Double.POSITIVE_INFINITY
-        var bestAlong = 0.0
-        var bestIndex = 0
+        val candidates = mutableListOf<Projection>()
         for (index in 0 until geometry.lastIndex) {
             val start = geometry[index]
             val end = geometry[index + 1]
@@ -47,14 +50,10 @@ object RouteGeometry {
             val t = if (norm < 1e-12) 0.0 else (-(ax * dx + ay * dy) / norm).coerceIn(0.0, 1.0)
             val distance = hypot(ax + t * dx, ay + t * dy)
             val segmentLength = distanceMeters(start, end)
-            if (distance < bestDistance) {
-                bestDistance = distance
-                bestAlong = total + t * segmentLength
-                bestIndex = index
-            }
+            candidates += Projection(distance, total + t * segmentLength, 0.0, index)
             total += segmentLength
         }
         require(total > 0 && total.isFinite()) { "Degenerate route geometry" }
-        return Projection(bestDistance, bestAlong, total, bestIndex)
+        return candidates.map { it.copy(totalGeometryMeters = total) }
     }
 }

@@ -1,0 +1,33 @@
+{
+  "schema": "sight.navigation-product-evidence-summary",
+  "providerSample": {
+    "trips": 3,
+    "returnedRoutes": 3,
+    "searches": 6,
+    "nonemptySearches": 6
+  },
+  "productionEngineReplay": {
+    "scenarios": 6,
+    "fixSamples": 217,
+    "automaticArrivalDeclarations": 0,
+    "unsupportedClearanceClaims": 0,
+    "failures": []
+  },
+  "mappedDetailsParser": {
+    "status": "passed",
+    "mappedRoughSurfaceSteps": 9,
+    "parsedSteps": 14,
+    "mappedEscalatorSteps": 1,
+    "scope": "One actual public Toronto route; native Valhalla parsing and map-feature provenance, not field conditions",
+    "cameraVerified": false,
+    "geometryPoints": 34,
+    "responseSha256": "352bca47d7f6d3c4a8d7984018830057dabf139666cc8a0d0826eb219d9a07ac",
+    "implementationSha256": "0226d2f46a3be107fe913e110eee6ada4e9990b383b267be522cc5a6793233c1",
+    "physicalAccessibilityVerified": false
+  },
+  "limits": [
+    "Small fixed public-landmark HTTP availability and response-parsing sample, not field walking, route accessibility, user destination accuracy or provider SLA",
+    "Constructed location traces over actual public-provider geometry, not recorded human/GNSS trajectories or measured navigation outcomes",
+    "No physical walking success, GPS accuracy distribution, route accessibility, audible latency, speech recognition or provider availability is established by these constructed traces"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "mappedRoughSurfaceSteps": 9,
+  "parsedSteps": 14,
+  "mappedEscalatorSteps": 1,
+  "scope": "One actual public Toronto route; native Valhalla parsing and map-feature provenance, not field conditions",
+  "cameraVerified": false,
+  "geometryPoints": 34,
+  "responseSha256": "352bca47d7f6d3c4a8d7984018830057dabf139666cc8a0d0826eb219d9a07ac",
+  "implementationSha256": "0226d2f46a3be107fe913e110eee6ada4e9990b383b267be522cc5a6793233c1",
+  "physicalAccessibilityVerified": false
+}

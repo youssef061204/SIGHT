@@ -44,6 +44,9 @@ class PhoneCameraSource(
     private val onTiming: (StageTiming) -> Unit = {},
     private val onFeedback: (String, Evidence) -> Unit = { _, _ -> },
     private val constrained: () -> Boolean = { false },
+    private val roadReader: AsyncRoadReader? = null,
+    private val roadEnabled: () -> Boolean = { false },
+    private val perceptionSuspended: () -> Boolean = { false },
 ) : VisualSource {
     // Distinguish restarted cameras so an old, asynchronous OCR task cannot enter a new session.
     override val sourceId = "phone-camera/${sessions.incrementAndGet()}"
@@ -98,6 +101,7 @@ class PhoneCameraSource(
         try {
             if (!active.get()) return
             received++
+            if(perceptionSuspended()){ skipped++; return }
             val receivedAt = SystemClock.elapsedRealtime()
             val exposureClock = realtimeClock
             val actualThermal = thermal()
@@ -154,6 +158,7 @@ class PhoneCameraSource(
                     if (plan.runDetection) onObservation(FrameObservation(evidence, detections), sample) else onTiming(sample)
                 }
             }
+            if (roadEnabled() && actualThermal < ThermalLevel.HOT && !limited) roadReader?.submit(frame,evidence)
             if (runOcr) {
                 if (quality?.feedback != null && detectionEnd - feedbackAtMs >= 6_000) {
                     feedbackAtMs = detectionEnd

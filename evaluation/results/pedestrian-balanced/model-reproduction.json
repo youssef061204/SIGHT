@@ -1,0 +1,11 @@
+{
+  "sourceUrl": "https://huggingface.co/AutowareFoundation/yabloc_pose_initializer/resolve/282a7fa0eb53ab5f8f0f179708ca57eacd25eaf1/saved_model/model_float32.tflite",
+  "sourceSha256": "9ac3a1423bc48e83808edc8273fe7a6e53d0bf0cabe2699d5ed1979b3c64f8a8",
+  "outputSha256": "8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4",
+  "bytes": 817520,
+  "schemaSha256": "da73b89f169b80d40b49e8131092c0d122d3306f24d2269a36c50b8c2d22991c",
+  "compilerVersion": "flatc version 25.12.19",
+  "resizeFlagsCorrected": 5,
+  "allTrainedBuffersUnchanged": true,
+  "scope": "Exact model conversion reproduction; no training, inference or device operations"
+}

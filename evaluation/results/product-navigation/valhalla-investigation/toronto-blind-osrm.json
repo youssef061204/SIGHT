@@ -1,0 +1,1358 @@
+{
+  "routes": [
+    {
+      "voiceLocale": "en-US",
+      "weight_name": "pedestrian",
+      "weight": 536.223,
+      "duration": 502.741,
+      "distance": 702.481,
+      "legs": [
+        {
+          "via_waypoints": [],
+          "admins": [
+            {
+              "iso_3166_1_alpha3": "CAN",
+              "iso_3166_1": "CA"
+            }
+          ],
+          "weight": 536.223,
+          "duration": 502.741,
+          "steps": [
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>Walk west on Great Hall.</speak>",
+                  "announcement": "Walk west on Great Hall.",
+                  "distanceAlongGeometry": 25.1
+                },
+                {
+                  "ssmlAnnouncement": "<speak>Pass VIA Concourse.</speak>",
+                  "announcement": "Pass VIA Concourse.",
+                  "distanceAlongGeometry": 6.3
+                }
+              ],
+              "intersections": [
+                {
+                  "bearings": [
+                    253
+                  ],
+                  "entry": [
+                    true
+                  ],
+                  "admin_index": 0,
+                  "out": 0,
+                  "geometry_index": 0,
+                  "location": [
+                    -79.380307,
+                    43.645217
+                  ]
+                }
+              ],
+              "maneuver": {
+                "instruction": "Walk west on Great Hall.",
+                "type": "depart",
+                "bearing_after": 253,
+                "bearing_before": 0,
+                "location": [
+                  -79.380307,
+                  43.645217
+                ]
+              },
+              "name": "Great Hall",
+              "duration": 17.696,
+              "distance": 25.069,
+              "driving_side": "right",
+              "weight": 17.696,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.380307,
+                    43.645217
+                  ],
+                  [
+                    -79.380605,
+                    43.645152
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>Continue on West Wing.</speak>",
+                  "announcement": "Continue on West Wing.",
+                  "distanceAlongGeometry": 14.2
+                }
+              ],
+              "intersections": [
+                {
+                  "bearings": [
+                    73,
+                    163,
+                    254,
+                    342
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "admin_index": 0,
+                  "out": 2,
+                  "geometry_index": 1,
+                  "location": [
+                    -79.380605,
+                    43.645152
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "straight",
+                "instruction": "Pass VIA Concourse.",
+                "type": "new name",
+                "bearing_after": 254,
+                "bearing_before": 253,
+                "location": [
+                  -79.380605,
+                  43.645152
+                ]
+              },
+              "name": "Great Hall",
+              "duration": 22.588,
+              "distance": 32.0,
+              "driving_side": "right",
+              "weight": 22.588,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.380605,
+                    43.645152
+                  ],
+                  [
+                    -79.380984,
+                    43.645074
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>In 50 meters, Turn left onto PATH Main Route.</speak>",
+                  "announcement": "In 50 meters, Turn left onto PATH Main Route.",
+                  "distanceAlongGeometry": 49.6
+                },
+                {
+                  "ssmlAnnouncement": "<speak>Turn left onto PATH Main Route.</speak>",
+                  "announcement": "Turn left onto PATH Main Route.",
+                  "distanceAlongGeometry": 40.0
+                }
+              ],
+              "intersections": [
+                {
+                  "bearings": [
+                    74,
+                    163,
+                    254,
+                    344
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "turn_weight": 5.0,
+                  "admin_index": 0,
+                  "out": 2,
+                  "geometry_index": 2,
+                  "location": [
+                    -79.380984,
+                    43.645074
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "straight",
+                "instruction": "Continue on West Wing.",
+                "type": "new name",
+                "bearing_after": 254,
+                "bearing_before": 254,
+                "location": [
+                  -79.380984,
+                  43.645074
+                ]
+              },
+              "name": "West Wing",
+              "duration": 55.765,
+              "distance": 79.0,
+              "driving_side": "right",
+              "weight": 60.765,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.380984,
+                    43.645074
+                  ],
+                  [
+                    -79.381925,
+                    43.644876
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [],
+              "intersections": [
+                {
+                  "bearings": [
+                    74,
+                    163,
+                    334
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "turn_weight": 5.0,
+                  "admin_index": 0,
+                  "out": 1,
+                  "geometry_index": 3,
+                  "location": [
+                    -79.381925,
+                    43.644876
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "left",
+                "instruction": "Turn left onto PATH Main Route.",
+                "type": "turn",
+                "bearing_after": 163,
+                "bearing_before": 254,
+                "location": [
+                  -79.381925,
+                  43.644876
+                ]
+              },
+              "name": "PATH Main Route",
+              "duration": 14.824,
+              "distance": 21.0,
+              "driving_side": "right",
+              "weight": 19.824,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.381925,
+                    43.644876
+                  ],
+                  [
+                    -79.381863,
+                    43.644725
+                  ],
+                  [
+                    -79.381908,
+                    43.644715
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>Continue on SkyWalk.</speak>",
+                  "announcement": "Continue on SkyWalk.",
+                  "distanceAlongGeometry": 14.2
+                }
+              ],
+              "intersections": [
+                {
+                  "bearings": [
+                    29,
+                    254
+                  ],
+                  "entry": [
+                    false,
+                    true
+                  ],
+                  "in": 0,
+                  "turn_weight": 5.0,
+                  "admin_index": 0,
+                  "out": 1,
+                  "geometry_index": 5,
+                  "location": [
+                    -79.381908,
+                    43.644715
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "straight",
+                "instruction": "Continue to Level 1.",
+                "type": "new name",
+                "bearing_after": 254,
+                "bearing_before": 209,
+                "location": [
+                  -79.381908,
+                  43.644715
+                ]
+              },
+              "name": "SkyWalk",
+              "duration": 25.412,
+              "distance": 36.0,
+              "driving_side": "right",
+              "weight": 30.412,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.381908,
+                    43.644715
+                  ],
+                  [
+                    -79.382341,
+                    43.644627
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>In 50 meters, Bear right.</speak>",
+                  "announcement": "In 50 meters, Bear right.",
+                  "distanceAlongGeometry": 49.6
+                },
+                {
+                  "ssmlAnnouncement": "<speak>Bear right.</speak>",
+                  "announcement": "Bear right.",
+                  "distanceAlongGeometry": 40.0
+                }
+              ],
+              "intersections": [
+                {
+                  "entry": [
+                    false,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    74,
+                    255
+                  ],
+                  "duration": 7.765,
+                  "admin_index": 0,
+                  "out": 1,
+                  "weight": 7.765,
+                  "geometry_index": 6,
+                  "location": [
+                    -79.382341,
+                    43.644627
+                  ]
+                },
+                {
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    75,
+                    163,
+                    253
+                  ],
+                  "duration": 2.118,
+                  "admin_index": 0,
+                  "out": 2,
+                  "weight": 2.118,
+                  "geometry_index": 7,
+                  "location": [
+                    -79.382468,
+                    43.644602
+                  ]
+                },
+                {
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    73,
+                    163,
+                    255
+                  ],
+                  "duration": 24.706,
+                  "admin_index": 0,
+                  "out": 2,
+                  "weight": 24.706,
+                  "geometry_index": 8,
+                  "location": [
+                    -79.382505,
+                    43.644594
+                  ]
+                },
+                {
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    75,
+                    253,
+                    344
+                  ],
+                  "duration": 24.0,
+                  "admin_index": 0,
+                  "out": 1,
+                  "weight": 24.0,
+                  "geometry_index": 9,
+                  "location": [
+                    -79.382927,
+                    43.644512
+                  ]
+                },
+                {
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    73,
+                    160,
+                    253
+                  ],
+                  "duration": 33.882,
+                  "admin_index": 0,
+                  "out": 2,
+                  "weight": 33.882,
+                  "geometry_index": 10,
+                  "location": [
+                    -79.383332,
+                    43.644425
+                  ]
+                },
+                {
+                  "bearings": [
+                    73,
+                    255,
+                    344
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "admin_index": 0,
+                  "out": 1,
+                  "geometry_index": 12,
+                  "location": [
+                    -79.383906,
+                    43.644301
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "straight",
+                "instruction": "Continue on SkyWalk.",
+                "type": "new name",
+                "bearing_after": 255,
+                "bearing_before": 254,
+                "location": [
+                  -79.382341,
+                  43.644627
+                ]
+              },
+              "name": "SkyWalk",
+              "duration": 100.941,
+              "distance": 143.0,
+              "driving_side": "right",
+              "weight": 100.941,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.382341,
+                    43.644627
+                  ],
+                  [
+                    -79.382468,
+                    43.644602
+                  ],
+                  [
+                    -79.382505,
+                    43.644594
+                  ],
+                  [
+                    -79.382927,
+                    43.644512
+                  ],
+                  [
+                    -79.383332,
+                    43.644425
+                  ],
+                  [
+                    -79.383599,
+                    43.644367
+                  ],
+                  [
+                    -79.383906,
+                    43.644301
+                  ],
+                  [
+                    -79.384049,
+                    43.644273
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [],
+              "intersections": [
+                {
+                  "bearings": [
+                    75,
+                    239,
+                    274
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "turn_weight": 5.0,
+                  "admin_index": 0,
+                  "out": 2,
+                  "geometry_index": 13,
+                  "location": [
+                    -79.384049,
+                    43.644273
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "slight right",
+                "instruction": "Bear right.",
+                "type": "turn",
+                "bearing_after": 274,
+                "bearing_before": 255,
+                "location": [
+                  -79.384049,
+                  43.644273
+                ]
+              },
+              "name": "",
+              "duration": 4.941,
+              "distance": 7.0,
+              "driving_side": "right",
+              "weight": 9.941,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.384049,
+                    43.644273
+                  ],
+                  [
+                    -79.38413,
+                    43.644277
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>Turn left to stay on SkyWalk.</speak>",
+                  "announcement": "Turn left to stay on SkyWalk.",
+                  "distanceAlongGeometry": 14.2
+                }
+              ],
+              "intersections": [
+                {
+                  "bearings": [
+                    94,
+                    253,
+                    265
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "turn_weight": 5.0,
+                  "admin_index": 0,
+                  "out": 1,
+                  "geometry_index": 14,
+                  "location": [
+                    -79.38413,
+                    43.644277
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "straight",
+                "instruction": "Take the escalator to Level 2.",
+                "type": "turn",
+                "bearing_after": 253,
+                "bearing_before": 274,
+                "location": [
+                  -79.38413,
+                  43.644277
+                ]
+              },
+              "name": "SkyWalk",
+              "duration": 19.765,
+              "distance": 28.0,
+              "driving_side": "right",
+              "weight": 24.765,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.38413,
+                    43.644277
+                  ],
+                  [
+                    -79.384468,
+                    43.644203
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>Pass SkyWalk.</speak>",
+                  "announcement": "Pass SkyWalk.",
+                  "distanceAlongGeometry": 4.0
+                }
+              ],
+              "intersections": [
+                {
+                  "bearings": [
+                    73,
+                    164,
+                    315
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "admin_index": 0,
+                  "out": 1,
+                  "geometry_index": 15,
+                  "location": [
+                    -79.384468,
+                    43.644203
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "left",
+                "instruction": "Turn left to stay on SkyWalk.",
+                "type": "continue",
+                "bearing_after": 164,
+                "bearing_before": 253,
+                "location": [
+                  -79.384468,
+                  43.644203
+                ]
+              },
+              "name": "SkyWalk",
+              "duration": 2.824,
+              "distance": 4.0,
+              "driving_side": "right",
+              "weight": 2.824,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.384468,
+                    43.644203
+                  ],
+                  [
+                    -79.384455,
+                    43.64417
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>In 50 meters, Bear right to stay on SkyWalk.</speak>",
+                  "announcement": "In 50 meters, Bear right to stay on SkyWalk.",
+                  "distanceAlongGeometry": 53.9
+                },
+                {
+                  "ssmlAnnouncement": "<speak>Bear right to stay on SkyWalk.</speak>",
+                  "announcement": "Bear right to stay on SkyWalk.",
+                  "distanceAlongGeometry": 40.0
+                }
+              ],
+              "intersections": [
+                {
+                  "entry": [
+                    true,
+                    true,
+                    false
+                  ],
+                  "in": 2,
+                  "bearings": [
+                    73,
+                    164,
+                    344
+                  ],
+                  "duration": 7.059,
+                  "admin_index": 0,
+                  "out": 1,
+                  "weight": 7.059,
+                  "geometry_index": 16,
+                  "location": [
+                    -79.384455,
+                    43.64417
+                  ]
+                },
+                {
+                  "bearings": [
+                    163,
+                    344
+                  ],
+                  "entry": [
+                    true,
+                    false
+                  ],
+                  "in": 1,
+                  "admin_index": 0,
+                  "out": 0,
+                  "geometry_index": 17,
+                  "location": [
+                    -79.384421,
+                    43.644086
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "straight",
+                "instruction": "Pass SkyWalk.",
+                "type": "new name",
+                "bearing_after": 164,
+                "bearing_before": 164,
+                "location": [
+                  -79.384455,
+                  43.64417
+                ]
+              },
+              "name": "SkyWalk",
+              "duration": 73.948,
+              "distance": 113.0,
+              "driving_side": "right",
+              "weight": 73.948,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.384455,
+                    43.64417
+                  ],
+                  [
+                    -79.384421,
+                    43.644086
+                  ],
+                  [
+                    -79.384235,
+                    43.643652
+                  ],
+                  [
+                    -79.384654,
+                    43.643299
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>In 50 meters, Continue.</speak>",
+                  "announcement": "In 50 meters, Continue.",
+                  "distanceAlongGeometry": 49.6
+                },
+                {
+                  "ssmlAnnouncement": "<speak>Continue.</speak>",
+                  "announcement": "Continue.",
+                  "distanceAlongGeometry": 40.0
+                }
+              ],
+              "intersections": [
+                {
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    41,
+                    135,
+                    251
+                  ],
+                  "duration": 23.294,
+                  "admin_index": 0,
+                  "out": 2,
+                  "weight": 23.294,
+                  "geometry_index": 19,
+                  "location": [
+                    -79.384654,
+                    43.643299
+                  ]
+                },
+                {
+                  "bearings": [
+                    71,
+                    163,
+                    251
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "admin_index": 0,
+                  "out": 2,
+                  "geometry_index": 20,
+                  "location": [
+                    -79.385042,
+                    43.643202
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "slight right",
+                "instruction": "Bear right to stay on SkyWalk.",
+                "type": "continue",
+                "bearing_after": 251,
+                "bearing_before": 221,
+                "location": [
+                  -79.384654,
+                  43.643299
+                ]
+              },
+              "name": "SkyWalk",
+              "duration": 61.412,
+              "distance": 87.0,
+              "driving_side": "right",
+              "weight": 61.412,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.384654,
+                    43.643299
+                  ],
+                  [
+                    -79.385042,
+                    43.643202
+                  ],
+                  [
+                    -79.385223,
+                    43.643157
+                  ],
+                  [
+                    -79.385689,
+                    43.643061
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>Turn right.</speak>",
+                  "announcement": "Turn right.",
+                  "distanceAlongGeometry": 40.0
+                }
+              ],
+              "intersections": [
+                {
+                  "bearings": [
+                    74,
+                    278
+                  ],
+                  "entry": [
+                    false,
+                    true
+                  ],
+                  "in": 0,
+                  "turn_weight": 5.0,
+                  "admin_index": 0,
+                  "out": 1,
+                  "geometry_index": 22,
+                  "location": [
+                    -79.385689,
+                    43.643061
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "straight",
+                "instruction": "Continue.",
+                "type": "new name",
+                "bearing_after": 278,
+                "bearing_before": 254,
+                "location": [
+                  -79.385689,
+                  43.643061
+                ]
+              },
+              "name": "",
+              "duration": 31.835,
+              "distance": 41.0,
+              "driving_side": "right",
+              "weight": 36.835,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.385689,
+                    43.643061
+                  ],
+                  [
+                    -79.385781,
+                    43.64307
+                  ],
+                  [
+                    -79.385912,
+                    43.643061
+                  ],
+                  [
+                    -79.386145,
+                    43.642947
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "voiceInstructions": [
+                {
+                  "ssmlAnnouncement": "<speak>Your destination is on the left.</speak>",
+                  "announcement": "Your destination is on the left.",
+                  "distanceAlongGeometry": 40.0
+                }
+              ],
+              "intersections": [
+                {
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    56,
+                    234,
+                    287
+                  ],
+                  "duration": 19.412,
+                  "admin_index": 0,
+                  "out": 2,
+                  "weight": 19.412,
+                  "geometry_index": 25,
+                  "location": [
+                    -79.386145,
+                    43.642947
+                  ]
+                },
+                {
+                  "entry": [
+                    false,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    98,
+                    269
+                  ],
+                  "duration": 7.765,
+                  "admin_index": 0,
+                  "out": 1,
+                  "weight": 7.765,
+                  "geometry_index": 27,
+                  "location": [
+                    -79.386453,
+                    43.642991
+                  ]
+                },
+                {
+                  "entry": [
+                    false,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    89,
+                    254
+                  ],
+                  "duration": 8.541,
+                  "admin_index": 0,
+                  "out": 1,
+                  "weight": 8.541,
+                  "geometry_index": 28,
+                  "location": [
+                    -79.386595,
+                    43.64299
+                  ]
+                },
+                {
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "bearings": [
+                    74,
+                    169,
+                    253
+                  ],
+                  "duration": 17.788,
+                  "admin_index": 0,
+                  "out": 2,
+                  "weight": 18.678,
+                  "geometry_index": 29,
+                  "location": [
+                    -79.386728,
+                    43.642962
+                  ]
+                },
+                {
+                  "bearings": [
+                    74,
+                    122,
+                    255
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0,
+                  "admin_index": 0,
+                  "out": 2,
+                  "geometry_index": 31,
+                  "location": [
+                    -79.386975,
+                    43.642908
+                  ]
+                }
+              ],
+              "maneuver": {
+                "modifier": "right",
+                "instruction": "Turn right.",
+                "type": "turn",
+                "bearing_after": 287,
+                "bearing_before": 236,
+                "location": [
+                  -79.386145,
+                  43.642947
+                ]
+              },
+              "name": "",
+              "duration": 70.791,
+              "distance": 86.412,
+              "driving_side": "right",
+              "weight": 74.274,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.386145,
+                    43.642947
+                  ],
+                  [
+                    -79.386261,
+                    43.642972
+                  ],
+                  [
+                    -79.386453,
+                    43.642991
+                  ],
+                  [
+                    -79.386595,
+                    43.64299
+                  ],
+                  [
+                    -79.386728,
+                    43.642962
+                  ],
+                  [
+                    -79.38693,
+                    43.642917
+                  ],
+                  [
+                    -79.386975,
+                    43.642908
+                  ],
+                  [
+                    -79.387081,
+                    43.642887
+                  ],
+                  [
+                    -79.387196,
+                    43.642865
+                  ]
+                ],
+                "type": "LineString"
+              }
+            },
+            {
+              "intersections": [
+                {
+                  "bearings": [
+                    75
+                  ],
+                  "entry": [
+                    true
+                  ],
+                  "in": 0,
+                  "admin_index": 0,
+                  "geometry_index": 33,
+                  "location": [
+                    -79.387196,
+                    43.642865
+                  ]
+                }
+              ],
+              "voiceInstructions": [],
+              "maneuver": {
+                "modifier": "left",
+                "instruction": "Your destination is on the left.",
+                "type": "arrive",
+                "bearing_after": 0,
+                "bearing_before": 255,
+                "location": [
+                  -79.387196,
+                  43.642865
+                ]
+              },
+              "name": "",
+              "duration": 0.0,
+              "distance": 0.0,
+              "driving_side": "right",
+              "weight": 0.0,
+              "mode": "walking",
+              "geometry": {
+                "coordinates": [
+                  [
+                    -79.387196,
+                    43.642865
+                  ],
+                  [
+                    -79.387196,
+                    43.642865
+                  ]
+                ],
+                "type": "LineString"
+              }
+            }
+          ],
+          "distance": 702.481,
+          "summary": "West Wing, SkyWalk"
+        }
+      ],
+      "geometry": {
+        "coordinates": [
+          [
+            -79.380307,
+            43.645217
+          ],
+          [
+            -79.380605,
+            43.645152
+          ],
+          [
+            -79.380984,
+            43.645074
+          ],
+          [
+            -79.381925,
+            43.644876
+          ],
+          [
+            -79.381863,
+            43.644725
+          ],
+          [
+            -79.381908,
+            43.644715
+          ],
+          [
+            -79.382341,
+            43.644627
+          ],
+          [
+            -79.382468,
+            43.644602
+          ],
+          [
+            -79.382505,
+            43.644594
+          ],
+          [
+            -79.382927,
+            43.644512
+          ],
+          [
+            -79.383332,
+            43.644425
+          ],
+          [
+            -79.383599,
+            43.644367
+          ],
+          [
+            -79.383906,
+            43.644301
+          ],
+          [
+            -79.384049,
+            43.644273
+          ],
+          [
+            -79.38413,
+            43.644277
+          ],
+          [
+            -79.384468,
+            43.644203
+          ],
+          [
+            -79.384455,
+            43.64417
+          ],
+          [
+            -79.384421,
+            43.644086
+          ],
+          [
+            -79.384235,
+            43.643652
+          ],
+          [
+            -79.384654,
+            43.643299
+          ],
+          [
+            -79.385042,
+            43.643202
+          ],
+          [
+            -79.385223,
+            43.643157
+          ],
+          [
+            -79.385689,
+            43.643061
+          ],
+          [
+            -79.385781,
+            43.64307
+          ],
+          [
+            -79.385912,
+            43.643061
+          ],
+          [
+            -79.386145,
+            43.642947
+          ],
+          [
+            -79.386261,
+            43.642972
+          ],
+          [
+            -79.386453,
+            43.642991
+          ],
+          [
+            -79.386595,
+            43.64299
+          ],
+          [
+            -79.386728,
+            43.642962
+          ],
+          [
+            -79.38693,
+            43.642917
+          ],
+          [
+            -79.386975,
+            43.642908
+          ],
+          [
+            -79.387081,
+            43.642887
+          ],
+          [
+            -79.387196,
+            43.642865
+          ]
+        ],
+        "type": "LineString"
+      }
+    }
+  ],
+  "waypoints": [
+    {
+      "distance": 1.937,
+      "name": "Great Hall",
+      "location": [
+        -79.380307,
+        43.645217
+      ]
+    },
+    {
+      "distance": 30.524,
+      "name": "",
+      "location": [
+        -79.387196,
+        43.642865
+      ]
+    }
+  ],
+  "code": "Ok"
+}

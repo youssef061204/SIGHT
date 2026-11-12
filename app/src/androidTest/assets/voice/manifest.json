@@ -1,0 +1,37 @@
+﻿{
+    "schema":  "sight.synthetic-command-audio.v1",
+    "source":  "Windows System.Speech.Synthesis.SpeechSynthesizer",
+    "voice":  "Microsoft David Desktop",
+    "locale":  "en-US",
+    "pcmFormat":  "16000 Hz, 16-bit signed little-endian PCM, mono, WAV",
+    "rate":  0,
+    "volume":  100,
+    "selection":  "Three fixed command intents selected before ASR execution; no vocabulary grammar is supplied to Vosk",
+    "boundary":  "Synthetic clean single-voice command smoke fixtures; not microphone, noise, accent, destination-name or population ASR evaluation",
+    "fixtures":  [
+                     {
+                         "file":  "destination.wav",
+                         "referenceText":  "Take me to the library.",
+                         "expectedIntent":  "route-search",
+                         "expectedTarget":  "the library",
+                         "bytes":  68206,
+                         "sha256":  "14cfeb72600f9d88506bf27d20f08458c96c2ee926e90d15ba39ae525c2c816a"
+                     },
+                     {
+                         "file":  "find-chair.wav",
+                         "referenceText":  "Find a chair.",
+                         "expectedIntent":  "find",
+                         "expectedTarget":  "chair",
+                         "bytes":  54766,
+                         "sha256":  "f2de0557e80df03a8a0c2f5d9a59148650b60abd2eddc065fa57664d787cdebe"
+                     },
+                     {
+                         "file":  "stop-navigation.wav",
+                         "referenceText":  "Stop navigation.",
+                         "expectedIntent":  "cancel-route",
+                         "expectedTarget":  "",
+                         "bytes":  64366,
+                         "sha256":  "aca4a47f8f4e02b2da083ef0de89c657b3747cd9ee063e0d5385494891bdfca8"
+                     }
+                 ]
+}

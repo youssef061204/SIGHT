@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 39036376,
+        "osm_key": "tourism",
+        "osm_value": "gallery",
+        "type": "house",
+        "housenumber": "380",
+        "name": "National Gallery of Canada",
+        "street": "Sussex Drive",
+        "locality": "Byward Market",
+        "district": "Lowertown",
+        "city": "Ottawa",
+        "county": "Eastern Ontario",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K1N 9N4",
+        "countrycode": "CA",
+        "extent": [
+          -75.6999141,
+          45.4301454,
+          -75.6974674,
+          45.4289017
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6988125,
+          45.4295263
+        ]
+      }
+    }
+  ]
+}

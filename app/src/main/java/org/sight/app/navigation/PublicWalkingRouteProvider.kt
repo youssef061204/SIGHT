@@ -14,19 +14,19 @@ import org.json.JSONObject
 class PublicWalkingRouteProvider(
     private val networkAllowed: () -> Boolean,
     private val transport: JsonTransport = BoundedHttpsTransport(),
-) {
-    suspend fun search(query: String): List<Destination> {
+) : WalkingRouteService {
+    override suspend fun search(query: String, bias: GeoPoint?): List<Destination> {
         consent()
         val normalized = query.trim()
         if (normalized.length !in 2..160) throw RouteProviderException(RouteFailure.INVALID_REQUEST,
             "Destination queries must contain 2 to 160 characters.")
-        val body = transport.get(searchUrl(normalized))
+        val body = transport.get(searchUrl(normalized, bias))
         currentCoroutineContext().ensureActive()
         consent()
         return withContext(Dispatchers.Default) { parseSearch(body) }
     }
 
-    suspend fun route(origin: GeoPoint, destination: Destination): WalkingRoute {
+    override suspend fun route(origin: GeoPoint, destination: Destination): WalkingRoute {
         consent()
         val directDistance = RouteGeometry.distanceMeters(origin, destination.point)
         if (directDistance < 10 || directDistance > 50_000) {
@@ -52,8 +52,9 @@ class PublicWalkingRouteProvider(
         const val MAP_FIX_URL = "https://www.openstreetmap.org/fixthemap"
         const val SERVICE_POLICY_URL = "https://routing.openstreetmap.de/about.html"
 
-        fun searchUrl(query: String): String =
-            "https://photon.komoot.io/api/?q=${URLEncoder.encode(query, Charsets.UTF_8.name())}&limit=5&lang=en"
+        fun searchUrl(query: String, bias: GeoPoint? = null): String =
+            "https://photon.komoot.io/api/?q=${URLEncoder.encode(query, Charsets.UTF_8.name())}&limit=5&lang=en" +
+                (bias?.let { String.format(Locale.US, "&lat=%.7f&lon=%.7f", it.latitude, it.longitude) } ?: "")
 
         fun routeUrl(origin: GeoPoint, destination: GeoPoint): String = String.format(Locale.US,
             "https://routing.openstreetmap.de/routed-foot/route/v1/foot/%.7f,%.7f;%.7f,%.7f" +
@@ -73,8 +74,8 @@ class PublicWalkingRouteProvider(
                     .mapNotNull { key -> properties.optString(key).takeIf { it.isNotBlank() && it != "null" } }
                     .distinct()
                 require(parts.isNotEmpty()) { "Destination has no label" }
-                val label = parts.joinToString(", ").take(300)
-                val id = "${properties.optString("osm_type", "unknown")}:${properties.optString("osm_id", "$index")}:${point.latitude}:${point.longitude}"
+                val label = RouteSpeech.label(parts.joinToString(", "))
+                val id = "${properties.optString("osm_type", "unknown").take(20)}:${properties.optString("osm_id", "$index").take(100)}:${point.latitude}:${point.longitude}"
                 Destination(id, label, point)
             }
         }

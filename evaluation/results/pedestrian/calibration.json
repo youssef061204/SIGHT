@@ -1,0 +1,80 @@
+{
+  "protocolSha256": "74ee5268d57093e6b3a7c7c1c4ca00ceadd5a68e1c770918dd2a96e49fcb19c6",
+  "candidates": [
+    {
+      "coverage": 0.06,
+      "tp": 0,
+      "fp": 2,
+      "fn": 5,
+      "tn": 43,
+      "precision": 0.0,
+      "recall": 0.0,
+      "iou": 0.0,
+      "falseEventsPerImage": 0.04
+    },
+    {
+      "coverage": 0.1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 5,
+      "tn": 44,
+      "precision": 0.0,
+      "recall": 0.0,
+      "iou": 0.0,
+      "falseEventsPerImage": 0.02
+    },
+    {
+      "coverage": 0.2,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "tn": 45,
+      "precision": null,
+      "recall": 0.0,
+      "iou": 0.0,
+      "falseEventsPerImage": 0.0
+    },
+    {
+      "coverage": 0.3,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "tn": 45,
+      "precision": null,
+      "recall": 0.0,
+      "iou": 0.0,
+      "falseEventsPerImage": 0.0
+    },
+    {
+      "coverage": 0.4,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "tn": 45,
+      "precision": null,
+      "recall": 0.0,
+      "iou": 0.0,
+      "falseEventsPerImage": 0.0
+    }
+  ],
+  "automaticRoadVoiceEnabled": false,
+  "chosen": null,
+  "roadPixelMetrics": {
+    "tp": 15579,
+    "fp": 116931,
+    "fn": 239077,
+    "tn": 12804907,
+    "precision": 0.1175684853973285,
+    "recall": 0.0611766461422468,
+    "iou": 0.04192557866663796
+  },
+  "roadOrMarkingPixelMetrics": {
+    "tp": 15609,
+    "fp": 117201,
+    "fn": 239047,
+    "tn": 12804637,
+    "precision": 0.11752880054212785,
+    "recall": 0.06129445212364916,
+    "iou": 0.041975813283063115
+  }
+}

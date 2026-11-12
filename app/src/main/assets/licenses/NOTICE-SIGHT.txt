@@ -1,0 +1,16 @@
+SIGHT
+Copyright 2026 Youssef Elsokkary and SIGHT contributors.
+
+Original SIGHT source is licensed under Apache License 2.0.
+Third-party SDKs, models, datasets, photographs and generated benchmark derivatives
+retain their respective licenses and notices; this source license does not replace
+those terms. See models/NOTICE.md, evaluation/**/ATTRIBUTION.md, the pedestrian
+evaluation provenance and the separate offline voice model notice.
+
+The optional Meta integration is a separate project subject to Meta's SDK terms.
+It is not included in the phone application dependency graph. Experimental Meta
+capabilities are not enabled for distribution.
+
+SIGHT is assistive software under evaluation. It does not establish crossing safety,
+physical clearance, obstacle absence, accessible routes or suitability for independent
+mobility. Retain established mobility aids and use supervised evaluation protocols.

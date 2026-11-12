@@ -1,0 +1,2124 @@
+{
+  "schema": "sight.navigation-production-engine-replay",
+  "routeProvider": "FOSSGIS OSRM foot",
+  "routeSteps": 13,
+  "sourceSha256": "c3665473629d8b0aa7db7d1b693f9d608d1b0ef841546435fe27f8e863ffd660",
+  "routeGeometryPoints": 58,
+  "failures": [],
+  "scope": "Constructed location traces over actual public-provider geometry, not recorded human/GNSS trajectories or measured navigation outcomes",
+  "boundaries": "No physical walking success, GPS accuracy distribution, route accessibility, audible latency, speech recognition or provider availability is established by these constructed traces",
+  "scenarios": [
+    {
+      "automaticArrivalDeclarations": 0,
+      "providerTurnIndexes": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "purpose": "Constructed 8m/6s samples follow actual provider geometry",
+      "uncertainStates": 0,
+      "stages": [
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 828.8,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 56.9,
+          "sample": 0
+        },
+        {
+          "instruction": "In approximately 45 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 820.7838731005342,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 48.883873100534196,
+          "sample": 1
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 812.7677461922921,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 40.86774619229211,
+          "sample": 2
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 804.7516192928261,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 32.85161929282619,
+          "sample": 3
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 796.7354923816064,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 24.83549238160642,
+          "sample": 4
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 788.719365480045,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 16.81936548004503,
+          "sample": 5
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left. GPS cannot identify the exact turning point.",
+          "nextStep": 1,
+          "remainingMeters": 780.7032385782643,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 8.803238578264335,
+          "sample": 6
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped route turns slight right at York Concourse.",
+          "nextStep": 2,
+          "remainingMeters": 772.6871116764837,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 17.187111676483752,
+          "sample": 7
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns slight right at York Concourse. GPS cannot identify the exact turning point.",
+          "nextStep": 2,
+          "remainingMeters": 764.6709847768014,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 9.17098477680149,
+          "sample": 8
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 756.6548578747859,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 40.25485787478593,
+          "sample": 9
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 748.6387309710997,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 32.23873097109973,
+          "sample": 10
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 740.6226040719777,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 24.222604071977713,
+          "sample": 11
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 732.6064771673857,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 16.20647716738577,
+          "sample": 12
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at York Concourse. GPS cannot identify the exact turning point.",
+          "nextStep": 3,
+          "remainingMeters": 724.5903502616426,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 8.190350261642635,
+          "sample": 13
+        },
+        {
+          "instruction": "In approximately 35 metres along the route, the mapped route turns right at York Concourse.",
+          "nextStep": 4,
+          "remainingMeters": 716.5742233654305,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 35.074223365430555,
+          "sample": 14
+        },
+        {
+          "instruction": "In approximately 25 metres along the route, the mapped route turns right at York Concourse.",
+          "nextStep": 4,
+          "remainingMeters": 708.55809645892,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 27.058096458920033,
+          "sample": 15
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped route turns right at York Concourse.",
+          "nextStep": 4,
+          "remainingMeters": 700.5419695559783,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 19.04196955597837,
+          "sample": 16
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right at York Concourse. GPS cannot identify the exact turning point.",
+          "nextStep": 4,
+          "remainingMeters": 692.5258426537936,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 11.025842653793632,
+          "sample": 17
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right at York Concourse. GPS cannot identify the exact turning point.",
+          "nextStep": 4,
+          "remainingMeters": 684.509715750852,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 3.009715750852081,
+          "sample": 18
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 676.4935888486747,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 60.69358884867472,
+          "sample": 19
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 668.477461947207,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 52.67746194720701,
+          "sample": 20
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 660.4613350367866,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 44.66133503678668,
+          "sample": 21
+        },
+        {
+          "instruction": "In approximately 35 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 652.4452081418204,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 36.64520814182049,
+          "sample": 22
+        },
+        {
+          "instruction": "In approximately 25 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 644.4290812405985,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 28.629081240598566,
+          "sample": 23
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 636.412954339302,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 20.612954339302064,
+          "sample": 24
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 628.3968274346513,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 12.596827434651345,
+          "sample": 25
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at York East Teamway. GPS cannot identify the exact turning point.",
+          "nextStep": 5,
+          "remainingMeters": 620.3807005313773,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 4.580700531377374,
+          "sample": 26
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 612.3645736255711,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 81.86457362557115,
+          "sample": 27
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 604.3484467231516,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 73.84844672315165,
+          "sample": 28
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 596.3323198219142,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 65.83231982191427,
+          "sample": 29
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 588.3161929187498,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 57.81619291874989,
+          "sample": 30
+        },
+        {
+          "instruction": "In approximately 45 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 580.3000660148236,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 49.8000660148237,
+          "sample": 31
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 572.2839391108973,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 41.78393911089739,
+          "sample": 32
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 564.2678122102263,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 33.767812210226396,
+          "sample": 33
+        },
+        {
+          "instruction": "In approximately 25 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 556.2516853063001,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 25.751685306300203,
+          "sample": 34
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 548.2355584050847,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 17.73555840508476,
+          "sample": 35
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left. GPS cannot identify the exact turning point.",
+          "nextStep": 6,
+          "remainingMeters": 540.2194315030341,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 9.719431503034173,
+          "sample": 36
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left at PATH Main Route.",
+          "nextStep": 7,
+          "remainingMeters": 532.203304599165,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 21.803304599165074,
+          "sample": 37
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left at PATH Main Route.",
+          "nextStep": 7,
+          "remainingMeters": 524.1871776974629,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 13.787177697462937,
+          "sample": 38
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at PATH Main Route. GPS cannot identify the exact turning point.",
+          "nextStep": 7,
+          "remainingMeters": 516.1710507864755,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 5.771050786475541,
+          "sample": 39
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at PATH. GPS cannot identify the exact turning point.",
+          "nextStep": 8,
+          "remainingMeters": 508.1549238809434,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 3.054923880943477,
+          "sample": 40
+        },
+        {
+          "instruction": "In approximately 210 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 500.13879697777753,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 213.9387969777776,
+          "sample": 41
+        },
+        {
+          "instruction": "In approximately 200 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 492.1226700768637,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 205.92267007686377,
+          "sample": 42
+        },
+        {
+          "instruction": "In approximately 190 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 484.10654317494226,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 197.90654317494233,
+          "sample": 43
+        },
+        {
+          "instruction": "In approximately 180 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 476.0904162730207,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 189.89041627302078,
+          "sample": 44
+        },
+        {
+          "instruction": "In approximately 180 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 468.0742893710993,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 181.8742893710994,
+          "sample": 45
+        },
+        {
+          "instruction": "In approximately 170 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 460.0581624689542,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 173.85816246895428,
+          "sample": 46
+        },
+        {
+          "instruction": "In approximately 160 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 452.04203556703277,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 165.84203556703284,
+          "sample": 47
+        },
+        {
+          "instruction": "In approximately 150 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 444.0259086572321,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 157.82590865723216,
+          "sample": 48
+        },
+        {
+          "instruction": "In approximately 140 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 436.00978175685015,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 149.8097817568502,
+          "sample": 49
+        },
+        {
+          "instruction": "In approximately 140 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 427.9936548564683,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 141.79365485646838,
+          "sample": 50
+        },
+        {
+          "instruction": "In approximately 130 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 419.97752794730127,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 133.77752794730134,
+          "sample": 51
+        },
+        {
+          "instruction": "In approximately 120 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 411.9614010471454,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 125.76140104714545,
+          "sample": 52
+        },
+        {
+          "instruction": "In approximately 110 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 403.9452741467635,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 117.74527414676356,
+          "sample": 53
+        },
+        {
+          "instruction": "In approximately 100 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 395.9291472375964,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 109.72914723759646,
+          "sample": 54
+        },
+        {
+          "instruction": "In approximately 100 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 387.91302033721456,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 101.71302033721463,
+          "sample": 55
+        },
+        {
+          "instruction": "In approximately 90 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 379.89689343741753,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 93.6968934374176,
+          "sample": 56
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 371.88076653508415,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 85.68076653508422,
+          "sample": 57
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 363.86463963275077,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 77.66463963275083,
+          "sample": 58
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 355.84851273248313,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 69.6485127324832,
+          "sample": 59
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 347.83238582908575,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 61.63238582908582,
+          "sample": 60
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 339.8162589256884,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 53.61625892568844,
+          "sample": 61
+        },
+        {
+          "instruction": "In approximately 45 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 331.80013202321754,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 45.60013202321761,
+          "sample": 62
+        },
+        {
+          "instruction": "In approximately 35 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 323.78400511449803,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 37.5840051144981,
+          "sample": 63
+        },
+        {
+          "instruction": "In approximately 25 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 315.76787820805504,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 29.56787820805505,
+          "sample": 64
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 307.75175131153844,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 21.55175131153851,
+          "sample": 65
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 299.73562439697326,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 13.535624396973276,
+          "sample": 66
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns slight left at PATH. GPS cannot identify the exact turning point.",
+          "nextStep": 9,
+          "remainingMeters": 291.71949749736,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 5.519497497360021,
+          "sample": 67
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 283.7033705967442,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 67.80337059674423,
+          "sample": 68
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 275.68724369213044,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 59.78724369213046,
+          "sample": 69
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 267.6711167975425,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 51.771116797542504,
+          "sample": 70
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 259.65498989316006,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 43.75498989316009,
+          "sample": 71
+        },
+        {
+          "instruction": "In approximately 35 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 251.63886298949262,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 35.738862989492645,
+          "sample": 72
+        },
+        {
+          "instruction": "In approximately 25 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 243.62273608437894,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 27.722736084378994,
+          "sample": 73
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 235.60660918160065,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 19.706609181600697,
+          "sample": 74
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at SkyWalk. GPS cannot identify the exact turning point.",
+          "nextStep": 10,
+          "remainingMeters": 227.5904822782825,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 11.690482278282502,
+          "sample": 75
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at SkyWalk. GPS cannot identify the exact turning point.",
+          "nextStep": 10,
+          "remainingMeters": 219.57435537063668,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 3.674355370636704,
+          "sample": 76
+        },
+        {
+          "instruction": "In approximately 120 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 211.55822846888896,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 124.05822846888896,
+          "sample": 77
+        },
+        {
+          "instruction": "In approximately 110 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 203.54210157089355,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 116.04210157089358,
+          "sample": 78
+        },
+        {
+          "instruction": "In approximately 100 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 195.52597466423413,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 108.02597466423413,
+          "sample": 79
+        },
+        {
+          "instruction": "In approximately 100 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 187.5098477575747,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 100.00984775757468,
+          "sample": 80
+        },
+        {
+          "instruction": "In approximately 90 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 179.4937208608155,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 91.99372086081553,
+          "sample": 81
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 171.4775939527971,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 83.97759395279706,
+          "sample": 82
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 163.4614670526337,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 75.96146705263368,
+          "sample": 83
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 155.44534015119393,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 67.94534015119393,
+          "sample": 84
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 147.42921324093797,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 59.929213240938,
+          "sample": 85
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 139.41308633949808,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 51.91308633949802,
+          "sample": 86
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 131.39695943805827,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 43.896959438058275,
+          "sample": 87
+        },
+        {
+          "instruction": "In approximately 35 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 123.38083254197174,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 35.8808325419717,
+          "sample": 88
+        },
+        {
+          "instruction": "In approximately 25 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 115.36470563324657,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 27.864705633246558,
+          "sample": 89
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 107.34857873008883,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 19.848578730088775,
+          "sample": 90
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right. GPS cannot identify the exact turning point.",
+          "nextStep": 11,
+          "remainingMeters": 99.3324518281347,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 11.832451828134708,
+          "sample": 91
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right. GPS cannot identify the exact turning point.",
+          "nextStep": 11,
+          "remainingMeters": 91.31632492618047,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 3.816324926180414,
+          "sample": 92
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 83.30019803129154,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 83.10019803129148,
+          "sample": 93
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 75.28407112021104,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 75.08407112021098,
+          "sample": 94
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 67.26794421734208,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 67.06794421734207,
+          "sample": 95
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 59.25181731486929,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 59.051817314869254,
+          "sample": 96
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 51.23569041610664,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 51.035690416106604,
+          "sample": 97
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 43.2195635106839,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 43.01956351068384,
+          "sample": 98
+        },
+        {
+          "instruction": "In approximately 35 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 35.203436609305854,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 35.00343660930582,
+          "sample": 99
+        },
+        {
+          "instruction": "In approximately 25 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 27.187309709231236,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 26.987309709231226,
+          "sample": 100
+        },
+        {
+          "instruction": "In approximately 15 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 19.171182812683806,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 18.971182812683764,
+          "sample": 101
+        },
+        {
+          "instruction": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "nextStep": null,
+          "remainingMeters": 11.155055905893269,
+          "state": "ARRIVAL_CONFIRMATION_REQUIRED",
+          "detail": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "distanceToNextStepMeters": null,
+          "sample": 102
+        },
+        {
+          "instruction": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "nextStep": null,
+          "remainingMeters": 3.138929005961959,
+          "state": "ARRIVAL_CONFIRMATION_REQUIRED",
+          "detail": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "distanceToNextStepMeters": null,
+          "sample": 103
+        },
+        {
+          "instruction": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "nextStep": null,
+          "remainingMeters": 0,
+          "state": "ARRIVAL_CONFIRMATION_REQUIRED",
+          "detail": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "distanceToNextStepMeters": null,
+          "sample": 104
+        }
+      ],
+      "unsupportedClearanceClaims": 0,
+      "id": "mapped-walk",
+      "offRouteStates": 0,
+      "arrivalConfirmationSuggestions": 3,
+      "turnsObservedAsUpcoming": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "samples": 105
+    },
+    {
+      "automaticArrivalDeclarations": 0,
+      "providerTurnIndexes": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "purpose": "Same constructed walk with alternating ±8m latitude noise, declared12m accuracy",
+      "uncertainStates": 0,
+      "stages": [
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 828.8,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 56.9,
+          "sample": 0
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 818.4704139869067,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 46.570413986906736,
+          "sample": 1
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 815.0812139997574,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 43.18121399975748,
+          "sample": 2
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 802.5326933609989,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 30.63269336099895,
+          "sample": 3
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 798.9543487201885,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 27.05434872018852,
+          "sample": 4
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 786.5005203152203,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 14.600520315220386,
+          "sample": 5
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left. GPS cannot identify the exact turning point.",
+          "nextStep": 1,
+          "remainingMeters": 782.9220921999744,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 11.022092199974416,
+          "sample": 6
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns slight right at York Concourse. GPS cannot identify the exact turning point.",
+          "nextStep": 2,
+          "remainingMeters": 764.2179631349996,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 8.717963134999692,
+          "sample": 7
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns slight right at York Concourse.",
+          "nextStep": 2,
+          "remainingMeters": 774.1983006491021,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 18.69830064910211,
+          "sample": 8
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 749.0309930381898,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 32.630993038189814,
+          "sample": 9
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 756.2734386917182,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 39.873438691718235,
+          "sample": 10
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 731.8274605822138,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 15.427460582213854,
+          "sample": 11
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left at York Concourse.",
+          "nextStep": 3,
+          "remainingMeters": 740.4403206294938,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 24.04032062949389,
+          "sample": 12
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns right at York Concourse.",
+          "nextStep": 4,
+          "remainingMeters": 708.7652018072014,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 27.265201807201436,
+          "sample": 13
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns right at York Concourse.",
+          "nextStep": 4,
+          "remainingMeters": 718.9976642718126,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 37.49766427181265,
+          "sample": 14
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns right at York Concourse.",
+          "nextStep": 4,
+          "remainingMeters": 700.8935348207874,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 19.393534820787465,
+          "sample": 15
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns right at York Concourse.",
+          "nextStep": 4,
+          "remainingMeters": 708.2065328382355,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 26.706532838235546,
+          "sample": 16
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right at York Concourse. GPS cannot identify the exact turning point.",
+          "nextStep": 4,
+          "remainingMeters": 684.8612840275906,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 3.3612840275906706,
+          "sample": 17
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right at York Concourse. GPS cannot identify the exact turning point.",
+          "nextStep": 4,
+          "remainingMeters": 692.1742760211781,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 10.674276021178173,
+          "sample": 18
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 674.068043669827,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 58.26804366982708,
+          "sample": 19
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 670.9030160848677,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 55.103016084867704,
+          "sample": 20
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 657.1773443748677,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 41.37734437486779,
+          "sample": 21
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 654.7984303139426,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 38.99843031394266,
+          "sample": 22
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 642.1180229413899,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 26.318022941389927,
+          "sample": 23
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left at York East Teamway.",
+          "nextStep": 5,
+          "remainingMeters": 638.7240213262185,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 22.924021326218508,
+          "sample": 24
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at York East Teamway. GPS cannot identify the exact turning point.",
+          "nextStep": 5,
+          "remainingMeters": 626.3356090390755,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 10.535609039075553,
+          "sample": 25
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at York East Teamway. GPS cannot identify the exact turning point.",
+          "nextStep": 5,
+          "remainingMeters": 622.441926962821,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 6.641926962821003,
+          "sample": 26
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 604.6452231654081,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 74.14522316540814,
+          "sample": 27
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 612.067798576816,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 81.56779857681607,
+          "sample": 28
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 588.6184481490512,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 58.11844814905129,
+          "sample": 29
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 596.0300660102715,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 65.53006601027158,
+          "sample": 30
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 572.586196973075,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 42.086196973075005,
+          "sample": 31
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 579.9978095713033,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 49.49780957130332,
+          "sample": 32
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 556.5539457995895,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 26.0539457995896,
+          "sample": 33
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 563.9655531355927,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 33.46555313559276,
+          "sample": 34
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left. GPS cannot identify the exact turning point.",
+          "nextStep": 6,
+          "remainingMeters": 540.5307654777074,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 10.030765477707462,
+          "sample": 35
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 547.9323185363146,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 17.432318536314654,
+          "sample": 36
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left at PATH Main Route.",
+          "nextStep": 7,
+          "remainingMeters": 530.1937008026655,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 19.79370080266557,
+          "sample": 37
+        },
+        {
+          "instruction": "In approximately 200 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 492.9454538454192,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 206.74545384541926,
+          "sample": 38
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at PATH Main Route. GPS cannot identify the exact turning point.",
+          "nextStep": 7,
+          "remainingMeters": 518.4644223828005,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 8.064422382800615,
+          "sample": 39
+        },
+        {
+          "instruction": "In approximately 210 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 504.76528324744606,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 218.56528324744613,
+          "sample": 40
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns left at PATH Main Route. GPS cannot identify the exact turning point.",
+          "nextStep": 7,
+          "remainingMeters": 517.0382296155146,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 6.638229615514717,
+          "sample": 41
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left.",
+          "nextStep": 6,
+          "remainingMeters": 545.144872762518,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 14.644872762518105,
+          "sample": 42
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left at PATH Main Route.",
+          "nextStep": 7,
+          "remainingMeters": 530.1937008026655,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 19.79370080266557,
+          "sample": 43
+        },
+        {
+          "instruction": "In approximately 190 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 478.35501581302464,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 192.1550158130247,
+          "sample": 44
+        },
+        {
+          "instruction": "In approximately 170 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 465.809701223642,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 179.60970122364205,
+          "sample": 45
+        },
+        {
+          "instruction": "In approximately 170 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 462.32275918884847,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 176.12275918884853,
+          "sample": 46
+        },
+        {
+          "instruction": "In approximately 160 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 449.8558469796327,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 163.65584697963277,
+          "sample": 47
+        },
+        {
+          "instruction": "In approximately 160 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 446.31364217610115,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 160.11364217610122,
+          "sample": 48
+        },
+        {
+          "instruction": "In approximately 140 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 433.7220597409023,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 147.52205974090236,
+          "sample": 49
+        },
+        {
+          "instruction": "In approximately 140 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 430.281385502455,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 144.08138550245508,
+          "sample": 50
+        },
+        {
+          "instruction": "In approximately 130 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 417.68980880420605,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 131.48980880420612,
+          "sample": 51
+        },
+        {
+          "instruction": "In approximately 120 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 414.2491288202571,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 128.04912882025718,
+          "sample": 52
+        },
+        {
+          "instruction": "In approximately 110 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 401.6575578765136,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 115.45755787651365,
+          "sample": 53
+        },
+        {
+          "instruction": "In approximately 110 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 398.2168721378406,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 112.01687213784066,
+          "sample": 54
+        },
+        {
+          "instruction": "In approximately 90 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 385.6253069398026,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 99.42530693980268,
+          "sample": 55
+        },
+        {
+          "instruction": "In approximately 90 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 382.14925010585887,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 95.94925010585894,
+          "sample": 56
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 369.62842120051,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 83.42842120051006,
+          "sample": 57
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 366.1169935089077,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 79.91699350890775,
+          "sample": 58
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 353.51304265201895,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 67.31304265201902,
+          "sample": 59
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 350.1678646562034,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 63.96786465620346,
+          "sample": 60
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 337.4807918280338,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 51.28079182803384,
+          "sample": 61
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 332.2730483371256,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 46.07304833712567,
+          "sample": 62
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 322.06369412554045,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 35.86369412554052,
+          "sample": 63
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 315.59415644938264,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 29.39415644938265,
+          "sample": 64
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 307.9254722474316,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 21.72547224743164,
+          "sample": 65
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns slight left at PATH.",
+          "nextStep": 9,
+          "remainingMeters": 298.4690930097317,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 12.269093009731819,
+          "sample": 66
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns slight left at PATH. GPS cannot identify the exact turning point.",
+          "nextStep": 9,
+          "remainingMeters": 292.98602343628613,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 6.7860234362862,
+          "sample": 67
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 285.98422687272756,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 70.08422687272753,
+          "sample": 68
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 273.4037275391303,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 57.503727539130296,
+          "sample": 69
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 270.02429751438325,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 54.12429751438333,
+          "sample": 70
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 257.22240564462834,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 41.32240564462836,
+          "sample": 71
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 254.07145621253352,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 38.1714562125336,
+          "sample": 72
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 244.12195978575755,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 28.221959785757576,
+          "sample": 73
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 230.14086256763235,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 14.240862567632348,
+          "sample": 74
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped route turns left at SkyWalk.",
+          "nextStep": 10,
+          "remainingMeters": 233.0562196584726,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 17.15621965847265,
+          "sample": 75
+        },
+        {
+          "instruction": "In approximately 120 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 215.64516759539399,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 128.145167595394,
+          "sample": 76
+        },
+        {
+          "instruction": "In approximately 120 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 208.9406945209165,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 121.44069452091651,
+          "sample": 77
+        },
+        {
+          "instruction": "In approximately 110 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 206.15964489191978,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 118.65964489191981,
+          "sample": 78
+        },
+        {
+          "instruction": "In approximately 100 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 192.90844437405707,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 105.40844437405713,
+          "sample": 79
+        },
+        {
+          "instruction": "In approximately 100 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 190.1273874207788,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 102.62738742077886,
+          "sample": 80
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 176.88912241951707,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 89.3891224195171,
+          "sample": 81
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 174.08220174077536,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 86.58220174077542,
+          "sample": 82
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 161.26665039193426,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 73.76665039193426,
+          "sample": 83
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 157.64016520615138,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 70.14016520615132,
+          "sample": 84
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 145.23439924312368,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 57.734399243123676,
+          "sample": 85
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 141.60790873154951,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 54.107908731549514,
+          "sample": 86
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 129.20214810312243,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 41.702148103122454,
+          "sample": 87
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 122.30694797268518,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 34.80694797268518,
+          "sample": 88
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 114.60707750325916,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 27.10707750325912,
+          "sample": 89
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped route turns right.",
+          "nextStep": 11,
+          "remainingMeters": 109.95483383630885,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 22.454833836308808,
+          "sample": 90
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right. GPS cannot identify the exact turning point.",
+          "nextStep": 11,
+          "remainingMeters": 94.84258349664739,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 7.342583496647421,
+          "sample": 91
+        },
+        {
+          "instruction": "The next mapped maneuver is nearby: the mapped route turns right. GPS cannot identify the exact turning point.",
+          "nextStep": 11,
+          "remainingMeters": 95.80620388441915,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 8.30620388441912,
+          "sample": 92
+        },
+        {
+          "instruction": "In approximately 80 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 85.67187726738912,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 85.47187726738912,
+          "sample": 93
+        },
+        {
+          "instruction": "In approximately 70 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 74.25417903774836,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 74.05417903774833,
+          "sample": 94
+        },
+        {
+          "instruction": "In approximately 60 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 68.29783175944993,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 68.09783175944995,
+          "sample": 95
+        },
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 59.32982294284769,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 59.12982294284768,
+          "sample": 96
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 48.966398578376406,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 48.76639857837631,
+          "sample": 97
+        },
+        {
+          "instruction": "In approximately 40 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 45.45879590121646,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 45.258795901216445,
+          "sample": 98
+        },
+        {
+          "instruction": "In approximately 30 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 32.84495314641496,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 32.64495314641488,
+          "sample": 99
+        },
+        {
+          "instruction": "In approximately 20 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 29.545801973834017,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 29.345801973834,
+          "sample": 100
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 17.05451692615974,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 16.854516926159704,
+          "sample": 101
+        },
+        {
+          "instruction": "In approximately 10 metres along the route, the mapped destination is nearby.",
+          "nextStep": 12,
+          "remainingMeters": 13.271728031991614,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 13.071728031991597,
+          "sample": 102
+        },
+        {
+          "instruction": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "nextStep": null,
+          "remainingMeters": 1.0901827255780892,
+          "state": "ARRIVAL_CONFIRMATION_REQUIRED",
+          "detail": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "distanceToNextStepMeters": null,
+          "sample": 103
+        },
+        {
+          "instruction": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "nextStep": null,
+          "remainingMeters": 0,
+          "state": "ARRIVAL_CONFIRMATION_REQUIRED",
+          "detail": "GPS places you near the mapped route endpoint for CN Tower public destination coordinate. The provider endpoint is about 30 metres from the selected map point. The entrance is unverified. Confirm the actual place before marking arrival.",
+          "distanceToNextStepMeters": null,
+          "sample": 104
+        }
+      ],
+      "unsupportedClearanceClaims": 0,
+      "id": "ordinary-drift",
+      "offRouteStates": 0,
+      "arrivalConfirmationSuggestions": 2,
+      "turnsObservedAsUpcoming": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "samples": 105
+    },
+    {
+      "automaticArrivalDeclarations": 0,
+      "providerTurnIndexes": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "purpose": "A2s GPS jump from origin to endpoint cannot announce arrival",
+      "uncertainStates": 1,
+      "stages": [
+        {
+          "instruction": "In approximately 50 metres along the route, the mapped route turns left.",
+          "nextStep": 1,
+          "remainingMeters": 828.8,
+          "state": "CURRENT",
+          "detail": "Position estimate matched to mapped route geometry. Sidewalk and crossing conditions are unverified.",
+          "distanceToNextStepMeters": 56.9,
+          "sample": 0
+        },
+        {
+          "instruction": null,
+          "nextStep": null,
+          "remainingMeters": null,
+          "state": "GPS_UNCERTAIN",
+          "detail": "Location changed faster than this walking guidance can verify. Waiting for another fix.",
+          "distanceToNextStepMeters": null,
+          "sample": 1
+        }
+      ],
+      "unsupportedClearanceClaims": 0,
+      "id": "endpoint-teleport",
+      "offRouteStates": 0,
+      "arrivalConfirmationSuggestions": 0,
+      "turnsObservedAsUpcoming": [1],
+      "samples": 2
+    },
+    {
+      "automaticArrivalDeclarations": 0,
+      "providerTurnIndexes": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "purpose": "Poor GNSS accuracy cannot establish arrival",
+      "uncertainStates": 1,
+      "stages": [{
+        "instruction": null,
+        "nextStep": null,
+        "remainingMeters": null,
+        "state": "GPS_UNCERTAIN",
+        "detail": "A fresh GPS fix with accuracy of 25 metres or better is required. Route progress is uncertain.",
+        "distanceToNextStepMeters": null,
+        "sample": 0
+      }],
+      "unsupportedClearanceClaims": 0,
+      "id": "inaccurate-endpoint",
+      "offRouteStates": 0,
+      "arrivalConfirmationSuggestions": 0,
+      "turnsObservedAsUpcoming": [],
+      "samples": 1
+    },
+    {
+      "automaticArrivalDeclarations": 0,
+      "providerTurnIndexes": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "purpose": "Expired fix cannot establish arrival",
+      "uncertainStates": 1,
+      "stages": [{
+        "instruction": null,
+        "nextStep": null,
+        "remainingMeters": null,
+        "state": "GPS_UNCERTAIN",
+        "detail": "A fresh GPS fix with accuracy of 25 metres or better is required. Route progress is uncertain.",
+        "distanceToNextStepMeters": null,
+        "sample": 0
+      }],
+      "unsupportedClearanceClaims": 0,
+      "id": "stale-endpoint",
+      "offRouteStates": 0,
+      "arrivalConfirmationSuggestions": 0,
+      "turnsObservedAsUpcoming": [],
+      "samples": 1
+    },
+    {
+      "automaticArrivalDeclarations": 0,
+      "providerTurnIndexes": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "purpose": "Three well-separated accurate fixes away from all route geometry establish disagreement",
+      "uncertainStates": 2,
+      "stages": [
+        {
+          "instruction": null,
+          "nextStep": null,
+          "remainingMeters": null,
+          "state": "GPS_UNCERTAIN",
+          "detail": "GPS differs from the route. Gathering another fix before estimating progress.",
+          "distanceToNextStepMeters": null,
+          "sample": 0
+        },
+        {
+          "instruction": null,
+          "nextStep": null,
+          "remainingMeters": null,
+          "state": "GPS_UNCERTAIN",
+          "detail": "GPS differs from the route. Gathering another fix before estimating progress.",
+          "distanceToNextStepMeters": null,
+          "sample": 1
+        },
+        {
+          "instruction": null,
+          "nextStep": null,
+          "remainingMeters": null,
+          "state": "OFF_ROUTE",
+          "detail": "Several accurate GPS fixes disagree with the mapped route. Recalculating may be needed.",
+          "distanceToNextStepMeters": null,
+          "sample": 2
+        }
+      ],
+      "unsupportedClearanceClaims": 0,
+      "id": "persistent-off-route",
+      "offRouteStates": 1,
+      "arrivalConfirmationSuggestions": 0,
+      "turnsObservedAsUpcoming": [],
+      "samples": 3
+    }
+  ],
+  "implementationSha256": {
+    "RouteVoiceAction.kt": "b2823f663923b41a5d414c7a4a82302197c6da0728830272e29ecdfaccbed6d3",
+    "RouteModels.kt": "7da80ae9cbe0c52034b4a38b377305fb22699b9916f7d9eecb8411645a884c07",
+    "PublicWalkingRouteProvider.kt": "179ec78d864ea42643727d8704fcb2748ff8898b6d18023f35ef605d22b0a3d9",
+    "RouteGeometry.kt": "55d42997f3ebbdbfe8497d2613c0c07aacbbf801e4143cc2c64ddbeaf1bd07eb",
+    "RouteProgressEngine.kt": "0c0307288cf68d76b72e47778611d5b51b1793ee9e7d2a0a1b9fbed91102214e"
+  }
+}

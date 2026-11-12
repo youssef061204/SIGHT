@@ -1,0 +1,9 @@
+{
+  "scope": "All reachable committed history, known credential patterns and sensitive filenames; not a proof of absence of every secret",
+  "head": "35d6aede025c4d5428e9a1187c16fddb7ab344a1",
+  "uniqueObjects": 1086,
+  "textBlobsScanned": 459,
+  "credentialFindings": [],
+  "sensitiveFiles": [],
+  "oversizedGitBlobs": []
+}

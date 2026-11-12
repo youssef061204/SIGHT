@@ -1,0 +1,1582 @@
+{
+  "schema": "sight.navigation-constructed-replay",
+  "sourceFile": "evaluation/results/v3-route-services/walking-route.json",
+  "sourceSha256": "c3665473629d8b0aa7db7d1b693f9d608d1b0ef841546435fe27f8e863ffd660",
+  "destination": {
+    "id": "public-cn-tower-coordinate",
+    "label": "CN Tower public destination coordinate",
+    "latitude": 43.6426,
+    "longitude": -79.3871
+  },
+  "geometryLengthMeters": 827.1326140817157,
+  "providerRouteLengthMeters": 828.8,
+  "scope": "Constructed location traces over actual public-provider geometry, not recorded human/GNSS trajectories or measured navigation outcomes",
+  "scenarios": [
+    {
+      "id": "mapped-walk",
+      "purpose": "Constructed 8m/6s samples follow actual provider geometry",
+      "expectNoOffRoute": true,
+      "expectNoUncertainty": true,
+      "frames": [
+        {
+          "longitude": -79.380307,
+          "latitude": 43.645218,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 1000,
+          "nowElapsedMs": 1000
+        },
+        {
+          "longitude": -79.38040219300822,
+          "latitude": 43.64519723642438,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 7000,
+          "nowElapsedMs": 7000
+        },
+        {
+          "longitude": -79.38049738601644,
+          "latitude": 43.64517647284876,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 13000,
+          "nowElapsedMs": 13000
+        },
+        {
+          "longitude": -79.38059257902466,
+          "latitude": 43.64515570927314,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 19000,
+          "nowElapsedMs": 19000
+        },
+        {
+          "longitude": -79.38068807266326,
+          "latitude": 43.645135684062275,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 25000,
+          "nowElapsedMs": 25000
+        },
+        {
+          "longitude": -79.38078361141518,
+          "latitude": 43.64511576965225,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 31000,
+          "nowElapsedMs": 31000
+        },
+        {
+          "longitude": -79.38087915016709,
+          "latitude": 43.64509585524222,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 37000,
+          "nowElapsedMs": 37000
+        },
+        {
+          "longitude": -79.38097468891901,
+          "latitude": 43.645075940832186,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 43000,
+          "nowElapsedMs": 43000
+        },
+        {
+          "longitude": -79.38095828620934,
+          "latitude": 43.645011789216106,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 49000,
+          "nowElapsedMs": 49000
+        },
+        {
+          "longitude": -79.38092940717205,
+          "latitude": 43.64494296404113,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 55000,
+          "nowElapsedMs": 55000
+        },
+        {
+          "longitude": -79.38089867217028,
+          "latitude": 43.64487454256107,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 61000,
+          "nowElapsedMs": 61000
+        },
+        {
+          "longitude": -79.38095429852092,
+          "latitude": 43.64483895730733,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 67000,
+          "nowElapsedMs": 67000
+        },
+        {
+          "longitude": -79.38096353039886,
+          "latitude": 43.64478374773031,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 73000,
+          "nowElapsedMs": 73000
+        },
+        {
+          "longitude": -79.38104656057261,
+          "latitude": 43.64475736314727,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 79000,
+          "nowElapsedMs": 79000
+        },
+        {
+          "longitude": -79.38114133105113,
+          "latitude": 43.64473561254564,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 85000,
+          "nowElapsedMs": 85000
+        },
+        {
+          "longitude": -79.38111569891666,
+          "latitude": 43.64466814704721,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 91000,
+          "nowElapsedMs": 91000
+        },
+        {
+          "longitude": -79.38108657771507,
+          "latitude": 43.644599356807234,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 97000,
+          "nowElapsedMs": 97000
+        },
+        {
+          "longitude": -79.38105745651347,
+          "latitude": 43.64453056656726,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 103000,
+          "nowElapsedMs": 103000
+        },
+        {
+          "longitude": -79.38102833531188,
+          "latitude": 43.64446177632728,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 109000,
+          "nowElapsedMs": 109000
+        },
+        {
+          "longitude": -79.38107487603529,
+          "latitude": 43.644421704154055,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 115000,
+          "nowElapsedMs": 115000
+        },
+        {
+          "longitude": -79.38116963765354,
+          "latitude": 43.6443999345931,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 121000,
+          "nowElapsedMs": 121000
+        },
+        {
+          "longitude": -79.38126154354029,
+          "latitude": 43.644373716981626,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 127000,
+          "nowElapsedMs": 127000
+        },
+        {
+          "longitude": -79.38135210566145,
+          "latitude": 43.644345532075235,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 133000,
+          "nowElapsedMs": 133000
+        },
+        {
+          "longitude": -79.3814472345306,
+          "latitude": 43.64432461929222,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 139000,
+          "nowElapsedMs": 139000
+        },
+        {
+          "longitude": -79.38154243513125,
+          "latitude": 43.644303877261905,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 145000,
+          "nowElapsedMs": 145000
+        },
+        {
+          "longitude": -79.381638222912,
+          "latitude": 43.644284634097694,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 151000,
+          "nowElapsedMs": 151000
+        },
+        {
+          "longitude": -79.38173430194831,
+          "latitude": 43.64426613440747,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 157000,
+          "nowElapsedMs": 157000
+        },
+        {
+          "longitude": -79.38177888034133,
+          "latitude": 43.64422525673137,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 163000,
+          "nowElapsedMs": 163000
+        },
+        {
+          "longitude": -79.38175207782237,
+          "latitude": 43.644155974748394,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 169000,
+          "nowElapsedMs": 169000
+        },
+        {
+          "longitude": -79.38172516964256,
+          "latitude": 43.644086714284946,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 175000,
+          "nowElapsedMs": 175000
+        },
+        {
+          "longitude": -79.38169812558412,
+          "latitude": 43.64401748149537,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 181000,
+          "nowElapsedMs": 181000
+        },
+        {
+          "longitude": -79.3816710815257,
+          "latitude": 43.64394824870578,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 187000,
+          "nowElapsedMs": 187000
+        },
+        {
+          "longitude": -79.38164403746727,
+          "latitude": 43.6438790159162,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 193000,
+          "nowElapsedMs": 193000
+        },
+        {
+          "longitude": -79.38161699340883,
+          "latitude": 43.64380978312662,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 199000,
+          "nowElapsedMs": 199000
+        },
+        {
+          "longitude": -79.3815899493504,
+          "latitude": 43.643740550337036,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 205000,
+          "nowElapsedMs": 205000
+        },
+        {
+          "longitude": -79.3815628665036,
+          "latitude": 43.64367132550922,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 211000,
+          "nowElapsedMs": 211000
+        },
+        {
+          "longitude": -79.38153569777772,
+          "latitude": 43.64360211839986,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 217000,
+          "nowElapsedMs": 217000
+        },
+        {
+          "longitude": -79.38153970977088,
+          "latitude": 43.643539019050124,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 223000,
+          "nowElapsedMs": 223000
+        },
+        {
+          "longitude": -79.38146661698974,
+          "latitude": 43.643538422255304,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 229000,
+          "nowElapsedMs": 229000
+        },
+        {
+          "longitude": -79.38137138925556,
+          "latitude": 43.64355909201842,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 235000,
+          "nowElapsedMs": 235000
+        },
+        {
+          "longitude": -79.38130696052434,
+          "latitude": 43.64359285179578,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 241000,
+          "nowElapsedMs": 241000
+        },
+        {
+          "longitude": -79.38137396140091,
+          "latitude": 43.6436100703936,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 247000,
+          "nowElapsedMs": 247000
+        },
+        {
+          "longitude": -79.38146931776608,
+          "latitude": 43.64358971916461,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 253000,
+          "nowElapsedMs": 253000
+        },
+        {
+          "longitude": -79.38156468876034,
+          "latitude": 43.64356939419862,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 259000,
+          "nowElapsedMs": 259000
+        },
+        {
+          "longitude": -79.38166005975458,
+          "latitude": 43.643549069232634,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 265000,
+          "nowElapsedMs": 265000
+        },
+        {
+          "longitude": -79.38175543074884,
+          "latitude": 43.643528744266646,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 271000,
+          "nowElapsedMs": 271000
+        },
+        {
+          "longitude": -79.3818508017431,
+          "latitude": 43.64350841930065,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 277000,
+          "nowElapsedMs": 277000
+        },
+        {
+          "longitude": -79.38194617273736,
+          "latitude": 43.643488094334664,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 283000,
+          "nowElapsedMs": 283000
+        },
+        {
+          "longitude": -79.38204161665229,
+          "latitude": 43.64346795486332,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 289000,
+          "nowElapsedMs": 289000
+        },
+        {
+          "longitude": -79.38213690246727,
+          "latitude": 43.643447422307055,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 295000,
+          "nowElapsedMs": 295000
+        },
+        {
+          "longitude": -79.38223218828226,
+          "latitude": 43.64342688975079,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 301000,
+          "nowElapsedMs": 301000
+        },
+        {
+          "longitude": -79.38232747409724,
+          "latitude": 43.64340635719453,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 307000,
+          "nowElapsedMs": 307000
+        },
+        {
+          "longitude": -79.38242275991222,
+          "latitude": 43.64338582463827,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 313000,
+          "nowElapsedMs": 313000
+        },
+        {
+          "longitude": -79.3825180457272,
+          "latitude": 43.64336529208201,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 319000,
+          "nowElapsedMs": 319000
+        },
+        {
+          "longitude": -79.38261333154219,
+          "latitude": 43.643344759525746,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 325000,
+          "nowElapsedMs": 325000
+        },
+        {
+          "longitude": -79.38270861735717,
+          "latitude": 43.64332422696948,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 331000,
+          "nowElapsedMs": 331000
+        },
+        {
+          "longitude": -79.38280394920169,
+          "latitude": 43.64330380737252,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 337000,
+          "nowElapsedMs": 337000
+        },
+        {
+          "longitude": -79.38289936438396,
+          "latitude": 43.64328359229153,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 343000,
+          "nowElapsedMs": 343000
+        },
+        {
+          "longitude": -79.38299477956623,
+          "latitude": 43.643263377210545,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 349000,
+          "nowElapsedMs": 349000
+        },
+        {
+          "longitude": -79.38308992297664,
+          "latitude": 43.64324250381765,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 355000,
+          "nowElapsedMs": 355000
+        },
+        {
+          "longitude": -79.38318503016863,
+          "latitude": 43.6432215426931,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 361000,
+          "nowElapsedMs": 361000
+        },
+        {
+          "longitude": -79.38328013736064,
+          "latitude": 43.64320058156854,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 367000,
+          "nowElapsedMs": 367000
+        },
+        {
+          "longitude": -79.38334160494556,
+          "latitude": 43.643233749309665,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 373000,
+          "nowElapsedMs": 373000
+        },
+        {
+          "longitude": -79.38343661108752,
+          "latitude": 43.64321254959204,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 379000,
+          "nowElapsedMs": 379000
+        },
+        {
+          "longitude": -79.38353506571339,
+          "latitude": 43.64320922456021,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 385000,
+          "nowElapsedMs": 385000
+        },
+        {
+          "longitude": -79.38363446262613,
+          "latitude": 43.64321078372747,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 391000,
+          "nowElapsedMs": 391000
+        },
+        {
+          "longitude": -79.38373359004765,
+          "latitude": 43.64321449990025,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 397000,
+          "nowElapsedMs": 397000
+        },
+        {
+          "longitude": -79.38383176156417,
+          "latitude": 43.64322586712848,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 403000,
+          "nowElapsedMs": 403000
+        },
+        {
+          "longitude": -79.38392911633144,
+          "latitude": 43.643228168530875,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 409000,
+          "nowElapsedMs": 409000
+        },
+        {
+          "longitude": -79.38402441736223,
+          "latitude": 43.643207673685545,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 415000,
+          "nowElapsedMs": 415000
+        },
+        {
+          "longitude": -79.38411963151205,
+          "latitude": 43.6431869707751,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 421000,
+          "nowElapsedMs": 421000
+        },
+        {
+          "longitude": -79.38421443590495,
+          "latitude": 43.643165305787534,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 427000,
+          "nowElapsedMs": 427000
+        },
+        {
+          "longitude": -79.38430916778088,
+          "latitude": 43.6431434730505,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 433000,
+          "nowElapsedMs": 433000
+        },
+        {
+          "longitude": -79.38440252917437,
+          "latitude": 43.6431260550563,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 439000,
+          "nowElapsedMs": 439000
+        },
+        {
+          "longitude": -79.38447525496119,
+          "latitude": 43.64317511065778,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 445000,
+          "nowElapsedMs": 445000
+        },
+        {
+          "longitude": -79.384547980748,
+          "latitude": 43.643224166259266,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 451000,
+          "nowElapsedMs": 451000
+        },
+        {
+          "longitude": -79.38462016286017,
+          "latitude": 43.64327362214513,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 457000,
+          "nowElapsedMs": 457000
+        },
+        {
+          "longitude": -79.38470190996726,
+          "latitude": 43.64328702250818,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 463000,
+          "nowElapsedMs": 463000
+        },
+        {
+          "longitude": -79.38479588062987,
+          "latitude": 43.643263529842535,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 469000,
+          "nowElapsedMs": 469000
+        },
+        {
+          "longitude": -79.38488985129246,
+          "latitude": 43.64324003717689,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 475000,
+          "nowElapsedMs": 475000
+        },
+        {
+          "longitude": -79.38498382195506,
+          "latitude": 43.64321654451124,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 481000,
+          "nowElapsedMs": 481000
+        },
+        {
+          "longitude": -79.38507781362495,
+          "latitude": 43.643193096060095,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 487000,
+          "nowElapsedMs": 487000
+        },
+        {
+          "longitude": -79.38517183944053,
+          "latitude": 43.64316971947611,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 493000,
+          "nowElapsedMs": 493000
+        },
+        {
+          "longitude": -79.38526659244249,
+          "latitude": 43.64314801958267,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 499000,
+          "nowElapsedMs": 499000
+        },
+        {
+          "longitude": -79.38536221335623,
+          "latitude": 43.643128320853656,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 505000,
+          "nowElapsedMs": 505000
+        },
+        {
+          "longitude": -79.38545783426997,
+          "latitude": 43.64310862212464,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 511000,
+          "nowElapsedMs": 511000
+        },
+        {
+          "longitude": -79.38555345518373,
+          "latitude": 43.64308892339563,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 517000,
+          "nowElapsedMs": 517000
+        },
+        {
+          "longitude": -79.38564907609747,
+          "latitude": 43.64306922466662,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 523000,
+          "nowElapsedMs": 523000
+        },
+        {
+          "longitude": -79.38574638790904,
+          "latitude": 43.64306661403458,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 529000,
+          "nowElapsedMs": 529000
+        },
+        {
+          "longitude": -79.38584520440634,
+          "latitude": 43.643065589010256,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 535000,
+          "nowElapsedMs": 535000
+        },
+        {
+          "longitude": -79.38593877794277,
+          "latitude": 43.64304789834561,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 541000,
+          "nowElapsedMs": 541000
+        },
+        {
+          "longitude": -79.38602113956085,
+          "latitude": 43.64300760124491,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 547000,
+          "nowElapsedMs": 547000
+        },
+        {
+          "longitude": -79.38610350117894,
+          "latitude": 43.642967304144214,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 553000,
+          "nowElapsedMs": 553000
+        },
+        {
+          "longitude": -79.38619211772482,
+          "latitude": 43.642957560869355,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 559000,
+          "nowElapsedMs": 559000
+        },
+        {
+          "longitude": -79.38628808286957,
+          "latitude": 43.64297553901902,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 565000,
+          "nowElapsedMs": 565000
+        },
+        {
+          "longitude": -79.3863866788089,
+          "latitude": 43.64298478238833,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 571000,
+          "nowElapsedMs": 571000
+        },
+        {
+          "longitude": -79.38648554292514,
+          "latitude": 43.64299077082447,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 577000,
+          "nowElapsedMs": 577000
+        },
+        {
+          "longitude": -79.38658495811654,
+          "latitude": 43.64299007071749,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 583000,
+          "nowElapsedMs": 583000
+        },
+        {
+          "longitude": -79.3866808195967,
+          "latitude": 43.642971932716485,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 589000,
+          "nowElapsedMs": 589000
+        },
+        {
+          "longitude": -79.38677605780587,
+          "latitude": 43.64295129405314,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 595000,
+          "nowElapsedMs": 595000
+        },
+        {
+          "longitude": -79.38687107714438,
+          "latitude": 43.64293012637873,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 601000,
+          "nowElapsedMs": 601000
+        },
+        {
+          "longitude": -79.38696640342316,
+          "latitude": 43.64290971931537,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 607000,
+          "nowElapsedMs": 607000
+        },
+        {
+          "longitude": -79.38706228890226,
+          "latitude": 43.642890706915594,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 613000,
+          "nowElapsedMs": 613000
+        },
+        {
+          "longitude": -79.38715836249837,
+          "latitude": 43.6428722002177,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 619000,
+          "nowElapsedMs": 619000
+        },
+        {
+          "longitude": -79.387196,
+          "latitude": 43.642865,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 625000,
+          "nowElapsedMs": 625000
+        }
+      ]
+    },
+    {
+      "id": "ordinary-drift",
+      "purpose": "Same constructed walk with alternating ±8m latitude noise, declared12m accuracy",
+      "expectNoOffRoute": true,
+      "frames": [
+        {
+          "longitude": -79.380307,
+          "latitude": 43.64528994568101,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 1000,
+          "nowElapsedMs": 1000
+        },
+        {
+          "longitude": -79.38040219300822,
+          "latitude": 43.64512529074337,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 7000,
+          "nowElapsedMs": 7000
+        },
+        {
+          "longitude": -79.38049738601644,
+          "latitude": 43.64524841852977,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 13000,
+          "nowElapsedMs": 13000
+        },
+        {
+          "longitude": -79.38059257902466,
+          "latitude": 43.64508376359213,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 19000,
+          "nowElapsedMs": 19000
+        },
+        {
+          "longitude": -79.38068807266326,
+          "latitude": 43.64520762974328,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 25000,
+          "nowElapsedMs": 25000
+        },
+        {
+          "longitude": -79.38078361141518,
+          "latitude": 43.64504382397124,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 31000,
+          "nowElapsedMs": 31000
+        },
+        {
+          "longitude": -79.38087915016709,
+          "latitude": 43.645167800923225,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 37000,
+          "nowElapsedMs": 37000
+        },
+        {
+          "longitude": -79.38097468891901,
+          "latitude": 43.64500399515118,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 43000,
+          "nowElapsedMs": 43000
+        },
+        {
+          "longitude": -79.38095828620934,
+          "latitude": 43.64508373489711,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 49000,
+          "nowElapsedMs": 49000
+        },
+        {
+          "longitude": -79.38092940717205,
+          "latitude": 43.64487101836012,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 55000,
+          "nowElapsedMs": 55000
+        },
+        {
+          "longitude": -79.38089867217028,
+          "latitude": 43.64494648824208,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 61000,
+          "nowElapsedMs": 61000
+        },
+        {
+          "longitude": -79.38095429852092,
+          "latitude": 43.64476701162632,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 67000,
+          "nowElapsedMs": 67000
+        },
+        {
+          "longitude": -79.38096353039886,
+          "latitude": 43.644855693411316,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 73000,
+          "nowElapsedMs": 73000
+        },
+        {
+          "longitude": -79.38104656057261,
+          "latitude": 43.64468541746626,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 79000,
+          "nowElapsedMs": 79000
+        },
+        {
+          "longitude": -79.38114133105113,
+          "latitude": 43.644807558226645,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 85000,
+          "nowElapsedMs": 85000
+        },
+        {
+          "longitude": -79.38111569891666,
+          "latitude": 43.644596201366205,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 91000,
+          "nowElapsedMs": 91000
+        },
+        {
+          "longitude": -79.38108657771507,
+          "latitude": 43.64467130248824,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 97000,
+          "nowElapsedMs": 97000
+        },
+        {
+          "longitude": -79.38105745651347,
+          "latitude": 43.644458620886255,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 103000,
+          "nowElapsedMs": 103000
+        },
+        {
+          "longitude": -79.38102833531188,
+          "latitude": 43.64453372200829,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 109000,
+          "nowElapsedMs": 109000
+        },
+        {
+          "longitude": -79.38107487603529,
+          "latitude": 43.64434975847305,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 115000,
+          "nowElapsedMs": 115000
+        },
+        {
+          "longitude": -79.38116963765354,
+          "latitude": 43.64447188027411,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 121000,
+          "nowElapsedMs": 121000
+        },
+        {
+          "longitude": -79.38126154354029,
+          "latitude": 43.64430177130062,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 127000,
+          "nowElapsedMs": 127000
+        },
+        {
+          "longitude": -79.38135210566145,
+          "latitude": 43.64441747775624,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 133000,
+          "nowElapsedMs": 133000
+        },
+        {
+          "longitude": -79.3814472345306,
+          "latitude": 43.64425267361121,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 139000,
+          "nowElapsedMs": 139000
+        },
+        {
+          "longitude": -79.38154243513125,
+          "latitude": 43.64437582294291,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 145000,
+          "nowElapsedMs": 145000
+        },
+        {
+          "longitude": -79.381638222912,
+          "latitude": 43.64421268841669,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 151000,
+          "nowElapsedMs": 151000
+        },
+        {
+          "longitude": -79.38173430194831,
+          "latitude": 43.644338080088474,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 157000,
+          "nowElapsedMs": 157000
+        },
+        {
+          "longitude": -79.38177888034133,
+          "latitude": 43.64415331105036,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 163000,
+          "nowElapsedMs": 163000
+        },
+        {
+          "longitude": -79.38175207782237,
+          "latitude": 43.6442279204294,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 169000,
+          "nowElapsedMs": 169000
+        },
+        {
+          "longitude": -79.38172516964256,
+          "latitude": 43.64401476860394,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 175000,
+          "nowElapsedMs": 175000
+        },
+        {
+          "longitude": -79.38169812558412,
+          "latitude": 43.644089427176375,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 181000,
+          "nowElapsedMs": 181000
+        },
+        {
+          "longitude": -79.3816710815257,
+          "latitude": 43.643876303024776,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 187000,
+          "nowElapsedMs": 187000
+        },
+        {
+          "longitude": -79.38164403746727,
+          "latitude": 43.643950961597206,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 193000,
+          "nowElapsedMs": 193000
+        },
+        {
+          "longitude": -79.38161699340883,
+          "latitude": 43.64373783744561,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 199000,
+          "nowElapsedMs": 199000
+        },
+        {
+          "longitude": -79.3815899493504,
+          "latitude": 43.64381249601804,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 205000,
+          "nowElapsedMs": 205000
+        },
+        {
+          "longitude": -79.3815628665036,
+          "latitude": 43.64359937982821,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 211000,
+          "nowElapsedMs": 211000
+        },
+        {
+          "longitude": -79.38153569777772,
+          "latitude": 43.64367406408087,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 217000,
+          "nowElapsedMs": 217000
+        },
+        {
+          "longitude": -79.38153970977088,
+          "latitude": 43.643467073369116,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 223000,
+          "nowElapsedMs": 223000
+        },
+        {
+          "longitude": -79.38146661698974,
+          "latitude": 43.64361036793631,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 229000,
+          "nowElapsedMs": 229000
+        },
+        {
+          "longitude": -79.38137138925556,
+          "latitude": 43.643487146337414,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 235000,
+          "nowElapsedMs": 235000
+        },
+        {
+          "longitude": -79.38130696052434,
+          "latitude": 43.64366479747679,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 241000,
+          "nowElapsedMs": 241000
+        },
+        {
+          "longitude": -79.38137396140091,
+          "latitude": 43.64353812471259,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 247000,
+          "nowElapsedMs": 247000
+        },
+        {
+          "longitude": -79.38146931776608,
+          "latitude": 43.64366166484562,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 253000,
+          "nowElapsedMs": 253000
+        },
+        {
+          "longitude": -79.38156468876034,
+          "latitude": 43.643497448517614,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 259000,
+          "nowElapsedMs": 259000
+        },
+        {
+          "longitude": -79.38166005975458,
+          "latitude": 43.64362101491364,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 265000,
+          "nowElapsedMs": 265000
+        },
+        {
+          "longitude": -79.38175543074884,
+          "latitude": 43.64345679858564,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 271000,
+          "nowElapsedMs": 271000
+        },
+        {
+          "longitude": -79.3818508017431,
+          "latitude": 43.64358036498166,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 277000,
+          "nowElapsedMs": 277000
+        },
+        {
+          "longitude": -79.38194617273736,
+          "latitude": 43.64341614865366,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 283000,
+          "nowElapsedMs": 283000
+        },
+        {
+          "longitude": -79.38204161665229,
+          "latitude": 43.643539900544326,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 289000,
+          "nowElapsedMs": 289000
+        },
+        {
+          "longitude": -79.38213690246727,
+          "latitude": 43.64337547662605,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 295000,
+          "nowElapsedMs": 295000
+        },
+        {
+          "longitude": -79.38223218828226,
+          "latitude": 43.6434988354318,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 301000,
+          "nowElapsedMs": 301000
+        },
+        {
+          "longitude": -79.38232747409724,
+          "latitude": 43.64333441151352,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 307000,
+          "nowElapsedMs": 307000
+        },
+        {
+          "longitude": -79.38242275991222,
+          "latitude": 43.64345777031928,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 313000,
+          "nowElapsedMs": 313000
+        },
+        {
+          "longitude": -79.3825180457272,
+          "latitude": 43.643293346401,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 319000,
+          "nowElapsedMs": 319000
+        },
+        {
+          "longitude": -79.38261333154219,
+          "latitude": 43.643416705206754,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 325000,
+          "nowElapsedMs": 325000
+        },
+        {
+          "longitude": -79.38270861735717,
+          "latitude": 43.643252281288476,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 331000,
+          "nowElapsedMs": 331000
+        },
+        {
+          "longitude": -79.38280394920169,
+          "latitude": 43.643375753053526,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 337000,
+          "nowElapsedMs": 337000
+        },
+        {
+          "longitude": -79.38289936438396,
+          "latitude": 43.643211646610524,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 343000,
+          "nowElapsedMs": 343000
+        },
+        {
+          "longitude": -79.38299477956623,
+          "latitude": 43.64333532289155,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 349000,
+          "nowElapsedMs": 349000
+        },
+        {
+          "longitude": -79.38308992297664,
+          "latitude": 43.643170558136646,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 355000,
+          "nowElapsedMs": 355000
+        },
+        {
+          "longitude": -79.38318503016863,
+          "latitude": 43.643293488374105,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 361000,
+          "nowElapsedMs": 361000
+        },
+        {
+          "longitude": -79.38328013736064,
+          "latitude": 43.643128635887535,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 367000,
+          "nowElapsedMs": 367000
+        },
+        {
+          "longitude": -79.38334160494556,
+          "latitude": 43.64330569499067,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 373000,
+          "nowElapsedMs": 373000
+        },
+        {
+          "longitude": -79.38343661108752,
+          "latitude": 43.643140603911036,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 379000,
+          "nowElapsedMs": 379000
+        },
+        {
+          "longitude": -79.38353506571339,
+          "latitude": 43.64328117024122,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 385000,
+          "nowElapsedMs": 385000
+        },
+        {
+          "longitude": -79.38363446262613,
+          "latitude": 43.64313883804646,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 391000,
+          "nowElapsedMs": 391000
+        },
+        {
+          "longitude": -79.38373359004765,
+          "latitude": 43.64328644558126,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 397000,
+          "nowElapsedMs": 397000
+        },
+        {
+          "longitude": -79.38383176156417,
+          "latitude": 43.64315392144747,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 403000,
+          "nowElapsedMs": 403000
+        },
+        {
+          "longitude": -79.38392911633144,
+          "latitude": 43.64330011421188,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 409000,
+          "nowElapsedMs": 409000
+        },
+        {
+          "longitude": -79.38402441736223,
+          "latitude": 43.64313572800454,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 415000,
+          "nowElapsedMs": 415000
+        },
+        {
+          "longitude": -79.38411963151205,
+          "latitude": 43.643258916456105,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 421000,
+          "nowElapsedMs": 421000
+        },
+        {
+          "longitude": -79.38421443590495,
+          "latitude": 43.643093360106526,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 427000,
+          "nowElapsedMs": 427000
+        },
+        {
+          "longitude": -79.38430916778088,
+          "latitude": 43.64321541873151,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 433000,
+          "nowElapsedMs": 433000
+        },
+        {
+          "longitude": -79.38440252917437,
+          "latitude": 43.64305410937529,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 439000,
+          "nowElapsedMs": 439000
+        },
+        {
+          "longitude": -79.38447525496119,
+          "latitude": 43.64324705633879,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 445000,
+          "nowElapsedMs": 445000
+        },
+        {
+          "longitude": -79.384547980748,
+          "latitude": 43.64315222057826,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 451000,
+          "nowElapsedMs": 451000
+        },
+        {
+          "longitude": -79.38462016286017,
+          "latitude": 43.64334556782614,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 457000,
+          "nowElapsedMs": 457000
+        },
+        {
+          "longitude": -79.38470190996726,
+          "latitude": 43.643215076827175,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 463000,
+          "nowElapsedMs": 463000
+        },
+        {
+          "longitude": -79.38479588062987,
+          "latitude": 43.64333547552354,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 469000,
+          "nowElapsedMs": 469000
+        },
+        {
+          "longitude": -79.38488985129246,
+          "latitude": 43.64316809149588,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 475000,
+          "nowElapsedMs": 475000
+        },
+        {
+          "longitude": -79.38498382195506,
+          "latitude": 43.64328849019225,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 481000,
+          "nowElapsedMs": 481000
+        },
+        {
+          "longitude": -79.38507781362495,
+          "latitude": 43.64312115037909,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 487000,
+          "nowElapsedMs": 487000
+        },
+        {
+          "longitude": -79.38517183944053,
+          "latitude": 43.64324166515712,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 493000,
+          "nowElapsedMs": 493000
+        },
+        {
+          "longitude": -79.38526659244249,
+          "latitude": 43.64307607390166,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 499000,
+          "nowElapsedMs": 499000
+        },
+        {
+          "longitude": -79.38536221335623,
+          "latitude": 43.64320026653466,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 505000,
+          "nowElapsedMs": 505000
+        },
+        {
+          "longitude": -79.38545783426997,
+          "latitude": 43.643036676443636,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 511000,
+          "nowElapsedMs": 511000
+        },
+        {
+          "longitude": -79.38555345518373,
+          "latitude": 43.64316086907664,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 517000,
+          "nowElapsedMs": 517000
+        },
+        {
+          "longitude": -79.38564907609747,
+          "latitude": 43.64299727898561,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 523000,
+          "nowElapsedMs": 523000
+        },
+        {
+          "longitude": -79.38574638790904,
+          "latitude": 43.64313855971559,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 529000,
+          "nowElapsedMs": 529000
+        },
+        {
+          "longitude": -79.38584520440634,
+          "latitude": 43.64299364332925,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 535000,
+          "nowElapsedMs": 535000
+        },
+        {
+          "longitude": -79.38593877794277,
+          "latitude": 43.643119844026614,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 541000,
+          "nowElapsedMs": 541000
+        },
+        {
+          "longitude": -79.38602113956085,
+          "latitude": 43.6429356555639,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 547000,
+          "nowElapsedMs": 547000
+        },
+        {
+          "longitude": -79.38610350117894,
+          "latitude": 43.64303924982522,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 553000,
+          "nowElapsedMs": 553000
+        },
+        {
+          "longitude": -79.38619211772482,
+          "latitude": 43.64288561518835,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 559000,
+          "nowElapsedMs": 559000
+        },
+        {
+          "longitude": -79.38628808286957,
+          "latitude": 43.64304748470003,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 565000,
+          "nowElapsedMs": 565000
+        },
+        {
+          "longitude": -79.3863866788089,
+          "latitude": 43.642912836707325,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 571000,
+          "nowElapsedMs": 571000
+        },
+        {
+          "longitude": -79.38648554292514,
+          "latitude": 43.643062716505476,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 577000,
+          "nowElapsedMs": 577000
+        },
+        {
+          "longitude": -79.38658495811654,
+          "latitude": 43.64291812503648,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 583000,
+          "nowElapsedMs": 583000
+        },
+        {
+          "longitude": -79.3866808195967,
+          "latitude": 43.64304387839749,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 589000,
+          "nowElapsedMs": 589000
+        },
+        {
+          "longitude": -79.38677605780587,
+          "latitude": 43.642879348372134,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 595000,
+          "nowElapsedMs": 595000
+        },
+        {
+          "longitude": -79.38687107714438,
+          "latitude": 43.64300207205974,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 601000,
+          "nowElapsedMs": 601000
+        },
+        {
+          "longitude": -79.38696640342316,
+          "latitude": 43.64283777363436,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 607000,
+          "nowElapsedMs": 607000
+        },
+        {
+          "longitude": -79.38706228890226,
+          "latitude": 43.6429626525966,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 613000,
+          "nowElapsedMs": 613000
+        },
+        {
+          "longitude": -79.38715836249837,
+          "latitude": 43.642800254536695,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 619000,
+          "nowElapsedMs": 619000
+        },
+        {
+          "longitude": -79.387196,
+          "latitude": 43.642865,
+          "accuracyMeters": 12.0,
+          "capturedElapsedMs": 625000,
+          "nowElapsedMs": 625000
+        }
+      ]
+    },
+    {
+      "id": "endpoint-teleport",
+      "purpose": "A2s GPS jump from origin to endpoint cannot announce arrival",
+      "expectLastState": "GPS_UNCERTAIN",
+      "expectNoArrival": true,
+      "frames": [
+        {
+          "longitude": -79.380307,
+          "latitude": 43.645218,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 1000,
+          "nowElapsedMs": 1000
+        },
+        {
+          "longitude": -79.387196,
+          "latitude": 43.642865,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 3000,
+          "nowElapsedMs": 3000
+        }
+      ]
+    },
+    {
+      "id": "inaccurate-endpoint",
+      "purpose": "Poor GNSS accuracy cannot establish arrival",
+      "expectLastState": "GPS_UNCERTAIN",
+      "expectNoArrival": true,
+      "frames": [
+        {
+          "longitude": -79.387196,
+          "latitude": 43.642865,
+          "accuracyMeters": 200.0,
+          "capturedElapsedMs": 1000,
+          "nowElapsedMs": 1000
+        }
+      ]
+    },
+    {
+      "id": "stale-endpoint",
+      "purpose": "Expired fix cannot establish arrival",
+      "expectLastState": "GPS_UNCERTAIN",
+      "expectNoArrival": true,
+      "frames": [
+        {
+          "longitude": -79.387196,
+          "latitude": 43.642865,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 1000,
+          "nowElapsedMs": 21000
+        }
+      ]
+    },
+    {
+      "id": "persistent-off-route",
+      "purpose": "Three well-separated accurate fixes away from all route geometry establish disagreement",
+      "expectLastState": "OFF_ROUTE",
+      "expectNoArrival": true,
+      "frames": [
+        {
+          "longitude": -79.38239377286008,
+          "latitude": 43.64739207088047,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 1000,
+          "nowElapsedMs": 1000
+        },
+        {
+          "longitude": -79.38239377286008,
+          "latitude": 43.64739207088047,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 3000,
+          "nowElapsedMs": 3000
+        },
+        {
+          "longitude": -79.38239377286008,
+          "latitude": 43.64739207088047,
+          "accuracyMeters": 6.0,
+          "capturedElapsedMs": 5000,
+          "nowElapsedMs": 5000
+        }
+      ]
+    }
+  ]
+}

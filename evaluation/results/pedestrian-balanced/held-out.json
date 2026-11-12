@@ -1,0 +1,338 @@
+{
+  "recordedAtUtc": "2026-10-28T03:56:28.907999+00:00",
+  "n": 40,
+  "roadTruthPresent": 20,
+  "modelSha256": "8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4",
+  "datasetManifestSha256": "bdc8dfe9aa6e9e6641f69e17157de039a78f0aafbc7e1879e5289d66bc7366df",
+  "protocolSha256": "eb9c7be7456c8268e02a74edc9ed316987b4c437efaa24c3883ddaf01d9ca708",
+  "selectionSha256": "07506be9178d84226c25d5772c2b701f57ded4c75f851383f78127baff43edc4",
+  "calibrationSha256": "6b3093179094fd1d8061f13b70446c6421f2e38c55e72d4a7768e22ca49d9bdc",
+  "pixelCutoff": 0.0,
+  "automaticRoadVoiceEligibleByCalibration": true,
+  "roadPresenceEvents": {
+    "minimumCoverage": 0.02,
+    "minimumMeanPosterior": 0.75,
+    "tp": 17,
+    "fp": 1,
+    "fn": 3,
+    "tn": 19,
+    "precision": 0.9444444444444444,
+    "recall": 0.85,
+    "iou": 0.8095238095238095,
+    "falseEventsPerImage": 0.025,
+    "events": [
+      {
+        "id": 520324,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 361142,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 124798,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 57149,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 343315,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 100274,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 175438,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 253819,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0
+      },
+      {
+        "id": 553339,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 246963,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 423798,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0
+      },
+      {
+        "id": 369812,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 190923,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 32941,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 221754,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 467848,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 6723,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 499622,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 225532,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 273617,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0
+      },
+      {
+        "id": 192607,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 529105,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 245173,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 79188,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 313588,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 0
+      },
+      {
+        "id": 474078,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 77460,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 527215,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 410880,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 349184,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 151480,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 458045,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 314182,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 175364,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 55299,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 1268,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 117425,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 526103,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 117374,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      {
+        "id": 82696,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      }
+    ]
+  },
+  "roadOnlyPixels": {
+    "tp": 918806,
+    "fp": 289301,
+    "fn": 216810,
+    "tn": 9286825,
+    "precision": 0.7605336282299499,
+    "recall": 0.8090815909603246,
+    "iou": 0.6448136979206508
+  },
+  "roadOrMarkingPixels": {
+    "tp": 945627,
+    "fp": 289715,
+    "fn": 189989,
+    "tn": 9286411,
+    "precision": 0.7654779000471125,
+    "recall": 0.8326996097272318,
+    "iou": 0.6634437895478313
+  },
+  "pavementPredictedAsRoadPixels": 209505,
+  "pavementTruthPixels": 500970,
+  "limits": [
+    "curb accuracy",
+    "marking accuracy",
+    "crosswalks",
+    "sidewalks",
+    "pedestrian signals",
+    "depth",
+    "clearance",
+    "camera movement",
+    "field hazard event recall",
+    "Balanced static COCO photographs; source-image road presence is not physical navigability or a natural-frequency false-warning estimate"
+  ]
+}

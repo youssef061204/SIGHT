@@ -1,3 +1,5 @@
+import java.security.MessageDigest
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -17,7 +19,7 @@ android {
     buildFeatures { compose = true; buildConfig = true }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
-    androidResources { noCompress += "tflite" }
+    androidResources { noCompress += listOf("tflite", "zip") }
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
     lint { abortOnError = true }
 }
@@ -41,6 +43,7 @@ dependencies {
     implementation("com.google.guava:guava:32.0.1-jre")
     implementation("com.google.mlkit:text-recognition:16.0.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
+    implementation("com.alphacephei:vosk-android:0.3.75")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.json:json:20240303")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
@@ -49,4 +52,20 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
+
+tasks.register("verifyVoiceModel") {
+    val archive = layout.projectDirectory.file("src/main/assets/voice-model-small-en-us-0.15.zip")
+    inputs.file(archive)
+    doLast {
+        check(archive.asFile.isFile) { "Run scripts/fetch-voice-model.ps1 before building: bundled offline voice model is missing" }
+        val digest = MessageDigest.getInstance("SHA-256")
+        archive.asFile.inputStream().use { stream ->
+            val buffer = ByteArray(65_536)
+            while (true) { val count = stream.read(buffer); if (count < 0) break; digest.update(buffer, 0, count) }
+        }
+        val hash = digest.digest().joinToString("") { "%02x".format(it) }
+        check(hash == "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498") { "Refusing unverified voice model" }
+    }
+}
+tasks.named("preBuild") { dependsOn("verifyVoiceModel") }
 

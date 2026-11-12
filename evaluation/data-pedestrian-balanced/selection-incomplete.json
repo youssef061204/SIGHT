@@ -1,0 +1,633 @@
+{
+  "accepted": [
+    {
+      "id": 284725,
+      "width": 640,
+      "height": 427,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000284725.jpg",
+      "imageSha256": "10ab8075df3cd9e3344d12fbb764a3c977e809bd06726649b686dd68abcbdf07",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000284725.png",
+      "maskSha256": "e779581b1b31d83d8e0b767fbc760a3023a61df07a9cbc32836e97d829795cae",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000284725.jpg",
+      "dhash64": "99d857f999e6674f",
+      "attribution": {
+        "image_id": 284725,
+        "status": "resolved",
+        "author_name": "bfishadow",
+        "author_url": "https://www.flickr.com/photos/bfishadow/",
+        "title": "An FC Bus",
+        "source_url": "https://www.flickr.com/photos/bfishadow/9766932005/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FfT55Bp&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 14440,
+      "pavementPixels": 61935,
+      "validPixels": 272715
+    },
+    {
+      "id": 522940,
+      "width": 511,
+      "height": 640,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000522940.jpg",
+      "imageSha256": "aa5f5a572998b2b8e100c7da7b8846df5e1d7b264212216792cf3cb30e28fd41",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000522940.png",
+      "maskSha256": "040cf47d6a0531a576308d6d063353ce18629588733dbba0a30e505baa5bbe7e",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000522940.jpg",
+      "dhash64": "c3f148c6a5332368",
+      "attribution": {
+        "image_id": 522940,
+        "status": "resolved",
+        "author_name": "SaucyGlo",
+        "author_url": "https://www.flickr.com/photos/67238971@N04/",
+        "title": "Stop sign outside Bozeman MT",
+        "source_url": "https://www.flickr.com/photos/67238971@N04/8560913618/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2Fe3uVmW&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 46628,
+      "pavementPixels": 0,
+      "validPixels": 326807
+    },
+    {
+      "id": 361142,
+      "width": 463,
+      "height": 640,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000361142.jpg",
+      "imageSha256": "cad7edbaebad81e4a799a39d8be9720c76c79ea2a675cbfd1b16612a837bf28f",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000361142.png",
+      "maskSha256": "5f7eb71f38ec4f3566b06d92cddaf8cd061a784c6edc8b9ac6fe8c5706055f23",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000361142.jpg",
+      "dhash64": "0642c9d8e4c024ce",
+      "attribution": {
+        "image_id": 361142,
+        "status": "resolved",
+        "author_name": "mkis",
+        "author_url": "https://www.flickr.com/photos/mkis/",
+        "title": "Auckland Ferry Building",
+        "source_url": "https://www.flickr.com/photos/mkis/2274699389/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2F4t1qSZ&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 20675,
+      "pavementPixels": 1086,
+      "validPixels": 295624
+    },
+    {
+      "id": 122217,
+      "width": 425,
+      "height": 640,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000122217.jpg",
+      "imageSha256": "7fcc6b0b9a125420374bb9fedc1f13a730c82b4e18814ffe825c2e41024d8ada",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000122217.png",
+      "maskSha256": "ef7ba0b301d223bba12709287c8e3cf17d826530b7559486110467febd0e8e00",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000122217.jpg",
+      "dhash64": "430737cf170d0d00",
+      "attribution": {
+        "image_id": 122217,
+        "status": "resolved",
+        "author_name": "tj scenes",
+        "author_url": "https://www.flickr.com/photos/uncut/",
+        "title": "",
+        "source_url": "https://www.flickr.com/photos/uncut/6327281848/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FaD7Ysm&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 227344,
+      "pavementPixels": 10929,
+      "validPixels": 271833
+    },
+    {
+      "id": 181816,
+      "width": 640,
+      "height": 480,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000181816.jpg",
+      "imageSha256": "fd7fe9e831b97c31d2996209d4eb152558e46d752089d3a2b1b5e0cb21f343fe",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000181816.png",
+      "maskSha256": "b9377b409ca3e584b3255679e7131072b40fc0df5fab4ed808a717736fdd9937",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000181816.jpg",
+      "dhash64": "8c88bce6e6e6e4e0",
+      "attribution": {
+        "image_id": 181816,
+        "status": "resolved",
+        "author_name": "DaraKero_F",
+        "author_url": "https://www.flickr.com/photos/darakero/",
+        "title": "Masked Rider sitting on the bench",
+        "source_url": "https://www.flickr.com/photos/darakero/7978704233/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2Fda3WN6&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 46396,
+      "pavementPixels": 72391,
+      "validPixels": 301423
+    },
+    {
+      "id": 343315,
+      "width": 640,
+      "height": 478,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000343315.jpg",
+      "imageSha256": "b094313886932ec44a42f09bb1d24452abfdac6340111e55395db104d9c07737",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000343315.png",
+      "maskSha256": "5cb2134715de0d5abcc4da7953038bba379eb56935c21fd67b55058702051479",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000343315.jpg",
+      "dhash64": "14141663d28aa098",
+      "attribution": {
+        "image_id": 343315,
+        "status": "resolved",
+        "author_name": "sillygwailo",
+        "author_url": "https://www.flickr.com/photos/sillygwailo/",
+        "title": "Cambie Bioswale and Fire Hydrant",
+        "source_url": "https://www.flickr.com/photos/sillygwailo/6036538152/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FacqQu1&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 92318,
+      "pavementPixels": 20887,
+      "validPixels": 305809
+    },
+    {
+      "id": 476119,
+      "width": 640,
+      "height": 427,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000476119.jpg",
+      "imageSha256": "b1e77b03b318546e0725250efdfb28a1ce24414750ae8e8c3b5097c5ffddf415",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000476119.png",
+      "maskSha256": "b8332e0a8bccbe0fce5c8097aa7514b7ea801c8aa04d56cfae42e2ffe11eb77e",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000476119.jpg",
+      "dhash64": "4ec461e1c2c8dcdf",
+      "attribution": {
+        "image_id": 476119,
+        "status": "resolved",
+        "author_name": "PeterYSKim",
+        "author_url": "https://www.flickr.com/photos/peteryskim/",
+        "title": "YellowVader",
+        "source_url": "https://www.flickr.com/photos/peteryskim/7062224927/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FbL4KqK&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 148054,
+      "pavementPixels": 0,
+      "validPixels": 272531
+    },
+    {
+      "id": 94751,
+      "width": 375,
+      "height": 500,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000094751.jpg",
+      "imageSha256": "4231038444f2ce50dcf7aac0255478c0a19ca857a6b10e137f7bce0c8da7f039",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000094751.png",
+      "maskSha256": "a2ffef2b3516a00846b00998e9fb77b543916df64e30bd1c5ed403990ee418d8",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000094751.jpg",
+      "dhash64": "6868634921733003",
+      "attribution": {
+        "image_id": 94751,
+        "status": "resolved",
+        "author_name": "Elsie esq.",
+        "author_url": "https://www.flickr.com/photos/elsie/",
+        "title": "This way. No! That way. Wrong! Go this. . . . . .",
+        "source_url": "https://www.flickr.com/photos/elsie/9572416/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FR4xE&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 3901,
+      "pavementPixels": 48936,
+      "validPixels": 187265
+    },
+    {
+      "id": 261888,
+      "width": 640,
+      "height": 426,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000261888.jpg",
+      "imageSha256": "02df0f1cd1c0997aacb71636e96f06a033cb2c1adee465744802e7cd691ac4de",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000261888.png",
+      "maskSha256": "d1180ab5191611c55b38bf4de740e1db9e8576abed8d6402f7f27ff302de39ca",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000261888.jpg",
+      "dhash64": "0f271b8d4f0f0909",
+      "attribution": {
+        "image_id": 261888,
+        "status": "resolved",
+        "author_name": "muneaki",
+        "author_url": "https://www.flickr.com/photos/muneaki/",
+        "title": "Close Encounters of Horses",
+        "source_url": "https://www.flickr.com/photos/muneaki/4918743472/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2F8uDR4W&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 64702,
+      "pavementPixels": 0,
+      "validPixels": 271271
+    },
+    {
+      "id": 190923,
+      "width": 375,
+      "height": 500,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000190923.jpg",
+      "imageSha256": "3407447c4e8ca2ceb0db4ba1cb97dee1547e63fb3499cb67d6813ac5d4275d3c",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000190923.png",
+      "maskSha256": "91c64247fb8386a5668b6a7382e1411d50c4394dca82a5103c2039e8ece4a86b",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000190923.jpg",
+      "dhash64": "aecc4ccbdd5c711d",
+      "attribution": {
+        "image_id": 190923,
+        "status": "resolved",
+        "author_name": "ttarasiuk",
+        "author_url": "https://www.flickr.com/photos/tara_siuk/",
+        "title": "IMG_0118",
+        "source_url": "https://www.flickr.com/photos/tara_siuk/3706332805/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2F6DvVBK&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 19054,
+      "pavementPixels": 41823,
+      "validPixels": 180584
+    },
+    {
+      "id": 365655,
+      "width": 640,
+      "height": 427,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000365655.jpg",
+      "imageSha256": "66762bdbb86e5f1aa51134a1ea4e02c9c70f0e9c3bcb6beae6d25c97e2adb4c9",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000365655.png",
+      "maskSha256": "25c28747dc1a7bf3ccd374412eb503404888880d1fd3ed898d421b7b6ca707ae",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000365655.jpg",
+      "dhash64": "4fc703031bd1070f",
+      "attribution": {
+        "image_id": 365655,
+        "status": "resolved",
+        "author_name": "Andy M Smith",
+        "author_url": "https://www.flickr.com/photos/andymsmith/",
+        "title": "IMG_3002",
+        "source_url": "https://www.flickr.com/photos/andymsmith/9708425604/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FfMUdGm&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 83621,
+      "pavementPixels": 0,
+      "validPixels": 270531
+    },
+    {
+      "id": 213255,
+      "width": 480,
+      "height": 640,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000213255.jpg",
+      "imageSha256": "536b78fa08534eb0778e58838065ba773fe8751dd87c13bf070f726affaab6e0",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000213255.png",
+      "maskSha256": "2feada96cb99d10daf4cbaf3245a04ed18394e69a25214eb4848d7e35fc7bbb5",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000213255.jpg",
+      "dhash64": "2e626c726f494d4d",
+      "attribution": {
+        "image_id": 213255,
+        "status": "resolved",
+        "author_name": "Al Pavangkanan",
+        "author_url": "https://www.flickr.com/photos/drtran/",
+        "title": "20080524354",
+        "source_url": "https://www.flickr.com/photos/drtran/2521020235/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2F4QLTu8&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 20098,
+      "pavementPixels": 53245,
+      "validPixels": 302588
+    },
+    {
+      "id": 78823,
+      "width": 640,
+      "height": 480,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000078823.jpg",
+      "imageSha256": "d9fe245622dc52d9c977eb501aa70d23a9e0fb61e2873879db6c0a89b1bc6b88",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000078823.png",
+      "maskSha256": "19bf9ea1320bc7b2deb2be3bf3b5834227376f135c6845caac4480f65d6adef7",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000078823.jpg",
+      "dhash64": "879d99191b1c1446",
+      "attribution": {
+        "image_id": 78823,
+        "status": "resolved",
+        "author_name": "dphiffer",
+        "author_url": "https://www.flickr.com/photos/dphiffer/",
+        "title": "Patient dog",
+        "source_url": "https://www.flickr.com/photos/dphiffer/13918737/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2F2ekye&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 42276,
+      "pavementPixels": 8145,
+      "validPixels": 304362
+    },
+    {
+      "id": 362682,
+      "width": 640,
+      "height": 427,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000362682.jpg",
+      "imageSha256": "840ceaeff4c9d12ebbf3820ef38426091e6a28782ec6cceea9f265cf8cfb2651",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000362682.png",
+      "maskSha256": "31e8fc6db0d1f43a2b4e858a1a8eee1b5a000d11521a36e8e5ad59e0cef81c99",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000362682.jpg",
+      "dhash64": "5dc7c9c98dfd1d53",
+      "attribution": {
+        "image_id": 362682,
+        "status": "resolved",
+        "author_name": "selmerv",
+        "author_url": "https://www.flickr.com/photos/selmer/",
+        "title": "Tokyo Bus",
+        "source_url": "https://www.flickr.com/photos/selmer/8575643656/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2Fe4Nq67&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 79425,
+      "pavementPixels": 0,
+      "validPixels": 272856
+    },
+    {
+      "id": 183246,
+      "width": 500,
+      "height": 400,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000183246.jpg",
+      "imageSha256": "25d6c62b5ee245a99b98de1f078ab5d827c6737dfe11c60815955146604b6e7b",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000183246.png",
+      "maskSha256": "9268bc66da8f8abfeee9928b18cb1f8542d299bb02e43698d1f3065c10d4958f",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000183246.jpg",
+      "dhash64": "5b0d1737a5250d5d",
+      "attribution": {
+        "image_id": 183246,
+        "status": "resolved",
+        "author_name": "crazytales562",
+        "author_url": "https://www.flickr.com/photos/crazytales562/",
+        "title": "Installing stoplight",
+        "source_url": "https://www.flickr.com/photos/crazytales562/2469205788/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2F4LcjRA&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 31952,
+      "pavementPixels": 0,
+      "validPixels": 199396
+    },
+    {
+      "id": 176037,
+      "width": 640,
+      "height": 431,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000176037.jpg",
+      "imageSha256": "64001499037f4314e4deb5cf0f85e9f0b06331370f1e8901bd1057b47c5ddf42",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000176037.png",
+      "maskSha256": "8746545326a2d39c75182dfc2f2493a3df8d6536efa564572093c303813a1cc5",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000176037.jpg",
+      "dhash64": "b1b1e78d8dd48dcc",
+      "attribution": {
+        "image_id": 176037,
+        "status": "resolved",
+        "author_name": "MTAPhotos",
+        "author_url": "https://www.flickr.com/photos/mtaphotos/",
+        "title": "NYCB_6218",
+        "source_url": "https://www.flickr.com/photos/mtaphotos/8140155314/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2Fdpjqzq&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 59990,
+      "pavementPixels": 40352,
+      "validPixels": 275113
+    },
+    {
+      "id": 303818,
+      "width": 480,
+      "height": 640,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000303818.jpg",
+      "imageSha256": "7e8916d1f7c98799b8ea70c9b5f20486167dde4c70f6d35d36d2cc384a4c2624",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000303818.png",
+      "maskSha256": "6545902e439720c2e288776c847b550949433524a858fea61f7c84595fc8c8a6",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000303818.jpg",
+      "dhash64": "2316189b0fb13c37",
+      "attribution": {
+        "image_id": 303818,
+        "status": "resolved",
+        "author_name": "foodieSarah",
+        "author_url": "https://www.flickr.com/photos/foodiesarah/",
+        "title": "Hairpin band",
+        "source_url": "https://www.flickr.com/photos/foodiesarah/9604033757/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2FfCFbCV&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 118221,
+      "pavementPixels": 57408,
+      "validPixels": 306639
+    },
+    {
+      "id": 356387,
+      "width": 500,
+      "height": 335,
+      "imagePath": "evaluation/data-pedestrian-balanced/images/000000356387.jpg",
+      "imageSha256": "d728e357255116bacd64621f096aae8a7aacaa0c1588b40591b8758a0cc32485",
+      "maskPath": "evaluation/data-pedestrian-balanced/masks/000000356387.png",
+      "maskSha256": "46255474f23fe273da12cbff03ddf02bc0bca61b7a4d432043bc3ae27cdc0be2",
+      "downloadUrl": "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000356387.jpg",
+      "dhash64": "1f171737031c3e33",
+      "attribution": {
+        "image_id": 356387,
+        "status": "resolved",
+        "author_name": "krossbow",
+        "author_url": "https://www.flickr.com/photos/krossbow/",
+        "title": "April in Paris 1999",
+        "source_url": "https://www.flickr.com/photos/krossbow/3055048577/",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "oembed_url": "https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fflic.kr%2Fp%2F5DXVvk&format=json"
+      },
+      "roadTruthPresent": true,
+      "roadPixels": 15211,
+      "pavementPixels": 9630,
+      "validPixels": 164919
+    }
+  ],
+  "exclusions": [
+    {
+      "id": 542625,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 479912,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 498286,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 84170,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 479030,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 516143,
+      "reason": "Current Flickr license is not accepted CC BY: CC BY-NC-SA 2.0"
+    },
+    {
+      "id": 423519,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 138979,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 577932,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 183709,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 89556,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 202339,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 485237,
+      "reason": "Current Flickr license is not accepted CC BY: All Rights Reserved"
+    },
+    {
+      "id": 293071,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 314251,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 531036,
+      "reason": "Current Flickr license is not accepted CC BY: CC BY-NC-SA 2.0"
+    },
+    {
+      "id": 377723,
+      "reason": "Current Flickr license is not accepted CC BY: All Rights Reserved"
+    },
+    {
+      "id": 455085,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 306893,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 523957,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 76416,
+      "reason": "Current Flickr license is not accepted CC BY: CC BY-NC-SA 2.0"
+    },
+    {
+      "id": 430871,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 140203,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 415536,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 369751,
+      "reason": "Current Flickr license is not accepted CC BY: CC BY-NC-SA 2.0"
+    },
+    {
+      "id": 259830,
+      "reason": "Current Flickr license is not accepted CC BY: None"
+    },
+    {
+      "id": 431848,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 576566,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 213605,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 142472,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 414510,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 227511,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 98392,
+      "reason": "Current Flickr license is not accepted CC BY: CC BY-NC-SA 2.0"
+    },
+    {
+      "id": 542856,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 547336,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 549930,
+      "reason": "Current Flickr license is not accepted CC BY: All Rights Reserved"
+    },
+    {
+      "id": 326627,
+      "reason": "prior creator or two-photo creator cap"
+    },
+    {
+      "id": 206487,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 301376,
+      "reason": "prior creator or two-photo creator cap"
+    }
+  ],
+  "counts": {
+    "true": 18
+  }
+}

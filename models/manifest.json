@@ -2,6 +2,7 @@
   "schema_version": 1,
   "selected_model": "efficientdet_lite0_int8",
   "inspection_model": "efficientdet_lite2_int8",
+  "pedestrian_surface_model": "intel_road_segmentation_adas_0001_fp32",
   "runtime_profiles": {
     "FAST": {"model_id": "efficientdet_lite0_int8", "score_threshold": 0.5, "role": "Continuous low-cost scene updates"},
     "INSPECT": {"model_id": "efficientdet_lite2_int8", "score_threshold": 0.55, "role": "Selective higher-detail inspection; deadline/thermal fallback required"}
@@ -10,6 +11,20 @@
   "source_documentation": "https://developers.google.com/edge/mediapipe/solutions/vision/object_detector",
   "retrieved_date": "2026-10-25",
   "models": [
+    {
+      "id": "intel_road_segmentation_adas_0001_fp32",
+      "path": "models/road_segmentation_adas_0001.tflite",
+      "bundled_asset": "perception/src/main/assets/road_segmentation_adas_0001.tflite",
+      "url": "https://github.com/youssef061204/SIGHT/releases/download/public-preview/road_segmentation_adas_0001.tflite",
+      "sha256": "8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4",
+      "bytes": 817520,
+      "input": "896x512 float32 NHWC raw BGR 0-255; stretch resize, output four softmax channels",
+      "version": "Intel reference graph with five resize flags corrected to align_corners=true, half_pixel_centers=false; weights unchanged",
+      "upstream_url": "https://huggingface.co/AutowareFoundation/yabloc_pose_initializer/resolve/282a7fa0eb53ab5f8f0f179708ca57eacd25eaf1/saved_model/model_float32.tflite",
+      "upstream_sha256": "9ac3a1423bc48e83808edc8273fe7a6e53d0bf0cabe2699d5ed1979b3c64f8a8",
+      "role": "Purpose-built road/curb/marking segmentation; narration eligibility is evaluated separately",
+      "license": "Apache-2.0 Intel Open Model Zoo; MIT PINTO conversion repository (Katsuya Hyodo), with SIGHT resize-flag correction. See pedestrian evaluation model notice. Does not recognize sidewalks, crosswalks, signal states or depth."
+    },
     {
       "id": "efficientdet_lite0_int8",
       "path": "models/efficientdet_lite0_int8.tflite",

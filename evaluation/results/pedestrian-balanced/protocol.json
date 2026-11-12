@@ -1,0 +1,57 @@
+{
+  "modelSha256": "8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4",
+  "pixelCutoffGrid": [
+    0.0,
+    0.35,
+    0.5,
+    0.65,
+    0.75,
+    0.85
+  ],
+  "pixelSelection": "Highest strict-road pixel IoU on selection; tie prefers higher cutoff",
+  "componentMinimumCoverage": 0.002,
+  "componentConnectivity": 4,
+  "maximumComponents": 12,
+  "voiceCoverageGrid": [
+    0.02,
+    0.04,
+    0.06,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "voiceMeanPosteriorGrid": [
+    0.0,
+    0.5,
+    0.65,
+    0.75,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "truthRoadPresence": "At least 2 percent of original full-image pixels annotated as COCO-Stuff road149",
+  "calibrationGate": {
+    "minimumPrecision": 0.9,
+    "maximumFalseEventsPerImage": 0.02,
+    "minimumRecall": 0.4,
+    "minimumTruePositives": 3
+  },
+  "voiceChoice": "Highest calibration recall meeting gate; then fewer FP, higher mean posterior, larger coverage. None means automatic road description disabled.",
+  "heldOutRule": "Evaluate selected pixel cutoff and fixed calibrated voice rule once; never retune on these images",
+  "notEvaluated": [
+    "curb accuracy",
+    "marking accuracy",
+    "crosswalks",
+    "sidewalks",
+    "pedestrian signals",
+    "depth",
+    "clearance",
+    "camera movement",
+    "field hazard event recall"
+  ],
+  "scope": "Balanced static COCO photographs; source-image road presence is not physical navigability or a natural-frequency false-warning estimate",
+  "datasetManifestSha256": "bdc8dfe9aa6e9e6641f69e17157de039a78f0aafbc7e1879e5289d66bc7366df"
+}

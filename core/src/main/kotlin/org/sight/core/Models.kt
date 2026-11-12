@@ -112,8 +112,8 @@ data class GoalState(
 )
 
 enum class ReliabilityState { OPERATIONAL, NEEDS_CONFIRMATION, VISUAL_INPUT_UNAVAILABLE, REDUCED_CAPABILITY, UNSUPPORTED_REQUEST }
-enum class SpeechPriority { AMBIENT, TASK, USER_REQUEST, STATUS }
-enum class AnnouncementKind { LIVE_SCENE, FIND_RESULT, OCR, MEMORY, STATUS, UNCERTAINTY }
+enum class SpeechPriority { AMBIENT, TASK, USER_REQUEST, NAVIGATION, ENVIRONMENT, STATUS }
+enum class AnnouncementKind { LIVE_SCENE, FIND_RESULT, OCR, MEMORY, STATUS, UNCERTAINTY, NAVIGATION, ENVIRONMENT }
 data class Grounding(val trackId: Long, val category: String, val direction: ImageDirection)
 data class Announcement(
     val text: String,
@@ -125,6 +125,8 @@ data class Announcement(
     val dedupKey: String = text,
     val grounding: List<Grounding> = emptyList(),
     val requiredRelationships: List<SceneRelationship> = emptyList(),
+    /** Optional task-context revision; used to invalidate queued navigation when its route changes. */
+    val contextId: String? = null,
 )
 
 data class RememberedEntity(val category: String, val direction: ImageDirection, val confidence: Float)

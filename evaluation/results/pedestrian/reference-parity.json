@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "imageId": 210273,
+      "maximumPosteriorError": 7.152557373046875e-06,
+      "meanPosteriorError": 1.5791053442626435e-07,
+      "argmaxAgreement": 1.0
+    },
+    {
+      "imageId": 256916,
+      "maximumPosteriorError": 1.3709068298339844e-05,
+      "meanPosteriorError": 1.3108754615132057e-07,
+      "argmaxAgreement": 1.0
+    },
+    {
+      "imageId": 278705,
+      "maximumPosteriorError": 7.271766662597656e-06,
+      "meanPosteriorError": 1.1842331559819286e-07,
+      "argmaxAgreement": 0.9999978201729911
+    },
+    {
+      "imageId": 338191,
+      "maximumPosteriorError": 8.046627044677734e-06,
+      "meanPosteriorError": 1.4879003629175713e-07,
+      "argmaxAgreement": 1.0
+    },
+    {
+      "imageId": 393226,
+      "maximumPosteriorError": 4.857778549194336e-06,
+      "meanPosteriorError": 6.345977965338534e-08,
+      "argmaxAgreement": 1.0
+    },
+    {
+      "imageId": 472623,
+      "maximumPosteriorError": 3.4332275390625e-05,
+      "meanPosteriorError": 2.3531431736500963e-07,
+      "argmaxAgreement": 1.0
+    },
+    {
+      "imageId": 499768,
+      "maximumPosteriorError": 1.52587890625e-05,
+      "meanPosteriorError": 1.4642546375398524e-07,
+      "argmaxAgreement": 1.0
+    },
+    {
+      "imageId": 572517,
+      "maximumPosteriorError": 3.7550926208496094e-06,
+      "meanPosteriorError": 2.53296956742588e-08,
+      "argmaxAgreement": 1.0
+    }
+  ],
+  "modelSha256": "8cbfa699891f82f6edae8493b8a75e648ddbbe8725165a86c6fc4c1f78e6a5b4",
+  "referenceXmlSha256": "228e4ef841a6cea468fc8cdf2c17b2cb27e7acc153ea81cf18773094043eadf9",
+  "referenceBinSha256": "e708aff5c4cd9813b575c72011f2cef9a4f5adb7aa382d81dc7adbb395dc9d8c",
+  "scope": "Same raw BGR float tensor into Intel official OpenVINO reference and redistributed TFLite conversion; not Android resize equivalence"
+}

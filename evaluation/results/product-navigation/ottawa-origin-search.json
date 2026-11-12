@@ -1,0 +1,169 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 68588664,
+        "osm_key": "amenity",
+        "osm_value": "townhall",
+        "type": "house",
+        "housenumber": "110",
+        "name": "Ottawa City Hall",
+        "street": "Laurier Avenue West",
+        "locality": "Golden Triangle",
+        "district": "Centretown",
+        "city": "Ottawa",
+        "county": "Eastern Ontario",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K1P 1J1",
+        "countrycode": "CA",
+        "extent": [
+          -75.6908418,
+          45.421433,
+          -75.6893233,
+          45.4201779
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6902694,
+          45.4208017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 68588664,
+        "osm_key": "office",
+        "osm_value": "government",
+        "type": "house",
+        "housenumber": "110",
+        "name": "Ottawa City Hall",
+        "street": "Laurier Avenue West",
+        "locality": "Golden Triangle",
+        "district": "Centretown",
+        "city": "Ottawa",
+        "county": "Eastern Ontario",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K1P 1J1",
+        "countrycode": "CA",
+        "extent": [
+          -75.6908418,
+          45.421433,
+          -75.6893233,
+          45.4201779
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6902694,
+          45.4208017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 479623955,
+        "osm_key": "amenity",
+        "osm_value": "townhall",
+        "type": "house",
+        "housenumber": "301",
+        "name": "Ottawa City Hall",
+        "street": "West Madison Street",
+        "city": "Ottawa",
+        "county": "LaSalle",
+        "state": "Illinois",
+        "country": "United States",
+        "postcode": "61350",
+        "countrycode": "US",
+        "extent": [
+          -88.8446252,
+          41.3466973,
+          -88.8442844,
+          41.3464008
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.8444545,
+          41.3465298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 68588510,
+        "osm_key": "amenity",
+        "osm_value": "townhall",
+        "type": "house",
+        "housenumber": "195",
+        "name": "Ottawa City Hall Heritage Building",
+        "street": "Elgin Street",
+        "district": "Centretown",
+        "city": "Ottawa",
+        "county": "Eastern Ontario",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "K2P 1L7",
+        "countrycode": "CA",
+        "extent": [
+          -75.69147,
+          45.4203028,
+          -75.6902714,
+          45.4196134
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6908549,
+          45.419956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_type": "W",
+        "osm_id": 892294733,
+        "osm_key": "building",
+        "osm_value": "yes",
+        "type": "house",
+        "name": "Ottawa City Hall",
+        "street": "West 4th Street",
+        "city": "Ottawa",
+        "county": "Franklin",
+        "state": "Kansas",
+        "country": "United States",
+        "postcode": "66067",
+        "countrycode": "US",
+        "extent": [
+          -95.2698308,
+          38.613215,
+          -95.2696428,
+          38.6129792
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.2697368,
+          38.6131076
+        ]
+      }
+    }
+  ]
+}

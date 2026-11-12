@@ -10,5 +10,13 @@ local.properties
 *.jks
 .idea/
 *.iml
+.env
+.env.*
+!.env.example
+*.partial
+*.apk
+*.aab
+*.p12
+*.pfx
 evaluation/data/cache/
 models/*.tflite

@@ -1,0 +1,37 @@
+{
+  "modelId": "intel-road-segmentation-adas-0001-fp32",
+  "modelSha256": "9ac3a1423bc48e83808edc8273fe7a6e53d0bf0cabe2699d5ed1979b3c64f8a8",
+  "modelUrl": "https://huggingface.co/AutowareFoundation/yabloc_pose_initializer/resolve/282a7fa0eb53ab5f8f0f179708ca57eacd25eaf1/saved_model/model_float32.tflite",
+  "pixelPosterior": 0.85,
+  "componentMinimumCoverage": 0.002,
+  "componentConnectivity": 4,
+  "maximumComponents": 12,
+  "voiceCoverageGrid": [
+    0.06,
+    0.1,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "voiceMinimumMeanPosterior": 0.85,
+  "truthRoadPresence": "At least2percent of full original-image pixels annotated as road",
+  "calibrationGate": {
+    "minimumPrecision": 0.9,
+    "maximumFalseEventsPerImage": 0.02,
+    "minimumTruePositiveEvents": 3,
+    "minimumRecall": 0.4
+  },
+  "choice": "Highest recall meeting gate; then fewer false positives, then larger coverage. If none pass, automatic surface speech disabled.",
+  "primaryPixelMetric": "Strict road class1 at posterior>=.85 versus COCO-Stuff road149; model markings remain separate",
+  "secondaryPixelMetric": "Road+marking(1or3) versus road149, reported explicitly and never treated as crosswalk",
+  "unsupportedVoiceClasses": [
+    "curb",
+    "road_marking",
+    "sidewalk",
+    "crosswalk",
+    "stairs",
+    "entrance",
+    "pedestrian_signal_state"
+  ],
+  "safety": "Even an admitted road description does not establish crossing permission, clearance, passability, physical distance or body direction"
+}

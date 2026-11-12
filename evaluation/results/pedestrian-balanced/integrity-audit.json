@@ -1,0 +1,23 @@
+{
+  "images": 100,
+  "creators": 89,
+  "splitCounts": {
+    "calibration": 30,
+    "selection": 30,
+    "held_out": 40
+  },
+  "positiveCounts": {
+    "calibration": 15,
+    "selection": 15,
+    "held_out": 20
+  },
+  "crossSplitCreators": 0,
+  "priorImageIdOverlap": 0,
+  "priorCreatorOverlap": 0,
+  "minimumWithinCorpusDhashDistance": 14,
+  "datasetManifestSha256": "bdc8dfe9aa6e9e6641f69e17157de039a78f0aafbc7e1879e5289d66bc7366df",
+  "protocolSha256": "eb9c7be7456c8268e02a74edc9ed316987b4c437efaa24c3883ddaf01d9ca708",
+  "fullHeldOutGatePassed": false,
+  "automaticRoadDescriptionsEnabled": false,
+  "reason": "The unchanged held-out FP/image budget is exceeded:1/40=.025 versus .02 maximum. No post-test threshold change."
+}

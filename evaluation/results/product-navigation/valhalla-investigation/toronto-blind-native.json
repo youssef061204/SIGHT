@@ -1,0 +1,325 @@
+{
+  "trip": {
+    "locations": [
+      {
+        "type": "break",
+        "lat": 43.6452,
+        "lon": -79.3803,
+        "original_index": 0
+      },
+      {
+        "type": "break",
+        "lat": 43.6426,
+        "lon": -79.3871,
+        "side_of_street": "left",
+        "original_index": 1
+      }
+    ],
+    "legs": [
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Walk west on Great Hall.",
+            "verbal_succinct_transition_instruction": "Walk west.",
+            "verbal_pre_transition_instruction": "Walk west on Great Hall.",
+            "verbal_post_transition_instruction": "Continue for 30 meters.",
+            "street_names": [
+              "Great Hall"
+            ],
+            "bearing_after": 253,
+            "time": 17.695,
+            "length": 0.025,
+            "cost": 17.695,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 8,
+            "instruction": "Pass VIA Concourse.",
+            "verbal_pre_transition_instruction": "Pass VIA Concourse.",
+            "street_names": [
+              "Great Hall"
+            ],
+            "bearing_before": 253,
+            "bearing_after": 254,
+            "time": 22.588,
+            "length": 0.032,
+            "cost": 22.588,
+            "begin_shape_index": 1,
+            "end_shape_index": 2,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 8,
+            "instruction": "Continue on West Wing.",
+            "verbal_transition_alert_instruction": "Continue on West Wing.",
+            "verbal_pre_transition_instruction": "Continue on West Wing.",
+            "verbal_post_transition_instruction": "Continue for 80 meters.",
+            "street_names": [
+              "West Wing"
+            ],
+            "bearing_before": 254,
+            "bearing_after": 254,
+            "time": 55.764,
+            "length": 0.079,
+            "cost": 60.764,
+            "begin_shape_index": 2,
+            "end_shape_index": 3,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 15,
+            "instruction": "Turn left onto PATH Main Route.",
+            "verbal_transition_alert_instruction": "Turn left onto PATH Main Route.",
+            "verbal_succinct_transition_instruction": "Turn left.",
+            "verbal_pre_transition_instruction": "Turn left onto PATH Main Route.",
+            "verbal_post_transition_instruction": "Continue for 20 meters.",
+            "street_names": [
+              "PATH Main Route"
+            ],
+            "bearing_before": 254,
+            "bearing_after": 163,
+            "time": 14.823,
+            "length": 0.021,
+            "cost": 19.823,
+            "begin_shape_index": 3,
+            "end_shape_index": 5,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 44,
+            "instruction": "Continue to Level 1.",
+            "street_names": [
+              "SkyWalk"
+            ],
+            "bearing_before": 209,
+            "bearing_after": 254,
+            "time": 25.411,
+            "length": 0.036,
+            "cost": 30.411,
+            "begin_shape_index": 5,
+            "end_shape_index": 6,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 8,
+            "instruction": "Continue on SkyWalk.",
+            "verbal_transition_alert_instruction": "Continue on SkyWalk.",
+            "verbal_pre_transition_instruction": "Continue on SkyWalk.",
+            "verbal_post_transition_instruction": "Continue for 100 meters.",
+            "street_names": [
+              "SkyWalk"
+            ],
+            "bearing_before": 254,
+            "bearing_after": 255,
+            "time": 100.941,
+            "length": 0.143,
+            "cost": 100.941,
+            "begin_shape_index": 6,
+            "end_shape_index": 13,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 9,
+            "instruction": "Bear right.",
+            "verbal_transition_alert_instruction": "Bear right.",
+            "verbal_succinct_transition_instruction": "Bear right.",
+            "verbal_pre_transition_instruction": "Bear right.",
+            "verbal_post_transition_instruction": "Continue for less than 10 meters.",
+            "bearing_before": 255,
+            "bearing_after": 274,
+            "time": 4.941,
+            "length": 0.007,
+            "cost": 9.941,
+            "begin_shape_index": 13,
+            "end_shape_index": 14,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 41,
+            "instruction": "Take the escalator to Level 2.",
+            "street_names": [
+              "SkyWalk"
+            ],
+            "bearing_before": 274,
+            "bearing_after": 253,
+            "time": 19.764,
+            "length": 0.028,
+            "cost": 24.764,
+            "begin_shape_index": 14,
+            "end_shape_index": 15,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 15,
+            "instruction": "Turn left to stay on SkyWalk.",
+            "verbal_transition_alert_instruction": "Turn left to stay on SkyWalk.",
+            "verbal_succinct_transition_instruction": "Turn left.",
+            "verbal_pre_transition_instruction": "Turn left to stay on SkyWalk.",
+            "verbal_post_transition_instruction": "Continue for less than 10 meters.",
+            "street_names": [
+              "SkyWalk"
+            ],
+            "bearing_before": 253,
+            "bearing_after": 164,
+            "time": 2.823,
+            "length": 0.004,
+            "cost": 2.823,
+            "begin_shape_index": 15,
+            "end_shape_index": 16,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 8,
+            "instruction": "Pass SkyWalk.",
+            "verbal_pre_transition_instruction": "Pass SkyWalk.",
+            "street_names": [
+              "SkyWalk"
+            ],
+            "bearing_before": 164,
+            "bearing_after": 164,
+            "time": 73.948,
+            "length": 0.113,
+            "cost": 73.948,
+            "begin_shape_index": 16,
+            "end_shape_index": 19,
+            "rough": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 9,
+            "instruction": "Bear right to stay on SkyWalk.",
+            "verbal_transition_alert_instruction": "Bear right to stay on SkyWalk.",
+            "verbal_succinct_transition_instruction": "Bear right.",
+            "verbal_pre_transition_instruction": "Bear right to stay on SkyWalk.",
+            "verbal_post_transition_instruction": "Continue for 90 meters.",
+            "street_names": [
+              "SkyWalk"
+            ],
+            "bearing_before": 221,
+            "bearing_after": 251,
+            "time": 61.411,
+            "length": 0.086,
+            "cost": 61.411,
+            "begin_shape_index": 19,
+            "end_shape_index": 22,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 8,
+            "instruction": "Continue.",
+            "verbal_transition_alert_instruction": "Continue.",
+            "verbal_pre_transition_instruction": "Continue.",
+            "verbal_post_transition_instruction": "Continue for 40 meters.",
+            "bearing_before": 254,
+            "bearing_after": 278,
+            "time": 31.835,
+            "length": 0.041,
+            "cost": 36.835,
+            "begin_shape_index": 22,
+            "end_shape_index": 25,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 10,
+            "instruction": "Turn right.",
+            "verbal_transition_alert_instruction": "Turn right.",
+            "verbal_succinct_transition_instruction": "Turn right.",
+            "verbal_pre_transition_instruction": "Turn right.",
+            "verbal_post_transition_instruction": "Continue for 90 meters.",
+            "bearing_before": 236,
+            "bearing_after": 287,
+            "time": 70.791,
+            "length": 0.086,
+            "cost": 74.273,
+            "begin_shape_index": 25,
+            "end_shape_index": 33,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 6,
+            "instruction": "Your destination is on the left.",
+            "verbal_transition_alert_instruction": "Your destination will be on the left.",
+            "verbal_pre_transition_instruction": "Your destination is on the left.",
+            "bearing_before": 255,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 33,
+            "end_shape_index": 33,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          }
+        ],
+        "summary": {
+          "level_changes": [
+            [
+              0,
+              0.0
+            ],
+            [
+              6,
+              1.0
+            ],
+            [
+              15,
+              2.0
+            ]
+          ],
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 43.642865,
+          "min_lon": -79.387195,
+          "max_lat": 43.645216,
+          "max_lon": -79.380306,
+          "time": 502.741,
+          "length": 0.702,
+          "cost": 536.223
+        },
+        "shape": "aq{frAdt~kvC`CrQzCtVjKxy@lH{BRxAnD`Zp@|FNhAbDjYlDhXrBtObCdRv@|GG`DrCbT`AYfDcAbZsJ`UdY`EfWxAhJ~Db\\QvDPdGbFpMq@fFe@~J@zGv@hGxArKPxAh@rEj@dF"
+      }
+    ],
+    "summary": {
+      "has_time_restrictions": false,
+      "has_toll": false,
+      "has_highway": false,
+      "has_ferry": false,
+      "min_lat": 43.642865,
+      "min_lon": -79.387195,
+      "max_lat": 43.645216,
+      "max_lon": -79.380306,
+      "time": 502.741,
+      "length": 0.702,
+      "cost": 536.223
+    },
+    "status_message": "Found route between points",
+    "status": 0,
+    "units": "kilometers",
+    "language": "en-US"
+  }
+}

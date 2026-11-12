@@ -49,6 +49,8 @@ class SpeechQueue(
             emit(SpeechDecisionCode.COOLDOWN, nowMs, event); return SpeechOfferResult(false)
         }
         val active = current
+        val resumeNavigation = active?.event?.takeIf { event.priority == SpeechPriority.ENVIRONMENT &&
+            it.priority == SpeechPriority.NAVIGATION && valid(it,nowMs) }
         val interrupt = active != null && (event.priority > active.event.priority ||
             event.priority >= SpeechPriority.USER_REQUEST && event.priority == active.event.priority)
         if (interrupt) {
@@ -56,7 +58,9 @@ class SpeechQueue(
             emit(SpeechDecisionCode.INTERRUPTED, nowMs, active!!.event)
         }
         if (event.priority >= SpeechPriority.USER_REQUEST) {
-            val removed = pending.toList(); pending.clear()
+            val removed = pending.filter { it.event.priority <= event.priority &&
+                !(event.priority == SpeechPriority.ENVIRONMENT && it.event.priority == SpeechPriority.NAVIGATION) }
+            pending.removeAll(removed.toSet())
             removed.forEach { emit(SpeechDecisionCode.SUPERSEDED, nowMs, it.event) }
         } else if (event.priority == SpeechPriority.TASK) {
             val ambient = pending.filter { it.event.priority == SpeechPriority.AMBIENT }
@@ -73,6 +77,8 @@ class SpeechQueue(
             emit(SpeechDecisionCode.EVICTED, nowMs, lowest.event)
         }
         pending += Pending(event, sequence++)
+        if (resumeNavigation != null && pending.size < capacity && pending.none { it.event.dedupKey == resumeNavigation.dedupKey })
+            pending += Pending(resumeNavigation,sequence++)
         emit(SpeechDecisionCode.ENQUEUED, nowMs, event)
         return SpeechOfferResult(true, interrupt)
     }

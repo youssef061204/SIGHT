@@ -4,6 +4,8 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.SystemClock
+import android.view.KeyEvent
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
@@ -32,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.Lifecycle
 import org.sight.app.navigation.NavigationController
 import org.sight.app.navigation.NavigationScreen
 import org.sight.core.*
@@ -47,10 +50,12 @@ class MainActivity : ComponentActivity() {
     private lateinit var controller: SightController
     private lateinit var navigation: NavigationController
     private var camera: PhoneCameraSource? = null
+    private lateinit var session: SightSession
+    private var requestVoice: (() -> Unit)? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val session = ViewModelProvider(this)[SightSession::class.java]
+        session = ViewModelProvider(this)[SightSession::class.java]
         controller = session.controller
         navigation = session.navigation
         setContent {
@@ -63,9 +68,29 @@ class MainActivity : ComponentActivity() {
 
     private fun stopCamera() { camera?.stop(); camera = null; controller.pause() }
 
+    override fun onKeyDown(keyCode:Int,event:KeyEvent):Boolean =
+        if(this::controller.isInitialized && keyCode in setOf(KeyEvent.KEYCODE_VOLUME_UP,KeyEvent.KEYCODE_VOLUME_DOWN)) true
+        else super.onKeyDown(keyCode,event)
+
+    override fun onKeyUp(keyCode:Int,event:KeyEvent):Boolean {
+        if(this::controller.isInitialized && keyCode in setOf(KeyEvent.KEYCODE_VOLUME_UP,KeyEvent.KEYCODE_VOLUME_DOWN)) {
+            if(!event.isCanceled) {
+                if(keyCode==KeyEvent.KEYCODE_VOLUME_UP) requestVoice?.invoke()
+                else { navigation.cancelNavigation(); stopCamera(); controller.perceptionStatus("Assistance stopped. Camera, microphone and route guidance are paused.") }
+            }
+            return true
+        }
+        return super.onKeyUp(keyCode,event)
+    }
+
     // Stop observations in the background; keep the user's task and ephemeral memory
     // across Activity recreation. The retained ViewModel never owns an Activity or camera.
-    override fun onStop() { stopCamera(); navigation.stopGps(); super.onStop() }
+    override fun onStop() { window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); stopCamera(); navigation.stopGps(); super.onStop() }
+    override fun onDestroy() {
+        navigation.onLocationPermissionRequired=null
+        session.onRequestStart=null; session.onRequestStop=null; requestVoice=null
+        super.onDestroy()
+    }
 
     @Composable
     private fun SightApp() {
@@ -87,13 +112,16 @@ class MainActivity : ComponentActivity() {
             else -> assistScroll
         }
         val cameraPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            if (granted) controller.start() else controller.failure("Camera permission is needed for visual assistance. Enable it in Android app settings.")
+            if (granted && lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) controller.start()
+            else if(!granted) controller.failure("Camera permission is needed for visual assistance. Enable it in Android app settings.")
         }
         val microphonePermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            if (granted) controller.startListening() else controller.command("Microphone permission was declined")
+            if (granted && lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) controller.startListening()
+            else if(!granted) controller.perceptionStatus("Microphone permission was declined. The labelled command field and TalkBack remain available.")
         }
         val locationPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { granted ->
-            if (granted.values.any { it }) navigation.startGps()
+            if (granted.values.any { it } && lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) navigation.startGps()
+            else if(!granted.values.any { it }) navigation.locationPermissionDenied()
         }
         val export = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
             uri?.let {
@@ -105,6 +133,21 @@ class MainActivity : ComponentActivity() {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) controller.start()
             else cameraPermission.launch(Manifest.permission.CAMERA)
         }
+        fun listen() {
+            if(controller.listening) controller.voice.cancel()
+            else if(ContextCompat.checkSelfPermission(this,Manifest.permission.RECORD_AUDIO)==PackageManager.PERMISSION_GRANTED) controller.startListening()
+            else microphonePermission.launch(Manifest.permission.RECORD_AUDIO)
+        }
+        DisposableEffect(Unit) {
+            session.onRequestStart={start()}; session.onRequestStop={stopCamera()}
+            navigation.onLocationPermissionRequired={locationPermission.launch(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION))}
+            requestVoice={listen()}
+            onDispose { session.onRequestStart=null; session.onRequestStop=null; navigation.onLocationPermissionRequired=null; requestVoice=null }
+        }
+        SideEffect {
+            if(controller.running || navigation.gpsActive) window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            else window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
 
         Scaffold(containerColor = Ink, bottomBar = { DestinationBar(tab) { tab = it } }) { padding ->
             Column(Modifier.fillMaxSize().padding(padding)) {
@@ -112,11 +155,17 @@ class MainActivity : ComponentActivity() {
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                         Text("SIGHT", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold,
                             modifier = Modifier.weight(1f).semantics { heading() })
-                        Text("3.0", color = Mint, style = MaterialTheme.typography.labelLarge)
+                        if(controller.running || navigation.gpsActive || controller.listening) TextButton(onClick={
+                            navigation.cancelNavigation(); stopCamera(); controller.perceptionStatus("Assistance stopped. Camera, microphone and route guidance are paused.")
+                        },modifier=Modifier.heightIn(min=48.dp)) { Text("Stop assistance") }
                     }
-                    Text("${if (controller.running) "Camera active" else "Camera off"} · ${if (controller.listening) "Microphone active" else "Microphone off"}",
+                    Text("${if (controller.running) "Camera active" else "Camera off"} · ${if (controller.listening) "Voice command active" else "Microphone off"}",
                         color = if (controller.running || controller.listening) Mint else Secondary,
                         modifier = Modifier.testTag("sensor-status").semantics { liveRegion = LiveRegionMode.Polite })
+                    if(controller.listening) Text(controller.microphoneStatus,color=Mint,
+                        modifier=Modifier.semantics { liveRegion=LiveRegionMode.Polite })
+                    if(navigation.hasRouteContext || navigation.gpsActive) Text("${if(navigation.gpsActive) "Location active" else "Location paused"} · Route ${navigation.phase.name.lowercase()}",
+                        color=Mint,modifier=Modifier.testTag("location-status").semantics { liveRegion=LiveRegionMode.Polite })
                 }
                 // This AndroidView has one stable composition slot outside every destination.
                 CameraHost(showPreview = tab == "Developer")
@@ -136,6 +185,17 @@ class MainActivity : ComponentActivity() {
                                     Text("Continue using your usual mobility aids. Descriptions can miss objects and do not assess a safe path.", color = Secondary)
                                 }
                             }
+                            Heading("Walking directions")
+                            Text(navigation.message,modifier=Modifier.testTag("route-status").semantics { liveRegion=LiveRegionMode.Polite })
+                            if(navigation.hasRouteContext) Text("Route context retained · ${navigation.phase.name.lowercase()}",color=Mint)
+                            if(navigation.currentInstruction.isNotBlank()) Text(navigation.currentInstruction)
+                            OutlinedTextField(navigation.query,navigation::changeQuery,label={Text("Destination name or address")},modifier=Modifier.fillMaxWidth())
+                            Action("Navigate",Modifier.fillMaxWidth(),navigation.query.isNotBlank()) { controller.command("take me to ${navigation.query}") }
+                            Text("Say ‘enable route services’ to consent to sharing destination queries and route coordinates with the providers. Then say ‘take me to the library’ and choose a numbered result.",color=Secondary)
+                            AdaptiveActions(
+                                { modifier -> Action(if(controller.listening) "Cancel microphone" else "Speak a command",modifier) { listen() } },
+                                { modifier -> Action("Stop assistance",modifier) { navigation.cancelNavigation(); stopCamera() } })
+                            Text("With SIGHT open: Volume up starts one spoken command; Volume down stops camera and route guidance. These keys replace volume adjustment while this screen is open. There is no wake-word listener.",color=Secondary)
                             Heading("What would help?")
                             AdaptiveActions(
                                 { modifier -> Action("Explore", modifier) { controller.command("explore") } },
@@ -153,9 +213,7 @@ class MainActivity : ComponentActivity() {
                             AdaptiveActions(
                                 { modifier -> Action("Ask", modifier, command.isNotBlank()) { controller.command(command); command = "" } },
                                 { modifier -> Action(if (controller.listening) "Cancel microphone" else "Use voice", modifier) {
-                                    if (controller.listening) controller.voice.cancel()
-                                    else if (ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) controller.startListening()
-                                    else microphonePermission.launch(Manifest.permission.RECORD_AUDIO)
+                                    listen()
                                 } })
                             Text(controller.microphoneStatus, color = Secondary, modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite })
                             AdaptiveActions(
@@ -231,6 +289,12 @@ class MainActivity : ComponentActivity() {
                             Text("Thermal: ${controller.thermalLevel} · Battery: ${controller.batteryPercent}%")
                             Text("Speech queue: ${controller.speech.queueSize} (max 4 including active)")
                             Text(controller.diagnosticSummary)
+                            Text(controller.surfaceSummary)
+                            Action(if(controller.roadDiagnostics) "Stop road diagnostics" else "Run road diagnostics",Modifier.fillMaxWidth()) {
+                                controller.command(if(controller.roadDiagnostics) "stop road diagnostics" else "road diagnostics")
+                            }
+                            controller.latestRoadTiming?.let { Text("Road model ${it.status}: native task ${it.inferenceMs} ms; age ${SystemClock.elapsedRealtime()-it.capturedAtMs} ms") }
+                            Text(controller.cameraPose?.description(SystemClock.elapsedRealtime()) ?: "Camera direction is unavailable. Image axes are not walking directions.")
                             controller.timing?.let { sample ->
                                 Text("Actual model: ${sample.modelId}")
                                 Text("Frame ${sample.frameId} · conversion ${sample.conversionMs} ms · detection ${sample.detectionMs} ms · total ${sample.totalMs} ms")
@@ -270,6 +334,8 @@ class MainActivity : ComponentActivity() {
                 Text("SIGHT describes what your rear camera detects and reads text on your phone. Point the camera while stationary to get started.")
                 Text("It can miss objects and cannot assess safe travel, crossings, clearance, or distance. Keep using your usual mobility aids.")
                 Text("Camera and microphone start only when you ask. Photos and video are never saved. You choose whether explicit landmarks persist.")
+                Text("For spoken walking directions, explicitly enable route services, say a destination, choose a numbered match, and grant location permission. Routing data does not establish accessible or physically passable travel.")
+                Text("While SIGHT is open, Volume up starts one voice command and Volume down stops assistance. A short vibration signals microphone readiness on devices with a vibrator. Android's on-device recognition is preferred; bundled offline English recognition supports Android 8 and newer. The labelled command control and TalkBack are alternatives.")
                 Text("Text reading runs on your phone. Google's text reader may send usage diagnostics to Google, without your images or recognized text. Airplane mode permits offline use.")
             } }, confirmButton = { TextButton(onClick = {
                 onboarding = false; getPreferences(MODE_PRIVATE).edit().putBoolean("introduced", true).apply()
@@ -295,7 +361,9 @@ class MainActivity : ComponentActivity() {
                             requestedProfile = this@MainActivity.controller::requestedProfile, textReader = this@MainActivity.controller.textReader,
                             onTiming = { timing -> if (camera === ownedSource) this@MainActivity.controller.onTiming(timing) },
                             onFeedback = { message, evidence -> if (camera === ownedSource) this@MainActivity.controller.frameFeedback(message, evidence) },
-                            constrained = { this@MainActivity.controller.resourceConstrained })
+                            constrained = { this@MainActivity.controller.resourceConstrained },
+                            roadReader = this@MainActivity.controller.roadReader, roadEnabled = this@MainActivity.controller::roadObservationEnabled,
+                            perceptionSuspended = { this@MainActivity.controller.listening })
                         camera = ownedSource
                         tag = ownedSource
                         ownedSource.start()

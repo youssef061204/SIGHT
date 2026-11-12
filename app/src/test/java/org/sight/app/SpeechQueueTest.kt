@@ -8,6 +8,48 @@ class SpeechQueueTest {
     private val accept: (Announcement, Long) -> Boolean = { _, _ -> true }
     private fun event(text: String, priority: SpeechPriority = SpeechPriority.TASK) = Announcement(text, priority, dedupKey = text)
 
+    @Test fun `lower priority requests cannot supersede pending environment or navigation cues`() {
+        val queue=SpeechQueue()
+        queue.offer(event("status",SpeechPriority.STATUS),0,accept)
+        val status=queue.next(1,accept)!!
+        queue.offer(event("mapped turn",SpeechPriority.NAVIGATION),2,accept)
+        queue.offer(event("traffic observation",SpeechPriority.ENVIRONMENT),3,accept)
+        queue.offer(event("requested text",SpeechPriority.USER_REQUEST),4,accept)
+        assertEquals(3,queue.pendingCount)
+        queue.finish(status.token,5)
+        assertEquals("traffic observation",queue.next(6,accept)!!.event.text)
+    }
+
+    @Test fun `a changed route revision invalidates dispatched and queued navigation immediately`() {
+        var revision="one"
+        val valid:(Announcement,Long)->Boolean={ item,_ -> item.contextId==revision }
+        val queue=SpeechQueue()
+        val event=event("old direction",SpeechPriority.NAVIGATION).copy(contextId="one")
+        queue.offer(event,0,valid)
+        val item=queue.next(1,valid)!!; queue.started(item.token,2,valid)
+        revision="two"
+        assertTrue(queue.tick(3,valid,valid))
+        assertNull(queue.current)
+        assertFalse(queue.offer(event,4,valid).accepted)
+    }
+
+    @Test fun `environment interruption resumes only a still fresh navigation cue`() {
+        val valid:(Announcement,Long)->Boolean={ item,at -> item.validUntilMs?.let { at<=it } ?: true }
+        val queue=SpeechQueue()
+        val direction=event("Mapped route turns left",SpeechPriority.NAVIGATION).copy(validUntilMs=100)
+        queue.offer(direction,0,valid)
+        val first=queue.next(1,valid)!!; queue.started(first.token,2,valid)
+        queue.offer(event("Traffic visible in camera image",SpeechPriority.ENVIRONMENT),3,valid)
+        val alert=queue.next(4,valid)!!; queue.started(alert.token,5,valid); queue.finish(alert.token,6)
+        assertEquals(direction,queue.next(7,valid)!!.event)
+        queue.stop(8)
+        queue.offer(direction.copy(dedupKey="later"),9,valid)
+        val again=queue.next(10,valid)!!; queue.started(again.token,11,valid)
+        queue.offer(event("Bicycle visible",SpeechPriority.ENVIRONMENT),12,valid)
+        val second=queue.next(13,valid)!!; queue.finish(second.token,101)
+        assertNull(queue.next(102,valid))
+    }
+
     @Test fun `task speech interrupts ambient and stale callbacks cannot finish the new utterance`() {
         val decisions = mutableListOf<SpeechDecision>()
         val queue = SpeechQueue(onDecision = decisions::add)

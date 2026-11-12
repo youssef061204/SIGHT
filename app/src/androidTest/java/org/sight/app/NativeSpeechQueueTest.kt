@@ -3,6 +3,7 @@ package org.sight.app
 import android.os.SystemClock
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.core.app.ActivityScenario
 import org.json.JSONArray
 import org.json.JSONObject
 import org.junit.Assert.*
@@ -21,6 +22,8 @@ import java.util.concurrent.atomic.AtomicReference
 @RunWith(AndroidJUnit4::class)
 class NativeSpeechQueueTest {
     @Test fun actualOfflineEngineStartsPriorityTaskAfterInterruptingAmbientSpeech() {
+        // Android 15 grants audio focus only to a foreground app (or an eligible service).
+        val foreground = ActivityScenario.launch(MainActivity::class.java)
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val context = instrumentation.targetContext
         val proof = File(context.cacheDir,"speech-queue-native-v3.json")
@@ -60,6 +63,6 @@ class NativeSpeechQueueTest {
                 .put("status",status.get()).put("recordedAtElapsedMs",SystemClock.elapsedRealtime())
                 .put("ambientInterrupted",true).put("taskStarted",true).put("humanHeardAudio",false)
                 .put("callbacks",JSONArray(callbacks)).toString(2))
-        } finally { instrumentation.runOnMainSync { output.close() } }
+        } finally { instrumentation.runOnMainSync { output.close() }; foreground.close() }
     }
 }

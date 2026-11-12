@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "imageId": 472623,
+      "maximumPosteriorError": 0.5141923427581787,
+      "meanPosteriorError": 0.007928487844765186,
+      "argmaxAgreement": 0.9893014090401786
+    },
+    {
+      "imageId": 256916,
+      "maximumPosteriorError": 0.4047655463218689,
+      "meanPosteriorError": 0.004831088241189718,
+      "argmaxAgreement": 0.9993547712053571
+    },
+    {
+      "imageId": 572517,
+      "maximumPosteriorError": 0.22722750902175903,
+      "meanPosteriorError": 0.0008335686870850623,
+      "argmaxAgreement": 1.0
+    }
+  ],
+  "modelSha256": "9ac3a1423bc48e83808edc8273fe7a6e53d0bf0cabe2699d5ed1979b3c64f8a8",
+  "referenceXmlSha256": "228e4ef841a6cea468fc8cdf2c17b2cb27e7acc153ea81cf18773094043eadf9",
+  "referenceBinSha256": "e708aff5c4cd9813b575c72011f2cef9a4f5adb7aa382d81dc7adbb395dc9d8c",
+  "scope": "Same raw BGR float tensor into Intel official OpenVINO reference and redistributed TFLite conversion; not Android resize equivalence"
+}

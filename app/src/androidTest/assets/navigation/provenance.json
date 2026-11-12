@@ -1,0 +1,132 @@
+{
+  "schema": "sight.public-navigation-provider-sample",
+  "recordedAtUtc": "2026-10-27T03:12:06.794708+00:00",
+  "trips": [
+    {
+      "id": "toronto",
+      "originQuery": "Union Station Toronto",
+      "destinationQuery": "CN Tower Toronto",
+      "selectionPolicy": "First geocoder result is used only for this fixed public-provider benchmark, never for user ambiguity resolution",
+      "originSearch": {
+        "url": "https://photon.komoot.io/api/?q=Union+Station+Toronto&limit=5&lang=en",
+        "httpStatus": 200,
+        "results": 5,
+        "responseFile": "toronto-origin-search.json",
+        "requestAndPostThrottleMs": 1752.63
+      },
+      "destinationSearch": {
+        "url": "https://photon.komoot.io/api/?q=CN+Tower+Toronto&limit=5&lang=en",
+        "httpStatus": 200,
+        "results": 4,
+        "responseFile": "toronto-destination-search.json",
+        "requestAndPostThrottleMs": 1709.84
+      },
+      "route": {
+        "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/-79.3801352,43.6447091;-79.3870872,43.6425637?overview=full&geometries=geojson&steps=true&alternatives=false",
+        "httpStatus": 200,
+        "providerCode": "Ok",
+        "responseFile": "toronto-route.json",
+        "routes": 1,
+        "requestAndPostThrottleMs": 4729.01
+      },
+      "origin": {
+        "id": "W:14744491",
+        "label": "Union Station, Bay Street, Toronto, Canada",
+        "latitude": 43.6447091,
+        "longitude": -79.3801352
+      },
+      "destination": {
+        "id": "W:32742038",
+        "label": "CN Tower, Bremner Boulevard, Toronto, Canada",
+        "latitude": 43.6425637,
+        "longitude": -79.3870872
+      },
+      "status": "returned_route"
+    },
+    {
+      "id": "ottawa",
+      "originQuery": "Ottawa City Hall",
+      "destinationQuery": "National Gallery of Canada Ottawa",
+      "selectionPolicy": "First geocoder result is used only for this fixed public-provider benchmark, never for user ambiguity resolution",
+      "originSearch": {
+        "url": "https://photon.komoot.io/api/?q=Ottawa+City+Hall&limit=5&lang=en",
+        "httpStatus": 200,
+        "results": 5,
+        "responseFile": "ottawa-origin-search.json",
+        "requestAndPostThrottleMs": 1969.2
+      },
+      "destinationSearch": {
+        "url": "https://photon.komoot.io/api/?q=National+Gallery+of+Canada+Ottawa&limit=5&lang=en",
+        "httpStatus": 200,
+        "results": 1,
+        "responseFile": "ottawa-destination-search.json",
+        "requestAndPostThrottleMs": 1725.58
+      },
+      "route": {
+        "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/-75.6902694,45.4208017;-75.6988125,45.4295263?overview=full&geometries=geojson&steps=true&alternatives=false",
+        "httpStatus": 200,
+        "providerCode": "Ok",
+        "responseFile": "ottawa-route.json",
+        "routes": 1,
+        "requestAndPostThrottleMs": 4895.64
+      },
+      "origin": {
+        "id": "W:68588664",
+        "label": "Ottawa City Hall, Laurier Avenue West, Ottawa, Canada",
+        "latitude": 45.4208017,
+        "longitude": -75.6902694
+      },
+      "destination": {
+        "id": "W:39036376",
+        "label": "National Gallery of Canada, Sussex Drive, Ottawa, Canada",
+        "latitude": 45.4295263,
+        "longitude": -75.6988125
+      },
+      "status": "returned_route"
+    },
+    {
+      "id": "kingston",
+      "originQuery": "Kingston City Hall Ontario",
+      "destinationQuery": "Queen's University Kingston Ontario",
+      "selectionPolicy": "First geocoder result is used only for this fixed public-provider benchmark, never for user ambiguity resolution",
+      "originSearch": {
+        "url": "https://photon.komoot.io/api/?q=Kingston+City+Hall+Ontario&limit=5&lang=en",
+        "httpStatus": 200,
+        "results": 5,
+        "responseFile": "kingston-origin-search.json",
+        "requestAndPostThrottleMs": 1930.8
+      },
+      "destinationSearch": {
+        "url": "https://photon.komoot.io/api/?q=Queen%27s+University+Kingston+Ontario&limit=5&lang=en",
+        "httpStatus": 200,
+        "results": 5,
+        "responseFile": "kingston-destination-search.json",
+        "requestAndPostThrottleMs": 1842.5
+      },
+      "route": {
+        "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/-76.4804296,44.2298681;-76.4957555,44.2263489?overview=full&geometries=geojson&steps=true&alternatives=false",
+        "httpStatus": 200,
+        "providerCode": "Ok",
+        "responseFile": "kingston-route.json",
+        "routes": 1,
+        "requestAndPostThrottleMs": 4752.76
+      },
+      "origin": {
+        "id": "W:25374703",
+        "label": "Kingston City Hall, Springer Market Square, Kingston, Canada",
+        "latitude": 44.2298681,
+        "longitude": -76.4804296
+      },
+      "destination": {
+        "id": "R:20513072",
+        "label": "Queen's University, King Street West, Kingston, Canada",
+        "latitude": 44.2263489,
+        "longitude": -76.4957555
+      },
+      "status": "returned_route"
+    }
+  ],
+  "scope": "Small fixed public-landmark HTTP availability and response-parsing sample, not field walking, route accessibility, user destination accuracy or provider SLA",
+  "attribution": "OpenStreetMap contributors; Photon / komoot; FOSSGIS OSRM foot",
+  "timingScope": "requestAndPostThrottleMs includes the explicit1.2second provider-policy wait after the HTTP request; not HTTP-only latency"
+}

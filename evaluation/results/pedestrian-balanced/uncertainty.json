@@ -1,0 +1,15 @@
+{
+  "roadPresencePrecisionWilson95": [
+    0.7424269921812741,
+    0.990124809021697
+  ],
+  "roadPresenceRecallWilson95": [
+    0.6395811352592431,
+    0.9476312541037835
+  ],
+  "falseEventPerImageWilson95": [
+    0.0044268315026814095,
+    0.1288136896347409
+  ],
+  "scope": "Illustrative binomial intervals for photos; creator clustering, curated prevalence, domain shift and training overlap are not accounted for. Pixel counts are correlated and receive no naive binomial interval."
+}

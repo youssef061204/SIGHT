@@ -1,0 +1,27 @@
+{
+  "recordedAtUtc": "2026-10-27T03:19:37.909253+00:00",
+  "url": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A43.6452%2C%22lon%22%3A-79.3803%7D%2C%7B%22lat%22%3A43.6426%2C%22lon%22%3A-79.3871%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22costing_options%22%3A%7B%22pedestrian%22%3A%7B%22type%22%3A%22blind%22%7D%7D%2C%22format%22%3A%22osrm%22%2C%22shape_format%22%3A%22geojson%22%2C%22language%22%3A%22en-US%22%2C%22voice_instructions%22%3Atrue%7D",
+  "payload": {
+    "locations": [
+      {
+        "lat": 43.6452,
+        "lon": -79.3803
+      },
+      {
+        "lat": 43.6426,
+        "lon": -79.3871
+      }
+    ],
+    "costing": "pedestrian",
+    "costing_options": {
+      "pedestrian": {
+        "type": "blind"
+      }
+    },
+    "format": "osrm",
+    "shape_format": "geojson",
+    "language": "en-US",
+    "voice_instructions": true
+  },
+  "httpStatus": 200
+}
